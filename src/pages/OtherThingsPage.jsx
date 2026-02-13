@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import albums from '../content/other-things.json';
+import { formatDateLabel } from '../utils/formatDate';
 
 export default function OtherThingsPage() {
   return (
@@ -9,7 +10,7 @@ export default function OtherThingsPage() {
         {albums.map((album) => (
           <li key={album.slug} className="card">
             <h3>{album.title}</h3>
-            <p className="meta">{album.date || 'No date'}</p>
+            <p className="meta">{formatDateLabel(album.date)}</p>
             {album.cover ? <p className="meta">Cover: {album.cover}</p> : null}
             <Link to={`/other-things/${album.slug}`}>View album</Link>
           </li>

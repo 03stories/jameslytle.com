@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import albums from '../content/other-things.json';
+import { formatDateLabel } from '../utils/formatDate';
 
 export default function OtherThingsDetailPage() {
   const { slug } = useParams();
@@ -17,7 +18,7 @@ export default function OtherThingsDetailPage() {
   return (
     <article>
       <h2>{album.title}</h2>
-      <p className="meta">{album.date || 'No date'}</p>
+      <p className="meta">{formatDateLabel(album.date)}</p>
       {Array.isArray(album.images) && album.images.length ? (
         <div className="card-list">
           {album.images.map((image) => (
