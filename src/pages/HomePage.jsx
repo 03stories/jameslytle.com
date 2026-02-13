@@ -1,8 +1,16 @@
+import site from '../content/site.json';
+
 export default function HomePage() {
+  const home = site.home || {};
+
   return (
     <section>
-      <h2>Home</h2>
-      <p>React rebuild in progress. Content now comes from Markdown under <code>content/</code>.</p>
+      <h2>{home.title || 'Home'}</h2>
+      {home.greeting ? <p>{home.greeting}</p> : null}
+      <div className="prose" dangerouslySetInnerHTML={{ __html: home.html || '' }} />
+      <p>
+        <a href="/content/site/home/untitled-drawing.pdf">Untitled Drawing (PDF)</a>
+      </p>
     </section>
   );
 }

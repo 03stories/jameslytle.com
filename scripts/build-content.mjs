@@ -10,6 +10,7 @@ const CONTENT_ROOT = path.join(ROOT, 'content');
 const PUBLIC_CONTENT_ROOT = path.join(ROOT, 'public', 'content');
 const OUTPUT_PROJECTS = path.join(ROOT, 'src', 'content', 'projects.json');
 const OUTPUT_OTHER_THINGS = path.join(ROOT, 'src', 'content', 'other-things.json');
+const OUTPUT_SITE = path.join(ROOT, 'src', 'content', 'site.json');
 
 async function markdownToHtml(markdown) {
   const rendered = await remark().use(html).process(markdown);
@@ -103,6 +104,39 @@ async function readCollection(collectionName) {
   return sortByDateDesc(entries);
 }
 
+async function readSitePages() {
+  const pages = ['home', 'about'];
+  const siteData = {};
+
+  for (const page of pages) {
+    const match = path.join(ROOT, 'content', 'site', page, 'index.md');
+
+    try {
+      const raw = await readFile(match, 'utf8');
+      const parsed = matter(raw);
+      const renderedHtml = await markdownToHtml(parsed.content || '');
+      const publicBasePath = `/content/site/${page}`;
+      const htmlWithAssetPaths = rewriteAssetUrls(renderedHtml, publicBasePath);
+      const pageDir = path.dirname(match);
+
+      await copyFolderAssets(pageDir, path.join(PUBLIC_CONTENT_ROOT, 'site', page));
+
+      siteData[page] = {
+        slug: page,
+        ...rewriteMetadataAssetPaths(parsed.data, publicBasePath),
+        html: htmlWithAssetPaths
+      };
+    } catch {
+      siteData[page] = {
+        slug: page,
+        html: ''
+      };
+    }
+  }
+
+  return siteData;
+}
+
 async function main() {
   await mkdir(path.join(ROOT, 'src', 'content'), { recursive: true });
   await mkdir(PUBLIC_CONTENT_ROOT, { recursive: true });
@@ -111,6 +145,7 @@ async function main() {
 
   let projects = [];
   let otherThings = [];
+  let site = {};
 
   try {
     projects = await readCollection('projects');
@@ -124,10 +159,15 @@ async function main() {
     otherThings = [];
   }
 
+  site = await readSitePages();
+
   await writeFile(OUTPUT_PROJECTS, JSON.stringify(projects, null, 2));
   await writeFile(OUTPUT_OTHER_THINGS, JSON.stringify(otherThings, null, 2));
+  await writeFile(OUTPUT_SITE, JSON.stringify(site, null, 2));
 
-  console.log(`Generated ${projects.length} projects and ${otherThings.length} albums.`);
+  console.log(
+    `Generated ${projects.length} projects, ${otherThings.length} albums, and ${Object.keys(site).length} site pages.`
+  );
 }
 
 main().catch((error) => {
