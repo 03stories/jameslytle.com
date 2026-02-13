@@ -1,4 +1,5 @@
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import HomePage from './pages/HomePage';
 import ProjectsPage from './pages/ProjectsPage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
@@ -9,9 +10,20 @@ import OtherThingsDetailPage from './pages/OtherThingsDetailPage';
 import LoginPage from './pages/LoginPage';
 import SandboxPage from './pages/SandboxPage';
 
+function ScrollToTopOnRouteChange() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [pathname]);
+
+  return null;
+}
+
 export default function App() {
   return (
     <div className="app-shell">
+      <ScrollToTopOnRouteChange />
       <header className="site-header">
         <h1>James Lytle</h1>
         <nav>

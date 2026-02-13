@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 0.0.0.0",
     "build:content": "node scripts/build-content.mjs",
     "import:projects": "node scripts/import-legacy-projects.mjs",
     "import:albums": "node scripts/import-legacy-albums.mjs",
