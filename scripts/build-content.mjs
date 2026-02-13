@@ -22,6 +22,30 @@ function rewriteAssetUrls(htmlText, publicBasePath) {
     .replace(/href="\.\//g, `href="${publicBasePath}/`);
 }
 
+function rewriteMetadataAssetPaths(value, publicBasePath) {
+  if (value instanceof Date) {
+    return value.toISOString();
+  }
+
+  if (typeof value === 'string') {
+    return value.startsWith('./') ? `${publicBasePath}/${value.slice(2)}` : value;
+  }
+
+  if (Array.isArray(value)) {
+    return value.map((entry) => rewriteMetadataAssetPaths(entry, publicBasePath));
+  }
+
+  if (value && typeof value === 'object') {
+    const next = {};
+    for (const [key, item] of Object.entries(value)) {
+      next[key] = rewriteMetadataAssetPaths(item, publicBasePath);
+    }
+    return next;
+  }
+
+  return value;
+}
+
 function sortByDateDesc(items) {
   return [...items].sort((a, b) => {
     const aTime = a.date ? new Date(a.date).getTime() : 0;
@@ -68,7 +92,7 @@ async function readCollection(collectionName) {
 
     entries.push({
       slug,
-      ...parsed.data,
+      ...rewriteMetadataAssetPaths(parsed.data, publicBasePath),
       html: htmlWithAssetPaths
     });
 

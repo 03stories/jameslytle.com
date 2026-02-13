@@ -33,6 +33,10 @@ function stripListMarker(value = '') {
   return value.replace(/^\-\s*/, '').trim();
 }
 
+function isLegacyReference(value = '') {
+  return /^(file|page|user):\/\//i.test(value);
+}
+
 function normalizeDate(dateText = '') {
   const matched = dateText.match(/^(\d{4}-\d{2}-\d{2})/);
   return matched ? matched[1] : '';
@@ -46,7 +50,7 @@ function normalizeTags(tagText = '') {
 }
 
 function parseInlineOptions(payload) {
-  const optionPattern = /([a-zA-Z-]+):\s*([\s\S]*?)(?=\s+[a-zA-Z-]+:\s|$)/g;
+  const optionPattern = /([a-zA-Z-]+):\s*([\s\S]*?)(?=\s+[a-zA-Z-]+:\s*|$)/g;
   const options = {};
   let match = optionPattern.exec(payload);
 
@@ -103,10 +107,14 @@ function toFrontmatter(sections, slug) {
   const headline = sections.Headline || '';
   const client = sections.Client || '';
   const tags = normalizeTags(sections.Tags || '');
-  const cover = stripListMarker(sections.Cover || '');
-  const clientLogo = stripListMarker(sections['Client-logo'] || '');
+  const coverRaw = stripListMarker(sections.Cover || '');
+  const clientLogoRaw = stripListMarker(sections['Client-logo'] || '');
+  const cover = coverRaw && !isLegacyReference(coverRaw) ? coverRaw : '';
+  const clientLogo = clientLogoRaw && !isLegacyReference(clientLogoRaw) ? clientLogoRaw : '';
   const summaryMatch = (sections.Text || '').match(/# Summary\s*([\s\S]*?)(?=\n# |\n\*Defining|\n\*Ideas|$)/i);
-  const summary = summaryMatch ? summaryMatch[1].replace(/\n+/g, ' ').trim() : '';
+  const summary = summaryMatch
+    ? convertKirbyTextToMarkdown(summaryMatch[1].replace(/\n+/g, ' ').trim())
+    : '';
 
   const lines = ['---'];
   lines.push(`title: ${JSON.stringify(title)}`);

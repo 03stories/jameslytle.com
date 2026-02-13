@@ -18,6 +18,15 @@ export default function OtherThingsDetailPage() {
     <article>
       <h2>{album.title}</h2>
       <p className="meta">{album.date || 'No date'}</p>
+      {Array.isArray(album.images) && album.images.length ? (
+        <div className="card-list">
+          {album.images.map((image) => (
+            <figure key={image} className="card">
+              <img src={image} alt={`${album.title} media`} style={{ maxWidth: '100%' }} />
+            </figure>
+          ))}
+        </div>
+      ) : null}
       <div className="prose" dangerouslySetInnerHTML={{ __html: album.html }} />
       <p>
         <Link to="/other-things">Back to albums</Link>

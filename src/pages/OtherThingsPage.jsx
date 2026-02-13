@@ -10,6 +10,7 @@ export default function OtherThingsPage() {
           <li key={album.slug} className="card">
             <h3>{album.title}</h3>
             <p className="meta">{album.date || 'No date'}</p>
+            {album.cover ? <p className="meta">Cover: {album.cover}</p> : null}
             <Link to={`/other-things/${album.slug}`}>View album</Link>
           </li>
         ))}
