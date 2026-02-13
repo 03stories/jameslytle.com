@@ -7,6 +7,27 @@ const DIST_DIR = path.join(ROOT, 'dist');
 const DIST_SERVER_DIR = path.join(DIST_DIR, 'server');
 const TEMPLATE_PATH = path.join(DIST_DIR, 'index.html');
 const SERVER_ENTRY_PATH = path.join(DIST_SERVER_DIR, 'entry-server.js');
+const BASE_PATH = normalizeBasePath(process.env.VITE_BASE_PATH || '/');
+
+function normalizeBasePath(value) {
+  if (!value) return '/';
+  let base = value.trim();
+  if (!base.startsWith('/')) base = `/${base}`;
+  if (!base.endsWith('/')) base = `${base}/`;
+  return base;
+}
+
+function withBase(route) {
+  if (BASE_PATH === '/') {
+    return route;
+  }
+
+  if (route === '/') {
+    return BASE_PATH;
+  }
+
+  return `${BASE_PATH.slice(0, -1)}${route}`;
+}
 
 async function loadJson(relativePath) {
   const filePath = path.join(ROOT, relativePath);
@@ -54,7 +75,7 @@ async function main() {
   const serverModule = await import(pathToFileURL(SERVER_ENTRY_PATH).href);
 
   for (const route of routes) {
-    const appHtml = serverModule.render(route);
+    const appHtml = serverModule.render(withBase(route));
     const html = template.replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`);
     const outputPath = routeToOutputPath(route);
     await mkdir(path.dirname(outputPath), { recursive: true });

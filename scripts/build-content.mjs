@@ -11,6 +11,27 @@ const PUBLIC_CONTENT_ROOT = path.join(ROOT, 'public', 'content');
 const OUTPUT_PROJECTS = path.join(ROOT, 'src', 'content', 'projects.json');
 const OUTPUT_OTHER_THINGS = path.join(ROOT, 'src', 'content', 'other-things.json');
 const OUTPUT_SITE = path.join(ROOT, 'src', 'content', 'site.json');
+const SITE_BASE_PATH = normalizeBasePath(process.env.VITE_BASE_PATH || '/');
+
+function normalizeBasePath(value) {
+  if (!value) return '/';
+  let base = value.trim();
+  if (!base.startsWith('/')) base = `/${base}`;
+  if (!base.endsWith('/')) base = `${base}/`;
+  return base;
+}
+
+function withBase(absolutePath) {
+  if (!absolutePath.startsWith('/')) {
+    return absolutePath;
+  }
+
+  if (SITE_BASE_PATH === '/') {
+    return absolutePath;
+  }
+
+  return `${SITE_BASE_PATH.slice(0, -1)}${absolutePath}`;
+}
 
 async function markdownToHtml(markdown) {
   const rendered = await remark().use(html).process(markdown);
@@ -20,7 +41,8 @@ async function markdownToHtml(markdown) {
 function rewriteAssetUrls(htmlText, publicBasePath) {
   return htmlText
     .replace(/src="\.\//g, `src="${publicBasePath}/`)
-    .replace(/href="\.\//g, `href="${publicBasePath}/`);
+    .replace(/href="\.\//g, `href="${publicBasePath}/`)
+    .replace(/href="\/(?!\/)/g, `href="${SITE_BASE_PATH}`);
 }
 
 function rewriteMetadataAssetPaths(value, publicBasePath) {
@@ -29,7 +51,15 @@ function rewriteMetadataAssetPaths(value, publicBasePath) {
   }
 
   if (typeof value === 'string') {
-    return value.startsWith('./') ? `${publicBasePath}/${value.slice(2)}` : value;
+    if (value.startsWith('./')) {
+      return `${publicBasePath}/${value.slice(2)}`;
+    }
+
+    if (value.startsWith('/') && !value.startsWith('//')) {
+      return withBase(value);
+    }
+
+    return value;
   }
 
   if (Array.isArray(value)) {
@@ -88,7 +118,7 @@ async function readCollection(collectionName) {
     const raw = await readFile(filePath, 'utf8');
     const parsed = matter(raw);
     const renderedHtml = await markdownToHtml(parsed.content || '');
-    const publicBasePath = `/content/${collectionName}/${slug}`;
+    const publicBasePath = withBase(`/content/${collectionName}/${slug}`);
     const htmlWithAssetPaths = rewriteAssetUrls(renderedHtml, publicBasePath);
 
     entries.push({
@@ -115,7 +145,7 @@ async function readSitePages() {
       const raw = await readFile(match, 'utf8');
       const parsed = matter(raw);
       const renderedHtml = await markdownToHtml(parsed.content || '');
-      const publicBasePath = `/content/site/${page}`;
+      const publicBasePath = withBase(`/content/site/${page}`);
       const htmlWithAssetPaths = rewriteAssetUrls(renderedHtml, publicBasePath);
       const pageDir = path.dirname(match);
 
