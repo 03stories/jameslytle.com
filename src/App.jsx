@@ -1,4 +1,4 @@
-import { Link, Route, Routes, useLocation } from 'react-router-dom';
+import { NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import HomePage from './pages/HomePage';
 import ProjectsPage from './pages/ProjectsPage';
@@ -24,18 +24,31 @@ export default function App() {
   return (
     <div className="app-shell">
       <ScrollToTopOnRouteChange />
+      <a className="skip-link" href="#main-content">
+        Skip to main content
+      </a>
       <header className="site-header">
         <h1>James Lytle</h1>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/about">About</Link>
-          <Link to="/resume">Resume</Link>
-          <Link to="/other-things">Other Things</Link>
+        <nav aria-label="Primary navigation">
+          <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            Home
+          </NavLink>
+          <NavLink to="/projects" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            Projects
+          </NavLink>
+          <NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            About
+          </NavLink>
+          <NavLink to="/resume" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            Resume
+          </NavLink>
+          <NavLink to="/other-things" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            Other Things
+          </NavLink>
         </nav>
       </header>
 
-      <main className="site-main">
+      <main id="main-content" className="site-main" tabIndex={-1}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />

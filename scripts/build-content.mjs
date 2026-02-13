@@ -140,7 +140,12 @@ async function readSitePages() {
 async function main() {
   await mkdir(path.join(ROOT, 'src', 'content'), { recursive: true });
   await mkdir(PUBLIC_CONTENT_ROOT, { recursive: true });
-  await rm(PUBLIC_CONTENT_ROOT, { recursive: true, force: true });
+  await rm(PUBLIC_CONTENT_ROOT, {
+    recursive: true,
+    force: true,
+    maxRetries: 5,
+    retryDelay: 100
+  });
   await mkdir(PUBLIC_CONTENT_ROOT, { recursive: true });
 
   let projects = [];
