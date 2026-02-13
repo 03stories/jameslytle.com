@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import albums from '../content/other-things.json';
 import { formatDateLabel } from '../utils/formatDate';
+import PhotoPaletteToolPage from './PhotoPaletteToolPage';
 
 export default function OtherThingsDetailPage() {
   const { slug } = useParams();
@@ -29,6 +30,7 @@ export default function OtherThingsDetailPage() {
         </div>
       ) : null}
       <div className="prose" dangerouslySetInnerHTML={{ __html: album.html }} />
+      {album.slug === 'photo-palette' ? <PhotoPaletteToolPage /> : null}
       <p>
         <Link to="/other-things">Back to albums</Link>
       </p>
