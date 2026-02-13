@@ -1,0 +1,27 @@
+import { Link, useParams } from 'react-router-dom';
+import albums from '../content/other-things.json';
+
+export default function OtherThingsDetailPage() {
+  const { slug } = useParams();
+  const album = albums.find((entry) => entry.slug === slug);
+
+  if (!album) {
+    return (
+      <section>
+        <h2>Album not found</h2>
+        <Link to="/other-things">Back to albums</Link>
+      </section>
+    );
+  }
+
+  return (
+    <article>
+      <h2>{album.title}</h2>
+      <p className="meta">{album.date || 'No date'}</p>
+      <div className="prose" dangerouslySetInnerHTML={{ __html: album.html }} />
+      <p>
+        <Link to="/other-things">Back to albums</Link>
+      </p>
+    </article>
+  );
+}
