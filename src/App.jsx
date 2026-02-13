@@ -1,5 +1,6 @@
 import { NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import { hydrateThemeFromStorage } from './utils/themePalette';
 import HomePage from './pages/HomePage';
 import ProjectsPage from './pages/ProjectsPage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
@@ -21,6 +22,10 @@ function ScrollToTopOnRouteChange() {
 }
 
 export default function App() {
+  useEffect(() => {
+    hydrateThemeFromStorage();
+  }, []);
+
   return (
     <div className="app-shell">
       <ScrollToTopOnRouteChange />

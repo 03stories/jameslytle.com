@@ -1,6 +1,24 @@
 :root {
   color-scheme: light;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --color-bg: #ffffff;
+  --color-text: #111111;
+  --color-surface: #ffffff;
+  --color-surface-strong: #f6f8fb;
+  --color-border: #dddddd;
+  --color-muted: #666666;
+  --color-link: #111111;
+  --color-focus: #0a66d6;
+  --color-skip-bg: #111111;
+  --color-skip-text: #ffffff;
+  --palette-1: #4b83c0;
+  --palette-2: #6ca6df;
+  --palette-3: #a5c7ea;
+  --palette-4: #c9d7e5;
+  --palette-5: #778899;
+  --palette-6: #4f5e6c;
+  --palette-7: #2f3944;
+  --palette-8: #1b232d;
 }
 
 * {
@@ -9,16 +27,17 @@
 
 body {
   margin: 0;
-  color: #111;
-  background: #fff;
+  color: var(--color-text);
+  background: var(--color-bg);
+  transition: background-color 180ms ease, color 180ms ease;
 }
 
 .skip-link {
   position: absolute;
   left: -9999px;
   top: 0;
-  background: #111;
-  color: #fff;
+  background: var(--color-skip-bg);
+  color: var(--color-skip-text);
   padding: 0.5rem 0.75rem;
   border-radius: 0.25rem;
 }
@@ -42,8 +61,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #fff;
-  border-bottom: 1px solid #ddd;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 2rem;
@@ -60,7 +79,7 @@ body {
 }
 
 .site-header a {
-  color: #111;
+  color: var(--color-link);
   text-decoration: none;
   font-weight: 600;
 }
@@ -71,8 +90,10 @@ body {
 }
 
 a:focus-visible,
-button:focus-visible {
-  outline: 2px solid #0a66d6;
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-focus);
   outline-offset: 2px;
 }
 
@@ -86,9 +107,10 @@ button:focus-visible {
 }
 
 .card {
-  border: 1px solid #e4e4e4;
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 1rem;
+  background: var(--color-surface-strong);
 }
 
 .prose {
@@ -145,15 +167,16 @@ button:focus-visible {
 .prose table th,
 .prose table td {
   padding: 0.4rem 0.5rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-border);
 }
 
 .prose a {
   overflow-wrap: anywhere;
+  color: var(--color-link);
 }
 
 .meta {
-  color: #666;
+  color: var(--color-muted);
   font-size: 0.9rem;
 }
 
@@ -176,4 +199,68 @@ button:focus-visible {
     margin: 0.75rem 0;
     border-radius: 4px;
   }
+}
+
+.palette-tool {
+  margin-top: 1.5rem;
+}
+
+.palette-tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.palette-tool label,
+.palette-tool select,
+.palette-tool input,
+.palette-tool button {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+
+.palette-tool button,
+.palette-tool select,
+.palette-tool input {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  padding: 0.55rem 0.75rem;
+}
+
+.palette-tool button {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.palette-preview-image {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.palette-swatches {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.palette-swatch-card {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.75rem;
+  background: var(--color-surface);
+}
+
+.palette-swatch-card p {
+  margin: 0 0 0.35rem;
+}
+
+.palette-chip {
+  width: 100%;
+  height: 48px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  margin-bottom: 0.5rem;
 }
