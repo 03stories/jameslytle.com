@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build:content": "node scripts/build-content.mjs",
+    "import:projects": "node scripts/import-legacy-projects.mjs",
     "build": "npm run build:content && vite build",
     "preview": "vite preview"
   },

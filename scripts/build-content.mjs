@@ -16,6 +16,12 @@ async function markdownToHtml(markdown) {
   return String(rendered);
 }
 
+function rewriteAssetUrls(htmlText, publicBasePath) {
+  return htmlText
+    .replace(/src="\.\//g, `src="${publicBasePath}/`)
+    .replace(/href="\.\//g, `href="${publicBasePath}/`);
+}
+
 function sortByDateDesc(items) {
   return [...items].sort((a, b) => {
     const aTime = a.date ? new Date(a.date).getTime() : 0;
@@ -57,11 +63,13 @@ async function readCollection(collectionName) {
     const raw = await readFile(filePath, 'utf8');
     const parsed = matter(raw);
     const renderedHtml = await markdownToHtml(parsed.content || '');
+    const publicBasePath = `/content/${collectionName}/${slug}`;
+    const htmlWithAssetPaths = rewriteAssetUrls(renderedHtml, publicBasePath);
 
     entries.push({
       slug,
       ...parsed.data,
-      html: renderedHtml
+      html: htmlWithAssetPaths
     });
 
     const publicTarget = path.join(PUBLIC_CONTENT_ROOT, collectionName, slug);
