@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>James Lytle</title>
+    <script type="module" crossorigin src="/jameslytle.com/assets/index-C1I0O_0w.js"></script>
+    <link rel="stylesheet" crossorigin href="/jameslytle.com/assets/index-D6VJl57M.css">
+  </head>
+  <body>
+    <div id="root"><div class="app-shell"><a class="skip-link" href="#main-content">Skip to main content</a><header class="site-header"><h1>James Lytle</h1><nav aria-label="Primary navigation"><a href="/jameslytle.com/">Home</a><a aria-current="page" class="active" href="/jameslytle.com/projects">Projects</a><a href="/jameslytle.com/about">About</a><a href="/jameslytle.com/resume">Resume</a><a href="/jameslytle.com/other-things">Other Things</a></nav></header><main id="main-content" class="site-main" tabindex="-1"><article><h2>Design Docs</h2><p class="meta">Jan 1, 2018</p><div class="prose"><h1>Summary</h1>
+<p>Starting in 2018, I started making a regular practice of creating "Design Docs" for every design ticket/task. Having a consistent-yet-flexible design process is critical to repeating great design. I started creating these to fill a gap in my own process, but their format has evolved to be especially useful in working with my design team and across departments. If this approach already exists out there by another name, I'd be curious to know, but I've not come across it so far.</p>
+<p>Just like any design process, the format isn't perfect and should evolve. I'll describe what they are for, how I use them, and why I think they're helpful for any design team.</p>
+<h2>The Problem</h2>
+<p>As a product designer, you can easily find yourself working across all different kinds of projects and teams at your company - big or small. Whether you have focused sprint time or longer deep dive projects, often you're working on more than one design at time. While it's fun to jump from project to project, keeping things interesting, you can also lose an incredible amount of context and decisions in all that context switching. That goes for whether you're working with team or just yourself.</p>
+<p>We (designers) use our typical tactics to make / keep track of work:</p>
+<ul>
+<li>Design briefs</li>
+<li>Tickets (like in JIRA)</li>
+<li>Meeting notes</li>
+<li>Research scripts</li>
+<li>Emails / Slack</li>
+<li>[insert your to do manager]</li>
+<li>sketches, stickies, notes, etc</li>
+<li>Design files (figma, sketch, principle, etc)</li>
+<li>Prototypes/code</li>
+</ul>
+<p>These tools are mostly great in and of themselves. But knowing what tool to pick up when can be a challenge, for new and seasoned designers. Most times we go by feel, and rightfully so, because different projects call for different tools.</p>
+<p>But I still had 1 big process problem, that kept gnawing at me: <strong>the developer handoff</strong>.</p>
+<p>If you have figured out the perfect developer handoff for every kind of design effort, please share it! I've yet to hear of it. What I do know that exists for this is another grab bag of tactics to achieve a great design implementation:</p>
+<ul>
+<li>Design file annotations</li>
+<li>Design prototypes</li>
+<li>Videos of prototypes/interactions</li>
+<li>Coded styling</li>
+<li>Coded prototypes</li>
+<li>Close developer collaboration</li>
+<li>Do / prototype the production code yourself</li>
+<li>QA, qa, qa, and qa</li>
+</ul>
+<p>The design doc isn't meant to replace all these things, but to augment a few annoyances I've had with the <em>efficiency and transparency</em> aspect of these tactics that are individual islands. In general, the tactics here are fine if you have lots of time to update/reorganize all your work regularly. But it's my future self that I know gets tired (and lazy) doing all of that.</p>
+<p>Here's the other thing. I wouldn't have thought any of these tools were a problem if I didn't grow as a developer. When developing, you learn about all sorts of other processes that are fairly established amongst coders.</p>
+<p>After learning about developer habits, I started to feel unsatisfied with the parts of the design process that deal with evolving communication and design changes. I'll describe this emergence as a series of rising annoyances:</p>
+<p><strong>Annoyance 1</strong>: Developers have some great tools designers don't really have a good answer for.</p>
+<ul>
+<li><strong>//code comments</strong> - A flexible bit of text that will live forever next to your finalized code. It's text, it flows, it's great. Most often used to explain why something is there or what a bit of code is doing. Our answer to this is annotations, mostly. (See Annoyance 2)</li>
+<li><strong>Git repos</strong> - Fork, merge, push, and pull. <em>Easily</em> browse how all the code has changed, when, why, and by whom. Figma has started trying to tackle this slightly, but it's lightyears behind github usability.</li>
+<li><strong>Pull Requests</strong> - A collaborative peer-reviewed process for their work, with a rich summary of what the feature is.</li>
+</ul>
+<p><strong>Annoyance #2</strong>:  Design file annotations are cumbersome and lack richness.</p>
+<ul>
+<li>When laid out on the artboard, they are cumbersome updating and can only handle text and mostly can't be long. Want to make it longer, sure that's fine, break it up and relayout everything else.</li>
+<li>Want to do them in comments? That's cool. But now let's hope none of those details you spent a lot of time on don't get missed. InVision and Figma have these, but I find them disjointed from clearly presenting a design.</li>
+<li>They are terrible for describing non-trivial interactions. For that, we prototype which is good...but now where is that prototype...? Also, prototypes are great at <em>experiencing</em> the design. Not good for <em>pointing out</em> requirements.</li>
+<li>Annotations are all 1 thread. Forget about replying to specific text in a manageable way.</li>
+</ul>
+<p>These annoyances found a form of a solution in this evolving design doc idea. I'll break down the pieces of it, and what I've found more or less useful for myself and the team.</p>
+<h2>Design doc Elements</h2>
+<p>The intention here is a flexible template with parts to be used as needed. It's also worth noting, that I used the new Dropbox Paper app to create these docs and templates. Paper uses markdown standards, so it is just enough styling to organize thoughts without tempting you to get fancy. I found that to be perfect for this process.</p>
+<p>The first iteration included only a version of the <em>Design Solution</em> section(1) to aid in a developer requirements handoff, but I will outline all the included sections here:</p>
+<p><strong>Design: ticket title</strong> - This should be consistent with your ticketing system, in my case JIRA. Also, provide a handy link directly to the ticket.</p>
+<p><strong>Ticket Summary/Design brief</strong> - This is where the purpose and scope of the design effort is defined. All of this should be the same info put in the ticket description.</p>
+<ul>
+<li><em>Summary</em></li>
+<li><em>Key Questions</em></li>
+<li><em>Brand new, or an improvement to related existing features?</em></li>
+<li><em>Specific functionality we are confident we want to support</em></li>
+<li><em>Tactics to complete this design effort</em></li>
+</ul>
+<p><strong>Progress Notes</strong> - Think of this almost like the design journal(2) with all your ugly thoughts and ideas you <em>really don't want</em> others to see. Still, it is great for <em>you</em> to have a place to write down thoughts and document ugly sketches of ideas you don't want to forget along the journey. <strong>This section should be messy.</strong> And it's ok to clean it up. But don't stress about fixing concepts here. All the finalized thoughts go in the Design Solution.</p>
+<p><strong>Design Solution</strong></p>
+<ul>
+<li><em>Feature Summary</em>  - This is not a repeat of the summary from above. You've learned new things in the design process. Reflect that here.</li>
+<li><em>Design prototype</em> - add a link, upload videos (3), etc.</li>
+<li><em>Design file</em></li>
+<li><em>Design Assets/Image</em></li>
+<li><em>Components/Features</em></li>
+<li><em>Explanation of success/error states and how to handle</em></li>
+<li><em>Other Questions</em> - Any special considerations about future expectations.</li>
+</ul>
+<p><em>Template PDF</em>
+<img src="/jameslytle.com/content/projects/design-docs/design-doc-template.png" alt="design-doc-template"></p>
+<p>Here are three (messy!) design docs from a variety of design tasks I've worked on for <a href="/jameslytle.com/projects/juicebox">Juicebox</a>. They are ordered oldest to newest, so the last one will have a format that feels closer to the current template above. I don't typically go back and clean up docs after the collaborative effort has been done to turn these into development tickets. I try to clean up and format things within reason while realtime work is happening, but after that I don't stress about it.</p>
+<p><img src="/jameslytle.com/content/projects/design-docs/screen-shot-2020-09-29-at-10.00.07-pm.png" alt="screen-shot-2020-09-29-at-10.00.07-pm">
+<img src="/jameslytle.com/content/projects/design-docs/screen-shot-2020-09-29-at-9.54.11-pm.png" alt="screen-shot-2020-09-29-at-9.54.11-pm">
+<img src="/jameslytle.com/content/projects/design-docs/screen-shot-2020-09-29-at-9.57.14-pm.png" alt="screen-shot-2020-09-29-at-9.57.14-pm"></p>
+<p><strong>Design is done. Now what?</strong>
+After the design is done, comes the best part. Now, it is used as the primary design requirements presentation tool with developers. Once a design is scheduled to start work on, I setup a meeting with stakeholders and we walk through just the Design Solution section. Usually I will start in the doc, and then move over to design files and prototypes for understanding and initial questions. Then we'll return back to the doc to go through requirements in greater detail and add notes or to dos realtime.</p>
+<p>If we've done a good job, developers have everything they need to start creating their own development tickets from the requirements here. When they are done, we'll get a link to the epic tickets to scan and feel confident all the requirements have made their way into the ticket details.</p>
+<p>Down the road, this document can always be referred back to for context and even basic understanding on what final designs are coming. This is handy especially for other departments that want to understand the gist of final designs without you having to present over again design files.</p>
+<h2>Learnings &#x26; what's next</h2>
+<p>Some parts in the template are more useful ongoing than other parts, but overall I think the three main sections feel right and are used on every design effort.</p>
+<p>Here are some future improvements I am interested in tinkering on:</p>
+<ul>
+<li>Add a short table of contents at the top. Most people could benefit from clearly jumping to the Design Solution.</li>
+<li>We tend to leave the gathering of styling requirements to the figma design files, but sometimes something can fall through the cracks. Should that be covered more here or in the design files?</li>
+<li>The "Tactics to complete" section doesn't seem especially useful.</li>
+<li>Figma urls are embedded in iframes, but aren't very useful unless I was more organized with frame sizes and component layout in the figma files. This would be fun to experiment with so image files don't need to be replaced for requirements section after updating.</li>
+</ul>
+<p>Finally, don't overburden your process. Do what works for you! But, if a design doc approach does help, that's great! I'd love to hear about it, and learn from you.</p>
+</div><p><a href="/jameslytle.com/projects">Back to projects</a></p></article></main></div></div>
+  </body>
+</html>
