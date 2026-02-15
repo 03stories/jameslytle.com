@@ -7,8 +7,7 @@ tags:
   - "UX"
   - "UI"
   - "Data Vis"
-cover: ./>
-  jb-rankedlist-bar-value-positioning@2x.png
+cover: ./jb-rankedlist-bar-value-positioning@2x.png
 clientLogo: ./juicebox_horizontal_orange_rgb.png
 summary: "The primary building block component of [Juicebox](/projects/Juicebox) data stories, is what we call a \"Slice\". They are unique set of charts and list components that have their own configuration and a specific set of common features (see [docs](https://docs.juiceboxdata.com/projects/juicebox/topics/juicebox_reference/slices/common_configuration.html)) that create the consistent user experience for both users and builders of Juicebox apps.  For *Slices, 2.0*, I'll walk through a specific challenge our team was facing and how a solution emerged with a new version of slices."
 draft: false

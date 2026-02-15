@@ -9,6 +9,7 @@ export default function ProjectsPage() {
       <ul className="card-list">
         {projects.map((project) => (
           <li key={project.slug} className="card">
+            {project.cover ? <img className="card-cover-image" src={project.cover} alt={`${project.title} cover`} /> : null}
             <h3>{project.title}</h3>
             <p className="meta">{formatDateLabel(project.date)}</p>
             <p>{project.headline || project.summary || ''}</p>
