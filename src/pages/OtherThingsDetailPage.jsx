@@ -20,7 +20,7 @@ export default function OtherThingsDetailPage() {
     <article>
       <h2>{album.title}</h2>
       <p className="meta">{formatDateLabel(album.date)}</p>
-      {Array.isArray(album.images) && album.images.length ? (
+      {album.slug !== 'photo-palette' && Array.isArray(album.images) && album.images.length ? (
         <div className="card-list">
           {album.images.map((image) => (
             <figure key={image} className="card">

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { applyTheme, createThemeFromPalette, resetTheme, saveTheme } from '../utils/themePalette';
 
-const DEFAULT_IMAGE = '/content/other-things/photo-palette/default-photo.jpg';
+const DEFAULT_IMAGE = new URL('../../content/other-things/photo-palette/default-photo.jpg', import.meta.url).href;
 const DEFAULT_SWATCHES = 8;
 
 function clamp(value, min, max) {
