@@ -61,7 +61,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--color-surface);
+  background: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -258,32 +258,64 @@ select:focus-visible {
   inset: 0;
 }
 
-.palette-marker {
+.palette-tool .palette-marker {
   position: absolute;
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  min-width: 24px;
+  max-width: 24px;
+  height: 24px;
+  min-height: 24px;
+  max-height: 24px;
   border-radius: 999px;
-  border: 2px solid var(--color-surface);
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-text) 38%, transparent), 0 2px 8px rgba(0, 0, 0, 0.26);
+  border: 1.5px solid #fff;
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--color-text) 42%, transparent),
+    0 2px 8px rgba(0, 0, 0, 0.28);
   color: #fff;
   display: grid;
   place-items: center;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
+  font-weight: 700;
   line-height: 1;
   padding: 0;
   margin: 0;
+  margin-bottom: 0;
+  width: 24px;
+  pointer-events: auto;
   cursor: grab;
   touch-action: none;
+  user-select: none;
+  transition: transform 120ms ease, box-shadow 120ms ease;
 }
 
-.palette-marker span {
+.palette-tool .palette-marker:hover {
+  transform: translateY(-1px) scale(1.08);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--color-text) 52%, transparent),
+    0 4px 12px rgba(0, 0, 0, 0.32);
+}
+
+.palette-tool .palette-marker:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px #fff,
+    0 0 0 4px var(--color-focus),
+    0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.palette-tool .palette-marker span {
   pointer-events: none;
+  letter-spacing: -0.01em;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
 }
 
-.palette-marker.is-active {
+.palette-tool .palette-marker.is-active {
   cursor: grabbing;
-  transform: scale(1.08);
+  transform: scale(1.12);
+  box-shadow:
+    0 0 0 2px #fff,
+    0 0 0 4px color-mix(in srgb, var(--color-focus) 65%, transparent),
+    0 5px 14px rgba(0, 0, 0, 0.34);
 }
 
 .palette-swatches {
