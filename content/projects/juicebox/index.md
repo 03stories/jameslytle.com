@@ -7,6 +7,7 @@ tags:
   - "UX"
   - "Data Vis"
   - "UI"
+cover: ./jb-header.png
 draft: false
 ---
 
