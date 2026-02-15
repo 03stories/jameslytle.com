@@ -2,12 +2,16 @@ import { Link } from 'react-router-dom';
 import albums from '../content/other-things.json';
 import { formatDateLabel } from '../utils/formatDate';
 
+const HIDDEN_ALBUM_SLUGS = new Set(['finestra-screenshots', 'juicebox-apps']);
+
 export default function OtherThingsPage() {
+  const visibleAlbums = albums.filter((album) => !HIDDEN_ALBUM_SLUGS.has(album.slug));
+
   return (
     <section>
       <h2>Other Things</h2>
       <ul className="card-list">
-        {albums.map((album) => {
+        {visibleAlbums.map((album) => {
           const dateLabel = formatDateLabel(album.date);
 
           return (
