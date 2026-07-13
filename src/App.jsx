@@ -22,12 +22,14 @@ function ScrollToTopOnRouteChange() {
 }
 
 export default function App() {
+  const location = useLocation();
+
   useEffect(() => {
     hydrateThemeFromStorage();
   }, []);
 
   return (
-    <div className="app-shell">
+    <div className={`app-shell${location.pathname === '/' ? ' home-shell' : ''}`}>
       <ScrollToTopOnRouteChange />
       <a className="skip-link" href="#main-content">
         Skip to main content

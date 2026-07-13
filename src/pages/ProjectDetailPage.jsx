@@ -18,7 +18,16 @@ export default function ProjectDetailPage() {
   return (
     <article>
       <h2>{project.title}</h2>
-      <p className="meta">{formatDateLabel(project.date)}</p>
+      <div className="project-meta">
+        <p className="meta">{formatDateLabel(project.date)}</p>
+        {project.tags?.length ? (
+          <ul className="project-tags" aria-label="Project tags">
+            {project.tags.map((tag) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
+        ) : null}
+      </div>
       <div className="prose" dangerouslySetInnerHTML={{ __html: project.html }} />
       <p>
         <Link to="/projects">Back to projects</Link>
