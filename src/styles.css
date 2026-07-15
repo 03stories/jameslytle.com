@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@400..700&display=swap');
 
 :root {
   color-scheme: light;
@@ -226,11 +226,14 @@ select:focus-visible {
 }
 
 .home-shell {
+  --home-font: 'Geologica', 'Helvetica Neue', Arial, sans-serif;
   max-width: 1360px;
   padding: 1.25rem 2rem 0;
   background: #f4f2ed;
   color: #171613;
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: var(--home-font);
+  font-kerning: normal;
+  font-optical-sizing: auto;
 }
 
 .home-shell .site-header {
@@ -242,14 +245,15 @@ select:focus-visible {
 }
 
 .home-shell .site-header h1 {
-  font-family: 'Newsreader', Georgia, serif;
-  font-size: clamp(1.65rem, 2.5vw, 2.25rem);
-  font-weight: 500;
+  font-family: var(--home-font);
+  font-size: clamp(1.55rem, 2vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
 }
 
 .home-shell .site-header a {
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 0.875rem;
+  font-weight: 600;
 }
 
 .home-page {
@@ -259,6 +263,12 @@ select:focus-visible {
   --home-rule: #cbc8c0;
   --home-red: #dd3f2d;
   --home-indigo: #253d75;
+  --home-text-caption: 0.8125rem;
+  --home-text-meta: 0.875rem;
+  --home-text-body: 1rem;
+  --home-text-lede: clamp(1.25rem, 1.7vw, 1.75rem);
+  --home-text-project: clamp(2.45rem, 3.7vw, 4.25rem);
+  --home-text-display: clamp(3.05rem, 5vw, 5.7rem);
   margin: 0 -2rem;
   background: var(--home-paper);
 }
@@ -272,8 +282,13 @@ select:focus-visible {
 }
 
 .home-page h2 {
-  font-family: 'Newsreader', Georgia, serif;
-  font-weight: 400;
+  font-family: var(--home-font);
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+.home-page p {
+  text-wrap: pretty;
 }
 
 .home-page a {
@@ -307,18 +322,12 @@ select:focus-visible {
 }
 
 .home-figure-label {
-  display: flex;
-  gap: 1.25rem;
-  align-items: baseline;
   padding-top: 0.8rem;
-  border-left: 1px solid var(--home-rule);
   color: var(--home-muted);
-  font-size: 0.72rem;
-}
-
-.home-figure-label span {
-  padding-left: 0.8rem;
-  color: var(--home-red);
+  font-size: var(--home-text-caption);
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
 }
 
 .home-intro {
@@ -329,15 +338,12 @@ select:focus-visible {
 }
 
 .home-intro h2 {
-  max-width: 14ch;
+  max-width: 15ch;
   margin-bottom: 0;
-  font-size: clamp(3rem, 5.3vw, 5.8rem);
-  line-height: 0.97;
-  letter-spacing: -0.035em;
-}
-
-.home-intro h2 em {
-  font-weight: 400;
+  font-size: var(--home-text-display);
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: -0.028em;
 }
 
 .home-intro-copy {
@@ -347,10 +353,10 @@ select:focus-visible {
 
 .home-intro-copy > p,
 .home-contact p {
-  max-width: 42ch;
+  max-width: 45ch;
   color: #33322e;
-  font-size: 0.98rem;
-  line-height: 1.65;
+  font-size: var(--home-text-body);
+  line-height: 1.6;
 }
 
 .home-actions {
@@ -368,8 +374,8 @@ select:focus-visible {
   justify-content: space-between;
   min-height: 44px;
   padding: 0.7rem 1rem;
-  font-size: 0.78rem;
-  font-weight: 500;
+  font-size: var(--home-text-meta);
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -403,41 +409,28 @@ select:focus-visible {
 }
 
 .home-rail h3,
-.home-kicker,
-.home-role,
-.home-principles > p {
+.home-principles > h2 {
   color: var(--home-indigo);
-  font-size: 0.7rem;
+  font-family: var(--home-font);
+  font-size: var(--home-text-caption);
   font-weight: 600;
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
 
+.home-role {
+  color: var(--home-indigo);
+  font-size: var(--home-text-meta);
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  line-height: 1.4;
+}
+
 .home-rail p,
 .home-rail li {
   color: #34332f;
-  font-size: 0.78rem;
-  line-height: 1.6;
-}
-
-.home-rail ol {
-  padding: 0;
-  list-style: none;
-  counter-reset: principles;
-}
-
-.home-rail li {
-  counter-increment: principles;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
-}
-
-.home-rail li::before {
-  display: block;
-  margin-bottom: 0.4rem;
-  color: var(--home-red);
-  content: '0' counter(principles);
-  font-size: 0.68rem;
+  font-size: var(--home-text-body);
+  line-height: 1.55;
 }
 
 .home-work {
@@ -458,39 +451,37 @@ select:focus-visible {
   top: 1.5rem;
 }
 
-.home-kicker {
-  margin-bottom: 1.5rem;
-  color: var(--home-red);
-}
-
 .home-project-copy h2 {
   margin-bottom: 0.75rem;
-  font-size: clamp(2.25rem, 4vw, 4.2rem);
-  line-height: 1;
-  letter-spacing: -0.025em;
+  font-size: var(--home-text-project);
+  font-weight: 650;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
 }
 
 .home-project-copy .home-role {
   margin-bottom: 1.75rem;
 }
 
-.home-project-copy > p:not(.home-kicker):not(.home-role) {
-  max-width: 34ch;
+.home-project-copy > p:not(.home-role) {
+  max-width: 40ch;
   color: #3d3b36;
-  font-size: 0.9rem;
-  line-height: 1.65;
+  font-size: var(--home-text-body);
+  line-height: 1.6;
 }
 
 .home-project-copy .home-project-lede {
-  font-family: 'Newsreader', Georgia, serif;
-  font-size: clamp(1.35rem, 2vw, 2rem) !important;
-  line-height: 1.2 !important;
+  font-family: var(--home-font);
+  font-size: var(--home-text-lede);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
 }
 
 .home-text-link {
   display: inline-block;
   margin-top: 1rem;
-  font-size: 0.78rem;
+  font-size: var(--home-text-meta);
   font-weight: 600;
   text-underline-offset: 0.2em;
 }
@@ -595,11 +586,12 @@ select:focus-visible {
   color: #f5f2ec;
 }
 
-.home-principles > p {
+.home-principles > h2 {
+  margin-bottom: 0;
   color: #ff6955;
 }
 
-.home-principles ol {
+.home-principles ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
@@ -610,17 +602,11 @@ select:focus-visible {
 .home-principles li {
   padding: 0 2rem;
   border-left: 1px solid #6b6862;
-  font-family: 'Newsreader', Georgia, serif;
-  font-size: clamp(1.3rem, 2vw, 2rem);
-  line-height: 1.1;
-}
-
-.home-principles li span {
-  display: block;
-  margin-bottom: 0.65rem;
-  color: #ff6955;
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.72rem;
+  font-family: var(--home-font);
+  font-size: var(--home-text-lede);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.005em;
 }
 
 .home-contact {
@@ -633,8 +619,10 @@ select:focus-visible {
 .home-contact h2 {
   max-width: 14ch;
   margin-bottom: 0;
-  font-size: clamp(3rem, 5vw, 5.5rem);
-  line-height: 0.98;
+  font-size: clamp(3rem, 4.7vw, 5.25rem);
+  font-weight: 650;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
 }
 
 .home-contact > div {
@@ -727,10 +715,6 @@ select:focus-visible {
     padding-top: 3rem;
   }
 
-  .home-intro h2 {
-    font-size: clamp(2.8rem, 13vw, 4.5rem);
-  }
-
   .home-rail {
     grid-template-columns: 1fr;
     gap: 0;
@@ -775,7 +759,7 @@ select:focus-visible {
     padding: 3rem 1rem;
   }
 
-  .home-principles ol {
+  .home-principles ul {
     grid-template-columns: 1fr;
   }
 
