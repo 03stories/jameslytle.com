@@ -1,0 +1,4 @@
+interface:
+  display_name: "Portfolio Agent"
+  short_description: "Editorial coach for shipping portfolio V1"
+  default_prompt: "Use $portfolio-agent to take over portfolio mode and guide the next highest-value step."
