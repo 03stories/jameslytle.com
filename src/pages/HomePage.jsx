@@ -30,11 +30,10 @@ export default function HomePage() {
           </figure>
 
           <div className="home-intro">
-            <h2 id="home-heading">Design engineer and product design leader making complex products useful.</h2>
+            <h2 id="home-heading">Design engineer & product designer transforming ideas to production.</h2>
             <div className="home-intro-copy">
               <p>
-                I connect product strategy, interface design, production code, and AI behavior. I take ambiguous
-                problems from first principles to shipped products.
+                I'm a forward looking pragmatic product designer that enjoys turning new directions into reality.
               </p>
               <div className="home-actions">
                 <a className="home-primary-action" href="mailto:jameslytle@hey.com">
@@ -51,15 +50,15 @@ export default function HomePage() {
         <aside className="home-rail" aria-label="Current role and working approach">
           <section>
             <h3>Current role</h3>
-            <p>Senior product design lead at Juice Analytics.</p>
+            <p>Design Engineer & Product Lead at Juice Analytics.</p>
           </section>
           <section>
             <h3>Working range</h3>
-            <p>Product strategy<br />Interface design<br />Production code<br />AI behavior</p>
+            <p>Product strategy<br />UI / UX<br />AI Development<br />Protoyping</p>
           </section>
           <section>
             <h3>Working approach</h3>
-            <p>Self-directed, pragmatic, and thorough.</p>
+            <p>Self-directed, pragmatic, continuous improvement.</p>
           </section>
         </aside>
       </div>
@@ -67,13 +66,13 @@ export default function HomePage() {
       <div className="home-work">
         <article className="home-project home-project-forward">
           <div className="home-project-copy">
-            <h2>Forward / Insights Recap</h2>
+            <h2>Forward</h2>
             <p className="home-role">Product originator · Design and implementation lead</p>
-            <p className="home-project-lede">Turns customer data into personalized, interactive stories at scale.</p>
+            <p className="home-project-lede">Turns customer data into personalized, mobile-first narratives at scale.</p>
             <p>
-              I originated and independently bootstrapped Forward as a new product inside Juice Analytics—defining
-              the strategy, experience, AI behavior, and much of the initial production implementation. I now develop
-              it with the broader team.
+              I originated and independently bootstrapped Forward as a new product inside Juice Analytics by defining
+              the strategy, experience, AI behavior, initial production implementation. I now lead product direction with
+              with the broader team, expanding its market.
             </p>
             <a className="home-text-link" href="https://www.insightsrecap.com/">
               View live product <span aria-hidden="true">↗</span>
@@ -82,7 +81,7 @@ export default function HomePage() {
           <figure className="home-forward-pair">
             <img className="home-forward-mobile" src={projects.forward} alt="Forward mobile personalized story detail" />
             <img className="home-forward-wide" src={projects.forward} alt="Forward product landing experience" />
-            <FigureLabel>Personalized story experience · Product in the wild</FigureLabel>
+            <FigureLabel>Personalized narratives at scale</FigureLabel>
           </figure>
         </article>
 
