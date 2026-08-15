@@ -1,6 +1,6 @@
 # Portfolio Status
 
-Last updated: 2026-08-10
+Last updated: 2026-08-15
 
 ## V1 goal
 
@@ -8,49 +8,47 @@ See [PORTFOLIO_GOALS.md](./PORTFOLIO_GOALS.md): ship a focused portfolio for sen
 
 ## Current phase
 
-Assets
+Drafting
 
 ## Current focus
 
-Forward flagship case study
+Forward narrative draft
 
 ## Single recommended next action
 
-Verify the opener and end-response counts behind Forward's 60% completion and 87% annual-repeat metrics.
+Draft the Forward case study from its evidence-ready ledger, preserving anonymous metrics and documented placeholders.
 
 ## This week's three outcomes
 
-1. [ ] Complete the Forward fact ledger and story skeleton.
-2. [ ] Confirm the three-project V1 featured set.
-3. [ ] Choose three writing pieces and four to six lab items from existing material.
+1. [x] Complete the Forward fact ledger and story skeleton.
+2. [x] Confirm the three-project V1 featured set.
+3. [x] Choose three writing pieces and four to six lab items from existing material.
 
 ## Readiness
 
 | Item | Level | Blocking issue | Next proof |
 |---|---|---|---|
-| Home | Draft-ready | Positioning is specific, but audience priority is not confirmed and copy contains errors/repetition | Confirm audience, then run a focused editorial pass |
-| Forward | Evidence-ready | Core story, two decisions, 9,772 sends, qualitative demand, and public-safe engagement metrics are captured; exact engagement denominators and assets remain unverified | Verify opener and end-response counts |
-| Juicebox | Skeleton | Substantial narrative and visuals exist, but role, decisions, and outcomes are not crisply evidenced | Build a fact ledger from the existing case study |
-| Third case study | Not assessed | Finestra, Slices, and Design Docs each offer different signals | Select after Forward evidence is captured |
-| Lab | Skeleton | Photo Palette is a working build; other items are mostly thin albums | Curate four to six distinct artifacts |
-| Writing | Skeleton | Eight external pieces are listed on About, but none are prioritized | Choose three pieces that reinforce positioning |
+| Home | Draft-ready | Hybrid role emphasis is confirmed, but public copy still needs alignment and contains errors/repetition | Align Home copy after the featured set is frozen |
+| Forward | Evidence-ready | Core story, decisions, outcomes, QA workflow, and reflection are captured; the process visual remains a documented placeholder | Create the anonymized Sankey when source is available |
+| Juicebox | Evidence-ready | The interview spine now covers ownership, decisions, implementation boundaries, qualitative outcomes, and current reflection; the visual comparison is a documented placeholder | Supply screenshots when available |
+| Finestra | Evidence-ready | Now 17/21 with adoption, explicit boundaries, reflection, rich assets, and a firsthand wall-scale-preview tradeoff | Curate assets during drafting |
+| Lab | Draft-ready | Four distinct artifacts are frozen; OpenIDEO's strongest participation fact still needs verification during copywriting | Draft compact proof cards |
+| Writing | Draft-ready | Three complementary pieces are frozen for V1; public About still lists all eight | Curate public presentation during implementation |
 | About/contact | Skeleton | Contact and resume exist; About positioning and links appear stale | Verify facts and curate copy |
 
 Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Presentable, Shipped.
 
 ## Blocking gaps
 
-- Forward's engagement percentages still need exact opener and end-response counts.
-- The preferred emphasis between design engineering and product leadership is not confirmed.
-- No third major case study has been selected.
+- None prevent narrative drafting; documented asset and verification gaps remain bounded.
 
 ## Last session
 
-- Captured: No new evidence; retained roughly 13,000 narratives processed, 9,772 sent after defined quality gating, and permission to publish the scale and engagement figures.
-- Changed: Refreshed portfolio status for a planning-state baseline commit; public portfolio content remains untouched.
-- Verified: Forward remains Evidence-ready, with send volume kept distinct from the unknown opener and end-response denominators.
-- Deferred: Engagement denominators, precise QA workflow, client identity, assets, copy edits, redesign work, and implementation.
+- Captured: Four complementary Lab artifacts covering a working browser utility, cross-functional process, physical craft, and community facilitation.
+- Changed: Froze the Lab set, merged screenshot galleries into parent cases, and advanced from Skeletons to Drafting; public portfolio content remains untouched.
+- Verified: All four selected artifacts have inspectable repository evidence; Photo Palette is a runnable implementation.
+- Deferred: OpenIDEO participation verification, Finestra asset/link verification, Editor screenshots, broader outcomes, Forward Sankey, public copy edits, redesign work, and implementation.
 
 ## Next review trigger
 
-James provides exact opener and end-response counts or confirms they are unavailable.
+The Forward narrative is drafted from its evidence ledger.

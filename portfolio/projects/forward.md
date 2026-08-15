@@ -1,6 +1,6 @@
 # Project: Forward / Insights Recap
 
-Last updated: 2026-08-08
+Last updated: 2026-08-15
 
 ## Classification
 
@@ -18,7 +18,7 @@ Last updated: 2026-08-08
 | Importance of problem | 3 | Customer-success teams could not scale consistent ROI storytelling beyond top accounts, exposing retention risk across the long tail | High |
 | Personal ownership | 3 | James owned the concept through MVP deployment and the first client proposal pitch, then led product direction for the first production release | High |
 | Decision richness | 2 | Two pivotal tradeoffs are documented: preserve narrative focus over exploration, and use AI for exploration while keeping scaled output deterministic and human-approved | High |
-| Outcome | 2 | Paid pilot, 9,772 narratives sent from roughly 13,000 processed, strong feedback, over 60% completion among openers, and 87% annual-repeat intent among finishers | High; engagement denominators pending |
+| Outcome | 2 | Paid pilot, 9,772 narratives sent from roughly 13,000 processed, strong feedback, 864 of 1,448 opened narratives completed, and 715 of 864 completed narratives selected annual-repeat intent | High |
 | Visual/interaction quality | ? | One Home image observed; insufficient inventory | Low |
 | Differentiation | 3 | Newest AI, product-origination, and production signal | Medium |
 | Technical/Design Engineer signal | 3 | James owned the frontend, narrative AI skill design/development, and the pipeline generating thousands of narratives | High |
@@ -51,11 +51,15 @@ Last updated: 2026-08-08
 | F-021 | AI supported narrative exploration and data-based condition definitions, while humans provided final QA before the approved system scaled output. | Firsthand answer, 2026-08-08 | High | Confirm precise QA workflow before public copy | Decision 2 decision |
 | F-022 | The product emphasized tooling that enabled oversight and approval at scale. | Firsthand answer, 2026-08-08 | High | Confirm public-safe | Decision 2 result |
 | F-023 | End-user feedback was strongly positive; many respondents asked to receive narratives more often and said they had shared or planned to share them with colleagues. | Firsthand answer, 2026-08-08 | High | Confirm public-safe; representative quote needed | Outcome |
-| F-024 | More than 60% of recipients who opened a narrative finished it. | Firsthand answer, 2026-08-08 | High; denominator unknown | Confirm public-safe | Quantitative outcome |
-| F-025 | Of users who reached the end, 87% said they would like to receive the experience again the following year. | Firsthand answer, 2026-08-08 | High; denominator unknown | Confirm public-safe | Quantitative outcome |
+| F-024 | Of 1,448 opened narratives, 864 were completed end to end (60%). | Supplied campaign narrative YAML, 2026-08-15 | High | Yes; anonymous campaign counts only | Quantitative outcome |
+| F-025 | Of 864 completed narratives, 715 selected “Yes” for receiving the experience again the following year (83%). | Supplied campaign narrative YAML, 2026-08-15 | High | Yes; anonymous campaign counts only | Quantitative outcome |
 | F-026 | The first client run processed roughly 13,000 narratives and sent 9,772. | Firsthand answer, 2026-08-08 | High | Yes | Shipped scale |
 | F-027 | Defined gating conditions determined whether each processed narrative was worth sending. | Firsthand answer, 2026-08-08 | High | Yes | Product judgment and shipped result |
 | F-028 | The scale and engagement figures may be shared publicly. | Explicit user confirmation, 2026-08-08 | High | Yes | Claims governance |
+| F-029 | Human QA accepted the stylistic direction and overall design feel rather than reviewing every generated narrative. | Firsthand answer, 2026-08-15 | High | Confirm public-safe wording | Decision 2 trust model |
+| F-030 | Deterministic template conditions were evaluated before generation through a designed managed process. | Firsthand answer, 2026-08-15 | High | Confirm public-safe wording | Decision 2 trust model |
+| F-031 | The production review mechanism was a CLI command that exported a CSV with one row for every template and condition. | Firsthand answer, 2026-08-15 | High | Confirm public-safe wording; anonymize any artifact | Decision 2 evidence |
+| F-032 | James would invest more design time in observability infrastructure for AI-generated content because tracking and understanding changes is now the limiting factor. | Firsthand answer, 2026-08-15 | High | Confirm public-safe wording | Reflection |
 
 ## Interview log
 
@@ -107,6 +111,39 @@ Last updated: 2026-08-08
 - New contradiction or gap: The 9,772 sent establishes campaign scale, but not the exact number of openers or end-of-narrative respondents behind the two percentages.
 - Files updated: This ledger, portfolio status, inventory, and content gaps.
 
+### 2026-08-15 — Metric denominators verified
+
+- Question: How many recipients opened a narrative, and how many answered the “again next year” question after finishing?
+- Answer/source: The supplied production narrative YAML records 9,772 narratives sent, 1,448 opened, 864 completed, and 715 “Yes” selections for receiving it again the following year.
+- Facts captured: Completion was 864 of 1,448 opened narratives (60%); annual-repeat intent was 715 of 864 completed narratives (83%).
+- Contradiction resolved: The earlier recalled 87% repeat-intent figure is superseded by the supplied artifact's 83%.
+- Privacy decision: Retain only anonymous aggregate counts and definitions; exclude client identity, identifiers, URLs, campaign dates, and unrelated narrative fields.
+- Files updated: This ledger, portfolio status, inventory, and content gaps.
+
+### 2026-08-15 — Human approval unit clarified
+
+- Question: Did human QA approve every generated narrative, or the narrative-and-condition system before deterministic generation?
+- Answer, preserving useful wording: “Human QA handled stylistic and overall design feel acceptance, while deterministic template conditions were evaluated before generation via a designed managed process.”
+- Facts captured: Human acceptance covered style and overall experience; deterministic conditions were evaluated through a managed pre-generation process; individual generated narratives were not the human-review unit.
+- New contradiction or gap: None. Public-safe phrasing and a supporting artifact remain needed.
+- Files updated: This ledger, portfolio status, inventory, and content gaps.
+
+### 2026-08-15 — Process-asset placeholder
+
+- Question: What existing artifact can demonstrate the managed condition-review process without revealing client details?
+- Answer, preserving useful wording: “Let's leave as a placeholder. I can have an image of a Sankey chart that visualizes the paths, but the actual real client process was me running a CLI command to export a CSV with a row for every template + condition.”
+- Facts captured: Production review used a CLI-generated CSV with one row per template and condition; a future anonymized Sankey may explain the paths.
+- Editorial decision: Label any Sankey as an explanatory visualization, not the production interface or review mechanism.
+- Files updated: This ledger, portfolio status, content gaps, and decisions.
+
+### 2026-08-15 — Reflection
+
+- Question: What did shipping Forward change about how you design AI products, and what would you do differently now?
+- Answer, preserving useful wording: “I would invest more design time in the observability infrastructure of AI generated content. The ability to track and understand changes is really the limiting factor in this new age of development.”
+- Facts captured: Future work would prioritize observability infrastructure; change tracking and comprehension are the limiting design constraint.
+- New contradiction or gap: None.
+- Files updated: This ledger, portfolio status, inventory, and content gaps.
+
 ## Story skeleton
 
 ### Context: what was happening?
@@ -138,8 +175,8 @@ CSMs had to cobble together data from ad hoc reports and spend hours creating de
 
 - Situation: Forward needed to personalize and output thousands of narratives without sacrificing trust.
 - Options: Allow AI to generate non-human-reviewed copy at scale with intensive prompt guardrails; or constrain production generation to an approved deterministic system.
-- Constraint: The team needed personalization at scale with reliable human oversight and final QA.
-- Decision: Use AI for exploratory narrative work and data-based condition definitions, then scale through a deterministic production system with human approval.
+- Constraint: The team needed personalization at scale without requiring humans to inspect thousands of individual outputs.
+- Decision: Use AI for exploratory narrative work and data-based condition definitions; have humans accept the stylistic direction and overall design feel; evaluate deterministic template conditions through a managed process before generation.
 - Result: The pipeline could generate thousands of narratives while preserving oversight and approval as core product capabilities.
 - Evidence: Firsthand account; pipeline, condition-definition, or approval-tooling artifact needed.
 
@@ -149,11 +186,11 @@ A paid pilot and first production release, including a frontend, narrative AI sk
 
 ### Outcome and reflection
 
-- Quantitative: Roughly 13,000 narratives were processed and 9,772 passed defined gating conditions and were sent. More than 60% of recipients who opened a narrative finished it. Among users who reached the end, 87% said they wanted the experience again the following year. The figures are public-safe; engagement denominators remain to be verified.
+- Quantitative: Roughly 13,000 narratives were processed and 9,772 passed defined gating conditions and were sent. Of 1,448 opened narratives, 864 were completed end to end (60%). Of those 864 completed narratives, 715 selected “Yes” for receiving the experience again the following year (83%). These anonymous aggregate figures are public-safe.
 - Qualitative: End users asked to receive narratives more often and reported sharing, or planning to share, them with colleagues. A public-safe representative quote is still needed.
 - Business/organizational: The first proposal pitch materialized into a paid pilot and production release; the product later expanded into broader team direction.
-- Learning: Unknown.
-- What I would change now: Unknown.
+- Learning: Generating content is only part of the system; teams need observability to understand how AI-assisted content changes over time.
+- What I would change now: Invest more design time in observability infrastructure and change tracking from the beginning.
 
 ## Asset inventory
 
@@ -161,6 +198,8 @@ A paid pilot and first production release, including a frontend, narrative AI sk
 |---|---|---|---|---|
 | Forward Home image | Screenshot/image | A visible mobile narrative experience | `content/site/home/forward-insights-recap-home.png` | Yes, but reused |
 | Live product | Website | A public product exists | https://www.insightsrecap.com/ | Needs content verification |
+| Condition-path Sankey | Planned explanatory visualization | How templates and conditions branch before deterministic generation | Placeholder; source must be anonymized | No |
+| Template-condition CSV | Production review artifact | The real managed review mechanism: one row per template and condition | Private/raw artifact not supplied | No |
 
 ## Narrative draft
 
@@ -168,10 +207,9 @@ Deferred until the fact ledger and story skeleton support it.
 
 ## Remaining gaps
 
-1. Exact opener and end-response denominators for the engagement metrics.
-2. Additional visual and technical evidence.
-3. Public-safe wording for client, architecture, scale, and the precise QA workflow.
+1. Condition-path Sankey placeholder or anonymized source artifact.
+2. Public-safe wording for client, architecture, scale, and QA workflow.
 
 ## Single next action
 
-Verify the opener and end-response counts behind Forward's 60% completion and 87% annual-repeat metrics.
+Confirm the portfolio's primary role emphasis before drafting public case-study copy.

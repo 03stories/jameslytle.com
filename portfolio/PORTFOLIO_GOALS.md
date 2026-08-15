@@ -2,15 +2,15 @@
 
 ## Objective
 
-Make the portfolio credible for senior design-engineering and product leadership opportunities, especially where complex data or AI products need to move from idea to production.
+Make the portfolio credible for intentionally hybrid senior roles spanning design engineering, product design, and product leadership, especially where complex data or AI ideas need to move into production.
 
 ## Primary audience
 
-Hiring managers and product/design leaders evaluating senior design-engineering or product leadership candidates. The preferred role emphasis and company profile still need confirmation.
+Hiring managers and product/design leaders evaluating an intentionally hybrid senior candidate with equal product judgment, design craft, and implementation depth. The preferred company profile still needs confirmation.
 
 ## Positioning
 
-James is a design engineer and product designer who transforms complex data and AI product ideas into production.
+James is a hybrid design engineer and product designer who frames, designs, and helps build complex data and AI products from idea through production.
 
 ## Portfolio promise
 
