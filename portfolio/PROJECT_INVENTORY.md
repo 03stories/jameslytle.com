@@ -6,8 +6,16 @@ Scores are conservative and evidence-based. `?` marks missing evidence; ranges s
 |---|---:|---|---|---|---:|---:|---:|---:|---:|---:|---:|---|---|---|
 | Forward / Insights Recap | Current | Juice Analytics | `insightsrecap.com` | One reused Home image observed | 3 | 3 | 2 | 2 | ? | 3 | 3 | 16–19 | Full case study | Must Ship |
 | Juicebox | 2020–current | Juice Analytics | Juicebox product page | Extensive screenshots/GIFs | 3 | 3 | 3 | 2 | 2 | 2 | 2 | 17 | Full case study; Evidence-ready | Must Ship |
-| Finestra Art App | 2011–2017 | Personal/co-founded | Closed | Extensive product/process assets | 2 | 3 | 3 | 2 | 2 | 3 | 2 | 17 | Full case study; Evidence-ready | Must Ship |
+| Finestra Art App | 2011–2017 | Personal/co-founded | Closed | Extensive product/process assets | 2 | 3 | 3 | 2 | 2 | 3 | 2 | 17 | Project snapshot; Evidence-ready | Must Ship supporting |
 | Slices 2.0 | 2017 | Juice Analytics | Documentation link | Extensive UI/process assets | 2 | 3 | 3 | 1 | 2 | 2 | 1 | 14 | Supporting decision chapter within Juicebox | Must Ship supporting |
+| Forward Pipeline Canvas | 2026 | Juice Analytics / internal POC | None observed | Working single-file app, plans, QA guide, 37 checks | 3 | 3 | 3 | 1 | 1? | 3 | 3 | 17 | Forward evidence or Lab artifact | Should Improve |
+| Forward Media Tools | 2026 | Juice Analytics / internal tool | None observed | Deterministic CLI, review gallery, audits, render evidence | 2 | 3? | 2 | 1 | 2 | 1 | 3 | 14 | Forward evidence or Lab artifact | Should Improve |
+| DataShorts | 2025–2026 | Juice Analytics | Private repository | Animated chart components and Forward integration | 2 | 2 | 2 | 1 | 2 | 1 | 3 | 13 | Forward evidence or Lab artifact | Should Improve |
+| Forward Narrative Claude Skill | 2025–2026 | Juice Analytics | Private team deployment | Skill, examples, references, changelog, Dispatch MCP integration, three synthetic public visuals | 3 | 3 | 3 | 2 | 2 | 3 | 3 | 19 | Full case study; Draft-ready | Must Ship |
+| AI Data Sidekick | 2025 | Standalone POC | Private repository | Working voice/chat/data-analysis app | 2 | 2? | 2? | 1 | ? | 2 | 3 | 12–16 | Project snapshot or Lab candidate | Discovery |
+| Text-to-Movie | 2025 | Standalone POC | None observed | Working authoring/animation prototype | 1 | 3? | 2 | 1 | 2 | 3 | 3 | 15 | Lab candidate; possible Forward-process evidence | Discovery |
+| Canvas Plan | 2025 | Standalone POC | None observed | Working spatial AI-context prototype and screenshot | 1 | 3? | 3 | 1 | 2 | 3 | 3 | 16 | Lab candidate | Discovery |
+| Timespan | 2026 | Personal | Public GitHub | Working Electron/D3 media timeline, tests, mockup | 1 | 3 | 2? | 1 | 1 | 3 | 3 | 14–15 | Lab or project snapshot | Discovery |
 | Design Docs | 2018 | Juice Analytics | None observed | Template and document screenshots | 2 | 3 | 2 | 1 | 1 | 2 | 2 | 13 | Lab/process artifact | Must Ship |
 | Photo Palette | Current | Personal | Internal route | Working tool and screenshots | 1 | 3 | 2? | 1 | 2 | 2 | 3 | 14 | Lab artifact | Must Ship |
 | Silverpop | 2013 | Silverpop | None observed | Multiple UI iterations | 2 | 2? | 2 | 1 | 2 | 1 | 0 | 10–12 | Project snapshot | Post-V1 |
@@ -53,6 +61,22 @@ Scores are conservative and evidence-based. `?` marks missing evidence; ranges s
 - Technical/Design Engineer signal: James designed and engineered the marketing site and did most Preview web frontend development; his co-founder owned native iOS implementation.
 - Unknowns affecting score: Broader business-operation boundaries, press/link verification, and external support before making an absolute “first app” claim.
 
+### Newly discovered recent work
+
+- Local repository history reveals a recent Forward authoring-tool constellation absent from the original inventory: Pipeline Canvas, Forward Media Tools, DataShorts, and Juice Skills.
+- Pipeline Canvas is the strongest potential third anchor. Its documented decisions include spatial-first rather than chat-first authoring, a faithful but advisory browser engine, byte-preserving round trips, structured visibility into branching logic, and live folder synchronization.
+- James built the complete Pipeline Canvas prototype in collaboration with Claude Code. It has unusually strong POC verification: 37 headless checks and 100/100-row parity with the production pipeline engine.
+- James has used Pipeline Canvas locally across a few projects to improve observability of pipeline-project configuration. Because it remains a self-used POC without broader adoption, it is supporting Forward evidence or a Lab artifact rather than the third anchor.
+- Forward Media Tools adds deterministic, auditable visual-asset generation, provenance tracking, player-specific validation, and human visual review. It currently reads as supporting evidence for Forward rather than an independent outcome story.
+- The deployed Forward Narrative Claude Skill is the selected third anchor. James developed and maintains it entirely; CTO Chris leads Dispatch, and James collaborated with him on the MCP/skill boundary. Other team members use the skill weekly for demo narratives and design prototypes.
+- The skill's documented architecture separates narrative judgment and convention enforcement from Dispatch's permissions, persistence, sharing, and authoritative schema validation. It supports portable standalone use and targeted section/group updates through stable IDs.
+- Before the skill, James alone created narratives locally and moved them through pull request, merge, and deployment before a URL could be shared—a process that could take multiple days and constrained customized sales demos. The deployed workflow lets the full team create and iterate through Claude Code; production is now the fastest step, shifting attention to the prospect relationship and story.
+- James established a continuous-improvement process from teammates' Claude sessions: preserve specific corrections, synthesize recurring patterns, reject one-off preferences, and incorporate generalizable changes into the appropriate layer. The repository journal confirms this process and its preference for better product defaults over accumulating skill prose.
+- Demonstrated improvements include responsive chart defaults, coordinated headline and striped-bar emphasis, appropriate photography sourcing, and validation against the product's installed icon set.
+- DataShorts demonstrates reusable component work, but its shared ownership and independent outcomes need clarification.
+- AI Data Sidekick, Text-to-Movie, Canvas Plan, and Timespan add recent voice-AI, creative-authoring, spatial-AI, and D3/Electron build evidence. None yet has the stakes or outcomes required to displace an anchor.
+- GitHub's public repository listing exposes only a small subset of the local work. `timespan` is the clearest recent public standalone repository; most high-value Forward prototypes are private or have no public remote.
+
 ## Portfolio coverage
 
 | Signal | Best evidence | Coverage | Gap or redundancy |
@@ -70,13 +94,15 @@ Scores are conservative and evidence-based. `?` marks missing evidence; ranges s
 
 ## Proposed featured set
 
-1. Forward / Insights Recap — flagship
+1. Forward / Insights Recap — recent flagship
 2. Juicebox — complex data-product system
-3. Finestra Art App — entrepreneurship and consumer/mobile range
+3. Forward Narrative Claude Skill — AI-enabled team workflow and organizational leverage
+
+Supporting project snapshot: Finestra Art App — entrepreneurship and consumer/mobile range
 
 ## Selection rationale
 
-The frozen V1 set makes James credible as an equal hybrid across product judgment, design craft, and implementation. Forward supplies the newest AI/product/build signal; Juicebox supplies complex systems depth; Finestra adds entrepreneurship, consumer/mobile range, web implementation, bounded adoption, and an honest closure reflection.
+Forward, Juicebox, and the Forward Narrative Claude Skill form three distinct stories despite sharing one product ecosystem: customer-facing product origination and scale; long-horizon platform and authoring-system design; and an internal AI workflow that removed a multi-day sales-demo bottleneck. Finestra remains visible as a supporting entrepreneurship and consumer/mobile snapshot.
 
 ## Writing candidates
 

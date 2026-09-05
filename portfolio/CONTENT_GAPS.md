@@ -9,7 +9,7 @@
 
 ## Interview queue
 
-No active interview question. Proceed to narrative drafting; return only when a documented evidence gap blocks a claim.
+No active interview questions. Deferred visual replacements remain documented below.
 
 ## Resolved gaps
 
@@ -34,11 +34,17 @@ No active interview question. Proceed to narrative drafting; return only when a 
 | G-020 | James rejected the conventional dimensions-only listing pattern and prioritized wall-scale preview despite limited sensors; it became Finestra's most talked-about capability. Any absolute “first app” claim requires verification or qualification. | `projects/finestra-art-app.md` | Firsthand answer / High | 2026-08-15 |
 | G-006 | Selected three V1 pieces: Another Hot Data Trend — Same Timeless Goal; Visualization Techniques We All Knew at 4 Years Old; and Data Discussion Etiquette from Brad Pitt. They cover product judgment, visual craft, and human-centered communication without redundancy. | `PROJECT_INVENTORY.md` | Live-page audit / High; Quora links unverified | 2026-08-15 |
 | G-021 | Selected four V1 Lab artifacts: Photo Palette, Design Docs, Mural, and OpenIDEO Atlanta. Up Up and Away is deferred; Juicebox and Finestra galleries merge into their parent cases. | `PROJECT_INVENTORY.md` | Repository and artifact audit / High | 2026-08-15 |
+| G-022 | Juicebox remains an active technology platform with live sign-in and workspace documentation. Use the current product-specific overview or sign-in; the legacy `/juicebox` marketing URL now redirects to the homepage. | `projects/juicebox.md` | Official current pages / High | 2026-09-05 |
+| G-023 | James built Pipeline Canvas completely with Claude Code and used it locally across a few projects to support observability of pipeline-project configuration. It remains a self-used POC and should support Forward or the Lab rather than serve as the third anchor. | `projects/forward-pipeline-canvas.md` | Firsthand answers and repository evidence / High | 2026-09-05 |
+| G-024 | Before the skill, James alone manually created narratives locally and moved them through pull request, merge, and deployment before a shareable URL existed; this could take multiple days and bottleneck sales. After deployment, the full team can rapidly create and iterate through Claude Code, making production the fastest step and shifting attention to sales strategy. | `projects/forward-narrative-skill.md` | Firsthand answer / High | 2026-09-05 |
+| G-025 | James turned recurring corrections from teammates' Claude sessions into a curated continuous-improvement process. He separated individual preferences from generalizable rules and incorporated improvements into the appropriate layer, including coordinated bar-chart emphasis, photography sourcing, installed-icon validation, and underlying responsive/default behavior. | `projects/forward-narrative-skill.md` | Firsthand answer and Narrative Review Journal / High | 2026-09-05 |
+| G-026 | James approved public description of Dispatch and MCP at the responsibility-boundary level and approved synthetic skill-session and narrative-output examples. The case now includes synthetic workflow, improvement-loop, and bar-insight visuals while excluding internal URLs, client data, and hosted-database implementation details. | `projects/forward-narrative-skill.md` | Firsthand answer and public draft / High | 2026-09-05 |
 
 ## Claims requiring care
 
 - Forward ownership boundaries are captured; client, architecture, and scale details still need public-safety confirmation before expansion.
 - Forward metrics are approved for public use as anonymous aggregates; client-identifying fields and unrelated narrative data are excluded.
+- Forward Narrative Skill may describe Dispatch and MCP at the responsibility-boundary level and use synthetic examples; exclude internal URLs, client data, and hosted-database implementation details.
 - Client work may contain confidential outcome details; confirm public-safe wording before publishing.
 - Legacy employer and role descriptions should be verified before updating About or resume material.
 - Existing Juicebox screens are historical evidence; do not present them as the current Editor UX. Preserve customer reporting as the still-accurate platform framing.

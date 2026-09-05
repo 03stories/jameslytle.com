@@ -1,123 +1,90 @@
 ---
 title: "Juicebox"
 date: 2020-06-27
-headline: "Customer Reporting Platform"
+headline: "Designing a customer-reporting platform that could grow"
 client: "Juice Analytics"
 tags:
+  - "Product Design"
+  - "Design Engineering"
+  - "Data Visualization"
   - "UX"
-  - "Data Vis"
-  - "UI"
 cover: ./jb-header.png
+summary: "I led interaction and interface design across Juicebox's evolution, from its configurable Slice system to a self-service Editor built for complex customer reports."
 draft: false
 ---
 
-[Juicebox](https://www.juiceanalytics.com/juicebox) is the latest (5+ yr) product iteration journey towards the elusive, perfect digital platform for people to tell stories with data. In my time at Juice Analytics, this is our second, and much better, attempt to achieve this goal.<a href="#aside"><sup>(1)</sup></a> I'll describe the product goals at a high level, and then touch on some of the unique design problems and solutions in Juicebox.
+[Juicebox](https://www.juiceanalytics.com/juicebox-for-databricks) is an active, configurable customer-reporting platform for turning data into guided, interactive stories. I led interaction and interface design across its evolution, from the building-block system used by internal app developers to the self-service Editor customers use to author reports.
 
-# What exactly is data storytelling?
-That is what researchers and practitioners have been trying to figure out, particularly in the last 10 years. It's a multi-layered challenge in practice, as there are many ways data can be gathered, stored, and presented. In my early days at Juice, I designed an exercise primer called 30 Days to Data Storytelling<a href="#aside"><sup>(2)</sup></a>, which spans a broad set of examples from principles.
+My work sat between product architecture, interaction design, and implementation. I designed reusable product systems, translated recurring client patterns into configuration models, built working definition prototypes, and implemented targeted frontend refinements. Engineering partners owned the underlying platform and production React system.
 
-Let me attempt to come up an answer in one sentence:
+![A Juicebox customer-reporting experience](./jb-header.png)
 
-> Data storytelling is a form of communication where the context of a story is told with the presentation of data.
+# From custom applications to a product system
 
-Not all stories or story types need data-centric views to be well told, but on the other hand, many presentations have been built that communicate data in terrible ways. As a designer, this space of designing with data has been rich with challenges and rewards. I'll break up this journey over the last 10 years into the early years (data visualization fundamentals), and the last 5 years of working on Juicebox (data & ux design).
+Before Juicebox, our team had designed and developed roughly 30–40 custom data applications. Repeated patterns were becoming visible: non-analytical audiences needed purposeful messaging, a guided narrative flow, and consistent visual building blocks—not a blank dashboard canvas.
 
-# The Early Years 
-*2010~2015 | Data visualization fundamentals*
+Juicebox turned those patterns into a platform. A report could contain multiple Stories, each assembled from configurable components called Slices. Shared interaction behavior made the experience coherent for end users, while common configuration gave app developers a reusable system for creating different customer reports.
 
-Fundamentally, the data storytelling design problem is an information design problem. I had to learn this new material of data, and what the best ways to form it were to solve the problem of helping people explore and understand it. 
+The product tension was constant: every new option increased flexibility, but too much flexibility would turn the platform into a development language. The goal was a smaller family of richer building blocks that made good reporting decisions easier.
 
-I cut my teeth in the field by following people like Edward Tufte<a href="#aside"><sup>(3)</sup></a>, Ben Schneiderman, and Mortiz Stefaner, amongst others. At Juice there were many data vis applications from consulting contracts that I would lead the interaction and interface design on. In those days there were few well designed charting frameworks available, so this was a great time to apply principles in practice one element at time -- working out our own visual language for a data visualization application. 
+![A public Juicebox report showing guided narrative and data visualization](./nashvillehealth.png)
 
-Naturally, once you've done 30-40 projects from scratch, any professional can see the repeated patterns that result in successful projects. Through this process I created a big fat list of principles<a href="#aside"><sup>(4)</sup></a> to keep in mind on any project. 
+# Decision 1: Learn through real client work before opening self-service
 
-During this time we started building our first data visualization product, attempting to address a faster way to design and develop the 80% of consulting requests we would get. At this stage, we were really only starting to scratch the surface on how to think about data visualization as a product, much less a platform. Some of the key differentiating patterns we landed on are expressed in a research poster paper entitled *Sharable Data Presentations for a Non-Analytical Audience*. I wrote and presented it at IEEE Vis 2013.
+Our earlier product exposed editing from the beginning. For Juicebox, we chose to mature the platform first while internal developers configured client applications.
 
-![Paper PDF](./vis-2013-slice-lytle-gemignani.jpg)
-![Poster PDF](./vis-2013-poster-slice-lytle-gemignani.jpg)
+Building a self-service Editor too early would have forced us to formalize abstractions before we understood which patterns were genuinely reusable. Working through varied client reports let us learn where customization was valuable, where consistency mattered, and which options created unnecessary complexity.
 
-![Watch: Slice editing sample](./slice-map-slice.png)
+Once the team could design and develop diverse reports within weeks, the repeated patterns were stable enough to expose through a customer-facing authoring experience. I analyzed two to three years of configuration and design behavior, then iterated on the Slice configuration model before it became part of the Editor.
 
-Here are the highlighted design patterns that we carried through into the next product iteration:
-1. **Visual building blocks** - Instead of focusing on one visualization, a data story will likely require a series of connected visuals to tell the story. At Juice we call them [Slices](projects/slices). They should share key features that create a consistent experience when moving throughout the presentation.
-2. **Purposeful messaging** - It might seem obvious that data should communicate with more than directionless, bullet point labels on charts, but this is only starting to be a more established pattern. Identifying why someone should care and communicating that message clearly is imperative to capturing people's attention.
-3. **Narrative flow** - This is about create a sequential direction through the data. Instead of the analytical exploratory approach, this is closer to a guided tour with *opportunities* to explore a bit along the way.
+![An early Story Designer configuration experience](./jb-story-designer.png)
 
-# Juicebox
-*2015~Today | Data Storytelling + UX design*
+# Decision 2: Unify filtering through Slices 2.0
 
-As we ventured into the 2nd iteration of the platform, we built upon our past learnings and applied a better systems mindset to both design and technical goals of the product:
-- **Data Storytelling + UX design:** a cohesive experience that thinks about a connected series of charts and story points that interact in richer ways. 
-- **Low-code, custom development:** using modern web frameworks, Juicebox can be highly customized per client requirements. 
-- **Scalable data platform:** As a containerized platform, Juicebox can scale to both the data and usage challenges of a saas product. 
+As the platform grew, two filtering systems had begun to overlap. Global Filters were easy to add, but every filter's data had to load before the story itself appeared. They also duplicated capabilities that increasingly belonged in Slices, creating two systems that would drift in behavior and cost more to maintain.
 
-In Slice we started the product with an editing UI built in, but with Juicebox we focused more on feature maturity first, starting out with the understanding that our developers would be configuring app designs for our own clients. This meant as I was designing the various UI components of the platform, I also had to consider the configuration usability for developers. While it is always easy to add more configuration options, an overly flexible system becomes more like a development language as opposed to an intentionally designed framework to more easily solve certain kinds of problems. This systemic design thinking is something I enjoyed learning more about and overseeing in the platform. 
+![The original Global Filters experience](./slices-global-filters.gif)
 
-In Juicebox, users interact with a Story which is composed of different kinds of building blocks called Slices, and these can be organized and configured in various ways to solve a particular design challenge. Each story, is generally tall, and flows from top to bottom like a webpage. Along the way, people may interact with charts of selection components to filter and focus on what they're interested in. A story is associated with a Juicebox App, and apps can have multiple complimentary stories within them that people can move navigate among. 
+We could optimize Global Filters, create a special filters-only Slice, or unify filtering within the common Slice model. I specifically drove the third direction.
 
-In Juicebox, a user interacts with a Story, which is composed of a set of Slice components that are configured to interact with each other and the user as they move through the page. 
+The difficult part was preserving existing client behavior while improving performance, end-user coherence, and YAML configuration for app developers. The design centered on persistent Slice pills: a compact selection state that could also open the Slice's data in a searchable, sortable side panel. A shared `display_slice_as` option let any compatible Slice appear as a visualization, a pill, or both.
 
-When I worked on client projects, I would often be responsible for the design mockup. Here are 3 examples of story design mockups I created:
-_Gallery placeholder from legacy content._
+![Slice pills opening a searchable side-panel list](./slices-side-panel-list.gif)
 
-There are about 15 different kinds of Slice types. Some are classic visualizations like bars, trend charts, and tables while others are less traditional like a leaderboard, bubble, or key metrics hierarchy slice. All Slice types share common configuration, and each type often has its own unique configuration. 
+This unlocked more than a replacement for Global Filters. Slice groups could place related filters together, add context, share layout behavior, and support crossfiltering. Lazy loading returned useful counts before full data values. Hierarchical Slices gained a consistent selection experience, and reports could place filters inline rather than isolate them in a header.
 
-Apps are published to a url that can be shared privately or publicly. The vast majority are private for client's customers, but here are a couple publicly available apps:
+![Crossfiltering and lazy-loading behavior in Slice pills](./slices-crossfilter.gif)
 
-## A variety of apps built with Juicebox
+The result was one primary filtering architecture the team could continue improving. Existing apps retained backward compatibility, while new apps could move to the richer Slice model.
 
-![Nashville Health embedded app](./nashvillehealth.png)
+# Decision 3: Redesign the Editor for platform-scale complexity
 
-![StartMe Entrepreneurs report](./jb-startme-2022-08-08.png)
+The original Editor made a smaller report easy to scan because configuration for its Slices and sections was visible together. As the platform evolved, that strength became a liability. Complex reports produced a cluttered interface, obscured the high-level structure, and forced authors to scroll repeatedly between distant parts of a story.
 
-![Example Survey report](./jb-survey-example.png)
+![Historical Editor interface before the latest major redesign](./jb-editor-2022.png)
 
-![Democratic Candidates 2002](./dems2020.png)
+The choice was to preserve all-at-once visibility or introduce hierarchy and reveal detail only when needed.
 
-![For fun, here's a personal data story on my listening habits](./jb-spotify.png)
+I designed the complete new experience: a folder-tree model for understanding and navigating report structure, a list experience optimized for speed, a sliding-panel system for progressively revealing detailed configuration, and the configuration components themselves.
 
-## Opening Juicebox for all
+I implemented working definition prototypes for handoff to frontend engineers, who built the production React system. After that implementation, I returned to the code to ship a series of UI and UX refinements.
 
-We knew once we could design and fully develop diverse client projects within a couple weeks, it was clear the maturity of the platform had come a long way. At this point, we asked, "What if we could take the best parts of Juicebox and allow anyone to start building their own apps?" Over the next 2-3 years, I analyzed the most repeated design and configuration patterns across our client apps and designed an editor user experience that allows people to connect their data and start designing data stories.
+The redesign rolled out smoothly and received customer praise. We do not have hard efficiency metrics, so the strongest evidence will be a matched before-and-after comparison of the old scroll-heavy experience and the new hierarchical model.
 
-This new authoring experience is a saas offering and is currently in Beta, but access may be requested from the [Juice website](https://www.juiceanalytics.com).
+> **Before-and-after visual forthcoming.** This comparison will show the same or a comparable report in the old and new Editors, highlighting structural navigation, full-story orientation, and progressively disclosed configuration.
 
-Here are editor screenshots on a fictitious sample app *Runners Tracker*.
+# What shipped
 
-*Adding a new app*
-![+ New App](./jb-create-new.png)
+Across its evolution, Juicebox supported a wide variety of private customer reports and public examples in healthcare, entrepreneurship, survey analysis, politics, and personal data. The platform expanded from internal developer configuration into a self-service authoring experience spanning data sources, report design, templates, publishing, sharing, trials, and workspaces.
 
-*Adjusting app settings*
-![App settings](./jb-settings.png)
+![A public entrepreneurship report built with Juicebox](./jb-startme-2022-08-08.png)
 
-*Managing data sources*
-![Managing data](./jb-data-source.png)
+![A public survey-reporting experience built with Juicebox](./jb-survey-example.png)
 
-*Designing a story*
-By far, one of the most challenging editing design challenges was how to architect the Slice configuration process - what would be possible and easy, and what we would cut out. After three in depth concept iterations, we landed on the final design:
+Slices 2.0 supplied a more coherent filtering and layout foundation. The latest Editor redesign supplied an information architecture that could keep pace as reports became more complex. Juice Analytics continues to identify Juicebox as its technology platform, with active [product sign-in](https://juiceboxdata.com/) and [workspace documentation](https://docs.myjuicebox.io/getting-started/new-workspace).
 
-![Story designer](./jb-story-designer.png)
+# What I would improve now
 
-*Interactions sample*
-![short interactions sample](./jb-editor.gif)
+I would add a floating Editor mode that lets the report remain full width while editing. The folder tree and sliding panels improved navigation and progressive disclosure, but some complex layouts are best judged at their real canvas width. A floating mode would preserve editing access without compromising the design context an author needs.
 
-## 2022 Update Highlights
-
-Here is an updated editor product screenshot, and some highlights of new or improved experiences that I led or managed design for:
-- Removed editors tabs and integrated the new data source drawer for easy access, faster file updates, and an improved data onboarding experience.
-- Option to start with report templates for best practice guidance and faster onboarding.
-- Improved sharing options that provide needed flexibility for customer use cases, including embedding and public password protected apps.
-- Header design options, designer and custom palettes, inline and background images
-- Responsive chart layouts, and a new Filters slice with a calendar picker and numeric range selection
-- A new 14 day Trial experience
-- Managed access to multiple workspaces
-
-![Editor UI](./jb-editor-2022.png)
-
-<div class="mt7">
-<h5 id="aside">NOTES</h5>
-<h5>1) The first attempt was a flash product called Slice. When flash died, Slice died. But here's [one old post](https://www.juiceanalytics.com/writing/slice-is-data-presentation-for-the-rest-of-us) I dug up about it.</h5>
-<h5>2) Today, it's one of the Juice [getting started guides](https://www.juiceanalytics.com/white-papers-guides-and-more).</h5>
-<h5>3) My first real exposure to the topic was at [a Tufte conference](https://www.edwardtufte.com/tufte/courses). He still, amazingly, runs them today.</h5>
-<h5>4) [Here](https://www.juiceanalytics.com/design-principles/full-list) is the list. A handful of them have a short summary post that I collaborated on awhile back.</h5>
-</div>
+The larger lesson is that authoring tools have two products inside them: the experience being created and the system used to create it. A scalable Editor has to keep both understandable as the platform grows.
