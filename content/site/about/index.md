@@ -5,11 +5,13 @@ email: "jameslytle@hey.com"
 headshot: ./james-headshot-2020.jpg
 ---
 
-I’m a Design Engineer & Product Lead at Juice Analytics. I work across product strategy, interaction design, frontend implementation, and AI behavior to make complex data products useful.
+I’m a Design Engineer & Product Lead at Juice Analytics, and I love designing useful data products from the inside out. The work I care about most helps people make sense of complex information and communicate it clearly, especially to people who don’t live in the data every day.
 
-My recent work spans three related but distinct problems: originating and building Forward, shaping the Juicebox authoring platform, and turning narrative-design expertise into a team-wide workflow. Across them, I move between framing the problem, prototyping in code, and carrying product decisions into shipped experiences.
+I enjoy working with different kinds of people and turning ambitious ideas into practical things that solve real problems. Constraints are part of the work; the best method or tool is the one that helps the team make progress. That might mean research, sketching, prototyping in code, or getting a first version in front of someone. I like moving between those modes, from framing the problem through to the details of a shipped experience.
 
-Earlier, I co-founded Finestra, a local art marketplace. It’s part of how I got here: an honest record of work, learning, and the product questions I’d approach differently today.
+Lately, that’s meant originating and building Forward, shaping the Juicebox authoring platform, and turning narrative-design expertise into a team-wide workflow. Each has asked me to connect product decisions with the interaction design, frontend implementation, and AI behavior that make the experience work.
+
+Earlier, I co-founded Finestra, a local art marketplace. I’m glad I took that swing. It’s part of how I got here, and an honest record of work, learning, and the product questions I’d approach differently today.
 
 I’m open to senior design-engineering and product design leadership opportunities, and selective collaboration on complex data and AI products.
 
