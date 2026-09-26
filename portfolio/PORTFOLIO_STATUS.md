@@ -12,11 +12,11 @@ Drafting
 
 ## Current focus
 
-Home featured set and historical Finestra framing
+About page and public writing selection
 
 ## Single recommended next action
 
-Develop the public Finestra page as a historical reflection, pairing selected period artifacts with the specific design decisions James would change now.
+Refresh the About page to match the hybrid positioning, verify its current-role and contact details, and feature only the three selected V1 writing pieces.
 
 ## This week's three outcomes
 
@@ -46,10 +46,10 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 ## Last session
 
 - Captured: James wants Finestra shown as an honest historical reference, and the existing case notes his wish for earlier buyer research and more attention to the buyer-artist exchange.
-- Changed: Home now features Forward, Juicebox, and the Forward Narrative Skill; adds Finestra as a distinct historical section; aligns the positioning copy; and removes Design Docs and Photo Palette from the featured hierarchy. The Finestra case now distinguishes its period from current reflection and includes selected product screenshots.
+- Changed: Home now features Forward, Juicebox, and the Forward Narrative Skill; adds Finestra as a distinct historical section; and aligns the positioning copy. The Finestra case distinguishes its period from current reflection, includes selected product screenshots, and avoids an unsupported “first app” claim.
 - Verified: Generated updated content JSON, reviewed Home and Finestra in the local browser, and passed `git diff --check`.
-- Deferred: Review of older Finestra prose, final visual polish, launch checks, and PR work.
+- Deferred: Refresh About and writing selections, final visual polish, launch checks, and PR work.
 
 ## Next review trigger
 
-Remaining Finestra copy has been checked for stale references and unsupported claims.
+The Finestra historical framing and period screenshots are present in the public case page.

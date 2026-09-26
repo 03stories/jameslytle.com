@@ -154,7 +154,7 @@ The Finestra marketplace app, its marketing site and promotional video, and the 
 
 ## Narrative draft
 
-Deferred until pivotal decision details are confirmed.
+The public page now presents Finestra as a historical reflection, preserves the role boundaries, and leads with the buyer-research lesson James would carry forward. Selected period screenshots replace the old gallery placeholder.
 
 ## Remaining gaps
 
@@ -164,4 +164,4 @@ Deferred until pivotal decision details are confirmed.
 
 ## Single next action
 
-Review the remaining legacy Finestra copy for obsolete references and unsupported historical superlatives while preserving its authentic period voice.
+Verify the archived marketing-site and video links, then decide which remaining period artifacts belong in the concise historical page.
