@@ -24,15 +24,30 @@ Within ten seconds, the portfolio should make these claims credible:
 
 ### Must Ship
 
-- [ ] Home and positioning
-- [ ] Three presentable major case studies
+- [ ] Home and positioning, with a refreshed visual direction
+- [ ] A curated Projects index with three major case studies and the Finestra historical reflection
+- [ ] Three presentable major case studies: Forward, Juicebox, Forward Narrative Skill
+- [ ] Finestra historical reflection
+- [ ] Lab landing page and four selected artifact pages
 - [ ] Selected live-project links
-- [ ] Four to six lab items
 - [ ] Three curated writing pieces
 - [ ] About
 - [ ] Resume/contact
-- [ ] Refreshed Home aesthetic with consistent patterns across relevant V1 routes
+- [ ] Consistent page patterns across relevant V1 routes
 - [ ] Responsive, accessible, performant launch pass
+
+### V1 route scope
+
+| Page type | V1 routes/content | Treatment |
+|---|---|---|
+| Home | `/` | Refresh aesthetic and establish the visual system |
+| Work index | `/projects` | Curate to Forward, Juicebox, Forward Narrative Skill, and Finestra |
+| Major case studies | `/projects/forward`, `/projects/juicebox`, `/projects/forward-narrative-skill` | Three presentable anchor stories |
+| Historical reflection | `/projects/finestra-art-app` | Keep as contextual history, not current design benchmark |
+| Lab | Existing `/other-things` landing route; Photo Palette, Design Docs, Mural, OpenIDEO Atlanta | Present as four compact artifacts; consider clearer `/lab` naming during implementation |
+| About and contact | `/about`, `/resume` | Carry the refreshed system and keep selected writing/contact |
+
+`/login` and `/sandbox` are implementation tools, not public portfolio pages. Coca-Cola, Silverpop, standalone Slices, Up Up and Away, and the Finestra/Juicebox screenshot galleries are outside the V1 index and visual refresh. Keep existing content/routes available until inbound links and redirects are reviewed; Slices remains represented within Juicebox.
 
 ### Should Improve
 
@@ -42,7 +57,7 @@ Within ten seconds, the portfolio should make these claims credible:
 ### Post-V1
 
 - [ ] Additional visual polish or motion
-- [ ] Archive cleanup
+- [ ] Full archive cleanup and route retirement after link/redirect review
 
 ## Quality bar
 
