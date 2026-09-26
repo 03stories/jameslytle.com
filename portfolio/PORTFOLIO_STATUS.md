@@ -46,7 +46,7 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 ## Last session
 
 - Captured: James wants Finestra shown as an honest historical reference, and the existing case notes his wish for earlier buyer research and more attention to the buyer-artist exchange.
-- Changed: Home now features Forward, Juicebox, and the Forward Narrative Skill; adds Finestra as a distinct historical section; and aligns the positioning copy. About now matches that positioning, restores James's conversational product-design philosophy, frames Finestra as an earlier chapter, and features the three selected writing pieces.
+- Changed: Home now features Forward, Juicebox, and the Forward Narrative Skill; adds Finestra as a distinct historical section; and aligns the positioning copy. About now matches that positioning, restores James's conversational product-design philosophy, links project references to their case pages, frames Finestra as an earlier chapter, and features the three selected writing pieces.
 - Verified: Generated updated content JSON, reviewed Home and Finestra in the local browser previously; this session generated About content and reviewed `/about`. `git diff --check` passed. LinkedIn and Medium pieces were source-checked; Twitter and Quora links were removed from the public page because they could not be verified.
 - Deferred: Replace the 2020 headshot if a current portrait is available, review responsive behavior, run launch checks, and open a PR.
 

@@ -9,9 +9,9 @@ I’m a Design Engineer & Product Lead at Juice Analytics, and I love designing 
 
 I enjoy working with different kinds of people and turning ambitious ideas into practical things that solve real problems. Constraints are part of the work; the best method or tool is the one that helps the team make progress. That might mean research, sketching, prototyping in code, or getting a first version in front of someone. I like moving between those modes, from framing the problem through to the details of a shipped experience.
 
-Lately, that’s meant originating and building Forward, shaping the Juicebox authoring platform, and turning narrative-design expertise into a team-wide workflow. Each has asked me to connect product decisions with the interaction design, frontend implementation, and AI behavior that make the experience work.
+Lately, that’s meant originating and building [Forward](/projects/forward), shaping the [Juicebox](/projects/juicebox) authoring platform, and turning narrative-design expertise into a team-wide workflow with the [Forward Narrative Skill](/projects/forward-narrative-skill). Each has asked me to connect product decisions with the interaction design, frontend implementation, and AI behavior that make the experience work.
 
-Earlier, I co-founded Finestra, a local art marketplace. I’m glad I took that swing. It’s part of how I got here, and an honest record of work, learning, and the product questions I’d approach differently today.
+Earlier, I co-founded [Finestra](/projects/finestra-art-app), a local art marketplace. I’m glad I took that swing. It’s part of how I got here, and an honest record of work, learning, and the product questions I’d approach differently today.
 
 I’m open to senior design-engineering and product design leadership opportunities, and selective collaboration on complex data and AI products.
 
