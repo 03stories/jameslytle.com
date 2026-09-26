@@ -31,12 +31,13 @@ Within ten seconds, the portfolio should make these claims credible:
 - [ ] Three curated writing pieces
 - [ ] About
 - [ ] Resume/contact
+- [ ] Refreshed Home aesthetic with consistent patterns across relevant V1 routes
 - [ ] Responsive, accessible, performant launch pass
 
 ### Should Improve
 
 - [ ] Replace legacy project summaries with decision-led snapshots where evidence supports them
-- [ ] Refresh stale About copy and links
+- [x] Refresh stale About copy and links
 
 ### Post-V1
 
