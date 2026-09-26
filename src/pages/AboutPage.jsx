@@ -12,7 +12,7 @@ export default function AboutPage() {
           <img src={about.headshot} alt="James Lytle" style={{ maxWidth: '300px', width: '100%' }} />
         </p>
       ) : null}
-      {about.email ? <p>Email: {about.email}</p> : null}
+      {about.email ? <p>Email: <a href={`mailto:${about.email}`}>{about.email}</a></p> : null}
       <div className="prose" dangerouslySetInnerHTML={{ __html: about.html || '' }} />
     </section>
   );

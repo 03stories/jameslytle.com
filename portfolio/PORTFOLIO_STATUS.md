@@ -12,11 +12,11 @@ Drafting
 
 ## Current focus
 
-About page and public writing selection
+Final visual polish and launch checks
 
 ## Single recommended next action
 
-Refresh the About page to match the hybrid positioning, verify its current-role and contact details, and feature only the three selected V1 writing pieces.
+Review responsive behavior and run the production and accessibility checks before opening a focused pull request.
 
 ## This week's three outcomes
 
@@ -34,8 +34,8 @@ Refresh the About page to match the hybrid positioning, verify its current-role 
 | Forward Narrative Claude Skill | Draft-ready | Public case draft, explicit responsibility boundaries, and three synthetic visuals are implemented; Home now features it | Complete final editorial polish |
 | Finestra historical reflection | Draft-ready | The case now names its period, role boundaries, and the buyer-research lesson; older copy still needs review for stale or unsupported claims | Review obsolete references and superlatives |
 | Lab | Draft-ready | Four distinct artifacts are frozen; OpenIDEO's strongest participation fact still needs verification during copywriting | Draft compact proof cards |
-| Writing | Draft-ready | Three complementary pieces are frozen for V1; public About still lists all eight | Curate public presentation during implementation |
-| About/contact | Skeleton | Contact and resume exist; About positioning and links appear stale | Verify facts and curate copy |
+| Writing | Draft-ready | The three selected V1 pieces now appear on About | Confirm links during launch checks |
+| About/contact | Draft-ready | Updated hybrid positioning, current role, contact link, and curated writing are present; 2020 headshot retained | Review responsive presentation |
 
 Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Presentable, Shipped.
 
@@ -46,9 +46,9 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 ## Last session
 
 - Captured: James wants Finestra shown as an honest historical reference, and the existing case notes his wish for earlier buyer research and more attention to the buyer-artist exchange.
-- Changed: Home now features Forward, Juicebox, and the Forward Narrative Skill; adds Finestra as a distinct historical section; and aligns the positioning copy. The Finestra case distinguishes its period from current reflection, includes selected product screenshots, and avoids an unsupported “first app” claim.
-- Verified: Generated updated content JSON, reviewed Home and Finestra in the local browser, and passed `git diff --check`.
-- Deferred: Refresh About and writing selections, final visual polish, launch checks, and PR work.
+- Changed: Home now features Forward, Juicebox, and the Forward Narrative Skill; adds Finestra as a distinct historical section; and aligns the positioning copy. About now matches that positioning, frames Finestra as an earlier chapter, and features the three selected writing pieces.
+- Verified: Generated updated content JSON, reviewed Home and Finestra in the local browser previously; this session generated About content and reviewed `/about`. `git diff --check` passed. LinkedIn and Medium pieces were source-checked; Twitter and Quora links were removed from the public page because they could not be verified.
+- Deferred: Replace the 2020 headshot if a current portrait is available, review responsive behavior, run launch checks, and open a PR.
 
 ## Next review trigger
 
