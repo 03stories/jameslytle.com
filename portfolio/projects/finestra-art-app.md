@@ -1,12 +1,12 @@
 # Project: Finestra Art App
 
-Last updated: 2026-08-15
+Last updated: 2026-09-26
 
 ## Classification
 
-- Proposed level: Full case study
+- Proposed level: Historical reflection
 - Priority: Must Ship
-- Readiness: Evidence-ready
+- Readiness: Draft-ready
 - Live URL: Product closed; archived marketing site and videos are linked from the existing case study.
 - Repository/prototype: Not recorded
 - Confidentiality or redaction constraints: None recorded; confirm any adoption or business figures before publication.
@@ -22,7 +22,7 @@ Last updated: 2026-08-15
 | Visual/interaction quality | 2 | Extensive real wireframes, product flows, marketing site capture, mobile screens, and videos show a coherent and distinctive interaction concept | High |
 | Differentiation | 3 | Adds entrepreneurship, consumer mobile, two-sided marketplace, physical-space interaction, and an honest closure story | High |
 | Technical/Design Engineer signal | 2 | James lists HTML/CSS, did most marketing and Preview web frontend development, and collaborated closely with his engineer co-founder; native app innovation belonged to his brother | High |
-| **Total** | **17/21** | Strong complementary case study with explicit ownership, adoption, and a differentiated firsthand product decision | High |
+| **Total** | **17/21** | Strong evidence for an honest historical reflection, with explicit ownership, adoption, and a differentiated firsthand product decision | High |
 
 ## Fact ledger
 
@@ -50,7 +50,7 @@ Last updated: 2026-08-15
 | F-020 | James's co-founder owned engineering for the native iOS app. | Firsthand answer, 2026-08-15 | High | Yes | Role boundary |
 | F-021 | James owned both design and engineering for the Finestra marketing site. | Firsthand answer, 2026-08-15 | High | Yes | Role and technical signal |
 | F-022 | Conventional art listings showed dimensions; Finestra instead let buyers view artwork at scale on their own wall despite the period's limited device sensors. | Firsthand answer, 2026-08-15 | High | Yes | Decision 2 |
-| F-023 | To James's knowledge, Finestra was the first app to create this wall-scale viewing experience. | Firsthand answer, 2026-08-15 | Medium; external verification needed for an absolute public claim | Use qualified wording unless verified | Differentiation |
+| F-023 | James recalls that Finestra was among the first apps to create this wall-scale viewing experience. | Firsthand answer, 2026-08-15 | Medium; external verification needed for an absolute public claim | Do not use as a public claim | Internal historical recollection |
 | F-024 | The team prioritized wall-scale preview because they believed spatial context would strengthen the connection between artists and genuine potential buyers. | Firsthand answer, 2026-08-15 | High | Yes | Decision 2 rationale |
 | F-025 | Wall-scale preview became Finestra's most talked-about capability. | Firsthand answer, 2026-08-15 | High; qualitative | Yes with bounded wording | Outcome |
 
@@ -78,7 +78,7 @@ Last updated: 2026-08-15
 - Tradeoff: Use the proven, low-complexity dimensions-only pattern or pursue a more meaningful spatial experience despite limited sensor capabilities.
 - Rationale: Help real potential buyers connect an artist's work to their own physical space.
 - Result: Wall-scale preview became the product's most talked-about capability.
-- Claim boundary: Qualify “first app” as James's/team's understanding unless independently verified.
+- Claim boundary: The public page now describes the capability without an absolute “first” claim; retain the recollection as internal historical context only.
 
 ## Story skeleton
 
@@ -147,6 +147,7 @@ The Finestra marketplace app, its marketing site and promotional video, and the 
 | Artwork and artist capture flows | Wireframes | Linked buyer/artist sides of the marketplace | `localart-artwork-2.png`, `localart-artwork-createnew1.png`, `localart-capture.png`, `localart-record.png` | Yes |
 | Marketing site capture | Animated archive | Shipped positioning and James's web work | `content/projects/finestra-art-app/finestra-web-home-2018.gif` | Yes |
 | Preview overview | Product diagram | Simplification around the wall-scale feature | `content/projects/finestra-art-app/preview-overview-highres-iphone@2x.png` | Yes |
+| Selected period app screens | Product screenshots | Artwork discovery, wall-scale preview, and artist detail | `content/other-things/finestra-screenshots/img_2885.png`, `img_2886.png`, `img_2887.png` | Yes; now included in the case page |
 | Promo and product videos | Video | Shipped experiences and marketing craft | Existing Vimeo embeds | Needs link verification |
 | Finestra Screenshots gallery | Screenshots | Additional shipped app views | `content/other-things/finestra-screenshots/` | Yes; merge into case study rather than duplicate |
 | Georgia Tech Alumni Magazine story | Press | Independent coverage | Link not recorded | No |
@@ -159,8 +160,8 @@ Deferred until pivotal decision details are confirmed.
 
 1. Working status and public relevance of linked archive/video evidence.
 2. Press link and precise wording for interest from other cities, if used publicly.
-3. External verification before making an absolute “first app” claim.
+3. Review remaining legacy copy for obsolete references and unsupported historical claims.
 
 ## Single next action
 
-Verify and curate the strongest Finestra visual and external-link evidence during drafting.
+Review the remaining legacy Finestra copy for obsolete references and unsupported historical superlatives while preserving its authentic period voice.

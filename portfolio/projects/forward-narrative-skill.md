@@ -118,4 +118,4 @@ The deeper product lesson is that scaling creative judgment requires more than d
 
 ## Single next action
 
-Align the Home project hierarchy to Forward, Juicebox, and the Forward Narrative Claude Skill, with Finestra as a supporting snapshot.
+Align Home to Forward, Juicebox, and the Forward Narrative Claude Skill; frame Finestra as a historical reflection.

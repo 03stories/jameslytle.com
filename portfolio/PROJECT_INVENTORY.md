@@ -6,7 +6,7 @@ Scores are conservative and evidence-based. `?` marks missing evidence; ranges s
 |---|---:|---|---|---|---:|---:|---:|---:|---:|---:|---:|---|---|---|
 | Forward / Insights Recap | Current | Juice Analytics | `insightsrecap.com` | One reused Home image observed | 3 | 3 | 2 | 2 | ? | 3 | 3 | 16–19 | Full case study | Must Ship |
 | Juicebox | 2020–current | Juice Analytics | Juicebox product page | Extensive screenshots/GIFs | 3 | 3 | 3 | 2 | 2 | 2 | 2 | 17 | Full case study; Evidence-ready | Must Ship |
-| Finestra Art App | 2011–2017 | Personal/co-founded | Closed | Extensive product/process assets | 2 | 3 | 3 | 2 | 2 | 3 | 2 | 17 | Project snapshot; Evidence-ready | Must Ship supporting |
+| Finestra Art App | 2011–2017 | Personal/co-founded | Closed | Extensive product/process assets | 2 | 3 | 3 | 2 | 2 | 3 | 2 | 17 | Historical reflection; Draft-ready | Must Ship supporting |
 | Slices 2.0 | 2017 | Juice Analytics | Documentation link | Extensive UI/process assets | 2 | 3 | 3 | 1 | 2 | 2 | 1 | 14 | Supporting decision chapter within Juicebox | Must Ship supporting |
 | Forward Pipeline Canvas | 2026 | Juice Analytics / internal POC | None observed | Working single-file app, plans, QA guide, 37 checks | 3 | 3 | 3 | 1 | 1? | 3 | 3 | 17 | Forward evidence or Lab artifact | Should Improve |
 | Forward Media Tools | 2026 | Juice Analytics / internal tool | None observed | Deterministic CLI, review gallery, audits, render evidence | 2 | 3? | 2 | 1 | 2 | 1 | 3 | 14 | Forward evidence or Lab artifact | Should Improve |
@@ -98,11 +98,11 @@ Scores are conservative and evidence-based. `?` marks missing evidence; ranges s
 2. Juicebox — complex data-product system
 3. Forward Narrative Claude Skill — AI-enabled team workflow and organizational leverage
 
-Supporting project snapshot: Finestra Art App — entrepreneurship and consumer/mobile range
+Historical reflection: Finestra Art App — an honest record of entrepreneurial effort, consumer/mobile work, and what James would approach differently today
 
 ## Selection rationale
 
-Forward, Juicebox, and the Forward Narrative Claude Skill form three distinct stories despite sharing one product ecosystem: customer-facing product origination and scale; long-horizon platform and authoring-system design; and an internal AI workflow that removed a multi-day sales-demo bottleneck. Finestra remains visible as a supporting entrepreneurship and consumer/mobile snapshot.
+Forward, Juicebox, and the Forward Narrative Claude Skill form three distinct stories despite sharing one product ecosystem: customer-facing product origination and scale; long-horizon platform and authoring-system design; and an internal AI workflow that removed a multi-day sales-demo bottleneck. Finestra remains visible as historical context: evidence of the path behind today's work, paired with candid reflection rather than presented as a current design benchmark.
 
 ## Writing candidates
 

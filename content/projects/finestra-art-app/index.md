@@ -1,7 +1,7 @@
 ---
 title: "Finestra Art App"
-date: 2011-01-01
-headline: "Find and buy local artwork that speaks to you"
+date: "2011-01-01T12:00:00"
+headline: "A startup chapter in local art, product ambition, and what I learned"
 client: "Personal"
 tags:
   - "Co-Founder"
@@ -13,19 +13,19 @@ tags:
   - "Print"
 cover: ./finestra-header.png
 clientLogo: ./full-transparent.png
-summary: "From 2011-2017, I co-founded a startup that was one of the first fine art marketplace apps on the Apple App Store. With myself leading design and my brother leading development, we learned plenty and had a blast connecting with so many interesting artists and art lovers. While we ultimately decided to close that chapter, the lessons learned in business and design were well worth the investment. **Goal:** Help working local artists easily make a connection between their art and local buyers. **Key Story:**  Grow the creative confidence and inspiration of communities by enriching the relationships between artists and neighbors via artwork."
+summary: "From 2011–2017, my brother and I built Finestra, a mobile marketplace connecting local artists and buyers. I led product design and the marketing site; he led native iOS engineering. The company is closed, but I value the persistence and relationships behind the work. Looking back, I would invest more in understanding buyers and the exchange between both sides of the marketplace."
 draft: false
 ---
 
-# Summary
+## Looking back
 
-From 2011-2017, I co-founded a startup that was one of the first fine art marketplace apps on the Apple App Store. With myself leading design and my brother leading development, we learned plenty and had a blast connecting with so many interesting artists and art lovers. While we ultimately decided to close that chapter, the lessons learned in business and design were well worth the investment.
+From 2011 to 2017, my brother Seth and I built Finestra to connect local artists with buyers. I led the product’s UX and UI design and designed and built the marketing site; Seth led native iOS engineering. I also did most of the web frontend work on the later Preview experience.
 
-**Goal:** Help working local artists easily make a connection between their art and local buyers.
+Finestra is now closed, and the screens below belong to that period. I still value the persistence it took to build the company and the people the work brought together. I would make many design decisions differently today. The clearest lesson is that I should have spent more time understanding buyers and designing for the exchange between artists and buyers—not only the discovery experience. This is a record of an earlier chapter, not a claim about my current interface standard.
 
-**Key Story:**  Grow the creative confidence and inspiration of communities by enriching the relationships between artists and neighbors via artwork.
+**The goal then:** Help working local artists connect their work with local buyers.
 
-# Process
+## Process
 
 *Defining the Problem*
 
@@ -90,7 +90,7 @@ As we synthesized feedback, the wireframes rounded out with more features such a
 
 We wanted our audience to experience new ways of making a connection with the art. There are two primary innovations we developed around this.
 1) A viewer could **listen to the artist** deliver commentary on the art, in their own words. Even if people didn't quite connect with the visual language yet, we thought they might connect with a personal audio clip from the very artist who created it. 
-2) A viewer could **see the artwork to scale on their own wall**. Art has always been hard for people to visualize in their own space. Finestra was the first mobile app to attempt doing this, before augmented reality iOS development features were available<a href="#aside"><sup>(3)</sup></a>.
+2) A viewer could **see the artwork to scale on their own wall**. Art has always been hard for people to visualize in their own space. we pursued this before built-in augmented reality development tools were available on iOS<a href="#aside"><sup>(3)</sup></a>.
 
 Here are initial wireframes allowing an artist to capture and upload their artwork.
 
@@ -105,7 +105,7 @@ Here are initial wireframes allowing an artist to capture and upload their artwo
 
 Next, let's jump ahead to post-launch.
 
-# Final Design & Marketing
+## Final Design & Marketing
 
 If you had visited finestraartapp.com on [May 17, 2018](https://web.archive.org/web/20180527075941/http://finestraartapp.com/), courtesy of WayBack machine, it would have looked like this:
 ![WayBack Machine, www.finestraartapp.com. I did most all the design and development on this.](./finestra-web-home-2018.gif)
@@ -113,9 +113,13 @@ If you had visited finestraartapp.com on [May 17, 2018](https://web.archive.org/
 Here is the promo video I produced and edited. 
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/61433410?byline=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
 
-Here are screenshots from an early version of the app.
+Selected screens from the early app show how we explored artwork discovery, seeing a piece on your own wall, and learning about the artist.
 
-_Gallery placeholder from legacy content._
+![Artwork listing in the Finestra iPhone app, with the artist, distance, and availability information.](/content/other-things/finestra-screenshots/img_2885.png)
+
+![Finestra's wall-scale preview showing a piece of art placed above a sofa in a living room.](/content/other-things/finestra-screenshots/img_2886.png)
+
+![An artwork detail view pairing the wall preview with artist information, audio, sharing, and a request-to-see-it action.](/content/other-things/finestra-screenshots/img_2887.png)
 
 Apart from purely design and development efforts, this adventure included all kinds of new business challenges and exciting experiences. 
 
@@ -137,7 +141,7 @@ Bootstrapping an art marketplace business was an entirely new experience for me.
 
 <div class="mt7">
 <h5 id="aside">NOTES</h5>
-<h5>1) As of today in 2020, sadly, there still seems to be very lackluster digital experiences to find local artwork. But I'd love to see one exist!</h5>
-<h5>2) Apps today, like LetGo, have done great work in ux conversation starter patterns.</h5>
-<h5>3) All the innovative dev credit here goes to the long nights of you Seth ;)</h5>
+<h5>1) This was a view of the market from our work in 2011, not a current market survey.</h5>
+<h5>2) In retrospect, I should have involved prospective buyers earlier and paid more attention to how interest could turn into an actual exchange.</h5>
+<h5>3) Seth led the native iOS engineering, including the implementation of the wall-scale preview.</h5>
 </div>

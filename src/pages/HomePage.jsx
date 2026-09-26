@@ -6,9 +6,11 @@ const projects = {
   forward: asset('content/site/home/forward-insights-recap-home.png'),
   juicebox: asset('content/projects/juicebox/jb-header.png'),
   juiceboxDetail: asset('content/projects/juicebox/jb-story-designer.png'),
-  designDocs: asset('content/projects/design-docs/design-doc-template.png'),
-  palette: asset('content/site/home/photo-palette-tool.png'),
-  palettePhoto: asset('content/other-things/photo-palette/default-photo.jpg')
+  narrativeWorkflow: asset('content/projects/forward-narrative-skill/workflow-before-after.svg'),
+  narrativeLoop: asset('content/projects/forward-narrative-skill/continuous-improvement-loop.svg'),
+  narrativeInsight: asset('content/projects/forward-narrative-skill/bar-insight-pattern.svg'),
+  finestraApp: asset('content/projects/finestra-art-app/localart-artwork-2.png'),
+  finestraArtist: asset('content/projects/finestra-art-app/localart-artwork-createnew1.png')
 };
 
 function FigureLabel({ children }) {
@@ -30,10 +32,10 @@ export default function HomePage() {
           </figure>
 
           <div className="home-intro">
-            <h2 id="home-heading">Design engineer & product designer transforming ideas to production.</h2>
+            <h2 id="home-heading">Design engineer & product design leader making complex products useful.</h2>
             <div className="home-intro-copy">
               <p>
-                I'm a forward looking pragmatic product designer that enjoys turning new directions into reality.
+                I connect product strategy, interface design, production code, and AI behavior to make complex products useful.
               </p>
               <div className="home-actions">
                 <a className="home-primary-action" href="mailto:jameslytle@hey.com">
@@ -54,7 +56,7 @@ export default function HomePage() {
           </section>
           <section>
             <h3>Working range</h3>
-            <p>Product strategy<br />UI / UX<br />AI Development<br />Protoyping</p>
+            <p>Product strategy<br />UI / UX<br />AI development<br />Prototyping</p>
           </section>
           <section>
             <h3>Working approach</h3>
@@ -70,17 +72,16 @@ export default function HomePage() {
             <p className="home-role">Product originator · Design and implementation lead</p>
             <p className="home-project-lede">Turns customer data into personalized, mobile-first narratives at scale.</p>
             <p>
-              I originated and independently bootstrapped Forward as a new product inside Juice Analytics by defining
-              the strategy, experience, AI behavior, initial production implementation. I now lead product direction with
-              with the broader team, expanding its market.
+              I originated and bootstrapped Forward inside Juice Analytics, shaping its strategy, experience, AI behavior,
+              and initial production implementation. I now lead product direction with the broader team as we expand its market.
             </p>
             <a className="home-text-link" href="https://www.insightsrecap.com/">
               View live product <span aria-hidden="true">↗</span>
             </a>
           </div>
           <figure className="home-forward-pair">
-            <img className="home-forward-mobile" src={projects.forward} alt="Forward mobile personalized story detail" />
-            <img className="home-forward-wide" src={projects.forward} alt="Forward product landing experience" />
+            <img className="home-forward-mobile" src={projects.forward} alt="Forward personalized story on a mobile screen" />
+            <img className="home-forward-wide" src={projects.forward} alt="Forward personalized data narrative" />
             <FigureLabel>Personalized narratives at scale</FigureLabel>
           </figure>
         </article>
@@ -105,44 +106,49 @@ export default function HomePage() {
           </figure>
         </article>
 
-        <article className="home-project home-project-docs">
+        <article className="home-project home-project-skill">
           <div className="home-project-copy">
-            <h2>Design Docs</h2>
-            <p className="home-role">Process design · Cross-functional practice</p>
-            <p className="home-project-lede">Clear briefs and living notes that keep teams aligned.</p>
+            <h2>Forward Narrative Skill</h2>
+            <p className="home-role">AI product system · Design and implementation lead</p>
+            <p className="home-project-lede">Turn one person’s narrative expertise into a team capability.</p>
             <p>
-              I created and evolved this working-document practice to preserve design context, improve developer
-              handoff, and make decisions easier for teams to revisit.
+              I built and maintain a Claude Skill that helps the team create and share sales narratives rapidly,
+              replacing a process that could take days and depend on me alone.
             </p>
-            <Link className="home-text-link" to="/projects/design-docs">
+            <Link className="home-text-link" to="/projects/forward-narrative-skill">
               View project <span aria-hidden="true">→</span>
             </Link>
           </div>
-          <figure className="home-docs-figure">
-            <img src={projects.designDocs} alt="Design document template with summary and progress notes" />
-            <FigureLabel>A working document, not a handoff artifact</FigureLabel>
+          <figure className="home-skill-visuals">
+            <img className="home-skill-workflow" src={projects.narrativeWorkflow} alt="Narrative creation moves from a single-person code and deployment process to team-wide creation and sharing" />
+            <div className="home-skill-details">
+              <img src={projects.narrativeLoop} alt="A continuous improvement loop turns team use into reusable product and skill improvements" />
+              <img src={projects.narrativeInsight} alt="A narrative chart uses a concise headline and visual emphasis to make its key insight clear" />
+            </div>
+            <FigureLabel>Workflow, improvement practice, and a reusable visual pattern</FigureLabel>
           </figure>
         </article>
 
-        <article className="home-project home-project-palette">
-          <div className="home-project-copy">
-            <h2>Photo Palette</h2>
-            <p className="home-role">Designer and developer</p>
-            <p className="home-project-lede">Extracts color palettes from any photo and outputs copy-ready CSS values.</p>
+        <section className="home-history" aria-labelledby="history-heading">
+          <div className="home-history-copy">
+            <p className="home-history-label">An earlier chapter · 2011–2017</p>
+            <h2 id="history-heading">Finestra Art App</h2>
+            <p className="home-project-lede">A startup chapter that still shapes how I think about making products.</p>
             <p>
-              I designed and built the in-browser utility, including draggable sampling points, multiple color formats,
-              and a live theme preview.
+              My brother and I built a marketplace to connect local artists with buyers. I led product design and built
+              the marketing site; he led iOS engineering. I value the work and the people it brought together. I’d make
+              many design decisions differently today, so I share it as an honest record of the attempt and what I learned.
             </p>
-            <Link className="home-text-link" to="/other-things/photo-palette">
-              Try the tool <span aria-hidden="true">→</span>
+            <Link className="home-text-link" to="/projects/finestra-art-app">
+              Revisit the Finestra story <span aria-hidden="true">→</span>
             </Link>
           </div>
-          <figure className="home-palette-pair">
-            <img className="home-palette-wide" src={projects.palette} alt="Photo Palette utility interface" />
-            <img className="home-palette-detail" src={projects.palettePhoto} alt="Sample photo used to generate a color palette" />
-            <FigureLabel>Palette utility · Sample picker</FigureLabel>
+          <figure className="home-history-images">
+            <img src={projects.finestraApp} alt="An early Finestra screen for discovering local artwork" />
+            <img src={projects.finestraArtist} alt="An early Finestra screen for artists to add artwork" />
+            <FigureLabel>Product work from an earlier era</FigureLabel>
           </figure>
-        </article>
+        </section>
       </div>
 
       <section className="home-principles" aria-labelledby="principles-heading">

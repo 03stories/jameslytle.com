@@ -1,6 +1,6 @@
 # Portfolio Status
 
-Last updated: 2026-09-05
+Last updated: 2026-09-26
 
 ## V1 goal
 
@@ -12,11 +12,11 @@ Drafting
 
 ## Current focus
 
-Home and featured-set alignment
+Home featured set and historical Finestra framing
 
 ## Single recommended next action
 
-Align the Home project hierarchy to Forward, Juicebox, and the Forward Narrative Claude Skill, with Finestra as a supporting snapshot.
+Develop the public Finestra page as a historical reflection, pairing selected period artifacts with the specific design decisions James would change now.
 
 ## This week's three outcomes
 
@@ -28,11 +28,11 @@ Align the Home project hierarchy to Forward, Juicebox, and the Forward Narrative
 
 | Item | Level | Blocking issue | Next proof |
 |---|---|---|---|
-| Home | Draft-ready | Hybrid role emphasis is confirmed, but public copy still needs alignment and contains errors/repetition | Align Home copy after the featured set is frozen |
+| Home | Draft-ready | Frozen anchors now lead; public copy and section hierarchy align with the hybrid positioning | Review on mobile and complete launch checks |
 | Forward | Draft-ready | The evidence-checked public route is implemented and passes build/accessibility validation; the process visual remains a documented placeholder | Replace placeholder when supplied |
 | Juicebox | Draft-ready | The evidence-checked public route is implemented and passes build, accessibility, and visual validation; the before/after visual remains a documented placeholder | Replace the placeholder when supplied |
-| Forward Narrative Claude Skill | Draft-ready | Public case draft, explicit responsibility boundaries, and three synthetic visuals are implemented and pass build, accessibility, and visual validation | Align Home entry and complete final editorial polish |
-| Finestra snapshot | Evidence-ready | Strong ownership, adoption, entrepreneurship, and range remain valuable, but its age and dated interface weaken it as an anchor | Curate a compact snapshot after anchor selection |
+| Forward Narrative Claude Skill | Draft-ready | Public case draft, explicit responsibility boundaries, and three synthetic visuals are implemented; Home now features it | Complete final editorial polish |
+| Finestra historical reflection | Draft-ready | The case now names its period, role boundaries, and the buyer-research lesson; older copy still needs review for stale or unsupported claims | Review obsolete references and superlatives |
 | Lab | Draft-ready | Four distinct artifacts are frozen; OpenIDEO's strongest participation fact still needs verification during copywriting | Draft compact proof cards |
 | Writing | Draft-ready | Three complementary pieces are frozen for V1; public About still lists all eight | Curate public presentation during implementation |
 | About/contact | Skeleton | Contact and resume exist; About positioning and links appear stale | Verify facts and curate copy |
@@ -45,11 +45,11 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 
 ## Last session
 
-- Captured: James approved responsibility-boundary descriptions of Dispatch/MCP and synthetic skill-session and narrative-output evidence for public use.
-- Changed: Built the public Forward Narrative Claude Skill case with synthetic before/after workflow, continuous-improvement-loop, and reusable bar-insight visuals; advanced it to Draft-ready.
-- Verified: Production build and accessibility audit pass across all 21 routes; the complete case and its three visuals render cleanly in the local production preview.
-- Deferred: Forward Sankey, Juicebox Editor screenshots, final visual polish, and PR work.
+- Captured: James wants Finestra shown as an honest historical reference, and the existing case notes his wish for earlier buyer research and more attention to the buyer-artist exchange.
+- Changed: Home now features Forward, Juicebox, and the Forward Narrative Skill; adds Finestra as a distinct historical section; aligns the positioning copy; and removes Design Docs and Photo Palette from the featured hierarchy. The Finestra case now distinguishes its period from current reflection and includes selected product screenshots.
+- Verified: Generated updated content JSON, reviewed Home and Finestra in the local browser, and passed `git diff --check`.
+- Deferred: Review of older Finestra prose, final visual polish, launch checks, and PR work.
 
 ## Next review trigger
 
-The Home page reflects the frozen featured set and supporting-project hierarchy.
+Remaining Finestra copy has been checked for stale references and unsupported claims.
