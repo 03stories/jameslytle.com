@@ -50,7 +50,7 @@ export default function App() {
             Resume
           </NavLink>
           <NavLink to="/other-things" className={({ isActive }) => (isActive ? 'active' : undefined)}>
-            Other Things
+            Lab
           </NavLink>
         </nav>
       </header>

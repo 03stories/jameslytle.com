@@ -1,5 +1,15 @@
 # Homepage Design QA
 
+## Current iteration — 2026-10-03
+
+The prior comparison below records an earlier visual direction. The current Home is a new iteration for James's feedback: introduction first, neutral background, a lighter Geologica hierarchy, uncropped dominant project images, quieter historical treatment, and reusable `--portfolio-*` foundations. See `DESIGN.md` for the provisional pattern guide. The previous “passed” conclusion does not indicate approval of this new aesthetic.
+
+- Production build and basic accessibility audit passed for 21 HTML files.
+- Browser review covered the default wide panel and a narrow viewport; no broken images or horizontal overflow were observed.
+- Measured CSS viewports included 325px and 1200px widths. Primary text contrast is 15.03:1; secondary text 6.43:1; the white action text on vermilion is 5.82:1. Browser console showed no errors during review.
+- Opening evidence: `/private/tmp/james-home-iteration-desktop.png` and `/private/tmp/james-home-iteration-mobile.png`.
+- Final aesthetic approval and propagation to other MVP pages remain open.
+
 - Source visual truth: `/Users/jameslytle/.codex/generated_images/019f4d86-9ac7-7031-9975-b60041a02ef3/exec-8a844f54-ffd4-4a7c-a069-bc33a78e7344.png`
 - Implementation: `http://localhost:5173/`
 - Desktop evidence: `/tmp/james-home-stitched-desktop.png`

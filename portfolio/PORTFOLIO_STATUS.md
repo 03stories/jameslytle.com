@@ -1,6 +1,6 @@
 # Portfolio Status
 
-Last updated: 2026-09-26
+Last updated: 2026-10-03
 
 ## V1 goal
 
@@ -16,7 +16,7 @@ Refresh Home aesthetic and define reusable page patterns
 
 ## Single recommended next action
 
-Create the refreshed Home direction and identify the reusable patterns it establishes for the scoped MVP routes.
+Review the new Home iteration with James and refine its visual character before extending the patterns to other MVP pages.
 
 ## This week's three outcomes
 
@@ -44,6 +44,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 - None prevent narrative drafting; documented asset and verification gaps remain bounded.
 
 ## Last session
+
+- Design iteration (2026-10-03): Reworked Home around an introduction-first composition, lighter typography, uncropped dominant project images, a quieter Finestra inset, and a neutral surface. Retained the existing Geologica font and vermilion accent. Added `DESIGN.md` with provisional reusable patterns; updated navigation from Other Things to Lab while retaining its route. The production build and basic accessibility audit passed. James's visual feedback is the next input; this direction is not frozen.
 
 - Captured: James wants Finestra shown as an honest historical reference, and the existing case notes his wish for earlier buyer research and more attention to the buyer-artist exchange. Before rollout, he wants to refresh Home's aesthetic and apply it consistently across the site; page relevance should be settled before launch validation.
 - Scoped: V1 includes Home, a curated Projects index, three major case studies, Finestra as a historical reflection, a four-item Lab, About, and Resume. Legacy case pages and gallery pages stay outside the index until inbound links and redirects are reviewed; login and sandbox are not public portfolio pages.

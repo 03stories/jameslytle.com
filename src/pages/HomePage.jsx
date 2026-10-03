@@ -5,7 +5,6 @@ const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 const projects = {
   forward: asset('content/site/home/forward-insights-recap-home.png'),
   juicebox: asset('content/projects/juicebox/jb-header.png'),
-  juiceboxDetail: asset('content/projects/juicebox/jb-story-designer.png'),
   narrativeWorkflow: asset('content/projects/forward-narrative-skill/workflow-before-after.svg'),
   narrativeLoop: asset('content/projects/forward-narrative-skill/continuous-improvement-loop.svg'),
   narrativeInsight: asset('content/projects/forward-narrative-skill/bar-insight-pattern.svg'),
@@ -25,70 +24,51 @@ export default function HomePage() {
   return (
     <section className="home-page" aria-labelledby="home-heading">
       <div className="home-opening">
-        <div className="home-opening-main">
-          <figure className="home-hero-figure">
-            <img src={projects.forward} alt="Forward personalized story shown alongside a mobile experience" />
-            <FigureLabel>Forward / Insights Recap · Originated and bootstrapped at Juice Analytics</FigureLabel>
-          </figure>
-
-          <div className="home-intro">
-            <h2 id="home-heading">Design engineer & product design leader making complex products useful.</h2>
-            <div className="home-intro-copy">
-              <p>
-                I connect product strategy, interface design, production code, and AI behavior to make complex products useful.
-              </p>
-              <div className="home-actions">
-                <a className="home-primary-action" href="mailto:jameslytle@hey.com">
-                  Start a conversation <span aria-hidden="true">→</span>
-                </a>
-                <Link className="home-secondary-action" to="/resume">
-                  View résumé
-                </Link>
-              </div>
+        <div className="home-intro">
+          <h2 id="home-heading">
+            Design engineer &amp; product design leader
+            <span>making complex products useful.</span>
+          </h2>
+          <div className="home-intro-copy">
+            <p>
+              I connect product strategy, interface design, production code, and AI behavior—from the first question to a working product.
+            </p>
+            <div className="home-actions">
+              <a className="home-primary-action" href="mailto:jameslytle@hey.com">
+                Start a conversation <span aria-hidden="true">↗</span>
+              </a>
+              <Link className="home-secondary-action" to="/resume">View résumé</Link>
             </div>
+            <p className="home-current-role">Currently Design Engineer &amp; Product Lead at Juice Analytics.</p>
           </div>
         </div>
-
-        <aside className="home-rail" aria-label="Current role and working approach">
-          <section>
-            <h3>Current role</h3>
-            <p>Design Engineer & Product Lead at Juice Analytics.</p>
-          </section>
-          <section>
-            <h3>Working range</h3>
-            <p>Product strategy<br />UI / UX<br />AI development<br />Prototyping</p>
-          </section>
-          <section>
-            <h3>Working approach</h3>
-            <p>Self-directed, pragmatic, continuous improvement.</p>
-          </section>
-        </aside>
       </div>
 
-      <div className="home-work">
+      <div className="home-work" aria-labelledby="selected-work-heading">
+        <h2 className="home-work-heading" id="selected-work-heading">Selected work</h2>
         <article className="home-project home-project-forward">
           <div className="home-project-copy">
-            <h2>Forward</h2>
+            <h3>Forward</h3>
             <p className="home-role">Product originator · Design and implementation lead</p>
             <p className="home-project-lede">Turns customer data into personalized, mobile-first narratives at scale.</p>
             <p>
               I originated and bootstrapped Forward inside Juice Analytics, shaping its strategy, experience, AI behavior,
               and initial production implementation. I now lead product direction with the broader team as we expand its market.
             </p>
-            <a className="home-text-link" href="https://www.insightsrecap.com/">
-              View live product <span aria-hidden="true">↗</span>
-            </a>
+            <div className="home-project-links">
+              <Link className="home-text-link" to="/projects/forward">Read the case study <span aria-hidden="true">→</span></Link>
+              <a className="home-live-link" href="https://www.insightsrecap.com/">Live product <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
           <figure className="home-forward-pair">
-            <img className="home-forward-mobile" src={projects.forward} alt="Forward personalized story on a mobile screen" />
-            <img className="home-forward-wide" src={projects.forward} alt="Forward personalized data narrative" />
+            <img className="home-forward-wide" loading="lazy" src={projects.forward} alt="Forward’s customer narrative experience alongside its product introduction" />
             <FigureLabel>Personalized narratives at scale</FigureLabel>
           </figure>
         </article>
 
         <article className="home-project home-project-juicebox">
           <div className="home-project-copy">
-            <h2>Juicebox</h2>
+            <h3>Juicebox</h3>
             <p className="home-role">Product design lead</p>
             <p className="home-project-lede">A data platform for exploring and presenting data stories.</p>
             <p>
@@ -100,15 +80,14 @@ export default function HomePage() {
             </Link>
           </div>
           <figure className="home-juicebox-pair">
-            <img className="home-juicebox-wide" src={projects.juicebox} alt="Juicebox story designer and data story" />
-            <img className="home-juicebox-detail" src={projects.juiceboxDetail} alt="Juicebox story designer detail" />
+            <img className="home-juicebox-wide" loading="lazy" src={projects.juicebox} alt="Juicebox story designer and data story" />
             <FigureLabel>Story canvas · Designer controls</FigureLabel>
           </figure>
         </article>
 
         <article className="home-project home-project-skill">
           <div className="home-project-copy">
-            <h2>Forward Narrative Skill</h2>
+            <h3>Forward Narrative Skill</h3>
             <p className="home-role">AI product system · Design and implementation lead</p>
             <p className="home-project-lede">Turn one person’s narrative expertise into a team capability.</p>
             <p>
