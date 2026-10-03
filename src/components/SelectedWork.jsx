@@ -99,7 +99,7 @@ export default function SelectedWork({ surface = 'home' }) {
 
         {included('finestra-art-app') && (<section className="portfolio-history" aria-labelledby="history-heading">
           <div className="portfolio-history-copy">
-            <p className="portfolio-history-label"><MaterialIcon name="archive" /> From the archive · 2011–2017</p>
+            <p className="portfolio-history-label"><MaterialIcon name="inventory_2" /> From the archive · 2011–2017</p>
             <h2 id="history-heading">Finestra Art App</h2>
             <p>
               My brother and I built a marketplace for local artists and buyers. I led product design and the marketing
