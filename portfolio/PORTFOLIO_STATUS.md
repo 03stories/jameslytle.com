@@ -16,7 +16,7 @@ Apply approved Home patterns to the scoped MVP pages
 
 ## Single recommended next action
 
-Apply the approved case-study patterns to Forward.
+Review the shared case-study presentation, then apply the portfolio shell to About and Resume.
 
 ## This week's three outcomes
 
@@ -44,6 +44,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 - None prevent narrative drafting; documented asset and verification gaps remain bounded.
 
 ## Last session
+
+- Applied the shared portfolio shell to project detail routes. Added a clear title/headline opening, quiet metadata, readable prose measure, wider artifact images, consistent corners/shadows, and return links. Viewed Forward in the local browser.
 
 - Promoted Home shell styles to the shared portfolio shell and extracted SelectedWork for Home and Projects. Projects now presents the three anchors and historical Finestra inset in the approved visual language. Viewed the refreshed index in the local browser.
 
