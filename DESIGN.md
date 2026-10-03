@@ -18,7 +18,7 @@ Practical, precise, approachable. Real product artifacts carry the visual eviden
 
 1. **Introduction:** lead with a clear heading, supporting first-person copy, contact action, and a short current-role line. Avoid a separate rail that repeats the same positioning.
 2. **Project preview:** readable text beside one dominant, uncropped artifact; alternate composition when it helps the reading rhythm. Give images a thin defined edge. On mobile, put copy before the artifact. Give case studies a direct link, with live-product links secondary. Role metadata starts with “Role:” and uses comma-separated items.
-3. **Artifact caption:** small sentence-case text beneath the real image, describing what it shows. Preserve the source image's proportions.
+3. **Artifact caption:** small sentence-case text beneath the real image, describing what it shows. Preserve the source image's proportions. Project images use 10px corners and a subtle 3px-offset, 8px-blur shadow; archive images use 8px corners. The archive surface uses 10px corners.
 4. **Historical reflection:** a compact dark green documentary inset with period information, a short reflection, and small authentic period images. Use denser, smaller typography to distinguish it from current work.
 5. **Closing contact:** “Let’s work together.” beside the opportunity statement and contact links. Resume links are labelled “Resume”. The working-principles section was removed at James's request.
 

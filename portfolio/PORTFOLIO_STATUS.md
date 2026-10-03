@@ -45,6 +45,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 
 ## Last session
 
+- Surface refinement: James requested softer image/archive corners and subtle image shadows. Applied 10px project image and archive surface corners, 8px archive image corners, and restrained image shadows.
+
 - Narrative Skill visual feedback: replaced Home’s three styled synthetic images with one plain before/after workflow wireframe. Created a separate Home asset; the detailed case-study assets remain available.
 
 - Icon refinement: James wanted different icons rather than no icons. Added local Google Material SVGs with consistent 6px spacing and semantic choices for internal, external, email, and Resume links.
