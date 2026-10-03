@@ -19,7 +19,7 @@ Practical, precise, approachable. Real product artifacts carry the visual eviden
 1. **Introduction:** lead with a clear heading, supporting first-person copy, contact action, and a short “Current:” role line. Top-align the heading and supporting column. Avoid a separate rail that repeats the same positioning.
 2. **Project preview:** readable text beside one dominant, uncropped artifact; alternate composition when it helps the reading rhythm. Give images a thin defined edge. On mobile, put copy before the artifact. Give case studies a direct link, with live-product links secondary. Role metadata starts with “Role:” and uses comma-separated items.
 3. **Artifact caption:** Optional small sentence-case text beneath the real image, describing what it shows. Omit captions that repeat nearby copy; Forward has no Home caption. Preserve the source image's proportions. Project images use 10px corners and a subtle 3px-offset, 8px-blur shadow; archive images use 8px corners. The archive surface uses 10px corners.
-4. **Historical reflection:** a compact, horizontally centered dark green documentary inset with an archive icon, period information, a short reflection, and small authentic period images. Cap its width at 1040px; keep its contents left-aligned. Use denser, smaller typography to distinguish it from current work.
+4. **Historical reflection:** a compact, horizontally centered subtle neutral documentary inset with an archive icon, period information, a short reflection, and small authentic period images. Cap its width at 1040px; keep its contents left-aligned. Use denser, smaller typography to distinguish it from current work.
 5. **Closing contact:** “Let’s chat” beside the opportunity statement and contact links. Resume links are labelled “Resume”. The working-principles section was removed at James's request.
 
 ## Explanatory diagrams
@@ -41,7 +41,7 @@ Use plain wireframe styling: neutral fills, thin outlines, simple connectors, re
 
 | Page | Composition and rules |
 |---|---|
-| Projects index | Clear introduction followed by a tight list of smaller thumbnails, titles, role metadata, and short summaries. Use direct title links and thin row separators. Distinguish Finestra with a compact dark archive row. |
+| Projects index | Clear introduction followed by a tight list of smaller thumbnails, titles, role metadata, and short summaries. Use direct title links and thin row separators. Distinguish Finestra with a compact neutral archive row. |
 | Major case studies | Clear title, short summary and role/context metadata, followed by readable narrative sections and generously sized artifacts. Use consistent captions only where they explain evidence. |
 | Finestra | Carry the archive icon, dates, and documentary treatment into the introduction. Keep reflection and period artifacts distinct from current design claims. |
 | About | Apply the shared title, prose, links, and spacing while preserving personal voice, inline project references, portrait, and curated writing. |
