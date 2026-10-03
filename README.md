@@ -2,6 +2,10 @@
 
 React + Vite portfolio site, statically prerendered for GitHub Pages.
 
+## Local setup
+
+Use Node.js 22, matching CI and `.nvmrc`. Install dependencies with `npm ci`, then start the site with `npm run dev`.
+
 ## Scripts
 
 - `npm run dev` - start local dev server (LAN accessible)
