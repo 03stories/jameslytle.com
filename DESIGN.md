@@ -28,7 +28,7 @@ Use plain wireframe styling: neutral fills, thin outlines, simple connectors, re
 
 ## Reuse rules
 
-- Extend the existing `--portfolio-*` token family and `MaterialIcon` component. Shared styles belong in `src/styles.css`; reusable presentation components belong in `src/components/`. `SelectedWork.jsx` supplies the curated project rows and archive to Home and Projects using `portfolio-*` classes. Give shared patterns portfolio names rather than making other pages depend on Home class names.
+- Extend the existing `--portfolio-*` token family and `MaterialIcon` component. Shared styles belong in `src/styles.css`; reusable presentation components belong in `src/components/`. `SelectedWork.jsx` supplies Home previews using `portfolio-*` classes. Projects uses a compact semantic list with 180px thumbnails, brief summaries, direct title links, and 24px row padding; visibility is controlled by `projectVisibility.json`. Give shared patterns portfolio names rather than making other pages depend on Home class names.
 - Promote the palette, gutter, spacing, type, image treatment, and action styles to the shared portfolio shell as pages migrate. Keep the approved Home appearance stable during this work.
 - Extract components when repeated uses have the same purpose. Good candidates are contact actions, artifact figures with optional captions, and project metadata. Keep Home's introduction and Finestra composition specific until another page needs the same structure.
 - Use authentic screenshots for product evidence. Use plain wireframes for explanatory systems. Preserve image proportions, avoid decorative crops, and keep the Home preview to one dominant artifact per project.
@@ -41,7 +41,7 @@ Use plain wireframe styling: neutral fills, thin outlines, simple connectors, re
 
 | Page | Composition and rules |
 |---|---|
-| Projects index | Clear introduction followed by curated project rows; use the preview hierarchy, role metadata, dominant images, and direct case links. Distinguish Finestra as historical. |
+| Projects index | Clear introduction followed by a tight list of smaller thumbnails, titles, role metadata, and short summaries. Use direct title links and thin row separators. Distinguish Finestra with a compact dark archive row. |
 | Major case studies | Clear title, short summary and role/context metadata, followed by readable narrative sections and generously sized artifacts. Use consistent captions only where they explain evidence. |
 | Finestra | Carry the archive icon, dates, and documentary treatment into the introduction. Keep reflection and period artifacts distinct from current design claims. |
 | About | Apply the shared title, prose, links, and spacing while preserving personal voice, inline project references, portrait, and curated writing. |
