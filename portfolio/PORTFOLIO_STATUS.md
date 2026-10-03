@@ -12,11 +12,11 @@ Drafting
 
 ## Current focus
 
-Refresh Home aesthetic and define reusable page patterns
+Apply approved Home patterns to the scoped MVP pages
 
 ## Single recommended next action
 
-Review the new Home iteration with James and refine its visual character before extending the patterns to other MVP pages.
+Promote the approved shared foundations and apply them to the Projects index.
 
 ## This week's three outcomes
 
@@ -28,7 +28,7 @@ Review the new Home iteration with James and refine its visual character before 
 
 | Item | Level | Blocking issue | Next proof |
 |---|---|---|---|
-| Home | Draft-ready | Frozen anchors and positioning are clear; James wants a refreshed aesthetic before rollout | Establish the new visual direction here first |
+| Home | Presentable | Visual direction approved; Juicebox replacement image remains G-027 | Preserve approved appearance during shared-pattern extraction |
 | Forward | Draft-ready | The evidence-checked public route is implemented; the process visual remains a documented placeholder | Apply refreshed case-study patterns after Home direction is set |
 | Juicebox | Draft-ready | The evidence-checked public route is implemented; the before/after visual remains a documented placeholder | Apply refreshed case-study patterns after Home direction is set |
 | Forward Narrative Claude Skill | Draft-ready | Public case draft, explicit responsibility boundaries, and three synthetic visuals are implemented; Home now features it | Apply refreshed case-study patterns after Home direction is set |
@@ -44,6 +44,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 - None prevent narrative drafting; documented asset and verification gaps remain bounded.
 
 ## Last session
+
+- James approved Home as the baseline for the rest of the site. Updated DESIGN.md with current labels, top alignment, centered archive treatment, reusable rules, page mappings, and rollout order.
 
 - Surface refinement: James requested softer image/archive corners and subtle image shadows. Applied 10px project image and archive surface corners, 8px archive image corners, and restrained image shadows.
 
@@ -63,4 +65,4 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 
 ## Next review trigger
 
-The Finestra historical framing and period screenshots are present in the public case page.
+The Projects index uses the approved shared foundations and is ready for visual review.

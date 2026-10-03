@@ -1,6 +1,6 @@
 # Portfolio visual direction
 
-Updated 2026-10-03. This is a provisional Home iteration for James's review, not a frozen design system. Extend it to the scoped MVP pages once the direction is settled.
+Updated 2026-10-03. James approved Home as the visual baseline for the MVP. These rules capture that design and guide its application to the remaining scoped pages. The reference implementation is `src/pages/HomePage.jsx` and the Home section of `src/styles.css`.
 
 ## Voice
 
@@ -16,18 +16,43 @@ Practical, precise, approachable. Real product artifacts carry the visual eviden
 
 ## Page patterns to carry forward
 
-1. **Introduction:** lead with a clear heading, supporting first-person copy, contact action, and a short current-role line. Avoid a separate rail that repeats the same positioning.
+1. **Introduction:** lead with a clear heading, supporting first-person copy, contact action, and a short “Current:” role line. Top-align the heading and supporting column. Avoid a separate rail that repeats the same positioning.
 2. **Project preview:** readable text beside one dominant, uncropped artifact; alternate composition when it helps the reading rhythm. Give images a thin defined edge. On mobile, put copy before the artifact. Give case studies a direct link, with live-product links secondary. Role metadata starts with “Role:” and uses comma-separated items.
-3. **Artifact caption:** small sentence-case text beneath the real image, describing what it shows. Preserve the source image's proportions. Project images use 10px corners and a subtle 3px-offset, 8px-blur shadow; archive images use 8px corners. The archive surface uses 10px corners.
-4. **Historical reflection:** a compact dark green documentary inset with period information, a short reflection, and small authentic period images. Use denser, smaller typography to distinguish it from current work.
-5. **Closing contact:** “Let’s work together.” beside the opportunity statement and contact links. Resume links are labelled “Resume”. The working-principles section was removed at James's request.
+3. **Artifact caption:** Optional small sentence-case text beneath the real image, describing what it shows. Omit captions that repeat nearby copy; Forward has no Home caption. Preserve the source image's proportions. Project images use 10px corners and a subtle 3px-offset, 8px-blur shadow; archive images use 8px corners. The archive surface uses 10px corners.
+4. **Historical reflection:** a compact, horizontally centered dark green documentary inset with an archive icon, period information, a short reflection, and small authentic period images. Cap its width at 1040px; keep its contents left-aligned. Use denser, smaller typography to distinguish it from current work.
+5. **Closing contact:** “Let’s chat” beside the opportunity statement and contact links. Resume links are labelled “Resume”. The working-principles section was removed at James's request.
 
 ## Explanatory diagrams
 
 Use plain wireframe styling: neutral fills, thin outlines, simple connectors, readable labels, and no gradients, glows, decorative grids, or shadows. Home shows only one workflow image for the Narrative Skill. More detailed evidence belongs in the case study.
 
-## Scope and review
+## Reuse rules
 
-Home is the visual proving ground. Case-study, Lab, About, Resume, and index patterns follow after James's feedback. Lab now has a clearer navigation label while retaining `/other-things` URLs.
+- Extend the existing `--portfolio-*` token family and `MaterialIcon` component. Shared styles belong in `src/styles.css`; reusable presentation components belong in `src/components/`. Give shared patterns portfolio names rather than making other pages depend on Home class names.
+- Promote the palette, gutter, spacing, type, image treatment, and action styles to the shared portfolio shell as pages migrate. Keep the approved Home appearance stable during this work.
+- Extract components when repeated uses have the same purpose. Good candidates are contact actions, artifact figures with optional captions, and project metadata. Keep Home's introduction and Finestra composition specific until another page needs the same structure.
+- Use authentic screenshots for product evidence. Use plain wireframes for explanatory systems. Preserve image proportions, avoid decorative crops, and keep the Home preview to one dominant artifact per project.
+- Use the accent for primary actions; use underlined text for secondary navigation. Material icons inherit the label color, measure 18px, have a 6px gap, and are decorative to assistive technology. Use archive for historical labels.
+- Maintain visible keyboard focus, semantic headings, descriptive image alternatives, and at least 44px action targets. Hover motion must respect reduced-motion preferences.
+- At 1000px, tighten column gaps; at 720px, stack columns with copy before images. Let actions and navigation wrap. Check long headings and images at narrow widths before considering a page finished.
+- Keep body copy readable, generally at 65–75ch maximum; introductions and project previews may use shorter measures. Preserve James's first-person voice and concrete responsibility boundaries.
 
-Remaining direction questions: the desired amount of visual character, the treatment of the long positioning headline, and whether the neutral surface and existing type family feel right. No new assets, speculative metrics, or decorative imagery were introduced.
+## Page application map
+
+| Page | Composition and rules |
+|---|---|
+| Projects index | Clear introduction followed by curated project rows; use the preview hierarchy, role metadata, dominant images, and direct case links. Distinguish Finestra as historical. |
+| Major case studies | Clear title, short summary and role/context metadata, followed by readable narrative sections and generously sized artifacts. Use consistent captions only where they explain evidence. |
+| Finestra | Carry the archive icon, dates, and documentary treatment into the introduction. Keep reflection and period artifacts distinct from current design claims. |
+| About | Apply the shared title, prose, links, and spacing while preserving personal voice, inline project references, portrait, and curated writing. |
+| Resume | Use dense, readable typography and clear experience hierarchy within the same shell; prioritize scanning and a direct resume action. |
+| Lab | Compact index and four artifact pages with the same typography, links, image treatment, and spacing. Keep `/other-things` routes. |
+
+## Rollout order
+
+1. Promote shared foundations and repeated actions/figures while preserving Home.
+2. Apply the system to Projects and the three major case studies.
+3. Apply the historical pattern to Finestra, then About, Resume, and the scoped Lab pages.
+4. Clean relevant content and resolve remaining evidence/assets, then review responsive behavior and accessibility before the launch PR.
+
+Home's direction is approved. The Juicebox replacement image remains tracked as G-027; approval of the visual patterns does not resolve that asset gap. Legacy pages outside MVP remain subject to the existing relevance and inbound-link plan.
