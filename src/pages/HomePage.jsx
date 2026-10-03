@@ -38,7 +38,7 @@ export default function HomePage() {
               </a>
               <Link className="home-secondary-action" to="/resume">Resume <MaterialIcon name="description" /></Link>
             </div>
-            <p className="home-current-role">Currently Design Engineer &amp; Product Lead at Juice Analytics.</p>
+            <p className="home-current-role">Current: Design Engineer &amp; Product Lead at Juice Analytics.</p>
           </div>
         </div>
       </div>
@@ -61,7 +61,6 @@ export default function HomePage() {
           </div>
           <figure className="home-forward-pair">
             <img className="home-forward-wide" loading="lazy" src={projects.forward} alt="Forward’s customer narrative experience alongside its product introduction" />
-            <FigureLabel>Personalized narratives at scale</FigureLabel>
           </figure>
         </article>
 
@@ -106,7 +105,7 @@ export default function HomePage() {
 
         <section className="home-history" aria-labelledby="history-heading">
           <div className="home-history-copy">
-            <p className="home-history-label">From the archive · 2011–2017</p>
+            <p className="home-history-label"><MaterialIcon name="archive" /> From the archive · 2011–2017</p>
             <h2 id="history-heading">Finestra Art App</h2>
             <p>
               My brother and I built a marketplace for local artists and buyers. I led product design and the marketing
@@ -125,7 +124,7 @@ export default function HomePage() {
       </div>
 
       <section className="home-contact" aria-labelledby="contact-heading">
-        <h2 id="contact-heading">Let’s work together.</h2>
+        <h2 id="contact-heading">Let’s chat</h2>
         <div>
           <p>
             I'm open to senior design-engineering and product leadership opportunities, and select collaborations on
