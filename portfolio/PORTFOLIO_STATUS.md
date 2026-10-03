@@ -45,6 +45,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 
 ## Last session
 
+- Narrative Skill visual feedback: replaced Home’s three styled synthetic images with one plain before/after workflow wireframe. Created a separate Home asset; the detailed case-study assets remain available.
+
 - Icon refinement: James wanted different icons rather than no icons. Added local Google Material SVGs with consistent 6px spacing and semantic choices for internal, external, email, and Resume links.
 
 - Browser feedback pass: Removed decorative arrows, standardized role labels and Resume links, defined image edges, removed the working-principles section, simplified the contact heading, and condensed Finestra into a dark documentary inset. Recorded the Juicebox image replacement as TODO G-027; James will select or supply a better image.

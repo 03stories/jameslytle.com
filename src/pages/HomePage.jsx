@@ -6,9 +6,7 @@ const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 const projects = {
   forward: asset('content/site/home/forward-insights-recap-home.png'),
   juicebox: asset('content/projects/juicebox/jb-header.png'),
-  narrativeWorkflow: asset('content/projects/forward-narrative-skill/workflow-before-after.svg'),
-  narrativeLoop: asset('content/projects/forward-narrative-skill/continuous-improvement-loop.svg'),
-  narrativeInsight: asset('content/projects/forward-narrative-skill/bar-insight-pattern.svg'),
+  narrativeWorkflow: asset('content/projects/forward-narrative-skill/workflow-wireframe.svg'),
   finestraApp: asset('content/projects/finestra-art-app/localart-artwork-2.png'),
   finestraArtist: asset('content/projects/finestra-art-app/localart-artwork-createnew1.png')
 };
@@ -102,11 +100,7 @@ export default function HomePage() {
           </div>
           <figure className="home-skill-visuals">
             <img className="home-skill-workflow" src={projects.narrativeWorkflow} alt="Narrative creation moves from a single-person code and deployment process to team-wide creation and sharing" />
-            <div className="home-skill-details">
-              <img src={projects.narrativeLoop} alt="A continuous improvement loop turns team use into reusable product and skill improvements" />
-              <img src={projects.narrativeInsight} alt="A narrative chart uses a concise headline and visual emphasis to make its key insight clear" />
-            </div>
-            <FigureLabel>Workflow, improvement practice, and a reusable visual pattern</FigureLabel>
+            <FigureLabel>A schematic of the workflow change</FigureLabel>
           </figure>
         </article>
 

@@ -378,8 +378,6 @@ select:focus-visible {
 .home-juicebox-wide { aspect-ratio: 3093 / 1441; object-fit: contain; }
 .home-skill-visuals { display: grid; gap: 1rem; }
 .home-skill-visuals .home-skill-workflow { width: 100%; object-fit: contain; }
-.home-skill-details { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.home-skill-details img { align-self: center; object-fit: contain; }
 
 .home-history {
   display: grid;

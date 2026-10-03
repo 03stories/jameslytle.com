@@ -22,6 +22,10 @@ Practical, precise, approachable. Real product artifacts carry the visual eviden
 4. **Historical reflection:** a compact dark green documentary inset with period information, a short reflection, and small authentic period images. Use denser, smaller typography to distinguish it from current work.
 5. **Closing contact:** “Let’s work together.” beside the opportunity statement and contact links. Resume links are labelled “Resume”. The working-principles section was removed at James's request.
 
+## Explanatory diagrams
+
+Use plain wireframe styling: neutral fills, thin outlines, simple connectors, readable labels, and no gradients, glows, decorative grids, or shadows. Home shows only one workflow image for the Narrative Skill. More detailed evidence belongs in the case study.
+
 ## Scope and review
 
 Home is the visual proving ground. Case-study, Lab, About, Resume, and index patterns follow after James's feedback. Lab now has a clearer navigation label while retaining `/other-things` URLs.
