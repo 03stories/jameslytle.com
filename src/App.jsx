@@ -29,7 +29,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className={`app-shell${location.pathname === '/' ? ' home-shell' : ''}`}>
+    <div className={`app-shell${['/', '/projects'].includes(location.pathname) ? ' portfolio-shell' : ''}`}>
       <ScrollToTopOnRouteChange />
       <a className="skip-link" href="#main-content">
         Skip to main content

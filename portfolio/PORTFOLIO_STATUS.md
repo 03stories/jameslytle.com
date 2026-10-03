@@ -16,7 +16,7 @@ Apply approved Home patterns to the scoped MVP pages
 
 ## Single recommended next action
 
-Promote the approved shared foundations and apply them to the Projects index.
+Apply the approved case-study patterns to Forward.
 
 ## This week's three outcomes
 
@@ -44,6 +44,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 - None prevent narrative drafting; documented asset and verification gaps remain bounded.
 
 ## Last session
+
+- Promoted Home shell styles to the shared portfolio shell and extracted SelectedWork for Home and Projects. Projects now presents the three anchors and historical Finestra inset in the approved visual language. Viewed the refreshed index in the local browser.
 
 - James approved Home as the baseline for the rest of the site. Updated DESIGN.md with current labels, top alignment, centered archive treatment, reusable rules, page mappings, and rollout order.
 

@@ -10,7 +10,7 @@ Practical, precise, approachable. Real product artifacts carry the visual eviden
 
 - Keep the existing Geologica family. Use 400 for prose, 500 for display and links, and 600 for the name. Weight contrast should help long headlines breathe.
 - Home's neutral background is `#f8f9f9`, ink `#202322`, secondary text `#555d59`, rules `#d9dfdc`, and vermilion action color `#bd3023`.
-- CSS foundations live under `--portfolio-*` in `src/styles.css`. They are currently scoped to `.home-shell`; migrate them deliberately when building the remaining page patterns.
+- CSS foundations live under `--portfolio-*` in `src/styles.css`. They now live on `.portfolio-shell`, used by Home and Projects; extend that shell deliberately as remaining pages migrate.
 - Fluid outer gutter: 20–64px. Section spacing: 56–112px. Display scale: 38–70px on desktop, 36–52px on mobile, with line height 1.12 and tracking no tighter than -0.035em.
 - Primary actions use a solid accent, white text, 4px corners, and a minimum 44px target. Secondary actions are underlined text. Links use local Google Material outlined SVGs: chevrons for internal project links, open-in-new for live products, mail for contact, and a document for Resume. Icons are 18px with a 6px label gap and inherit the text color; they are hidden from assistive technology. Hover lifts have reduced-motion alternatives.
 
@@ -28,7 +28,7 @@ Use plain wireframe styling: neutral fills, thin outlines, simple connectors, re
 
 ## Reuse rules
 
-- Extend the existing `--portfolio-*` token family and `MaterialIcon` component. Shared styles belong in `src/styles.css`; reusable presentation components belong in `src/components/`. Give shared patterns portfolio names rather than making other pages depend on Home class names.
+- Extend the existing `--portfolio-*` token family and `MaterialIcon` component. Shared styles belong in `src/styles.css`; reusable presentation components belong in `src/components/`. `SelectedWork.jsx` supplies the curated project rows and archive to Home and Projects using `portfolio-*` classes. Give shared patterns portfolio names rather than making other pages depend on Home class names.
 - Promote the palette, gutter, spacing, type, image treatment, and action styles to the shared portfolio shell as pages migrate. Keep the approved Home appearance stable during this work.
 - Extract components when repeated uses have the same purpose. Good candidates are contact actions, artifact figures with optional captions, and project metadata. Keep Home's introduction and Finestra composition specific until another page needs the same structure.
 - Use authentic screenshots for product evidence. Use plain wireframes for explanatory systems. Preserve image proportions, avoid decorative crops, and keep the Home preview to one dominant artifact per project.
