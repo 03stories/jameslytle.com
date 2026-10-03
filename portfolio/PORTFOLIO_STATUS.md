@@ -45,6 +45,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 
 ## Last session
 
+- Icon refinement: James wanted different icons rather than no icons. Added local Google Material SVGs with consistent 6px spacing and semantic choices for internal, external, email, and Resume links.
+
 - Browser feedback pass: Removed decorative arrows, standardized role labels and Resume links, defined image edges, removed the working-principles section, simplified the contact heading, and condensed Finestra into a dark documentary inset. Recorded the Juicebox image replacement as TODO G-027; James will select or supply a better image.
 
 - Design iteration (2026-10-03): Reworked Home around an introduction-first composition, lighter typography, uncropped dominant project images, a quieter Finestra inset, and a neutral surface. Retained the existing Geologica font and vermilion accent. Added `DESIGN.md` with provisional reusable patterns; updated navigation from Other Things to Lab while retaining its route. The production build and basic accessibility audit passed. James's visual feedback is the next input; this direction is not frozen.

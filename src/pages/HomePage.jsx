@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import MaterialIcon from '../components/MaterialIcon';
 
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 
@@ -35,9 +36,9 @@ export default function HomePage() {
             </p>
             <div className="home-actions">
               <a className="home-primary-action" href="mailto:jameslytle@hey.com">
-                Start a conversation
+                <MaterialIcon name="mail" /> Start a conversation
               </a>
-              <Link className="home-secondary-action" to="/resume">Resume</Link>
+              <Link className="home-secondary-action" to="/resume">Resume <MaterialIcon name="description" /></Link>
             </div>
             <p className="home-current-role">Currently Design Engineer &amp; Product Lead at Juice Analytics.</p>
           </div>
@@ -56,8 +57,8 @@ export default function HomePage() {
               and initial production implementation. I now lead product direction with the broader team as we expand its market.
             </p>
             <div className="home-project-links">
-              <Link className="home-text-link" to="/projects/forward">Read the case study</Link>
-              <a className="home-live-link" href="https://www.insightsrecap.com/">Live product</a>
+              <Link className="home-text-link" to="/projects/forward">Read the case study <MaterialIcon name="chevron_right" /></Link>
+              <a className="home-live-link" href="https://www.insightsrecap.com/">Live product <MaterialIcon name="open_in_new" /></a>
             </div>
           </div>
           <figure className="home-forward-pair">
@@ -76,7 +77,7 @@ export default function HomePage() {
               into a configurable component system and, later, a self-service authoring experience.
             </p>
             <Link className="home-text-link" to="/projects/juicebox">
-              View project
+              View project <MaterialIcon name="chevron_right" />
             </Link>
           </div>
           {/* TODO: Replace this historical Juicebox capture with a stronger representative product image. See portfolio/CONTENT_GAPS.md G-027. */}
@@ -96,7 +97,7 @@ export default function HomePage() {
               replacing a process that could take days and depend on me alone.
             </p>
             <Link className="home-text-link" to="/projects/forward-narrative-skill">
-              View project
+              View project <MaterialIcon name="chevron_right" />
             </Link>
           </div>
           <figure className="home-skill-visuals">
@@ -118,7 +119,7 @@ export default function HomePage() {
               site; he led iOS engineering. An honest record of the attempt, what I learned, and what I’d do differently today.
             </p>
             <Link className="home-text-link" to="/projects/finestra-art-app">
-              Revisit the Finestra story
+              Revisit the Finestra story <MaterialIcon name="chevron_right" />
             </Link>
           </div>
           <figure className="home-history-images">
@@ -138,10 +139,10 @@ export default function HomePage() {
           </p>
           <div className="home-actions">
             <a className="home-primary-action" href="mailto:jameslytle@hey.com">
-              Start a conversation
+              <MaterialIcon name="mail" /> Start a conversation
             </a>
             <Link className="home-secondary-action" to="/resume">
-              Resume
+              Resume <MaterialIcon name="description" />
             </Link>
           </div>
         </div>

@@ -324,6 +324,7 @@ select:focus-visible {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
+  gap: 0.375rem;
   font-size: 0.875rem;
   font-weight: 500;
   text-decoration: none;
@@ -338,7 +339,7 @@ select:focus-visible {
 }
 .home-primary-action:hover { background: #9e281e; transform: translateY(-2px); }
 .home-secondary-action { text-decoration: underline; text-underline-offset: 0.3em; }
-.home-text-link, .home-live-link { display: inline-flex; align-items: center; min-height: 44px; font-size: 0.875rem; font-weight: 500; text-underline-offset: 0.3em; }
+.home-text-link, .home-live-link { display: inline-flex; align-items: center; gap: 0.375rem; min-height: 44px; font-size: 0.875rem; font-weight: 500; text-underline-offset: 0.3em; }
 .home-project-links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.75rem; }
 .home-live-link { color: var(--portfolio-muted) !important; font-weight: 400; }
 
@@ -627,4 +628,15 @@ select:focus-visible {
     grid-template-columns: 1fr;
     gap: 0.25rem;
   }
+}
+
+/* Local Google Material Symbols; inherit link color without an icon font. */
+.material-icon {
+  display: inline-block;
+  width: 1.125rem;
+  height: 1.125rem;
+  flex: 0 0 1.125rem;
+  background-color: currentColor;
+  -webkit-mask: var(--material-icon) center / contain no-repeat;
+  mask: var(--material-icon) center / contain no-repeat;
 }
