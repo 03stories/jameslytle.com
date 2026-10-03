@@ -294,7 +294,7 @@ select:focus-visible {
   display: grid;
   grid-template-columns: minmax(0, 1.65fr) minmax(240px, 0.85fr);
   gap: clamp(2.5rem, 6vw, 6rem);
-  align-items: end;
+  align-items: start;
 }
 .home-intro h2 {
   max-width: 20ch;
