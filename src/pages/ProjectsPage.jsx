@@ -7,7 +7,7 @@ export default function ProjectsPage() {
         <h2 id="projects-heading">Projects</h2>
         <p>Selected work in product design, engineering, and AI, with an earlier chapter from the archive.</p>
       </header>
-      <SelectedWork />
+      <SelectedWork surface="projects" />
     </section>
   );
 }

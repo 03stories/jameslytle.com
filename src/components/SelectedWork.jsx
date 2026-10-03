@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import MaterialIcon from './MaterialIcon';
+import visibility from '../content/projectVisibility.json';
+import allProjects from '../content/projects.json';
 
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 
@@ -19,11 +21,13 @@ function FigureLabel({ children }) {
   );
 }
 
-export default function SelectedWork() {
+export default function SelectedWork({ surface = 'home' }) {
+  const included = (slug) => visibility.some((item) => item.slug === slug && item[surface]);
+  const additional = visibility.filter((item) => item[surface] && !['forward', 'juicebox', 'forward-narrative-skill', 'finestra-art-app'].includes(item.slug)).map((item) => allProjects.find((project) => project.slug === item.slug)).filter(Boolean);
   return (
       <div className="portfolio-work" aria-labelledby="selected-work-heading">
         <h2 className="portfolio-work-heading" id="selected-work-heading">Selected work</h2>
-        <article className="portfolio-project portfolio-project-forward">
+        {included('forward') && (<article className="portfolio-project portfolio-project-forward">
           <div className="portfolio-project-copy">
             <h3>Forward</h3>
             <p className="portfolio-role">Role: Product originator, design and implementation lead</p>
@@ -40,9 +44,9 @@ export default function SelectedWork() {
           <figure className="portfolio-forward-pair">
             <img className="portfolio-forward-wide" loading="lazy" src={projects.forward} alt="Forward’s customer narrative experience alongside its product introduction" />
           </figure>
-        </article>
+        </article>)}
 
-        <article className="portfolio-project portfolio-project-juicebox">
+        {included('juicebox') && (<article className="portfolio-project portfolio-project-juicebox">
           <div className="portfolio-project-copy">
             <h3>Juicebox</h3>
             <p className="portfolio-role">Role: Product design lead</p>
@@ -60,9 +64,9 @@ export default function SelectedWork() {
             <img className="portfolio-juicebox-wide" loading="lazy" src={projects.juicebox} alt="Juicebox story designer and data story" />
             <FigureLabel>Story canvas · Designer controls</FigureLabel>
           </figure>
-        </article>
+        </article>)}
 
-        <article className="portfolio-project portfolio-project-skill">
+        {included('forward-narrative-skill') && (<article className="portfolio-project portfolio-project-skill">
           <div className="portfolio-project-copy">
             <h3>Forward Narrative Skill</h3>
             <p className="portfolio-role">Role: AI product system, design and implementation lead</p>
@@ -79,9 +83,21 @@ export default function SelectedWork() {
             <img className="portfolio-skill-workflow" src={projects.narrativeWorkflow} alt="Narrative creation moves from a single-person code and deployment process to team-wide creation and sharing" />
             <FigureLabel>A schematic of the workflow change</FigureLabel>
           </figure>
-        </article>
+        </article>)}
 
-        <section className="portfolio-history" aria-labelledby="history-heading">
+        {additional.map((project) => (
+          <article className="portfolio-project" key={project.slug}>
+            <div className="portfolio-project-copy">
+              <h3>{project.title}</h3>
+              <p className="portfolio-role">{project.client}</p>
+              <p>{project.headline}</p>
+              <Link className="portfolio-text-link" to={`/projects/${project.slug}`}>View project <MaterialIcon name="chevron_right" /></Link>
+            </div>
+            {project.cover && <figure><img loading="lazy" src={project.cover} alt={`${project.title} product interface`} /></figure>}
+          </article>
+        ))}
+
+        {included('finestra-art-app') && (<section className="portfolio-history" aria-labelledby="history-heading">
           <div className="portfolio-history-copy">
             <p className="portfolio-history-label"><MaterialIcon name="archive" /> From the archive · 2011–2017</p>
             <h2 id="history-heading">Finestra Art App</h2>
@@ -98,7 +114,7 @@ export default function SelectedWork() {
             <img src={projects.finestraArtist} alt="An early Finestra screen for artists to add artwork" />
             <FigureLabel>Product work, 2011–2017</FigureLabel>
           </figure>
-        </section>
+        </section>)}
       </div>
 
   );
