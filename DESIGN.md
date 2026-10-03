@@ -12,16 +12,15 @@ Practical, precise, approachable. Real product artifacts carry the visual eviden
 - Home's neutral background is `#f8f9f9`, ink `#202322`, secondary text `#555d59`, rules `#d9dfdc`, and vermilion action color `#bd3023`.
 - CSS foundations live under `--portfolio-*` in `src/styles.css`. They are currently scoped to `.home-shell`; migrate them deliberately when building the remaining page patterns.
 - Fluid outer gutter: 20–64px. Section spacing: 56–112px. Display scale: 38–70px on desktop, 36–52px on mobile, with line height 1.12 and tracking no tighter than -0.035em.
-- Primary actions use a solid accent, white text, 4px corners, and a minimum 44px target. Secondary actions are underlined text. Arrow movements and hover lifts have reduced-motion alternatives.
+- Primary actions use a solid accent, white text, 4px corners, and a minimum 44px target. Secondary actions are underlined text. Links have no decorative arrows. Hover lifts have reduced-motion alternatives.
 
 ## Page patterns to carry forward
 
 1. **Introduction:** lead with a clear heading, supporting first-person copy, contact action, and a short current-role line. Avoid a separate rail that repeats the same positioning.
-2. **Project preview:** readable text beside one dominant, uncropped artifact; alternate composition when it helps the reading rhythm. On mobile, put copy before the artifact. Give case studies a direct link, with live-product links secondary.
+2. **Project preview:** readable text beside one dominant, uncropped artifact; alternate composition when it helps the reading rhythm. Give images a thin defined edge. On mobile, put copy before the artifact. Give case studies a direct link, with live-product links secondary. Role metadata starts with “Role:” and uses comma-separated items.
 3. **Artifact caption:** small sentence-case text beneath the real image, describing what it shows. Preserve the source image's proportions.
-4. **Historical reflection:** a quieter inset surface with period information and current reflection. Historical images remain authentic to their period.
-5. **Working principles:** three open columns with comfortable reading widths; stack them on mobile.
-6. **Closing contact:** a concise heading beside the opportunity statement and contact links.
+4. **Historical reflection:** a compact dark green documentary inset with period information, a short reflection, and small authentic period images. Use denser, smaller typography to distinguish it from current work.
+5. **Closing contact:** “Let’s work together.” beside the opportunity statement and contact links. Resume links are labelled “Resume”. The working-principles section was removed at James's request.
 
 ## Scope and review
 

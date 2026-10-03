@@ -2,6 +2,8 @@
 
 ## Current iteration — 2026-10-03
 
+Browser feedback refinement: removed arrow icons, added thin image borders and Role labels, recorded Juicebox image TODO G-027, removed principles, shortened Resume labels and the contact heading, and compressed the historical section to approximately 246px at a 1161px viewport. Reviewed mobile at 325px without horizontal overflow. Build and basic accessibility audit passed for 21 pages. Feedback screenshot: `/private/tmp/james-home-feedback-desktop.png`.
+
 The prior comparison below records an earlier visual direction. The current Home is a new iteration for James's feedback: introduction first, neutral background, a lighter Geologica hierarchy, uncropped dominant project images, quieter historical treatment, and reusable `--portfolio-*` foundations. See `DESIGN.md` for the provisional pattern guide. The previous “passed” conclusion does not indicate approval of this new aesthetic.
 
 - Production build and basic accessibility audit passed for 21 HTML files.

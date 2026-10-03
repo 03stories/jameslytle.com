@@ -6,6 +6,7 @@
 |---|---|---|---|---|---|---|---|
 | G-010 | Forward | Must Ship | Create an anonymized Sankey explaining template-condition paths without implying it was the production review interface | The trust-model claim needs visible technical evidence | Anonymized source data or a manually verified path model | `projects/forward.md` | Deferred |
 | G-016 | Juicebox Editor | Must Ship | Insert matched before/after screenshots showing the old flat, scroll-heavy Editor and the new folder-tree/sliding-panel UX | Visual comparison can demonstrate the improvement without unsupported quantitative claims | Old and new Editor screenshots, preferably showing the same or comparable story | `projects/juicebox.md` | Deferred placeholder |
+| G-027 | Home / Juicebox image | Should Improve | Replace `jb-header.png` with a stronger representative product image, as requested in James's browser feedback | The current historical screenshot is not the desired visual introduction to Juicebox | James to select or supply a better image; preserve its authentic proportions | `src/pages/HomePage.jsx` | TODO — current image retained pending replacement |
 
 ## Interview queue
 

@@ -35,9 +35,9 @@ export default function HomePage() {
             </p>
             <div className="home-actions">
               <a className="home-primary-action" href="mailto:jameslytle@hey.com">
-                Start a conversation <span aria-hidden="true">↗</span>
+                Start a conversation
               </a>
-              <Link className="home-secondary-action" to="/resume">View résumé</Link>
+              <Link className="home-secondary-action" to="/resume">Resume</Link>
             </div>
             <p className="home-current-role">Currently Design Engineer &amp; Product Lead at Juice Analytics.</p>
           </div>
@@ -49,15 +49,15 @@ export default function HomePage() {
         <article className="home-project home-project-forward">
           <div className="home-project-copy">
             <h3>Forward</h3>
-            <p className="home-role">Product originator · Design and implementation lead</p>
+            <p className="home-role">Role: Product originator, design and implementation lead</p>
             <p className="home-project-lede">Turns customer data into personalized, mobile-first narratives at scale.</p>
             <p>
               I originated and bootstrapped Forward inside Juice Analytics, shaping its strategy, experience, AI behavior,
               and initial production implementation. I now lead product direction with the broader team as we expand its market.
             </p>
             <div className="home-project-links">
-              <Link className="home-text-link" to="/projects/forward">Read the case study <span aria-hidden="true">→</span></Link>
-              <a className="home-live-link" href="https://www.insightsrecap.com/">Live product <span aria-hidden="true">↗</span></a>
+              <Link className="home-text-link" to="/projects/forward">Read the case study</Link>
+              <a className="home-live-link" href="https://www.insightsrecap.com/">Live product</a>
             </div>
           </div>
           <figure className="home-forward-pair">
@@ -69,16 +69,17 @@ export default function HomePage() {
         <article className="home-project home-project-juicebox">
           <div className="home-project-copy">
             <h3>Juicebox</h3>
-            <p className="home-role">Product design lead</p>
+            <p className="home-role">Role: Product design lead</p>
             <p className="home-project-lede">A data platform for exploring and presenting data stories.</p>
             <p>
               I led interaction and interface design across the platform's evolution, turning recurring client needs
               into a configurable component system and, later, a self-service authoring experience.
             </p>
             <Link className="home-text-link" to="/projects/juicebox">
-              View project <span aria-hidden="true">→</span>
+              View project
             </Link>
           </div>
+          {/* TODO: Replace this historical Juicebox capture with a stronger representative product image. See portfolio/CONTENT_GAPS.md G-027. */}
           <figure className="home-juicebox-pair">
             <img className="home-juicebox-wide" loading="lazy" src={projects.juicebox} alt="Juicebox story designer and data story" />
             <FigureLabel>Story canvas · Designer controls</FigureLabel>
@@ -88,14 +89,14 @@ export default function HomePage() {
         <article className="home-project home-project-skill">
           <div className="home-project-copy">
             <h3>Forward Narrative Skill</h3>
-            <p className="home-role">AI product system · Design and implementation lead</p>
+            <p className="home-role">Role: AI product system, design and implementation lead</p>
             <p className="home-project-lede">Turn one person’s narrative expertise into a team capability.</p>
             <p>
               I built and maintain a Claude Skill that helps the team create and share sales narratives rapidly,
               replacing a process that could take days and depend on me alone.
             </p>
             <Link className="home-text-link" to="/projects/forward-narrative-skill">
-              View project <span aria-hidden="true">→</span>
+              View project
             </Link>
           </div>
           <figure className="home-skill-visuals">
@@ -110,37 +111,26 @@ export default function HomePage() {
 
         <section className="home-history" aria-labelledby="history-heading">
           <div className="home-history-copy">
-            <p className="home-history-label">An earlier chapter · 2011–2017</p>
+            <p className="home-history-label">From the archive · 2011–2017</p>
             <h2 id="history-heading">Finestra Art App</h2>
-            <p className="home-project-lede">A startup chapter that still shapes how I think about making products.</p>
             <p>
-              My brother and I built a marketplace to connect local artists with buyers. I led product design and built
-              the marketing site; he led iOS engineering. I value the work and the people it brought together. I’d make
-              many design decisions differently today, so I share it as an honest record of the attempt and what I learned.
+              My brother and I built a marketplace for local artists and buyers. I led product design and the marketing
+              site; he led iOS engineering. An honest record of the attempt, what I learned, and what I’d do differently today.
             </p>
             <Link className="home-text-link" to="/projects/finestra-art-app">
-              Revisit the Finestra story <span aria-hidden="true">→</span>
+              Revisit the Finestra story
             </Link>
           </div>
           <figure className="home-history-images">
             <img src={projects.finestraApp} alt="An early Finestra screen for discovering local artwork" />
             <img src={projects.finestraArtist} alt="An early Finestra screen for artists to add artwork" />
-            <FigureLabel>Product work from an earlier era</FigureLabel>
+            <FigureLabel>Product work, 2011–2017</FigureLabel>
           </figure>
         </section>
       </div>
 
-      <section className="home-principles" aria-labelledby="principles-heading">
-        <h2 id="principles-heading">How the work happens</h2>
-        <ul>
-          <li>Clarify the problem before polishing the interface.</li>
-          <li>Prototype in the material of the final product.</li>
-          <li>Document decisions so teams can carry them forward.</li>
-        </ul>
-      </section>
-
       <section className="home-contact" aria-labelledby="contact-heading">
-        <h2 id="contact-heading">Have a complex product worth making useful?</h2>
+        <h2 id="contact-heading">Let’s work together.</h2>
         <div>
           <p>
             I'm open to senior design-engineering and product leadership opportunities, and select collaborations on
@@ -148,10 +138,10 @@ export default function HomePage() {
           </p>
           <div className="home-actions">
             <a className="home-primary-action" href="mailto:jameslytle@hey.com">
-              Start a conversation <span aria-hidden="true">→</span>
+              Start a conversation
             </a>
             <Link className="home-secondary-action" to="/resume">
-              View résumé
+              Resume
             </Link>
           </div>
         </div>
