@@ -1,6 +1,13 @@
 import defaults from './tokens.json';
 export { defaults };
 export const storageKey = 'jl-portfolio-design-v1';
+export const fonts = {
+  geologica: { label: 'Geologica · current', stack: "'Geologica', 'Helvetica Neue', Arial, sans-serif" },
+  inter: { label: 'Inter · neutral sans', stack: "'Inter', 'Helvetica Neue', Arial, sans-serif" },
+  'source-sans': { label: 'Source Sans 3 · humanist sans', stack: "'Source Sans 3', 'Helvetica Neue', Arial, sans-serif" },
+  system: { label: 'System sans · native', stack: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" },
+  georgia: { label: 'Georgia · serif', stack: "Georgia, 'Times New Roman', serif" }
+};
 export const ranges = {
   'gutter-max': [20, 96], 'section-max': [56, 160], 'display-max': [52, 96],
   'body-size': [14, 20], 'image-radius': [0, 24], 'action-radius': [0, 16],
@@ -11,7 +18,9 @@ export function validateTokens(input) {
   const result = { ...defaults };
   for (const [key, value] of Object.entries(input)) {
     if (!Object.hasOwn(defaults, key)) throw new Error(`Unknown token: ${key}`);
-    if (ranges[key]) {
+    if (key === 'font') {
+      if (typeof value !== 'string' || !Object.hasOwn(fonts, value)) throw new Error('Choose a supported font option.');
+    } else if (ranges[key]) {
       const [min, max] = ranges[key];
       if (typeof value !== 'number' || !Number.isFinite(value) || value < min || value > max) throw new Error(`${key} must be between ${min} and ${max}.`);
     } else if (typeof value !== 'string' || !/^#[0-9a-f]{6}$/i.test(value)) throw new Error(`${key} needs a six-digit hex color.`);
@@ -20,7 +29,7 @@ export function validateTokens(input) {
   return result;
 }
 export function tokenStyles(tokens) {
-  return Object.fromEntries(Object.entries(tokens).map(([key, value]) => [`--portfolio-${key}`, typeof value === 'number' ? `${value}${key === 'shadow-opacity' ? '%' : 'px'}` : value]));
+  return Object.fromEntries(Object.entries(tokens).map(([key, value]) => [`--portfolio-${key}`, key === 'font' ? fonts[value].stack : typeof value === 'number' ? `${value}${key === 'shadow-opacity' ? '%' : 'px'}` : value]));
 }
 export function readTokens() {
   try { return validateTokens(JSON.parse(localStorage.getItem(storageKey)) || defaults); } catch { return { ...defaults }; }

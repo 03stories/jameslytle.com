@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@400..700&family=Inter:wght@400..700&family=Source+Sans+3:wght@400..700&display=swap');
 
 :root {
   color-scheme: light;
@@ -227,7 +227,6 @@ select:focus-visible {
 
 /* Approved shared portfolio foundations; applied as each MVP page migrates. */
 .portfolio-shell {
-  --portfolio-font: 'Geologica', 'Helvetica Neue', Arial, sans-serif;
   --portfolio-gutter: clamp(1.25rem, 4vw, var(--portfolio-gutter-max));
   --portfolio-section-space: clamp(3.5rem, 7vw, var(--portfolio-section-max));
   max-width: 1440px;
@@ -757,3 +756,5 @@ select:focus-visible {
 .design-export textarea { width: 100%; padding: 1rem; color: var(--portfolio-ink); background: var(--portfolio-bg); border: 1px solid var(--portfolio-line); font-size: 0.875rem; line-height: 1.5; resize: vertical; }
 .design-export summary { min-height: 44px; padding-block: 1rem; cursor: pointer; }
 @media (max-width: 720px) { .design-workspace { grid-template-columns: 1fr; } .design-controls { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 1rem; } .design-controls h3 { grid-column: 1 / -1; } .design-control > span { flex-direction: column; gap: 0.25rem; } }
+
+.design-control select { width: 100%; min-height: 44px; margin-top: 0.5rem; padding: 0.5rem; font: inherit; font-size: 0.875rem; color: var(--portfolio-ink); background: var(--portfolio-bg); border: 1px solid var(--portfolio-line); }
