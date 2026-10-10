@@ -758,3 +758,9 @@ select:focus-visible {
 @media (max-width: 720px) { .design-workspace { grid-template-columns: 1fr; } .design-controls { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 1rem; } .design-controls h3 { grid-column: 1 / -1; } .design-control > span { flex-direction: column; gap: 0.25rem; } }
 
 .design-control select { width: 100%; min-height: 44px; margin-top: 0.5rem; padding: 0.5rem; font: inherit; font-size: 0.875rem; color: var(--portfolio-ink); background: var(--portfolio-bg); border: 1px solid var(--portfolio-line); }
+
+.design-custom-font { grid-column: 1 / -1; margin-bottom: 1.5rem; }
+.design-custom-font label { display: block; font-size: 0.875rem; margin-block: 0.75rem 0.5rem; }
+.design-custom-font textarea { width: 100%; padding: 0.625rem; font: inherit; font-size: 0.8125rem; border: 1px solid var(--portfolio-line); background: var(--portfolio-bg); color: var(--portfolio-ink); resize: vertical; }
+.design-custom-font p { font-size: 0.8125rem; line-height: 1.5; }
+.design-custom-font button:disabled { opacity: 0.6; cursor: default; }

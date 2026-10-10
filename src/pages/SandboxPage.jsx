@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import MaterialIcon from '../components/MaterialIcon';
-import { defaults, fonts, ranges, readTokens, previewTokens, validateTokens, contrast } from '../design/tokens';
+import { defaults, fonts, ranges, readTokens, previewTokens, validateTokens, contrast, fontInfo, parseGoogleFont, loadGoogleFont } from '../design/tokens';
 
 const labels = {
   font: 'Font family',
@@ -16,6 +16,15 @@ export default function SandboxPage() {
   const [tokens, setTokens] = useState(defaults);
   const [status, setStatus] = useState('');
   const [importText, setImportText] = useState('');
+  const [fontInput, setFontInput] = useState('');
+  const [fontStatus, setFontStatus] = useState('');
+  const [fontLoading, setFontLoading] = useState(false);
+  async function previewFont() {
+    setFontLoading(true); setFontStatus('Loading font…');
+    try { const font = parseGoogleFont(fontInput); await loadGoogleFont(font); update({ ...tokens, font }); setFontStatus(`Previewing ${fontInfo(font).label}.`); }
+    catch (error) { setFontStatus(error.message); }
+    finally { setFontLoading(false); }
+  }
   useEffect(() => setTokens(readTokens()), []);
   const output = JSON.stringify(tokens, null, 2);
   const update = next => { setTokens(next); previewTokens(next); setStatus('Preview saved in this browser.'); };
@@ -43,15 +52,22 @@ export default function SandboxPage() {
       <div className="design-workspace">
         <aside className="design-controls" aria-label="Design controls">
           <h3>Foundations</h3>
+          <div className="design-custom-font">
+            <a className="portfolio-text-link" href="https://fonts.google.com/" target="_blank" rel="noreferrer">Browse Google Fonts <MaterialIcon name="open_in_new" /></a>
+            <label htmlFor="google-font-input">Font name or embed snippet</label>
+            <textarea id="google-font-input" rows={3} placeholder="e.g. Manrope, or paste the embed code" value={fontInput} onChange={e => setFontInput(e.target.value)} />
+            <button onClick={previewFont} disabled={fontLoading || !fontInput.trim()}>{fontLoading ? 'Loading…' : 'Preview font'}</button>
+            <p role="status">{fontStatus}</p>
+          </div>
           {Object.entries(tokens).map(([key, value]) => (
             <label className="design-control" key={key} htmlFor={`token-${key}`}>
-              <span>{labels[key]} <output>{key === 'font' ? fonts[value].label.split(' · ')[0] : value}{ranges[key] ? key === 'shadow-opacity' ? '%' : 'px' : ''}</output></span>
-              {key === 'font' ? <select id={`token-${key}`} value={value} onChange={e => update({ ...tokens, font: e.target.value })}>{Object.entries(fonts).map(([id, font]) => <option key={id} value={id}>{font.label}</option>)}</select> : ranges[key] ? <input id={`token-${key}`} type="range" min={ranges[key][0]} max={ranges[key][1]} step={key === 'display-max' ? 0.1 : 1} value={value} onChange={e => update({ ...tokens, [key]: Number(e.target.value) })} /> : <input id={`token-${key}`} type="color" value={value} onChange={e => update({ ...tokens, [key]: e.target.value })} />}
+              <span>{labels[key]} <output>{key === 'font' ? fontInfo(value).label.split(' · ')[0] : value}{ranges[key] ? key === 'shadow-opacity' ? '%' : 'px' : ''}</output></span>
+              {key === 'font' ? <select id={`token-${key}`} value={value} onChange={e => update({ ...tokens, font: e.target.value })}>{value.startsWith('google:') && <option value={value}>{fontInfo(value).label} · custom</option>}{Object.entries(fonts).map(([id, font]) => <option key={id} value={id}>{font.label}</option>)}</select> : ranges[key] ? <input id={`token-${key}`} type="range" min={ranges[key][0]} max={ranges[key][1]} step={key === 'display-max' ? 0.1 : 1} value={value} onChange={e => update({ ...tokens, [key]: Number(e.target.value) })} /> : <input id={`token-${key}`} type="color" value={value} onChange={e => update({ ...tokens, [key]: e.target.value })} />}
             </label>
           ))}
         </aside>
         <div className="design-specimens">
-          <section className="design-specimen"><h3>Type & voice</h3><div className="home-intro"><h2>Make complex<br /><span>products useful.</span></h2></div><div className="portfolio-editorial-prose"><p>{fonts[tokens.font].label.split(' · ')[0]} carries the site from display headings to readable prose. Clear ownership, practical language, and real artifacts do the work.</p><h2>A clear section heading</h2><p>Long-form copy stays within a comfortable reading measure. Supporting text uses the secondary color without losing contrast.</p></div><p className="design-muted">Secondary text · Metadata · Artifact captions</p></section>
+          <section className="design-specimen"><h3>Type & voice</h3><div className="home-intro"><h2>Make complex<br /><span>products useful.</span></h2></div><div className="portfolio-editorial-prose"><p>{fontInfo(tokens.font).label.split(' · ')[0]} carries the site from display headings to readable prose. Clear ownership, practical language, and real artifacts do the work.</p><h2>A clear section heading</h2><p>Long-form copy stays within a comfortable reading measure. Supporting text uses the secondary color without losing contrast.</p></div><p className="design-muted">Secondary text · Metadata · Artifact captions</p></section>
           <section className="design-specimen"><h3>Actions & navigation</h3><div className="home-actions"><a className="home-primary-action" href="mailto:jameslytle@hey.com"><MaterialIcon name="mail" />Start a conversation</a><Link className="portfolio-text-link" to="/projects">View projects <MaterialIcon name="chevron_right" /></Link></div><p className="design-muted">Hover or focus Resume in the header to preview its download treatment.</p></section>
           <section className="design-specimen portfolio-project"><div className="portfolio-project-copy"><h3>Real artifacts</h3><p className="portfolio-role">Role: Design and implementation</p><p>Original proportions, a fine image edge, soft corners, and a restrained shadow.</p></div><figure><img src={`${import.meta.env.BASE_URL}content/other-things/photo-palette/default-photo.jpg`} alt="Color study photograph used for the portfolio’s Photo Palette experiment" /><figcaption className="portfolio-figure-label">Image treatment responds to the controls.</figcaption></figure></section>
           <section className="design-specimen"><h3>Contrast checks</h3><ul className="design-contrast">{checks.map(([label, foreground, background]) => { const ratio = contrast(foreground, background); return <li key={label}><span>{label}</span><strong>{ratio.toFixed(2)}:1 · {ratio >= 4.5 ? 'AA body pass' : 'Below AA body target'}</strong></li>; })}</ul></section>

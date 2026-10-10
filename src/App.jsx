@@ -11,7 +11,7 @@ import OtherThingsPage from './pages/OtherThingsPage';
 import OtherThingsDetailPage from './pages/OtherThingsDetailPage';
 import LoginPage from './pages/LoginPage';
 import SandboxPage from './pages/SandboxPage';
-import { defaults, readTokens, tokenStyles } from './design/tokens';
+import { defaults, readTokens, tokenStyles, loadGoogleFont } from './design/tokens';
 
 function ScrollToTopOnRouteChange() {
   const { pathname } = useLocation();
@@ -36,6 +36,10 @@ export default function App() {
   useEffect(() => {
     document.documentElement.style.setProperty('--portfolio-bg', designTokens.bg);
   }, [designTokens.bg]);
+
+  useEffect(() => {
+    loadGoogleFont(designTokens.font).catch(() => {});
+  }, [designTokens.font]);
 
   useEffect(() => {
     hydrateThemeFromStorage();
