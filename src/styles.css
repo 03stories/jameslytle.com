@@ -883,3 +883,9 @@ html { scroll-padding-top: 100px; }
   .mobile-menu-backdrop, .mobile-menu-backdrop[data-open="true"] { transition: none; }
 }
 @media print { .mobile-menu-backdrop { display: none !important; } }
+
+@media (max-width: 720px) {
+  .case-study-prose p:has(> img), .case-study-prose > figure { margin-block: 1rem; }
+  .case-study-prose p:has(> img) img { margin-block: 0; }
+  .case-study-prose :is(p:has(> img), figure) + :is(h1, h2, h3, h4, h5, h6) { margin-top: .75rem; }
+}
