@@ -27,3 +27,9 @@ The print document uses 10pt Arial body text for consistent pagination, plus the
 The local password is in `.resume-password.local`, which is Git ignored. Change that file and restart Vite or rebuild to change the password. Vite embeds only its SHA-256 hash, not the password itself. This is casual privacy, not secure authentication: the resume remains in the client bundle and a simple password hash can be guessed offline.
 
 For a deployed build, provide `RESUME_PASSWORD` as a CI environment secret. If neither that variable nor the local file is present, the gate stays locked; there is no default password or bypass. The local password is intentionally not pushed to GitHub.
+
+## Browser and phone QA
+
+The design-system preview is stored separately per browser and origin. For a consistent comparison, use Reset to site defaults in `/design-system` or import the same configuration in each browser, and compare at 100% browser zoom. The resume uses 10pt body text (13.33 CSS px) and a 30pt name (40 CSS px) on desktop; the name reduces to 26pt on narrow screens. Mobile text autosizing is normalized to 100% while user zoom remains available.
+
+The dev server binds to all network interfaces. Open `http://<Mac-local-IP>:5173/` on a phone connected to the same Wi-Fi. The resume gate uses browser-compatible SHA-256 so it also works over local-network HTTP, where Web Crypto's secure-context API is unavailable. Unlock storage is separate for localhost and the local IP address.

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { sha256 } from 'js-sha256';
 import MaterialIcon from '../components/MaterialIcon';
 import './ResumePage.css';
 
@@ -25,8 +26,7 @@ export default function ResumePage() {
     setChecking(true);
     setError('');
     try {
-      const bytes = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(password));
-      const hash = Array.from(new Uint8Array(bytes), byte => byte.toString(16).padStart(2, '0')).join('');
+      const hash = sha256(password);
       if (__RESUME_PASSWORD_HASH__ && hash === __RESUME_PASSWORD_HASH__) {
         try { localStorage.setItem(unlockStorageKey, hash); } catch {}
         setUnlocked(true);
@@ -35,7 +35,7 @@ export default function ResumePage() {
         setError('That password didn’t match. Try again.');
       }
     } catch {
-      setError('Unable to unlock the resume. Please try again on HTTPS or localhost.');
+      setError('Unable to unlock the resume. Please try again.');
     } finally {
       setChecking(false);
     }
