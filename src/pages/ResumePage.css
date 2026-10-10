@@ -41,3 +41,14 @@
   .resume-job-heading { flex-wrap: nowrap; }
   .app-shell::before, .case-study::before { display: none !important; }
 }
+.resume-gate { max-width: 440px; margin: 2rem auto 6rem; }
+.resume-gate h2 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; }
+.resume-gate > p { color: var(--portfolio-muted); }
+.resume-gate form { display: flex; flex-direction: column; align-items: stretch; gap: .75rem; margin-top: 2rem; }
+.resume-gate label { font-weight: 600; }
+.resume-gate input { width: 100%; box-sizing: border-box; padding: .8rem; background: white; color: #202322; border: 1px solid #555d59; border-radius: 4px; font: inherit; }
+.resume-gate input:focus-visible { outline: 2px solid var(--portfolio-accent); outline-offset: 3px; }
+.resume-gate button { justify-content: center; }
+.resume-gate button:disabled { opacity: .65; cursor: default; }
+.resume-gate [role="status"] { min-height: 1.5em; margin: 0; }
+.resume-lock { border: 0; background: transparent; cursor: pointer; font: inherit; }

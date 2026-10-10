@@ -4,6 +4,41 @@ import './ResumePage.css';
 
 export default function ResumePage() {
   const [paper, setPaper] = useState('letter');
+  const [unlocked, setUnlocked] = useState(false);
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [checking, setChecking] = useState(false);
+  async function unlock(event) {
+    event.preventDefault();
+    setChecking(true);
+    setError('');
+    try {
+      const bytes = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(password));
+      const hash = Array.from(new Uint8Array(bytes), byte => byte.toString(16).padStart(2, '0')).join('');
+      if (__RESUME_PASSWORD_HASH__ && hash === __RESUME_PASSWORD_HASH__) {
+        setUnlocked(true);
+        setPassword('');
+      } else {
+        setError('That password didn’t match. Try again.');
+      }
+    } catch {
+      setError('Unable to unlock the resume. Please try again on HTTPS or localhost.');
+    } finally {
+      setChecking(false);
+    }
+  }
+  if (!unlocked) return (
+    <section className="resume-gate" aria-labelledby="resume-gate-heading">
+      <h2 id="resume-gate-heading">Resume studio</h2>
+      <p>Enter the password to view and print the working resume.</p>
+      <form onSubmit={unlock}>
+        <label htmlFor="resume-password">Password</label>
+        <input id="resume-password" type="password" autoComplete="current-password" value={password} onChange={event => setPassword(event.target.value)} required aria-describedby={error ? 'resume-password-error' : undefined} aria-invalid={Boolean(error)} />
+        <button className="home-primary-action" disabled={checking || !password}>{checking ? 'Checking…' : 'Unlock resume'}</button>
+        <p id="resume-password-error" role="status">{error}</p>
+      </form>
+    </section>
+  );
   return (
     <section className={`resume-workspace resume-paper-${paper}`} aria-label="Resume">
       <div className="resume-toolbar">
@@ -12,6 +47,7 @@ export default function ResumePage() {
           <label>Paper<select value={paper} onChange={event => setPaper(event.target.value)}><option value="letter">US Letter</option><option value="a4">A4</option></select></label>
           <button className="home-primary-action" onClick={() => window.print()}><MaterialIcon name="description" />Print / Save PDF</button>
           <a className="portfolio-text-link" href={`${import.meta.env.BASE_URL}resume.pdf`}>Current PDF</a>
+          <button className="portfolio-text-link resume-lock" onClick={() => { setUnlocked(false); setError(''); }}>Lock</button>
         </div>
         <p className="resume-review-note">Working draft · Review role history and dates before replacing the downloadable PDF.</p>
       </div>
@@ -25,7 +61,7 @@ export default function ResumePage() {
         <section className="resume-section" aria-labelledby="resume-experience">
           <h3 id="resume-experience">Experience</h3>
           <div className="resume-job">
-            <div className="resume-job-heading"><h4>Juice Analytics</h4><span>2009–Present</span></div>
+            <div className="resume-job-heading"><h4>Juice Analytics</h4><span>2011–Present</span></div>
             <p className="resume-role">Design Engineer &amp; Product Lead · Current role</p>
             <ul>
               <li>Originated Forward, a customer-impact storytelling product; led product direction, recipient experience, and implementation from concept through MVP and the first paid production release.</li>
@@ -42,7 +78,7 @@ export default function ResumePage() {
             </ul>
           </div>
           <div className="resume-job">
-            <div className="resume-job-heading"><h4>Finestra Art App</h4><span>2011–2017</span></div>
+            <div className="resume-job-heading"><h4>Finestra Art App</h4><span>2012–2015</span></div>
             <p className="resume-role">Co-founder &amp; Product Designer</p>
             <p>Co-founded a local art marketplace. Led UX and UI design, built the marketing website, and implemented web frontend work for the Preview experience, partnering with my co-founder on native iOS engineering.</p>
           </div>

@@ -27,7 +27,7 @@ export default function ProjectsPage() {
               <Link className={`project-index-row${historical ? ' project-index-archive' : ''}`} to={`/projects/${project.slug}`} aria-label={`View ${presentation.title || project.title}`}>
               <img loading="lazy" src={presentation.image || project.cover} alt={`${presentation.title || project.title} project preview`} />
               <div className="project-index-copy">
-                {historical && <p className="project-index-meta project-index-archive-label"><MaterialIcon name="inventory_2" /> From the archive · 2011–2017</p>}
+                {historical && <p className="project-index-meta project-index-archive-label"><MaterialIcon name="inventory_2" /> From the archive · 2012–2015</p>}
                 <h3>{presentation.title || project.title}<MaterialIcon name="chevron_right" /></h3>
                 {presentation.role && <p className="project-index-meta">Role: {presentation.role}</p>}
                 <p>{project.headline}</p>

@@ -1,6 +1,6 @@
 ---
 title: "Finestra Art App"
-date: "2011-01-01T12:00:00"
+date: "2012-01-01T12:00:00"
 headline: "A startup chapter in local art, product ambition, and what I learned"
 client: "Personal"
 tags:
@@ -13,13 +13,13 @@ tags:
   - "Print"
 cover: ./finestra-header.png
 clientLogo: ./full-transparent.png
-summary: "From 2011–2017, my brother and I built Finestra, a mobile marketplace connecting local artists and buyers. I led product design and the marketing site; he led native iOS engineering. The company is closed, but I value the persistence and relationships behind the work. Looking back, I would invest more in understanding buyers and the exchange between both sides of the marketplace."
+summary: "From 2012–2015, my brother and I built Finestra, a mobile marketplace connecting local artists and buyers. I led product design and the marketing site; he led native iOS engineering. The company is closed, but I value the persistence and relationships behind the work. Looking back, I would invest more in understanding buyers and the exchange between both sides of the marketplace."
 draft: false
 ---
 
 ## Looking back
 
-From 2011 to 2017, my brother Seth and I built Finestra to connect local artists with buyers. I led the product’s UX and UI design and designed and built the marketing site; Seth led native iOS engineering. I also did most of the web frontend work on the later Preview experience.
+From 2012 to 2015, my brother Seth and I built Finestra to connect local artists with buyers. I led the product’s UX and UI design and designed and built the marketing site; Seth led native iOS engineering. I also did most of the web frontend work on the later Preview experience.
 
 Finestra is now closed, and the screens below belong to that period. I still value the persistence it took to build the company and the people the work brought together. I would make many design decisions differently today. The clearest lesson is that I should have spent more time understanding buyers and designing for the exchange between artists and buyers—not only the discovery experience. This is a record of an earlier chapter, not a claim about my current interface standard.
 

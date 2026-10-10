@@ -6,7 +6,7 @@ Scores are conservative and evidence-based. `?` marks missing evidence; ranges s
 |---|---:|---|---|---|---:|---:|---:|---:|---:|---:|---:|---|---|---|
 | Forward / Insights Recap | Current | Juice Analytics | `insightsrecap.com` | One reused Home image observed | 3 | 3 | 2 | 2 | ? | 3 | 3 | 16–19 | Full case study | Must Ship |
 | Juicebox | 2020–current | Juice Analytics | Juicebox product page | Extensive screenshots/GIFs | 3 | 3 | 3 | 2 | 2 | 2 | 2 | 17 | Full case study; Evidence-ready | Must Ship |
-| Finestra Art App | 2011–2017 | Personal/co-founded | Closed | Extensive product/process assets | 2 | 3 | 3 | 2 | 2 | 3 | 2 | 17 | Historical reflection; Draft-ready | Must Ship supporting |
+| Finestra Art App | 2012–2015 | Personal/co-founded | Closed | Extensive product/process assets | 2 | 3 | 3 | 2 | 2 | 3 | 2 | 17 | Historical reflection; Draft-ready | Must Ship supporting |
 | Slices 2.0 | 2017 | Juice Analytics | Documentation link | Extensive UI/process assets | 2 | 3 | 3 | 1 | 2 | 2 | 1 | 14 | Supporting decision chapter within Juicebox | Must Ship supporting |
 | Forward Pipeline Canvas | 2026 | Juice Analytics / internal POC | None observed | Working single-file app, plans, QA guide, 37 checks | 3 | 3 | 3 | 1 | 1? | 3 | 3 | 17 | Forward evidence or Lab artifact | Should Improve |
 | Forward Media Tools | 2026 | Juice Analytics / internal tool | None observed | Deterministic CLI, review gallery, audits, render evidence | 2 | 3? | 2 | 1 | 2 | 1 | 3 | 14 | Forward evidence or Lab artifact | Should Improve |
@@ -24,7 +24,7 @@ Scores are conservative and evidence-based. `?` marks missing evidence; ranges s
 | Up Up and Away | Unknown | Volunteer collaboration | Event site | Two event images | 2 | 1 | ? | 1 | 2? | 3 | 0 | 7–12 | Archive pending role clarity | Post-V1 |
 | Mural | Unknown | Personal | None | One image | 1 | 3 | 1 | 1 | 2 | 2 | 0 | 10 | Lab/craft artifact | Must Ship |
 | Juicebox Apps gallery | Unknown | Juice Analytics | None observed | Three screenshots | 1 | ? | ? | 1 | 2 | 0 | ? | 5–14 | Archive/supporting evidence | Post-V1 |
-| Finestra Screenshots gallery | 2011–2017 | Personal | None | Three screenshots | 1 | 3 | ? | 1 | 2 | 0 | 1? | 7–13 | Archive/supporting evidence | Post-V1 |
+| Finestra Screenshots gallery | 2012–2015 | Personal | None | Three screenshots | 1 | 3 | ? | 1 | 2 | 0 | 1? | 7–13 | Archive/supporting evidence | Post-V1 |
 
 ## Score evidence
 

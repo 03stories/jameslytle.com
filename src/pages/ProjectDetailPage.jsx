@@ -27,7 +27,7 @@ export default function ProjectDetailPage() {
     <article className="portfolio-page case-study">
       <header className="case-study-opening">
         <Link className="portfolio-text-link" to="/projects"><MaterialIcon name="chevron_right" /> All projects</Link>
-        {slug === 'finestra-art-app' && <p className="case-study-archive"><MaterialIcon name="inventory_2" /> From the archive · 2011–2017</p>}
+        {slug === 'finestra-art-app' && <p className="case-study-archive"><MaterialIcon name="inventory_2" /> From the archive · 2012–2015</p>}
         <h2>{project.title}</h2>
         {project.headline && <p className="case-study-headline">{project.headline}</p>}
       <div className="project-meta">

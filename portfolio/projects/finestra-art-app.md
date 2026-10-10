@@ -28,7 +28,7 @@ Last updated: 2026-09-26
 
 | ID | Fact or claim | Source | Confidence | Public-safe? | Narrative destination |
 |---|---|---|---|---|---|
-| F-001 | James co-founded Finestra from 2011–2017 and led design while his brother led development. | Existing case study | High | Already public | Context and role |
+| F-001 | James co-founded Finestra from 2012–2015 and led design while his brother led development. | Existing case study | High | Already public | Context and role |
 | F-002 | The initial problem came from local artists having finished work in storage and lacking time or administrative capacity to promote it. | Existing case study | High | Already public | Problem |
 | F-003 | Potential buyers often found discovering and choosing original art intimidating. | Existing case study | High | Already public | Problem |
 | F-004 | Competitors primarily represented high-end professional artists or mass-produced prints; the team identified a gap around original work from local artists. | Existing case study and competitor artifact | High | Already public | Context and decision 1 |
