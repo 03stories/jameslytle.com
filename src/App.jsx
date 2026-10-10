@@ -38,8 +38,8 @@ export default function App() {
   }, [designTokens.bg]);
 
   useEffect(() => {
-    loadGoogleFont(designTokens.font).catch(() => {});
-  }, [designTokens.font]);
+    Promise.all([loadGoogleFont(designTokens['heading-font']), loadGoogleFont(designTokens['body-font'])]).catch(() => {});
+  }, [designTokens['heading-font'], designTokens['body-font']]);
 
   useEffect(() => {
     hydrateThemeFromStorage();

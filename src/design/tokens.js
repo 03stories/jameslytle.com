@@ -15,10 +15,15 @@ export const ranges = {
 };
 export function validateTokens(input) {
   if (!input || typeof input !== 'object' || Array.isArray(input)) throw new Error('Use a JSON object of design tokens.');
+  // Older exports used one font for both roles. Preserve that choice on import.
+  if (Object.hasOwn(input, 'font')) {
+    const { font, ...rest } = input;
+    input = { 'heading-font': font, 'body-font': font, ...rest };
+  }
   const result = { ...defaults };
   for (const [key, value] of Object.entries(input)) {
     if (!Object.hasOwn(defaults, key)) throw new Error(`Unknown token: ${key}`);
-    if (key === 'font') {
+    if (key === 'heading-font' || key === 'body-font') {
       if (typeof value !== 'string' || (!Object.hasOwn(fonts, value) && !/^google:[A-Za-z][A-Za-z0-9 -]{0,79}$/.test(value))) throw new Error('Choose a supported font option.');
     } else if (ranges[key]) {
       const [min, max] = ranges[key];
@@ -29,7 +34,7 @@ export function validateTokens(input) {
   return result;
 }
 export function tokenStyles(tokens) {
-  return Object.fromEntries(Object.entries(tokens).map(([key, value]) => [`--portfolio-${key}`, key === 'font' ? fontInfo(value).stack : typeof value === 'number' ? `${value}${key === 'shadow-opacity' ? '%' : 'px'}` : value]));
+  return Object.fromEntries(Object.entries(tokens).map(([key, value]) => [`--portfolio-${key}`, (key === 'heading-font' || key === 'body-font') ? fontInfo(value).stack : typeof value === 'number' ? `${value}${key === 'shadow-opacity' ? '%' : 'px'}` : value]));
 }
 export function readTokens() {
   try { return validateTokens(JSON.parse(localStorage.getItem(storageKey)) || defaults); } catch { return { ...defaults }; }

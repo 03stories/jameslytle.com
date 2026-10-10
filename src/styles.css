@@ -764,3 +764,8 @@ select:focus-visible {
 .design-custom-font textarea { width: 100%; padding: 0.625rem; font: inherit; font-size: 0.8125rem; border: 1px solid var(--portfolio-line); background: var(--portfolio-bg); color: var(--portfolio-ink); resize: vertical; }
 .design-custom-font p { font-size: 0.8125rem; line-height: 1.5; }
 .design-custom-font button:disabled { opacity: 0.6; cursor: default; }
+
+.app-shell { font-family: var(--portfolio-body-font); --portfolio-font: var(--portfolio-body-font); }
+.app-shell :is(h1, h2, h3, h4, h5, h6) { font-family: var(--portfolio-heading-font); }
+.design-custom-font select { width: 100%; min-height: 44px; padding: 0.5rem; font: inherit; font-size: 0.875rem; color: var(--portfolio-ink); background: var(--portfolio-bg); border: 1px solid var(--portfolio-line); }
+.design-export textarea { font-family: var(--portfolio-body-font); }
