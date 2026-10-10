@@ -78,3 +78,7 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 ## Next review trigger
 
 The Projects index uses the approved shared foundations and is ready for visual review.
+
+## Session stopping point — 2026-10-10
+
+James approved the current website refinements as a good stopping point. Next work is primarily content review: Home/About/resume positioning, ownership and evidence in the three primary case studies, remaining placeholders, and final resume PDF export. James also wants a new portrait of himself for About, replacing the 2020 headshot. Obtain a current photo before replacing the asset. The existing draft PR #4 holds the implementation work. Local development server stopped at James's request.
