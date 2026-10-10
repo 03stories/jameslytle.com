@@ -889,3 +889,10 @@ html { scroll-padding-top: 100px; }
   .case-study-prose p:has(> img) img { margin-block: 0; }
   .case-study-prose :is(p:has(> img), figure) + :is(h1, h2, h3, h4, h5, h6) { margin-top: .75rem; }
 }
+
+/* Inset every linked row so hover and focus surfaces frame the content. */
+.project-index-row { padding-inline: 1.25rem; border-radius: var(--portfolio-image-radius); }
+.project-index-row:focus-visible { outline-offset: 2px; }
+@media (max-width: 720px) {
+  .project-index-row, .project-index-archive { padding-inline: .75rem; }
+}
