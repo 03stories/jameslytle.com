@@ -1,6 +1,6 @@
 # Portfolio Status
 
-Last updated: 2026-10-03
+Last updated: 2026-10-10
 
 ## V1 goal
 
@@ -16,7 +16,7 @@ Apply approved Home patterns to the scoped MVP pages
 
 ## Single recommended next action
 
-Review the shared case-study presentation, then apply the portfolio shell to About and Resume.
+Apply the approved portfolio shell to the scoped Lab index and artifact pages.
 
 ## This week's three outcomes
 
@@ -44,6 +44,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 - None prevent narrative drafting; documented asset and verification gaps remain bounded.
 
 ## Last session
+
+- Resumed the local site on Node 22 after installing dependencies with npm ci. Applied the approved shell, title hierarchy, portrait treatment, contact links, and prose spacing to About; matched Resume to the shell with a direct PDF action. Reviewed both routes and About at a narrow 325px CSS viewport, with a loaded portrait and no horizontal overflow. Production build and accessibility audit passed for 21 routes.
 
 - Applied the shared portfolio shell to project detail routes. Added a clear title/headline opening, quiet metadata, readable prose measure, wider artifact images, consistent corners/shadows, and return links. Viewed Forward in the local browser.
 
