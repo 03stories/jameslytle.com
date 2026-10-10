@@ -26,6 +26,14 @@ function ScrollToTopOnRouteChange() {
 export default function App() {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileNavigation, setMobileNavigation] = useState(false);
+  useEffect(() => {
+    const query = window.matchMedia('(max-width: 720px)');
+    const update = () => setMobileNavigation(query.matches);
+    update();
+    query.addEventListener('change', update);
+    return () => query.removeEventListener('change', update);
+  }, []);
   useEffect(() => { setMenuOpen(false); }, [location.pathname]);
   const [layoutGuides, setLayoutGuides] = useState(false);
   useEffect(() => {
@@ -66,8 +74,9 @@ export default function App() {
       <header className="site-header">
         <h1><Link className="site-name-link" to="/">James Lytle</Link></h1>
         <button className="mobile-menu-toggle" aria-expanded={menuOpen} aria-controls="primary-navigation" onClick={() => setMenuOpen(open => !open)}>
-          {menuOpen ? 'Close' : 'Menu'}<span aria-hidden="true">{menuOpen ? '×' : '☰'}</span>
+          {menuOpen ? 'Close' : 'Menu'}<span className="mobile-menu-icon" data-open={menuOpen} aria-hidden="true"><i /><i /></span>
         </button>
+        <div className="mobile-navigation-panel" data-open={menuOpen} inert={mobileNavigation && !menuOpen ? '' : undefined}>
         <nav id="primary-navigation" data-open={menuOpen} aria-label="Primary navigation" onKeyDown={event => { if (event.key === 'Escape') { setMenuOpen(false); document.querySelector('.mobile-menu-toggle')?.focus(); } }}>
           <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : undefined)}>
             Home
@@ -87,6 +96,7 @@ export default function App() {
             <span className="header-resume-download" aria-hidden="true"><MaterialIcon name="download" /></span>
           </a>
         </nav>
+        </div>
       </header>
 
       <main id="main-content" className="site-main" tabIndex={-1}>
