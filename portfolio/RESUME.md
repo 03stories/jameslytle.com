@@ -22,7 +22,7 @@ The print document uses 10pt Arial body text for consistent pagination, plus the
 
 ## Static password gate
 
-`/resume` starts locked and prerenders only the password form. Unlock lasts until reload or the Lock button is used. The existing public PDF download stays public.
+`/resume` starts locked and prerenders only the password form. A successful unlock is remembered in browser local storage across reloads and return visits. Only the matching password hash is stored, not the typed password. The Lock button clears saved access; changing the build password invalidates previous saved access. If browser storage is unavailable, unlock works for the current visit only. The existing public PDF download stays public.
 
 The local password is in `.resume-password.local`, which is Git ignored. Change that file and restart Vite or rebuild to change the password. Vite embeds only its SHA-256 hash, not the password itself. This is casual privacy, not secure authentication: the resume remains in the client bundle and a simple password hash can be guessed offline.
 

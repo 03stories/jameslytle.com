@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import MaterialIcon from '../components/MaterialIcon';
 import './ResumePage.css';
+
+const unlockStorageKey = 'portfolio-resume-unlock';
 
 export default function ResumePage() {
   const [paper, setPaper] = useState('letter');
@@ -8,6 +10,16 @@ export default function ResumePage() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [checking, setChecking] = useState(false);
+  useEffect(() => {
+    try {
+      setUnlocked(Boolean(__RESUME_PASSWORD_HASH__) && localStorage.getItem(unlockStorageKey) === __RESUME_PASSWORD_HASH__);
+    } catch {}
+  }, []);
+  function lock() {
+    try { localStorage.removeItem(unlockStorageKey); } catch {}
+    setUnlocked(false);
+    setError('');
+  }
   async function unlock(event) {
     event.preventDefault();
     setChecking(true);
@@ -16,6 +28,7 @@ export default function ResumePage() {
       const bytes = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(password));
       const hash = Array.from(new Uint8Array(bytes), byte => byte.toString(16).padStart(2, '0')).join('');
       if (__RESUME_PASSWORD_HASH__ && hash === __RESUME_PASSWORD_HASH__) {
+        try { localStorage.setItem(unlockStorageKey, hash); } catch {}
         setUnlocked(true);
         setPassword('');
       } else {
@@ -47,7 +60,7 @@ export default function ResumePage() {
           <label>Paper<select value={paper} onChange={event => setPaper(event.target.value)}><option value="letter">US Letter</option><option value="a4">A4</option></select></label>
           <button className="home-primary-action" onClick={() => window.print()}><MaterialIcon name="description" />Print / Save PDF</button>
           <a className="portfolio-text-link" href={`${import.meta.env.BASE_URL}resume.pdf`}>Current PDF</a>
-          <button className="portfolio-text-link resume-lock" onClick={() => { setUnlocked(false); setError(''); }}>Lock</button>
+          <button className="portfolio-text-link resume-lock" onClick={lock}>Lock</button>
         </div>
         <p className="resume-review-note">Working draft · Review role history and dates before replacing the downloadable PDF.</p>
       </div>
