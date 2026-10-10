@@ -78,3 +78,7 @@ Lab now uses the shared portfolio shell, including both font roles and image/act
 Lab and project details share one explicit grid. The default reading column is 720px and the wide artifact frame is 1040px, both configurable in the design system and exported as `reading-width` and `artifact-width`. Back links, openings, metadata, prose headings/paragraphs, and footers use the same reading-column boundaries. Heading font sizes no longer recalculate their own centered `ch` widths. Inline Lab document images align to the reading edge at their native width (capped to the available space); case-study images and Lab galleries/tools may use the wide frame. At narrow viewports the reading column collapses to the available width.
 
 Show layout guides is a temporary inspection control, retained during route navigation in the current app session. It outlines the reading boundaries and wide frame on detail pages; it is not part of the exported design configuration.
+
+### Website reading scale
+
+Website body text defaults to 18px; supporting text uses a minimum ratio of approximately 0.889 (16px at the default), and navigation uses the full body size on desktop and mobile. Text sizes derive from the body-size token so preview controls adjust the complete reading scale. Display headings use an 88px ceiling with a larger fluid scale. Mobile project summaries retain full body size. The printable resume keeps its independent point-based scale (10pt body, 30pt desktop name).
