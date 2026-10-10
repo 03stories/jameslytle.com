@@ -1,6 +1,7 @@
 import { Link, NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import MaterialIcon from './components/MaterialIcon';
+import MediaViewer from './components/MediaViewer';
 import { hydrateThemeFromStorage } from './utils/themePalette';
 import HomePage from './pages/HomePage';
 import ProjectsPage from './pages/ProjectsPage';
@@ -117,6 +118,7 @@ export default function App() {
           <Route path="/sandbox" element={<SandboxPage />} />
         </Routes>
       </main>
+      <MediaViewer />
     </div>
   );
 }
