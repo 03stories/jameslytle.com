@@ -10,14 +10,19 @@ const labels = {
   'accent-hover': 'Action hover', 'action-tint': 'Action tint', line: 'Dividers', 'image-border': 'Image edge',
   'gutter-max': 'Outer gutter ceiling', 'section-max': 'Section spacing ceiling', 'display-max': 'Display size ceiling',
   'body-size': 'Long-form text size', 'image-radius': 'Image corners', 'action-radius': 'Action corners',
+  'reading-width': 'Reading column width', 'artifact-width': 'Wide artifact width',
   'icon-gap': 'Header icon spacing', 'shadow-opacity': 'Image shadow strength'
 };
 
 export default function SandboxPage() {
   const [tokens, setTokens] = useState(defaults);
+  const [guides, setGuides] = useState(false);
   const [status, setStatus] = useState('');
   const [importText, setImportText] = useState('');
-  useEffect(() => setTokens(readTokens()), []);
+  useEffect(() => {
+    setTokens(readTokens());
+    try { setGuides(sessionStorage.getItem('portfolio-layout-guides') === 'true'); } catch {}
+  }, []);
   const output = JSON.stringify(tokens, null, 2);
   const update = next => { setTokens(next); previewTokens(next); setStatus('Preview saved in this browser.'); };
   const checks = [['Primary text', tokens.ink, tokens.bg], ['Secondary text', tokens.muted, tokens.bg], ['Action label', '#ffffff', tokens.accent], ['Hover action', tokens['accent-hover'], tokens['action-tint']]];
@@ -44,6 +49,7 @@ export default function SandboxPage() {
       <div className="design-workspace">
         <aside className="design-controls" aria-label="Design controls">
           <h3>Foundations</h3>
+          <label className="design-guide-control"><input type="checkbox" checked={guides} onChange={event => { setGuides(event.target.checked); window.dispatchEvent(new CustomEvent('portfolio-layout-guides', { detail: event.target.checked })); }} />Show layout guides</label>
           <a className="portfolio-text-link" href="https://fonts.google.com/" target="_blank" rel="noreferrer">Browse Google Fonts <MaterialIcon name="open_in_new" /></a>
           <FontControl role="heading" value={tokens['heading-font']} onChange={font => update({ ...readTokens(), 'heading-font': font })} />
           <FontControl role="body" value={tokens['body-font']} onChange={font => update({ ...readTokens(), 'body-font': font })} />
@@ -55,6 +61,7 @@ export default function SandboxPage() {
           ))}
         </aside>
         <div className="design-specimens">
+          <section className="design-specimen"><h3>Reading & artifact columns</h3><div className="design-layout-preview"><div className="design-layout-text">Title, headings, prose, and footer share this reading column.</div><div className="design-layout-wide">Detailed artifacts can extend to this wider frame.</div></div><p className="design-muted">Widths are shared across Lab and project detail pages. Enable guides and open a detail page to inspect the alignment.</p></section>
           <section className="design-specimen"><h3>Type & voice</h3><div className="home-intro"><h2>Make complex<br /><span>products useful.</span></h2></div><div className="portfolio-editorial-prose"><p>Headings use {fontInfo(tokens['heading-font']).label.split(' · ')[0]}; body copy uses {fontInfo(tokens['body-font']).label.split(' · ')[0]}. Clear ownership, practical language, and real artifacts do the work.</p><h2>A clear section heading</h2><p>Long-form copy stays within a comfortable reading measure. Supporting text uses the secondary color without losing contrast.</p></div><p className="design-muted">Secondary text · Metadata · Artifact captions</p></section>
           <section className="design-specimen"><h3>Actions & navigation</h3><div className="home-actions"><a className="home-primary-action" href="mailto:jameslytle@hey.com"><MaterialIcon name="mail" />Start a conversation</a><Link className="portfolio-text-link" to="/projects">View projects <MaterialIcon name="chevron_right" /></Link></div><p className="design-muted">Hover or focus Resume in the header to preview its download treatment.</p></section>
           <section className="design-specimen portfolio-project"><div className="portfolio-project-copy"><h3>Real artifacts</h3><p className="portfolio-role">Role: Design and implementation</p><p>Original proportions, a fine image edge, soft corners, and a restrained shadow.</p></div><figure><img src={`${import.meta.env.BASE_URL}content/other-things/photo-palette/default-photo.jpg`} alt="Color study photograph used for the portfolio’s Photo Palette experiment" /><figcaption className="portfolio-figure-label">Image treatment responds to the controls.</figcaption></figure></section>
@@ -68,6 +75,7 @@ export default function SandboxPage() {
 
 function FontControl({ role, value, onChange }) {
   const [input, setInput] = useState('');
+  const [guides, setGuides] = useState(false);
   const [status, setStatus] = useState('');
   const [loading, setLoading] = useState(false);
   const title = role === 'heading' ? 'Heading' : 'Body';

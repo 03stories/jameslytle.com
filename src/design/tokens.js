@@ -11,6 +11,7 @@ export const fonts = {
 export const ranges = {
   'gutter-max': [20, 96], 'section-max': [56, 160], 'display-max': [52, 96],
   'body-size': [14, 20], 'image-radius': [0, 24], 'action-radius': [0, 16],
+  'reading-width': [560, 800], 'artifact-width': [800, 1200],
   'icon-gap': [0, 12], 'shadow-opacity': [0, 20]
 };
 export function validateTokens(input) {

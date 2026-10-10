@@ -45,6 +45,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 
 ## Last session
 
+- Replaced independently centered detail blocks with a shared reading/artifact grid. Title, metadata, section headings, paragraphs, inline document images, and footer now share the reading edge. Added configurable reading and artifact widths plus temporary layout guides. Verified matching text edges on Design Docs and Forward, and narrow layouts on Design Docs and Juicebox without horizontal overflow.
+
 - Migrated Lab and artifact routes to the approved portfolio shell and tokens. Curated the index to Photo Palette, Design Docs, Mural, and OpenIDEO Atlanta; added a compact Design Docs artifact with template and handoff evidence while preserving its original article. Added named Lab pagination, month dates where available, and uncropped imagery. Photo Palette now previews its extracted theme within the utility, keeping the portfolio design configuration stable. Checked all four routes and narrow Photo Palette/Design Docs layouts without horizontal overflow.
 
 - Added a visual design system at `/design-system` with browser-local controls, live component specimens, contrast checks, reset, JSON export/download, and validated import. Centralized core portfolio foundations in `src/design/tokens.json`; verified an image-radius change persisted to Home and reset successfully. Legacy Lab migration remains the next portfolio rollout step.

@@ -25,6 +25,16 @@ function ScrollToTopOnRouteChange() {
 
 export default function App() {
   const location = useLocation();
+  const [layoutGuides, setLayoutGuides] = useState(false);
+  useEffect(() => {
+    try { setLayoutGuides(sessionStorage.getItem('portfolio-layout-guides') === 'true'); } catch {}
+    const update = event => {
+      setLayoutGuides(event.detail);
+      try { sessionStorage.setItem('portfolio-layout-guides', String(event.detail)); } catch {}
+    };
+    window.addEventListener('portfolio-layout-guides', update);
+    return () => window.removeEventListener('portfolio-layout-guides', update);
+  }, []);
   const [designTokens, setDesignTokens] = useState(defaults);
   useEffect(() => {
     setDesignTokens(readTokens());
@@ -46,7 +56,7 @@ export default function App() {
   }, []);
 
   return (
-    <div style={tokenStyles(designTokens)} className={`app-shell${(location.pathname === '/' || location.pathname.startsWith('/projects') || location.pathname.startsWith('/other-things') || ['/about', '/resume', '/design-system', '/sandbox'].includes(location.pathname)) ? ' portfolio-shell' : ''}`}>
+    <div data-layout-guides={layoutGuides} style={tokenStyles(designTokens)} className={`app-shell${(location.pathname === '/' || location.pathname.startsWith('/projects') || location.pathname.startsWith('/other-things') || ['/about', '/resume', '/design-system', '/sandbox'].includes(location.pathname)) ? ' portfolio-shell' : ''}`}>
       <ScrollToTopOnRouteChange />
       <a className="skip-link" href="#main-content">
         Skip to main content
