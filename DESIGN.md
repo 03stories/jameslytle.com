@@ -81,4 +81,4 @@ Show layout guides is a temporary inspection control, retained during route navi
 
 ### Website reading scale
 
-Website body text defaults to 18px; supporting text uses a minimum ratio of approximately 0.889 (16px at the default), and navigation uses the full body size on desktop and mobile. Text sizes derive from the body-size token so preview controls adjust the complete reading scale. Display headings use an 88px ceiling with a larger fluid scale. Mobile project summaries retain full body size. The printable resume keeps its independent point-based scale (10pt body, 30pt desktop name).
+Website body text defaults to 18px; supporting text uses a minimum ratio of approximately 0.889 (16px at the default), and navigation uses the full body size on desktop and mobile. Text sizes derive from the body-size token so preview controls adjust the complete reading scale. Display headings use the original 70.4px ceiling with the larger fluid scale. Mobile project summaries retain full body size. The printable resume keeps its independent point-based scale (10pt body, 30pt desktop name).
