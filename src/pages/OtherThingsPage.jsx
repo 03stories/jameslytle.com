@@ -10,6 +10,7 @@ export default function OtherThingsPage() {
       <header className="portfolio-opening">
         <h2 id="lab-heading">Lab</h2>
         <p>Small tools, working methods, and experiments beyond the main product work.</p>
+        <Link className="portfolio-text-link" to="/design-system">Design system<MaterialIcon name="chevron_right" /></Link>
       </header>
       <ul className="project-index lab-index">
         {labItems.map(item => {
