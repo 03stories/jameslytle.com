@@ -707,6 +707,13 @@ select:focus-visible {
 .case-study-previous .material-icon { transform: rotate(180deg); }
 .case-study-next { margin-left: auto; }
 
+.site-header .header-resume-link { display: inline-flex; align-items: center; gap: 0.375rem; min-height: 44px; }
+.header-resume-download { display: inline-flex; opacity: 0; transition: opacity 160ms ease; }
+.header-resume-link:hover .header-resume-download,
+.header-resume-link:focus-visible .header-resume-download { opacity: 1; }
+@media (hover: none) { .header-resume-download { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .header-resume-download { transition: none; } }
+
 .about-page, .resume-page { padding-bottom: var(--portfolio-section-space); }
 .portfolio-page-opening { max-width: 1040px; margin-inline: auto; padding-block: 2rem 3rem; }
 .portfolio-page-opening h2 { margin-bottom: 1.25rem; font-size: clamp(2.25rem, 4.5vw, 4.4rem); font-weight: 500; line-height: 1.12; letter-spacing: -0.035em; }
