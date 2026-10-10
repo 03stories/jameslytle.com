@@ -77,6 +77,7 @@ export default function App() {
           {menuOpen ? 'Close' : 'Menu'}<span className="mobile-menu-icon" data-open={menuOpen} aria-hidden="true"><i /><i /></span>
         </button>
         <div className="mobile-navigation-panel" data-open={menuOpen} inert={mobileNavigation && !menuOpen ? '' : undefined}>
+        <div className="mobile-navigation-clip">
         <nav id="primary-navigation" data-open={menuOpen} aria-label="Primary navigation" onKeyDown={event => { if (event.key === 'Escape') { setMenuOpen(false); document.querySelector('.mobile-menu-toggle')?.focus(); } }}>
           <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : undefined)}>
             Home
@@ -96,6 +97,7 @@ export default function App() {
             <span className="header-resume-download" aria-hidden="true"><MaterialIcon name="download" /></span>
           </a>
         </nav>
+        </div>
         </div>
       </header>
 

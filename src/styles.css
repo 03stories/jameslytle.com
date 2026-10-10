@@ -851,3 +851,8 @@ select:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .mobile-navigation-panel, .mobile-navigation-panel[data-open="true"], .mobile-menu-icon i { transition: none; }
 }
+@media (max-width: 720px) {
+  .mobile-navigation-clip { min-height: 0; overflow: hidden; }
+  .site-header .mobile-navigation-panel nav, .portfolio-shell .site-header .mobile-navigation-panel nav { overflow: visible; }
+  .mobile-navigation-panel nav a { flex-shrink: 0; }
+}
