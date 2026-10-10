@@ -1,4 +1,4 @@
-import { NavLink, Route, Routes, useLocation } from 'react-router-dom';
+import { Link, NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import MaterialIcon from './components/MaterialIcon';
 import { hydrateThemeFromStorage } from './utils/themePalette';
@@ -36,7 +36,7 @@ export default function App() {
         Skip to main content
       </a>
       <header className="site-header">
-        <h1>James Lytle</h1>
+        <h1><Link className="site-name-link" to="/">James Lytle</Link></h1>
         <nav aria-label="Primary navigation">
           <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : undefined)}>
             Home
