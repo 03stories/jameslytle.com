@@ -101,6 +101,8 @@ export default function App() {
         </div>
       </header>
 
+      <button className="mobile-menu-backdrop" data-open={menuOpen} aria-label="Close navigation menu" tabIndex={-1} aria-hidden={!menuOpen || !mobileNavigation} onClick={() => { setMenuOpen(false); document.querySelector('.mobile-menu-toggle')?.focus(); }} />
+
       <main id="main-content" className="site-main" tabIndex={-1}>
         <Routes>
           <Route path="/" element={<HomePage />} />

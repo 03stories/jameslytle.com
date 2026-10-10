@@ -873,3 +873,13 @@ html { scroll-padding-top: 100px; }
   pointer-events: none;
 }
 .site-header { isolation: isolate; }
+
+.mobile-menu-backdrop { display: none; }
+@media (max-width: 720px) {
+  .mobile-menu-backdrop { display: block; position: fixed; inset: 0; z-index: 90; margin: 0; padding: 0; border: 0; background: rgb(20 26 23 / .38); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 180ms ease-out, visibility 0s 180ms; }
+  .mobile-menu-backdrop[data-open="true"] { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity 280ms cubic-bezier(.22, 1, .36, 1), visibility 0s; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu-backdrop, .mobile-menu-backdrop[data-open="true"] { transition: none; }
+}
+@media print { .mobile-menu-backdrop { display: none !important; } }
