@@ -1,27 +1,30 @@
 import { Link } from 'react-router-dom';
 import albums from '../content/other-things.json';
-import { formatDateLabel } from '../utils/formatDate';
-
-const HIDDEN_ALBUM_SLUGS = new Set(['finestra-screenshots', 'juicebox-apps']);
+import projects from '../content/projects.json';
+import { labItems } from '../content/labItems';
+import MaterialIcon from '../components/MaterialIcon';
 
 export default function OtherThingsPage() {
-  const visibleAlbums = albums.filter((album) => !HIDDEN_ALBUM_SLUGS.has(album.slug));
-
   return (
-    <section>
-      <h2>Other Things</h2>
-      <ul className="card-list">
-        {visibleAlbums.map((album) => {
-          const dateLabel = formatDateLabel(album.date);
-
-          return (
-            <li key={album.slug} className="card">
-              {album.cover ? <img className="card-cover-image" src={album.cover} alt={`${album.title} cover`} /> : null}
-              <h3>{album.title}</h3>
-              {dateLabel !== 'No date' ? <p className="meta">{dateLabel}</p> : null}
-              <Link to={`/other-things/${album.slug}`}>View album</Link>
-            </li>
-          );
+    <section className="portfolio-page lab-page" aria-labelledby="lab-heading">
+      <header className="portfolio-opening">
+        <h2 id="lab-heading">Lab</h2>
+        <p>Small tools, working methods, and experiments beyond the main product work.</p>
+      </header>
+      <ul className="project-index lab-index">
+        {labItems.map(item => {
+          const artifact = [...albums, ...projects].find(entry => entry.slug === item.slug);
+          return <li key={item.slug}>
+            <Link className="project-index-row" to={`/other-things/${item.slug}`}>
+              {artifact?.cover && <img src={item.slug === 'photo-palette' ? `${import.meta.env.BASE_URL}content/site/home/photo-palette-tool.png` : artifact.cover} alt="" loading="lazy" />}
+              <div className="project-index-copy">
+                <p className="project-index-meta">{item.kind}</p>
+                <h3>{item.title}<MaterialIcon name="chevron_right" /></h3>
+                <p>{item.summary}</p>
+                <p className="lab-role">Role: {item.role}</p>
+              </div>
+            </Link>
+          </li>;
         })}
       </ul>
     </section>

@@ -46,7 +46,7 @@ export default function App() {
   }, []);
 
   return (
-    <div style={tokenStyles(designTokens)} className={`app-shell${(location.pathname === '/' || location.pathname.startsWith('/projects') || ['/about', '/resume', '/design-system', '/sandbox'].includes(location.pathname)) ? ' portfolio-shell' : ''}`}>
+    <div style={tokenStyles(designTokens)} className={`app-shell${(location.pathname === '/' || location.pathname.startsWith('/projects') || location.pathname.startsWith('/other-things') || ['/about', '/resume', '/design-system', '/sandbox'].includes(location.pathname)) ? ' portfolio-shell' : ''}`}>
       <ScrollToTopOnRouteChange />
       <a className="skip-link" href="#main-content">
         Skip to main content

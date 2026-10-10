@@ -54,6 +54,7 @@ async function buildRouteList() {
     '/about',
     '/resume',
     '/other-things',
+    '/other-things/design-docs',
     '/login',
     '/sandbox',
     '/design-system'

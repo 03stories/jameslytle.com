@@ -769,3 +769,13 @@ select:focus-visible {
 .app-shell :is(h1, h2, h3, h4, h5, h6) { font-family: var(--portfolio-heading-font); }
 .design-custom-font select { width: 100%; min-height: 44px; padding: 0.5rem; font: inherit; font-size: 0.875rem; color: var(--portfolio-ink); background: var(--portfolio-bg); border: 1px solid var(--portfolio-line); }
 .design-export textarea { font-family: var(--portfolio-body-font); }
+
+.lab-index { display: block; max-width: 1040px; margin-inline: auto; }
+.lab-index .project-index-row { grid-template-columns: 180px minmax(0, 1fr); }
+.project-index-copy .lab-role { margin-top: 0.625rem; color: var(--portfolio-muted); font-size: 0.8125rem; }
+.lab-gallery { display: flex; flex-direction: column; gap: 2rem; max-width: 1040px; margin: 0 auto 3rem; }
+.lab-gallery img { display: block; max-width: 100%; height: auto; margin-inline: auto; border: 1px solid var(--portfolio-image-border); border-radius: var(--portfolio-image-radius); box-shadow: 0 3px 8px rgb(32 35 34 / var(--portfolio-shadow-opacity)); }
+.lab-artifact .palette-tool { margin: 3rem auto; padding: clamp(1rem, 3vw, 2rem); max-width: 1040px; border: 1px solid var(--portfolio-line); border-radius: var(--portfolio-image-radius); background: var(--color-bg); color: var(--color-text); }
+.lab-artifact .palette-tool .card { background: var(--color-surface); border-color: var(--color-border); }
+.lab-artifact .palette-tool :is(input, select, button) { font-family: var(--portfolio-body-font); }
+@media (max-width: 540px) { .lab-index .project-index-row { grid-template-columns: 100px minmax(0, 1fr); } }

@@ -16,7 +16,7 @@ Apply approved Home patterns to the scoped MVP pages
 
 ## Single recommended next action
 
-Apply the approved portfolio shell to the scoped Lab index and artifact pages.
+Review the scoped MVP pages together, then complete the final content and launch checks.
 
 ## This week's three outcomes
 
@@ -44,6 +44,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 - None prevent narrative drafting; documented asset and verification gaps remain bounded.
 
 ## Last session
+
+- Migrated Lab and artifact routes to the approved portfolio shell and tokens. Curated the index to Photo Palette, Design Docs, Mural, and OpenIDEO Atlanta; added a compact Design Docs artifact with template and handoff evidence while preserving its original article. Added named Lab pagination, month dates where available, and uncropped imagery. Photo Palette now previews its extracted theme within the utility, keeping the portfolio design configuration stable. Checked all four routes and narrow Photo Palette/Design Docs layouts without horizontal overflow.
 
 - Added a visual design system at `/design-system` with browser-local controls, live component specimens, contrast checks, reset, JSON export/download, and validated import. Centralized core portfolio foundations in `src/design/tokens.json`; verified an image-radius change persisted to Home and reset successfully. Legacy Lab migration remains the next portfolio rollout step.
 
