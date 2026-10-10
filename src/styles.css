@@ -860,3 +860,16 @@ select:focus-visible {
 /* Keep anchored content clear of the persistent header. */
 html { scroll-padding-top: 100px; }
 @media (max-width: 720px) { html { scroll-padding-top: 80px; } }
+
+/* Full-bleed sticky surface; header contents retain the page alignment. */
+.site-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--portfolio-bg, var(--color-bg));
+  box-shadow: 0 0 0 100vmax var(--portfolio-bg, var(--color-bg));
+  clip-path: inset(0 -100vmax);
+  z-index: -1;
+  pointer-events: none;
+}
+.site-header { isolation: isolate; }
