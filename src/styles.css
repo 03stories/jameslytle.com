@@ -847,13 +847,7 @@ select:focus-visible {
   .mobile-navigation-panel { display: grid; grid-template-rows: 0fr; flex-basis: 100%; min-width: 0; opacity: 0; visibility: hidden; transition: grid-template-rows 180ms cubic-bezier(.22, 1, .36, 1), opacity 140ms ease-out, visibility 0s 180ms; }
   .mobile-navigation-panel[data-open="true"] { grid-template-rows: 1fr; opacity: 1; visibility: visible; transition: grid-template-rows 280ms cubic-bezier(.22, 1, .36, 1), opacity 180ms ease-out, visibility 0s; }
   .site-header .mobile-navigation-panel nav, .portfolio-shell .site-header .mobile-navigation-panel nav { display: flex; min-height: 0; overflow: hidden; margin: 0; padding: 0; border: 0; box-shadow: inset 0 1px var(--portfolio-line), inset 0 -1px var(--portfolio-line); }
-  .mobile-navigation-panel nav a { opacity: 0; transform: translateY(-5px); transition: opacity 100ms ease-out, transform 140ms cubic-bezier(.22, 1, .36, 1); }
-  .mobile-navigation-panel[data-open="true"] nav a { opacity: 1; transform: translateY(0); transition-duration: 180ms, 240ms; transition-delay: 30ms; }
-  .mobile-navigation-panel[data-open="true"] nav a:nth-child(2) { transition-delay: 50ms; }
-  .mobile-navigation-panel[data-open="true"] nav a:nth-child(3) { transition-delay: 70ms; }
-  .mobile-navigation-panel[data-open="true"] nav a:nth-child(4) { transition-delay: 90ms; }
-  .mobile-navigation-panel[data-open="true"] nav a:nth-child(5) { transition-delay: 110ms; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .mobile-navigation-panel, .mobile-navigation-panel[data-open="true"], .mobile-navigation-panel nav a, .mobile-navigation-panel[data-open="true"] nav a, .mobile-menu-icon i { transition: none; }
+  .mobile-navigation-panel, .mobile-navigation-panel[data-open="true"], .mobile-menu-icon i { transition: none; }
 }
