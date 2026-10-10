@@ -241,10 +241,10 @@ select:focus-visible {
 }
 
 .portfolio-shell .site-header {
-  position: static;
+  position: sticky;
   margin: 0;
   padding-block: 1.75rem;
-  background: transparent;
+  background: var(--portfolio-bg);
   border: 0;
   gap: 1.5rem;
 }
@@ -856,3 +856,7 @@ select:focus-visible {
   .site-header .mobile-navigation-panel nav, .portfolio-shell .site-header .mobile-navigation-panel nav { overflow: visible; }
   .mobile-navigation-panel nav a { flex-shrink: 0; }
 }
+
+/* Keep anchored content clear of the persistent header. */
+html { scroll-padding-top: 100px; }
+@media (max-width: 720px) { html { scroll-padding-top: 80px; } }

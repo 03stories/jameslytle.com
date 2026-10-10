@@ -86,3 +86,5 @@ Website body text defaults to 18px; supporting text uses a minimum ratio of appr
 ### Mobile navigation and rhythm
 
 At widths up to 720px the header is a compact name-and-Menu row. A disclosure button opens a vertical navigation list; route changes close it and Escape returns focus to the button. Mobile introductions use 20px top / 24px bottom padding, project rows use 16px vertical padding, and Home sections use 32px vertical padding. Thumbnail rows align at the top. Desktop navigation and spacing retain their existing layout.
+
+The shared site header stays sticky at the top on desktop and mobile, using the page background for readable navigation while scrolling.
