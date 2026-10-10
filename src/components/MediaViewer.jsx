@@ -10,11 +10,10 @@ export default function MediaViewer() {
   const dialog = useRef(null);
   const trigger = useRef(null);
   useEffect(() => {
-    const images = [...document.querySelectorAll('.site-main img:not([data-no-fullscreen]):not(.palette-preview-image)')];
+    const images = [...document.querySelectorAll('.site-main img:not([data-no-fullscreen]):not(.palette-preview-image)')].filter(img => !img.closest('a'));
     const cleanups = images.map(img => {
-      const linked = img.closest('a');
       const original = { role: img.getAttribute('role'), tab: img.getAttribute('tabindex'), label: img.getAttribute('aria-label') };
-      if (!linked) {
+      {
         img.setAttribute('role', 'button');
         img.setAttribute('tabindex', '0');
         img.setAttribute('aria-label', `View full screen: ${img.alt || 'image'}`);
@@ -23,26 +22,17 @@ export default function MediaViewer() {
       const open = event => {
         event.preventDefault();
         event.stopPropagation();
-        trigger.current = linked || img;
+        trigger.current = img;
         setMedia({ src: img.currentSrc || img.src, alt: img.alt || 'Full-screen image' });
       };
       const key = event => { if (event.key === 'Enter' || event.key === ' ') open(event); };
       img.addEventListener('click', open);
-      if (!linked) img.addEventListener('keydown', key);
-      let keyboardButton;
-      if (linked) {
-        keyboardButton = document.createElement('button');
-        keyboardButton.className = 'media-viewer-access';
-        keyboardButton.textContent = `View full screen: ${img.alt || 'image'}`;
-        keyboardButton.addEventListener('click', open);
-        linked.after(keyboardButton);
-      }
+      img.addEventListener('keydown', key);
       return () => {
-        keyboardButton?.remove();
         img.removeEventListener('click', open);
         img.removeEventListener('keydown', key);
         img.classList.remove('media-viewer-trigger');
-        if (!linked) for (const [attr, value] of Object.entries({ role: original.role, tabindex: original.tab, 'aria-label': original.label })) {
+        for (const [attr, value] of Object.entries({ role: original.role, tabindex: original.tab, 'aria-label': original.label })) {
           if (value === null) img.removeAttribute(attr); else img.setAttribute(attr, value);
         }
       };

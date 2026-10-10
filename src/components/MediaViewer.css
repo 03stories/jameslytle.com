@@ -7,5 +7,3 @@
 .media-viewer-close span { font-size: 26px; line-height: 1; }
 .media-viewer-close:focus-visible { outline: 2px solid white; outline-offset: 3px; }
 @media print { .media-viewer { display: none !important; } }
-.media-viewer-access { position: absolute; width: 1px; height: 1px; padding: 0; border: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-.media-viewer-access:focus-visible { position: fixed; top: 12px; left: 12px; z-index: 200; width: auto; height: auto; padding: .75rem; background: white; color: #202322; clip-path: none; white-space: normal; }
