@@ -82,3 +82,7 @@ Show layout guides is a temporary inspection control, retained during route navi
 ### Website reading scale
 
 Website body text defaults to 18px; supporting text uses a minimum ratio of approximately 0.889 (16px at the default), and navigation uses the full body size on desktop and mobile. Text sizes derive from the body-size token so preview controls adjust the complete reading scale. Display headings use the original 70.4px ceiling with the larger fluid scale. Mobile project summaries retain full body size. The printable resume keeps its independent point-based scale (10pt body, 30pt desktop name).
+
+### Mobile navigation and rhythm
+
+At widths up to 720px the header is a compact name-and-Menu row. A disclosure button opens a vertical navigation list; route changes close it and Escape returns focus to the button. Mobile introductions use 20px top / 24px bottom padding, project rows use 16px vertical padding, and Home sections use 32px vertical padding. Thumbnail rows align at the top. Desktop navigation and spacing retain their existing layout.

@@ -25,6 +25,8 @@ function ScrollToTopOnRouteChange() {
 
 export default function App() {
   const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
+  useEffect(() => { setMenuOpen(false); }, [location.pathname]);
   const [layoutGuides, setLayoutGuides] = useState(false);
   useEffect(() => {
     try { setLayoutGuides(sessionStorage.getItem('portfolio-layout-guides') === 'true'); } catch {}
@@ -63,7 +65,10 @@ export default function App() {
       </a>
       <header className="site-header">
         <h1><Link className="site-name-link" to="/">James Lytle</Link></h1>
-        <nav aria-label="Primary navigation">
+        <button className="mobile-menu-toggle" aria-expanded={menuOpen} aria-controls="primary-navigation" onClick={() => setMenuOpen(open => !open)}>
+          {menuOpen ? 'Close' : 'Menu'}<span aria-hidden="true">{menuOpen ? '×' : '☰'}</span>
+        </button>
+        <nav id="primary-navigation" data-open={menuOpen} aria-label="Primary navigation" onKeyDown={event => { if (event.key === 'Escape') { setMenuOpen(false); document.querySelector('.mobile-menu-toggle')?.focus(); } }}>
           <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : undefined)}>
             Home
           </NavLink>

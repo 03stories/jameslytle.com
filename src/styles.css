@@ -804,3 +804,36 @@ select:focus-visible {
 .case-study-prose p img { margin-inline: 0; }
 .case-study-prose > div { grid-column: text-start / text-end; }
 .case-study-prose > div:has(iframe, video, embed) { grid-column: wide-start / wide-end; }
+
+/* A compact mobile header and a tighter reading rhythm. */
+.mobile-menu-toggle { display: none; }
+@media (max-width: 720px) {
+  .site-header, .portfolio-shell .site-header { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 0; padding-block: .75rem; margin-bottom: 0; }
+  .mobile-menu-toggle { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; padding: .5rem 0 .5rem .75rem; border: 0; background: transparent; color: var(--portfolio-ink); font: inherit; cursor: pointer; }
+  .mobile-menu-toggle span { font-size: 1.25rem; line-height: 1; }
+  .mobile-menu-toggle:focus-visible { outline: 2px solid var(--portfolio-accent); outline-offset: 3px; }
+  .site-header nav, .portfolio-shell .site-header nav { display: none; flex-basis: 100%; flex-direction: column; align-items: stretch; gap: 0; margin-top: .5rem; padding-block: .5rem; border-block: 1px solid var(--portfolio-line); }
+  .site-header nav[data-open="true"] { display: flex; }
+  .portfolio-shell .site-header nav a { padding: .5rem .25rem; min-height: 44px; box-sizing: border-box; text-decoration: none; }
+  .portfolio-shell .site-header nav a.active { font-weight: 600; color: var(--portfolio-accent-hover); }
+  .home-opening { padding-block: 1.25rem 2.5rem; }
+  .portfolio-opening, .portfolio-page-opening { padding-block: 1.25rem 1.5rem; }
+  .portfolio-opening h2, .portfolio-page-opening h2 { margin-bottom: .75rem; }
+  .portfolio-opening > p, .portfolio-page-opening > p { margin-bottom: 0; line-height: 1.55; }
+  .portfolio-opening > .portfolio-text-link { margin-top: .5rem; }
+  .home-intro, .portfolio-project, .portfolio-project-juicebox, .portfolio-history, .home-contact { gap: 1.5rem; }
+  .home-actions { margin-top: 1.25rem; gap: .5rem 1rem; }
+  .portfolio-project { padding-block: 2rem; }
+  .portfolio-role { margin-bottom: .75rem; }
+  .portfolio-project-copy > p { margin-bottom: .75rem; }
+  .project-index-row { padding-block: 1rem; align-items: start; }
+  .project-index-row > img { margin-top: .5rem; }
+  .project-index-copy h3 { margin-bottom: .25rem; }
+  .project-index-copy .project-index-meta { margin-bottom: .5rem; }
+  .case-study-opening { padding-block: 1rem 1.5rem; }
+  .case-study-opening > .portfolio-text-link { margin-bottom: 1rem; }
+  .case-study-opening h2 { margin-bottom: .75rem; }
+  .case-study-headline { margin-bottom: 1rem; }
+  .case-study-prose > :is(p, ul, ol, blockquote) { margin-bottom: 1rem; }
+  .case-study-prose :is(h1, h2) { margin-top: 2rem; margin-bottom: .75rem; }
+}
