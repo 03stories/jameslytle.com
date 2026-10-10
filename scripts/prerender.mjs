@@ -55,7 +55,8 @@ async function buildRouteList() {
     '/resume',
     '/other-things',
     '/login',
-    '/sandbox'
+    '/sandbox',
+    '/design-system'
   ]);
 
   for (const project of projects) {

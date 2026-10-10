@@ -45,6 +45,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 
 ## Last session
 
+- Added a visual design system at `/design-system` with browser-local controls, live component specimens, contrast checks, reset, JSON export/download, and validated import. Centralized core portfolio foundations in `src/design/tokens.json`; verified an image-radius change persisted to Home and reset successfully. Legacy Lab migration remains the next portfolio rollout step.
+
 - Resumed the local site on Node 22 after installing dependencies with npm ci. Applied the approved shell, title hierarchy, portrait treatment, contact links, and prose spacing to About; matched Resume to the shell with a direct PDF action. Reviewed both routes and About at a narrow 325px CSS viewport, with a loaded portrait and no horizontal overflow. Production build and accessibility audit passed for 21 routes.
 
 - Applied the shared portfolio shell to project detail routes. Added a clear title/headline opening, quiet metadata, readable prose measure, wider artifact images, consistent corners/shadows, and return links. Viewed Forward in the local browser.

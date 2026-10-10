@@ -1,5 +1,5 @@
 import { Link, NavLink, Route, Routes, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import MaterialIcon from './components/MaterialIcon';
 import { hydrateThemeFromStorage } from './utils/themePalette';
 import HomePage from './pages/HomePage';
@@ -11,6 +11,7 @@ import OtherThingsPage from './pages/OtherThingsPage';
 import OtherThingsDetailPage from './pages/OtherThingsDetailPage';
 import LoginPage from './pages/LoginPage';
 import SandboxPage from './pages/SandboxPage';
+import { defaults, readTokens, tokenStyles } from './design/tokens';
 
 function ScrollToTopOnRouteChange() {
   const { pathname } = useLocation();
@@ -24,13 +25,24 @@ function ScrollToTopOnRouteChange() {
 
 export default function App() {
   const location = useLocation();
+  const [designTokens, setDesignTokens] = useState(defaults);
+  useEffect(() => {
+    setDesignTokens(readTokens());
+    const update = event => setDesignTokens(event.detail);
+    window.addEventListener('portfolio-design-change', update);
+    return () => window.removeEventListener('portfolio-design-change', update);
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.style.setProperty('--portfolio-bg', designTokens.bg);
+  }, [designTokens.bg]);
 
   useEffect(() => {
     hydrateThemeFromStorage();
   }, []);
 
   return (
-    <div className={`app-shell${(location.pathname === '/' || location.pathname.startsWith('/projects') || ['/about', '/resume'].includes(location.pathname)) ? ' portfolio-shell' : ''}`}>
+    <div style={tokenStyles(designTokens)} className={`app-shell${(location.pathname === '/' || location.pathname.startsWith('/projects') || ['/about', '/resume', '/design-system', '/sandbox'].includes(location.pathname)) ? ' portfolio-shell' : ''}`}>
       <ScrollToTopOnRouteChange />
       <a className="skip-link" href="#main-content">
         Skip to main content
@@ -68,6 +80,7 @@ export default function App() {
           <Route path="/other-things" element={<OtherThingsPage />} />
           <Route path="/other-things/:slug" element={<OtherThingsDetailPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/design-system" element={<SandboxPage />} />
           <Route path="/sandbox" element={<SandboxPage />} />
         </Routes>
       </main>

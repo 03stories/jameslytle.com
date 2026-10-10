@@ -56,3 +56,13 @@ Use plain wireframe styling: neutral fills, thin outlines, simple connectors, re
 4. Clean relevant content and resolve remaining evidence/assets, then review responsive behavior and accessibility before the launch PR.
 
 Home's direction is approved. The Juicebox replacement image remains tracked as G-027; approval of the visual patterns does not resolve that asset gap. Legacy pages outside MVP remain subject to the existing relevance and inbound-link plan.
+
+## Interactive design system
+
+Open `/design-system` (`/sandbox` is an alias) for live foundations, type, action, artifact, and contrast specimens. The page is deliberately outside the public header navigation.
+
+`src/design/tokens.json` is the committed source of truth for the portfolio palette, desktop display ceiling, long-form body size, fluid gutter/section ceilings, image/action corners, image edge/shadow, and Resume icon spacing. `src/design/tokens.js` validates configurations and maps values to `--portfolio-*` CSS variables. App renders these variables before hydration, preserving the default appearance in prerendered output.
+
+Edits are local browser previews, stored separately from the older Photo Palette experiment. They carry across the migrated portfolio routes. Copy/download the current JSON and provide it to Codex to apply to `src/design/tokens.json`; reset restores committed defaults. Import accepts known token names, six-digit hex colors, and bounded numeric values. Contrast ratios are basic body-text checks, not a full accessibility audit.
+
+Scope: Home, Projects, shared case studies, About, Resume, and the design-system page use the portfolio foundations. Lab and older utility pages still use the legacy theme until migrated. Component-specific composition, responsive minimums, archive details, and small metadata sizes remain intentional CSS rules; the controls are not a universal override of every pixel.
