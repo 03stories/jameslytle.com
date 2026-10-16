@@ -1,6 +1,6 @@
 # Portfolio Status
 
-Last updated: 2026-10-10
+Last updated: 2026-10-16
 
 ## V1 goal
 
@@ -44,6 +44,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 - None prevent narrative drafting; documented asset and verification gaps remain bounded.
 
 ## Last session
+
+- Added the Pie Slice prototype film to Juicebox with a short interaction-craft section, native playback controls, and a text description. The selected public export covers coordinated selection, authoring rules, and layout/formatting states; the raw recordings and review archive remain local. The matched Editor before/after is still the next evidence gap.
 
 - Replaced independently centered detail blocks with a shared reading/artifact grid. Title, metadata, section headings, paragraphs, inline document images, and footer now share the reading edge. Added configurable reading and artifact widths plus temporary layout guides. Verified matching text edges on Design Docs and Forward, and narrow layouts on Design Docs and Juicebox without horizontal overflow.
 

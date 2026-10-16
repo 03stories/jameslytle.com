@@ -1,6 +1,6 @@
 # Project: Juicebox
 
-Last updated: 2026-09-05
+Last updated: 2026-10-16
 
 ## Classification
 
@@ -219,6 +219,8 @@ I would add a floating Editor mode that lets the report remain full width while 
 The larger lesson is that authoring tools have two products inside them: the experience being created and the system used to create it. A scalable Editor has to keep both understandable as the platform grows.
 
 ## Remaining gaps
+
+The public article now includes a Pie Slice interaction-craft section and an 81-second silent film. Evidence combines James's supplied hover/selection and expanded authoring recordings with captured prototype states for layout, theme, and formatting. It is labeled as Figma design work; the filtered-state example does not demonstrate a data-update transition. Raw recordings and the review archive remain outside Git.
 
 1. Matched before/after Editor screenshots when available.
 2. Broader quantitative, customer, business, or organizational outcome evidence.

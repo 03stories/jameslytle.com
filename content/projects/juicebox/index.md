@@ -57,6 +57,24 @@ This unlocked more than a replacement for Global Filters. Slice groups could pla
 
 The result was one primary filtering architecture the team could continue improving. Existing apps retained backward compatibility, while new apps could move to the richer Slice model.
 
+## Interaction craft within a reusable Slice
+
+A reusable Slice has to stay understandable as data, layout, and authoring choices change. For the pie Slice, I designed coordinated feedback across the chart, legend, and filter pill. Hover previews a selection; selecting Nashville and “41 Other” represents 42 underlying cities.
+
+The same component also needed to handle narrow and wide containers, long labels, large values, dark backgrounds, and incomplete authoring inputs. I worked through these cases in Figma prototypes so the system's behavior was considered alongside its appearance.
+
+<figure class="slice-film">
+  <video controls playsinline preload="none" width="1920" height="1080" poster="./pie-slice-poster.jpg" aria-label="Pie Slice interaction and system-state prototypes" aria-describedby="slice-film-caption">
+    <source src="./pie-slice-interactions.mp4" type="video/mp4">
+    <a href="./pie-slice-interactions.mp4">Download the Pie Slice prototype video</a>.
+  </video>
+  <figcaption id="slice-film-caption" class="portfolio-figure-label">Figma design prototypes · 1 min 21 sec · Silent video. Hover and selection, authoring rules, and layout and formatting states.</figcaption>
+  <details class="slice-film-description">
+    <summary>Read the video description</summary>
+    <p>The pointer moves between the pie chart and legend to show coordinated hover feedback, then selects Nashville and the grouped 41 Other cities. The combined selection represents 42 cities. The authoring prototype demonstrates required inputs, dimension and measure choices, display modes, and returning to an incomplete configuration when an input is removed. Further examples show a dark background, narrow, intermediate, and wide layouts, minimum and maximum label widths, long names, large values, and a selected category with its filter context.</p>
+  </details>
+</figure>
+
 # Decision 3: Redesign the Editor for platform-scale complexity
 
 The original Editor made a smaller report easy to scan because configuration for its Slices and sections was visible together. As the platform evolved, that strength became a liability. Complex reports produced a cluttered interface, obscured the high-level structure, and forced authors to scroll repeatedly between distant parts of a story.
