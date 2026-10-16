@@ -163,7 +163,7 @@ Error generating stack: `+i.message+`
   <figcaption id="slice-film-caption" class="portfolio-figure-label">Figma design prototypes · 1 min 21 sec · Silent video. Hover and selection, authoring rules, and layout and formatting states.</figcaption>
   <details class="slice-film-description">
     <summary>Read the video description</summary>
-    <p>The pointer moves between the pie chart and legend to show coordinated hover feedback, then selects Nashville and the grouped 41 Other cities. The combined selection represents 42 cities. The authoring prototype demonstrates required inputs, dimension and measure choices, display modes, and returning to an incomplete configuration when an input is removed. Further examples show a dark background, narrow, intermediate, and wide layouts, minimum and maximum label widths, long names, large values, and a selected category with its filter context.</p>
+    <p>The pointer moves between the pie chart and legend to show coordinated hover feedback, then selects Nashville and the grouped 41 Other cities. The combined selection represents 42 cities. The authoring prototype demonstrates required inputs, dimension and measure choices, display modes, and returning to an incomplete configuration when an input is removed. Further examples show a dark background, narrow, intermediate, and wide layouts, minimum and maximum label widths, long names, and large values. Finally, a filter change animates the chart while preserving Nashville's selection context.</p>
   </details>
 </figure>
 <h1>Decision 3: Redesign the Editor for platform-scale complexity</h1>
