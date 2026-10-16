@@ -64,7 +64,7 @@ A reusable Slice has to stay understandable as data, layout, and authoring choic
 The same component also needed to handle narrow and wide containers, long labels, large values, dark backgrounds, and incomplete authoring inputs. I worked through these cases in Figma prototypes so the system's behavior was considered alongside its appearance.
 
 <figure class="slice-film">
-  <video controls playsinline preload="none" width="1920" height="1080" poster="./pie-slice-poster.jpg" aria-label="Pie Slice interaction and system-state prototypes" aria-describedby="slice-film-caption">
+  <video controls muted playsinline data-play-in-view preload="none" width="1920" height="1080" poster="./pie-slice-poster.jpg" aria-label="Pie Slice interaction and system-state prototypes" aria-describedby="slice-film-caption">
     <source src="./pie-slice-interactions.mp4" type="video/mp4">
     <a href="./pie-slice-interactions.mp4">Download the Pie Slice prototype video</a>.
   </video>

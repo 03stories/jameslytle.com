@@ -1,12 +1,20 @@
+import { useEffect, useRef } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import projects from '../content/projects.json';
 import MaterialIcon from '../components/MaterialIcon';
 import visibility from '../content/projectVisibility.json';
 import { formatMonthLabel } from '../utils/formatDate';
+import { observeViewportVideo } from '../utils/viewportVideo';
 
 export default function ProjectDetailPage() {
   const { slug } = useParams();
   const project = projects.find((entry) => entry.slug === slug);
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    const cleanups = Array.from(contentRef.current?.querySelectorAll('video[data-play-in-view]') || [], observeViewportVideo);
+    return () => cleanups.forEach((cleanup) => cleanup());
+  }, [project]);
 
   if (!project) {
     return (
@@ -41,7 +49,7 @@ export default function ProjectDetailPage() {
         ) : null}
       </div>
       </header>
-      <div className="prose case-study-prose" dangerouslySetInnerHTML={{ __html: project.html }} />
+      <div ref={contentRef} className="prose case-study-prose" dangerouslySetInnerHTML={{ __html: project.html }} />
       <footer className="case-study-footer">
         <nav className="case-study-pagination" aria-label="Project navigation">
           {previous ? <Link className="portfolio-text-link case-study-previous" to={`/projects/${previous.slug}`}><MaterialIcon name="chevron_right" /> Previous: {name(previous)}</Link> : <span />}
