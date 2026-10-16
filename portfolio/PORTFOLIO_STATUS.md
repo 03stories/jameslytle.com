@@ -12,11 +12,11 @@ Drafting
 
 ## Current focus
 
-Apply approved Home patterns to the scoped MVP pages
+Complete the remaining portfolio content and asset review, including Juicebox Editor evidence.
 
 ## Single recommended next action
 
-Review the scoped MVP pages together, then complete the final content and launch checks.
+Select a matched or comparable before-and-after pair for the Juicebox Editor redesign.
 
 ## This week's three outcomes
 
@@ -45,7 +45,7 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 
 ## Last session
 
-- Added the Pie Slice prototype film to Juicebox with a short interaction-craft section, native playback controls, and a text description. The selected public export covers coordinated selection, authoring rules, and layout/formatting states; the raw recordings and review archive remain local. The matched Editor before/after is still the next evidence gap.
+- Added the Pie Slice prototype film to Juicebox with a short interaction-craft section, native playback controls, and a text description. The selected public export covers coordinated selection, authoring rules, layout/formatting states, and James's replacement filter-change transition. Playback starts muted when 35% visible and pauses below that threshold; reduced-motion users retain manual playback. Build and accessibility checks passed for 23 routes, and targeted playback-logic checks passed. Raw recordings and the review archive remain local. The matched Editor before/after is still the next evidence gap.
 
 - Replaced independently centered detail blocks with a shared reading/artifact grid. Title, metadata, section headings, paragraphs, inline document images, and footer now share the reading edge. Added configurable reading and artifact widths plus temporary layout guides. Verified matching text edges on Design Docs and Forward, and narrow layouts on Design Docs and Juicebox without horizontal overflow.
 
