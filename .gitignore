@@ -1,6 +1,10 @@
 node_modules
+.vite/
 dist
 .DS_Store
 src/content/projects.json
 src/content/other-things.json
 src/content/site.json
+
+# Local resume gate password (never commit)
+.resume-password.local

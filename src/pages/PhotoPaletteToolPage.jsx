@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { applyTheme, createThemeFromPalette, resetTheme, saveTheme } from '../utils/themePalette';
+import { createThemeFromPalette } from '../utils/themePalette';
 import defaultPhoto from '../../content/other-things/photo-palette/default-photo.jpg';
 
 const DEFAULT_IMAGE = defaultPhoto;
@@ -9,7 +9,7 @@ const MAX_SWATCHES = 14;
 const MARKER_SIZE = 26;
 
 const THEME_VAR_USAGE = [
-  { variable: '--color-bg', source: 'color-bg', affects: 'body background and page canvas' },
+  { variable: '--color-bg', source: 'color-bg', affects: 'utility background and canvas' },
   { variable: '--color-text', source: 'color-text', affects: 'default text, headings, and paragraph content' },
   { variable: '--color-surface', source: 'color-surface', affects: 'inputs, selects, and button surfaces' },
   {
@@ -26,7 +26,7 @@ const THEME_VAR_USAGE = [
   ...Array.from({ length: 8 }, (_, index) => ({
     variable: `--palette-${index + 1}`,
     source: `palette-${index + 1}`,
-    affects: `palette slot ${index + 1} used to derive the live site theme`
+    affects: `palette slot ${index + 1} used to derive the utility preview theme`
   }))
 ];
 
@@ -223,14 +223,6 @@ export default function PhotoPaletteToolPage() {
   }, [loadedImage, markers]);
 
   useEffect(() => {
-    if (!palette.length) return;
-
-    const theme = createThemeFromPalette(palette);
-    applyTheme(theme);
-    saveTheme(theme);
-  }, [palette]);
-
-  useEffect(() => {
     return () => {
       if (imageRef.current) {
         URL.revokeObjectURL(imageRef.current);
@@ -365,12 +357,11 @@ export default function PhotoPaletteToolPage() {
   }
 
   function onResetTheme() {
-    resetTheme();
     setImageSrc(DEFAULT_IMAGE);
     setImageLabel('Default image');
     setSwatchCount(DEFAULT_SWATCHES);
     setMarkers(createMarkers(DEFAULT_SWATCHES));
-    setCopyStatus('Theme reset to site default.');
+    setCopyStatus('Image and palette markers reset.');
   }
 
   function onSwatchCountChange(value) {
@@ -394,11 +385,11 @@ export default function PhotoPaletteToolPage() {
   }
 
   return (
-    <section className="palette-tool" aria-label="Photo palette tool">
+    <section className="palette-tool" aria-label="Photo palette tool" style={Object.fromEntries(Object.entries(themePreview).map(([key, value]) => [`--${key}`, value]))}>
       <h3>Photo Palette Utility</h3>
       <p>
         Upload a photo, drag markers to sample exact points, and copy palette values in CSS-ready formats.
-        Generated palettes are applied to the site and persisted between pages.
+        Generated palettes preview on this utility. Copy the values to use them in your own work.
       </p>
 
       <div className="palette-tool-grid">
@@ -427,7 +418,7 @@ export default function PhotoPaletteToolPage() {
           </div>
 
           <button type="button" onClick={onResetTheme}>
-            Reset site theme
+            Reset palette theme
           </button>
 
           <div className="palette-preview-frame" ref={annotationFrameRef}>

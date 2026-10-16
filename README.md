@@ -2,6 +2,10 @@
 
 React + Vite portfolio site, statically prerendered for GitHub Pages.
 
+## Local setup
+
+Use Node.js 22, matching CI and `.nvmrc`. Install dependencies with `npm ci`, then start the site with `npm run dev`.
+
 ## Scripts
 
 - `npm run dev` - start local dev server (LAN accessible)
@@ -42,3 +46,7 @@ Base path environment values:
 
 - Production: `VITE_BASE_PATH=/jameslytle.com/`
 - PR previews: `VITE_BASE_PATH=/jameslytle.com/pr-preview/pr-<PR#>/`
+
+## Project visibility
+
+Edit `src/content/projectVisibility.json` to include or exclude a project. Set `home` or `projects` to `true` to display it on that surface, or `false` to hide it. These settings only control listings; content and direct project URLs remain available. Additional index entries follow the file order, after the three anchor projects and before the Finestra archive. To list a new project, create its content folder and add its slug to this file.

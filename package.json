@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build:content": "node scripts/build-content.mjs",
@@ -16,6 +19,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "js-sha256": "^1.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.30.1"
