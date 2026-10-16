@@ -220,7 +220,7 @@ The larger lesson is that authoring tools have two products inside them: the exp
 
 ## Remaining gaps
 
-The public article now includes a Pie Slice interaction-craft section and an 81-second silent film. Evidence combines James's supplied hover/selection and expanded authoring recordings with captured prototype states for layout, theme, and formatting. It is labeled as Figma design work; the filtered-state example does not demonstrate a data-update transition. Raw recordings and the review archive remain outside Git.
+The public article now includes a Pie Slice interaction-craft section and an 81-second silent film. Evidence combines James's supplied hover/selection, expanded authoring, and filtered-state transition recordings with captured prototype states for layout, theme, and formatting. The final flow demonstrates a filter change while preserving Nashville's selection context. It is labeled as Figma design work. Raw recordings and the review archive remain outside Git.
 
 1. Matched before/after Editor screenshots when available.
 2. Broader quantitative, customer, business, or organizational outcome evidence.
