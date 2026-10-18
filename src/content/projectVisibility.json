@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "forward",
+    "home": true,
+    "projects": true
+  },
+  {
+    "slug": "juicebox",
+    "home": true,
+    "projects": true
+  },
+  {
+    "slug": "forward-narrative-skill",
+    "home": true,
+    "projects": true
+  },
+  {
+    "slug": "slices",
+    "home": false,
+    "projects": true
+  },
+  {
+    "slug": "silverpop",
+    "home": false,
+    "projects": true
+  },
+  {
+    "slug": "coca-cola",
+    "home": false,
+    "projects": false
+  },
+  {
+    "slug": "design-docs",
+    "home": false,
+    "projects": false
+  },
+  {
+    "slug": "finestra-art-app",
+    "home": true,
+    "projects": true
+  }
+]

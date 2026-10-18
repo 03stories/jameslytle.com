@@ -34,13 +34,15 @@ function withBase(absolutePath) {
 }
 
 async function markdownToHtml(markdown) {
-  const rendered = await remark().use(html).process(markdown);
+  // Content is authored in this repository; preserve its media and figure markup.
+  const rendered = await remark().use(html, { sanitize: false }).process(markdown);
   return String(rendered);
 }
 
 function rewriteAssetUrls(htmlText, publicBasePath) {
   return htmlText
     .replace(/src="\.\//g, `src="${publicBasePath}/`)
+    .replace(/poster="\.\//g, `poster="${publicBasePath}/`)
     .replace(/href="\.\//g, `href="${publicBasePath}/`)
     .replace(/href="\/(?!\/)/g, `href="${SITE_BASE_PATH}`);
 }

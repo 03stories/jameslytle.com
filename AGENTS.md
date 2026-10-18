@@ -9,7 +9,7 @@
 
 ## Local Setup
 
-1. Use Node.js 24 to match CI.
+1. Use Node.js 22 to match CI (`.nvmrc` records the supported major version).
 2. Install dependencies with `npm ci`.
 
 ## Quality Checks Before PR

@@ -1,54 +1,27 @@
 ---
-title: Bio
-heroStatement: "Humble, pragmatic, goal oriented problem solving"
-email: "jameslytle [at] hey.com"
+title: About
+heroStatement: "Design engineer and product design leader making complex products useful."
+email: "jameslytle@hey.com"
 headshot: ./james-headshot-2020.jpg
 ---
 
-I love designing beautiful, useful data products, inside and out. My goal is simply to help people communicate their complex data more fluently to their non-analytical audiences.
+I’m a Design Engineer & Product Lead at Juice Analytics, and I love designing useful data products from the inside out. The work I care about most helps people make sense of complex information and communicate it clearly, especially to people who don’t live in the data every day.
 
-Collaborating with diverse teams, I'm passionate about turning imaginative design concepts into pragmatic solutions that solve real problems for real people. Constraints are good, and for me, the best technique or tool in the process is the one that works<sup>(1)</sup>.
+I enjoy working with different kinds of people and turning ambitious ideas into practical things that solve real problems. Constraints are part of the work; the best method or tool is the one that helps the team make progress. That might mean research, sketching, prototyping in code, or getting a first version in front of someone. I like moving between those modes, from framing the problem through to the details of a shipped experience.
 
-I've worked with the mainstays like Coca-Cola, IHG, and Healthstream, as well as slightly fresher startups like TrueCar, IRUNURUN, and Medikly.
+Lately, that’s meant originating and building [Forward](/projects/forward), shaping the [Juicebox](/projects/juicebox) authoring platform, and turning narrative-design expertise into a team-wide workflow with the [Forward Narrative Skill](/projects/forward-narrative-skill). Each has asked me to connect product decisions with the interaction design, frontend implementation, and AI behavior that make the experience work.
 
-### Notes
+Earlier, I co-founded [Finestra](/projects/finestra-art-app), a local art marketplace. I’m glad I took that swing. It’s part of how I got here, and an honest record of work, learning, and the product questions I’d approach differently today.
 
-1. sketching, ux research, wireframing, interaction design, prototyping, etc
+I’m open to senior design-engineering and product design leadership opportunities, and selective collaboration on complex data and AI products.
 
-### Social
-
-- [GitHub](https://github.com/03stories)
-- [Twitter](https://twitter.com/03stories)
-- [Quora](https://www.quora.com/profile/James-Lytle)
-- [LinkedIn](https://www.linkedin.com/in/jameslytle/)
-
-### Writing
+## Selected writing
 
 - [Another Hot Data Trend — Same Timeless Goal](https://medium.com/@03STORIES/another-hot-data-trend-same-timeless-goal-98b631964c49)
 - [Visualization Techniques We All Knew at 4 Years Old](https://medium.com/@03STORIES/visualization-techniques-we-all-knew-at-4-years-old-b2953edfa2aa)
-- [Chart Makeovers](https://medium.com/@03STORIES/chart-makeovers-a4382d73fa15)
-- [Memorable or Actionable or Both](https://medium.com/@03STORIES/memorable-or-actionable-or-both-bfdacc545003)
 - [Data Discussion Etiquette from Brad Pitt](https://medium.com/@03STORIES/data-discussion-etiquette-from-brad-pitt-9d97ae977ec6)
-- [What Is the Difference Between Traditional Reporting and Data Visualisation?](https://qr.ae/T6KS3X)
-- [How Are Data Products Used?](https://qr.ae/T6KmcR)
-- [Reimagining Higher Education](https://medium.com/@03STORIES/reimagining-higher-education-pt-1-ec7966896b44)
 
-### Skills
+## Find me
 
-- Product Design, Strategy, & Development
-- Data Visualization
-- UX & Research Management
-- AI Research & Development
-- Design Management
-- Client Management
-- Interaction & Interface Design
-- Workshop Design & Presentation
-
-### Tools
-
-- HTML / CSS / JS for prototyping & feature development (Usually in Tailwind/React)
-- Figma / Principle for visuals
-- VSCode / Cursor for IDE
-- Google Docs / Dropbox Paper for management
-- GitHub / JIRA for tracking
-- Whiteboard / Sketching for ideation
+- [GitHub](https://github.com/03stories)
+- [LinkedIn](https://www.linkedin.com/in/jameslytle/)

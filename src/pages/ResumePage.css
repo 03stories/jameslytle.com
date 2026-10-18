@@ -1,0 +1,54 @@
+.resume-workspace { --resume-text-size: 10pt; --resume-leading: 1.34; padding-bottom: 4rem; }
+.resume-toolbar { max-width: 1000px; margin: 0 auto 2rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem; }
+.resume-toolbar strong { font-size: 1.25rem; }
+.resume-toolbar p { margin: .35rem 0 0; max-width: 50ch; font-size: .875rem; color: var(--portfolio-muted); }
+.resume-toolbar-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
+.resume-toolbar-actions label { display: flex; align-items: center; gap: .5rem; font-size: .875rem; }
+.resume-toolbar-actions select { padding: .6rem; border: 1px solid var(--portfolio-line); border-radius: 4px; background: white; color: #202322; }
+.resume-toolbar .resume-review-note { flex-basis: 100%; max-width: none; }
+.resume-document { box-sizing: border-box; width: 100%; max-width: 8.5in; min-height: 11in; margin: auto; padding: 12mm; background: white; color: #202322; font-family: Arial, sans-serif; font-size: var(--resume-text-size); line-height: var(--resume-leading); border: 1px solid #d9dfdc; }
+.resume-paper-a4 .resume-document { max-width: 210mm; min-height: 297mm; }
+.resume-document :is(h2,h3,h4) { color: #202322; font-family: var(--portfolio-heading-font, Arial, sans-serif); letter-spacing: -.02em; text-wrap: balance; }
+.resume-document h2 { margin: 0; font-size: 30pt; line-height: 1.1; }
+.resume-positioning { font-size: 13pt; font-weight: 600; margin: 6pt 0; }
+.resume-contact { display: flex; flex-wrap: wrap; gap: 4pt 14pt; font-size: 9pt; }
+.resume-contact a { color: #202322; text-decoration-thickness: .5px; text-underline-offset: 2px; }
+.resume-summary { margin: 12pt 0 0; }
+.resume-section { margin-top: 11pt; }
+.resume-section h3 { margin: 0 0 7pt; font-size: 12pt; color: #9e281e; border-bottom: 1px solid #d9dfdc; padding-bottom: 4pt; }
+.resume-job { margin-top: 7pt; }
+.resume-job-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 12pt; }
+.resume-job-heading h4 { margin: 0; font-size: 11pt; }
+.resume-job-heading span { flex-shrink: 0; font-size: 9pt; }
+.resume-document p { text-wrap: pretty; }
+.resume-job p, .resume-section > p { margin: 4pt 0; }
+.resume-role { font-weight: 600; }
+.resume-document ul { margin: 5pt 0 8pt; padding-left: 14pt; }
+.resume-document li { padding-left: 2pt; margin-bottom: 3pt; }
+.resume-tools { color: #555d59; }
+@media (max-width: 600px) { .resume-document { padding: 20px; min-height: 0; } .resume-document h2 { font-size: 26pt; } .resume-job-heading { flex-wrap: wrap; gap: 2pt 10pt; } }
+@media print {
+  html, body, #root { margin: 0 !important; padding: 0 !important; background: white !important; }
+  .app-shell { max-width: none !important; padding: 0 !important; margin: 0 !important; }
+  .site-header, .skip-link, .resume-toolbar { display: none !important; }
+  .site-main { margin: 0 !important; padding: 0 !important; }
+  .resume-workspace { margin: 0; padding: 0; }
+  .resume-document, .resume-paper-a4 .resume-document { width: 100%; max-width: none; min-height: 0; padding: 0; border: 0; }
+  .resume-document h2 { font-size: 30pt; }
+  .resume-section h3, .resume-job-heading, .resume-role { break-after: avoid; }
+  .resume-document li, .resume-section > p { break-inside: avoid; }
+  .resume-document p { orphans: 3; widows: 3; }
+  .resume-job-heading { flex-wrap: nowrap; }
+  .app-shell::before, .case-study::before { display: none !important; }
+}
+.resume-gate { max-width: 440px; margin: 2rem auto 6rem; }
+.resume-gate h2 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; }
+.resume-gate > p { color: var(--portfolio-muted); }
+.resume-gate form { display: flex; flex-direction: column; align-items: stretch; gap: .75rem; margin-top: 2rem; }
+.resume-gate label { font-weight: 600; }
+.resume-gate input { width: 100%; box-sizing: border-box; padding: .8rem; background: white; color: #202322; border: 1px solid #555d59; border-radius: 4px; font: inherit; }
+.resume-gate input:focus-visible { outline: 2px solid var(--portfolio-accent); outline-offset: 3px; }
+.resume-gate button { justify-content: center; }
+.resume-gate button:disabled { opacity: .65; cursor: default; }
+.resume-gate [role="status"] { min-height: 1.5em; margin: 0; }
+.resume-lock { border: 0; background: transparent; cursor: pointer; font: inherit; }
