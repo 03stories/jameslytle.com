@@ -38,7 +38,7 @@ export default function SelectedWork({ surface = 'home' }) {
             </p>
             <div className="portfolio-project-links">
               <Link className="portfolio-text-link" to="/projects/forward">Read the case study <MaterialIcon name="chevron_right" /></Link>
-              <a className="portfolio-live-link" href="https://www.insightsrecap.com/">Live product <MaterialIcon name="open_in_new" /></a>
+              <a className="portfolio-live-link" href="https://www.insightsrecap.com/">Open Site <MaterialIcon name="open_in_new" /></a>
             </div>
           </div>
           <figure className="portfolio-forward-pair">
