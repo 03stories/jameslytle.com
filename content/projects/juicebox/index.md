@@ -13,7 +13,7 @@ summary: "I led interaction and interface design across Juicebox's evolution, fr
 draft: false
 ---
 
-[Juicebox](https://www.juiceanalytics.com/juicebox-for-databricks) is an active, configurable customer-reporting platform for turning data into guided, interactive stories. I led interaction and interface design across its evolution, from the building-block system used by internal app developers to the self-service Editor customers use to author reports.
+[Juicebox](https://www.juiceanalytics.com/) is an active, configurable customer-reporting platform for turning data into guided, interactive stories. I led interaction and interface design across its evolution, from the building-block system used by internal app developers to the self-service Editor customers use to author reports.
 
 My work sat between product architecture, interaction design, and implementation. I designed reusable product systems, translated recurring client patterns into configuration models, built working definition prototypes, and implemented targeted frontend refinements. Engineering partners owned the underlying platform and production React system.
 
