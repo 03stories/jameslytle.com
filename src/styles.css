@@ -809,6 +809,15 @@ select:focus-visible {
 .case-study-prose p img { margin-inline: 0; }
 .case-study-prose > div { grid-column: text-start / text-end; }
 .case-study-prose > div:has(iframe, video, embed) { grid-column: wide-start / wide-end; }
+.case-study-prose > .portfolio-report-gallery { grid-column: wide-start / wide-end; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: clamp(1rem, 2.5vw, 2rem); margin-block: 1.5rem 3rem; overflow: visible; }
+.portfolio-report-column { display: grid; align-content: start; gap: 2rem; min-width: 0; }
+.portfolio-report-gallery figure { margin: 0; min-width: 0; }
+.portfolio-report-gallery figure > a { display: block; }
+.portfolio-report-gallery img { display: block; height: auto; }
+.portfolio-report-gallery a:focus-visible { outline: 2px solid var(--portfolio-accent); outline-offset: 5px; }
+@media (max-width: 720px) {
+  .case-study-prose > .portfolio-report-gallery { grid-template-columns: 1fr; gap: 2rem; }
+}
 
 /* A compact mobile header and a tighter reading rhythm. */
 .mobile-menu-toggle { display: none; }

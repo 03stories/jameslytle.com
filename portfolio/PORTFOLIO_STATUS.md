@@ -45,6 +45,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 
 ## Last session
 
+- Replaced the two What shipped images with four supplied report captures: Quarterly Performance Review, Website Dashboard, Start:ME Entrepreneurs, and Acme Rentals Survey Results. A three-column gallery preserves full image proportions, stacks the compact dashboard above Start:ME, and collapses to one column on mobile. Added the supplied dashboard and survey live links, larger-image links, and optimized WebP assets. Desktop and narrow layouts have no horizontal overflow.
+
 - Replaced the opening Juicebox still with James’s full 65-second sample recording, exported as a 1920px MP4 with a poster, description, muted viewport playback, and looping. Removed the NashvilleHealth and early Runners Tracker/Story Designer screenshots at James’s request.
 
 - Added the approved Editor comparison: 44 seconds from the 2022 Juice Analytics demo (3:42–4:26) and the first 60 seconds of James’s 2026 recording. Both reuse the existing muted viewport playback helper, native controls, and reduced-motion behavior. Added poster frames, text descriptions, source credit, and English captions for the older narration; replaced the Decision 3 placeholder and historical still.
