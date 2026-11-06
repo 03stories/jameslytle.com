@@ -17,7 +17,7 @@
   {
     "slug": "slices",
     "home": false,
-    "projects": true
+    "projects": false
   },
   {
     "slug": "silverpop",
