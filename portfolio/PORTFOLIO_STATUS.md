@@ -35,7 +35,7 @@ Review the Forward case study and its remaining process-visual evidence gap.
 | Finestra historical reflection | Draft-ready | The case now names its period, role boundaries, and the buyer-research lesson; older copy still needs review for stale or unsupported claims | Review obsolete references and superlatives |
 | Lab | Draft-ready | Four selected artifacts are in V1; OpenIDEO's strongest participation fact still needs verification during copywriting | Present as a compact Lab index and four artifact pages |
 | Writing | Draft-ready | The three selected V1 pieces now appear on About | Keep the curated presentation consistent with the refreshed system |
-| About/contact | Draft-ready | Updated positioning and personal voice, current role, contact link, curated writing, and project links are present; 2020 headshot retained | Apply refreshed page patterns after Home direction is set |
+| About/contact | Draft-ready | Updated positioning and personal voice, current role, contact link, curated writing, project links, and approved travel portrait are present | Apply refreshed page patterns after Home direction is set |
 | Resume | Presentable | None — James approved the resume as ready on 2026-11-06 | Preserve the approved resume during remaining portfolio work |
 
 Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Presentable, Shipped.
@@ -45,6 +45,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 - None prevent narrative drafting; documented asset and verification gaps remain bounded.
 
 ## Last session
+
+- Replaced About’s 2020 headshot with James’s approved travel portrait: subtle AI-assisted hair/gaze retouch, followed by a tighter off-center crop retaining the train setting. Exported an optimized WebP, updated alternative text, and verified the image loads on About without horizontal overflow.
 
 - James approved the Resume as ready on 2026-11-06. Added a Presentable readiness entry and recorded approval in RESUME.md; no resume content or PDF changes were requested.
 

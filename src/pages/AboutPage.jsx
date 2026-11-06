@@ -13,7 +13,7 @@ export default function AboutPage() {
       <div className="about-layout">
       <aside className="about-profile" aria-label="Portrait and contact">
       {about.headshot ? (
-        <img className="about-portrait" src={about.headshot} alt="James Lytle" />
+        <img className="about-portrait" src={about.headshot} alt="James Lytle on a train in Japan" />
       ) : null}
       {about.email ? <a className="portfolio-text-link" href={`mailto:${about.email}`}><MaterialIcon name="mail" />Let’s chat</a> : null}
       <a className="portfolio-text-link" href={`${import.meta.env.BASE_URL}resume.pdf`}><MaterialIcon name="description" />Resume</a>
