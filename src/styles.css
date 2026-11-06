@@ -364,7 +364,7 @@ select:focus-visible {
 .portfolio-role { color: var(--portfolio-muted); font-size: calc(var(--portfolio-body-size) * 0.8889); line-height: 1.55; font-weight: 400; margin-bottom: 1.5rem; }
 .portfolio-project-copy > p:not(.portfolio-role) { max-width: 40ch; font-size: calc(var(--portfolio-body-size) * 1); line-height: 1.75; font-weight: 400; }
 .portfolio-project-copy .portfolio-project-lede { font-size: clamp(1.25rem, 1.75vw, 1.5rem); line-height: 1.45; font-weight: 400; letter-spacing: -0.015em; }
-.portfolio-project figure img { display: block; width: 100%; height: auto; border: 1px solid var(--portfolio-image-border); border-radius: var(--portfolio-image-radius); box-shadow: 0 3px 8px rgb(32 35 34 / var(--portfolio-shadow-opacity)); }
+.portfolio-project figure :is(img, video) { display: block; width: 100%; height: auto; border: 1px solid var(--portfolio-image-border); border-radius: var(--portfolio-image-radius); box-shadow: 0 3px 8px rgb(32 35 34 / var(--portfolio-shadow-opacity)); }
 .portfolio-figure-label { padding-top: 0.875rem; color: var(--portfolio-muted); font-size: calc(var(--portfolio-body-size) * 0.8889); font-weight: 400; line-height: 1.6; }
 .case-study-prose .slice-film { margin-block: 1.5rem 2.5rem; }
 .case-study-prose .slice-film video { height: auto; margin: 0; border-radius: var(--portfolio-image-radius); background: #25272b; }
@@ -376,7 +376,6 @@ select:focus-visible {
 .portfolio-project-juicebox { grid-template-columns: minmax(0, 1.6fr) minmax(0, 0.85fr); }
 .portfolio-project-juicebox .portfolio-project-copy { grid-column: 2; grid-row: 1; }
 .portfolio-project-juicebox figure { grid-column: 1; grid-row: 1; }
-.portfolio-juicebox-wide { aspect-ratio: 3093 / 1441; object-fit: contain; }
 .portfolio-skill-visuals { display: grid; gap: 1rem; }
 .portfolio-skill-visuals .portfolio-skill-workflow { width: 100%; object-fit: contain; }
 

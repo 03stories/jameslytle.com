@@ -28,7 +28,7 @@ Review the Forward case study and its remaining process-visual evidence gap.
 
 | Item | Level | Blocking issue | Next proof |
 |---|---|---|---|
-| Home | Presentable | Visual direction approved; Juicebox replacement image remains G-027 | Preserve approved appearance during shared-pattern extraction |
+| Home | Presentable | Visual direction approved; Juicebox preview replaced with approved sample video (G-027 resolved) | Preserve approved appearance during shared-pattern extraction |
 | Forward | Draft-ready | The evidence-checked public route is implemented; the process visual remains a documented placeholder | Apply refreshed case-study patterns after Home direction is set |
 | Juicebox | Presentable | None — James approved the project as ready on 2026-11-06 | Merge project-updates via PR #7 when ready to publish |
 | Forward Narrative Claude Skill | Draft-ready | Public case draft, explicit responsibility boundaries, and three synthetic visuals are implemented; Home now features it | Apply refreshed case-study patterns after Home direction is set |
@@ -45,6 +45,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 - None prevent narrative drafting; documented asset and verification gaps remain bounded.
 
 ## Last session
+
+- Replaced Home’s historical Juicebox image with the same 65-second sample report video used on the project page. Reuses the viewport playback helper, muted looping playback, native controls, poster, and responsive proportions. Verified offscreen pause and mobile sizing; resolved G-027.
 
 - Improved About’s mobile layout by pairing a compact off-center portrait with contact links in the same row, reducing the gap before the introduction, and tightening prose spacing. Contact targets remain 44px high. Verified narrow, tablet, and desktop layouts without horizontal overflow; desktop keeps its existing two-column composition.
 

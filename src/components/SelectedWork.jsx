@@ -1,13 +1,16 @@
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import MaterialIcon from './MaterialIcon';
 import visibility from '../content/projectVisibility.json';
 import allProjects from '../content/projects.json';
+import { observeViewportVideo } from '../utils/viewportVideo';
 
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 
 const projects = {
   forward: asset('content/site/home/forward-insights-recap-home.png'),
-  juicebox: asset('content/projects/juicebox/jb-header.png'),
+  juiceboxVideo: asset('content/projects/juicebox/juicebox-sample.mp4'),
+  juiceboxPoster: asset('content/projects/juicebox/juicebox-sample-poster.jpg'),
   narrativeWorkflow: asset('content/projects/forward-narrative-skill/workflow-wireframe.svg'),
   finestraApp: asset('content/projects/finestra-art-app/localart-artwork-2.png'),
   finestraArtist: asset('content/projects/finestra-art-app/localart-artwork-createnew1.png')
@@ -22,6 +25,10 @@ function FigureLabel({ children }) {
 }
 
 export default function SelectedWork({ surface = 'home' }) {
+  const juiceboxVideoRef = useRef(null);
+  useEffect(() => {
+    if (juiceboxVideoRef.current) return observeViewportVideo(juiceboxVideoRef.current);
+  }, [surface]);
   const included = (slug) => visibility.some((item) => item.slug === slug && item[surface]);
   const additional = visibility.filter((item) => item[surface] && !['forward', 'juicebox', 'forward-narrative-skill', 'finestra-art-app'].includes(item.slug)).map((item) => allProjects.find((project) => project.slug === item.slug)).filter(Boolean);
   return (
@@ -59,10 +66,12 @@ export default function SelectedWork({ surface = 'home' }) {
               View project <MaterialIcon name="chevron_right" />
             </Link>
           </div>
-          {/* TODO: Replace this historical Juicebox capture with a stronger representative product image. See portfolio/CONTENT_GAPS.md G-027. */}
           <figure className="portfolio-juicebox-pair">
-            <img className="portfolio-juicebox-wide" loading="lazy" src={projects.juicebox} alt="Juicebox story designer and data story" />
-            <FigureLabel>Story canvas · Designer controls</FigureLabel>
+            <video ref={juiceboxVideoRef} className="portfolio-juicebox-video" controls muted loop playsInline preload="none" width="1920" height="1198" poster={projects.juiceboxPoster} aria-label="Juicebox sample customer-reporting experience" aria-describedby="home-juicebox-video-caption">
+              <source src={projects.juiceboxVideo} type="video/mp4" />
+              <a href={projects.juiceboxVideo}>Download the Juicebox sample recording</a>.
+            </video>
+            <figcaption id="home-juicebox-video-caption" className="portfolio-figure-label">An interactive customer survey report · 1 min 5 sec · Silent video.</figcaption>
           </figure>
         </article>)}
 
