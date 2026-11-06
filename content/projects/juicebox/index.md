@@ -125,23 +125,23 @@ Across its evolution, Juicebox supported a wide variety of private customer repo
 <div class="portfolio-report-gallery" role="group" aria-label="Examples of reports built with Juicebox">
   <div class="portfolio-report-column">
     <figure>
-      <a href="./report-quarterly.webp" target="_blank" rel="noopener noreferrer" aria-label="View the full Quarterly Performance Review image in a new tab"><img src="./report-quarterly.webp" alt="Quarterly performance report combining a dark blue cover, activity and engagement metrics, scores, and recommended actions" width="1400" height="6164" loading="lazy" decoding="async"></a>
+      <img src="./report-quarterly.webp" alt="Quarterly performance report combining a dark blue cover, activity and engagement metrics, scores, and recommended actions" width="1400" height="6164" loading="lazy" decoding="async">
       <figcaption class="portfolio-figure-label">Quarterly performance review<br>Benchmarks, progress, and recommended actions.</figcaption>
     </figure>
   </div>
   <div class="portfolio-report-column">
     <figure>
-      <a href="./report-dashboard.webp" target="_blank" rel="noopener noreferrer" aria-label="View the full Dashboard Example image in a new tab"><img src="./report-dashboard.webp" alt="Compact pale-yellow and green website dashboard with key metrics, a sessions trend, locations, and traffic sources" width="1400" height="1176" loading="lazy" decoding="async"></a>
+      <img src="./report-dashboard.webp" alt="Compact pale-yellow and green website dashboard with key metrics, a sessions trend, locations, and traffic sources" width="1400" height="1176" loading="lazy" decoding="async">
       <figcaption class="portfolio-figure-label">Website dashboard<br><a href="https://james.myjuicebox.io/a/dashboard_example_3/?h=Ep_ZyFNUAgnRpuI3EkczHXg4Fl4">Explore the live dashboard</a></figcaption>
     </figure>
     <figure>
-      <a href="./report-startme.webp" target="_blank" rel="noopener noreferrer" aria-label="View the full Start:ME Entrepreneurs image in a new tab"><img src="./report-startme.webp" alt="Teal and mint Start:ME entrepreneurship report with neighborhood maps, business categories, growth trends, and business details" width="1400" height="5601" loading="lazy" decoding="async"></a>
+      <img src="./report-startme.webp" alt="Teal and mint Start:ME entrepreneurship report with neighborhood maps, business categories, growth trends, and business details" width="1400" height="5601" loading="lazy" decoding="async">
       <figcaption class="portfolio-figure-label">Start:ME Entrepreneurs<br>A community story told through maps, trends, and business details.</figcaption>
     </figure>
   </div>
   <div class="portfolio-report-column">
     <figure>
-      <a href="./report-survey.webp" target="_blank" rel="noopener noreferrer" aria-label="View the full Acme Rentals Survey Results image in a new tab"><img src="./report-survey.webp" alt="Acme Rentals survey report mixing photography, purple and navy sections, recommendation scores, satisfaction ratings, and customer comments" width="1400" height="5586" loading="lazy" decoding="async"></a>
+      <img src="./report-survey.webp" alt="Acme Rentals survey report mixing photography, purple and navy sections, recommendation scores, satisfaction ratings, and customer comments" width="1400" height="5586" loading="lazy" decoding="async">
       <figcaption class="portfolio-figure-label">Customer survey report<br><a href="https://james.myjuicebox.io/a/survey_example_3/">Explore the live survey report</a></figcaption>
     </figure>
   </div>

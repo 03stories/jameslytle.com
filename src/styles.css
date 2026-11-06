@@ -812,7 +812,6 @@ select:focus-visible {
 .case-study-prose > .portfolio-report-gallery { grid-column: wide-start / wide-end; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: clamp(1rem, 2.5vw, 2rem); margin-block: 1.5rem 3rem; overflow: visible; }
 .portfolio-report-column { display: grid; align-content: start; gap: 2rem; min-width: 0; }
 .portfolio-report-gallery figure { margin: 0; min-width: 0; }
-.portfolio-report-gallery figure > a { display: block; }
 .portfolio-report-gallery img { display: block; height: auto; }
 .portfolio-report-gallery a:focus-visible { outline: 2px solid var(--portfolio-accent); outline-offset: 5px; }
 @media (max-width: 720px) {
