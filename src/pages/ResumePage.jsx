@@ -69,7 +69,7 @@ export default function ResumePage() {
           <h2 id="resume-name">James Lytle</h2>
           <p className="resume-positioning">Design Engineer &amp; Product Design Leader</p>
           <div className="resume-contact"><a href="https://jameslytle.com">jameslytle.com</a><a href="mailto:jameslytle@hey.com">jameslytle@hey.com</a><a href="https://www.linkedin.com/in/jameslytle/">LinkedIn</a><a href="https://github.com/03stories">GitHub</a></div>
-          <p className="resume-summary">I connect product strategy, interaction design, production code, and AI behavior to make complex data products useful. I lead work from problem framing through shipped experiences, pairing design leadership with hands-on prototyping and frontend implementation.</p>
+          <p className="resume-summary">I connect product strategy, interaction design, production code, and AI behavior to make complex products useful. I lead work from problem framing through shipped experiences, pairing design leadership with hands-on prototyping and frontend implementation.</p>
         </header>
         <section className="resume-section" aria-labelledby="resume-experience">
           <h3 id="resume-experience">Experience</h3>
@@ -100,7 +100,7 @@ export default function ResumePage() {
             <p>Brand and print design, web design and development, video production, and motion graphics.</p>
           </div>
         </section>
-        <section className="resume-section" aria-labelledby="resume-capabilities"><h3 id="resume-capabilities">Capabilities</h3><p>Product strategy · Design leadership &amp; mentoring · Interaction design · UX research · Data visualization &amp; storytelling · Frontend development · AI workflow design</p><p className="resume-tools">React · JavaScript · HTML &amp; CSS · Tailwind CSS · Figma · GitHub · Prototyping in code</p></section>
+        <section className="resume-section" aria-labelledby="resume-capabilities"><h3 id="resume-capabilities">Capabilities</h3><p>Product strategy · Design leadership &amp; mentoring · Interaction design · UX research · Data visualization &amp; storytelling · Frontend development · AI design &amp; development · Rapid prototyping</p><p className="resume-tools">React · JavaScript · HTML &amp; CSS · Tailwind · Figma · GitHub</p></section>
         <section className="resume-section" aria-labelledby="resume-community"><h3 id="resume-community">Community &amp; education</h3><p><strong>OpenIDEO Atlanta Chapter · 2015–2020</strong> — Organized community design workshops and facilitated a one-day design jam with 75 participants.</p><p><strong>Georgia Institute of Technology · 2005</strong> — B.S. in Industrial and Product Design.</p></section>
       </article>
       <style>{`@page { size: ${paper === 'a4' ? 'A4' : 'letter'}; margin: 12mm; }`}</style>
