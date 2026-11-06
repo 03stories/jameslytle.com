@@ -22,7 +22,7 @@
   {
     "slug": "silverpop",
     "home": false,
-    "projects": true
+    "projects": false
   },
   {
     "slug": "coca-cola",
