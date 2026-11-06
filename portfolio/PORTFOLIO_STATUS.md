@@ -45,6 +45,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 
 ## Last session
 
+- Replaced the opening Juicebox still with James’s full 65-second sample recording, exported as a 1920px MP4 with a poster, description, muted viewport playback, and looping. Removed the NashvilleHealth and early Runners Tracker/Story Designer screenshots at James’s request.
+
 - Added the approved Editor comparison: 44 seconds from the 2022 Juice Analytics demo (3:42–4:26) and the first 60 seconds of James’s 2026 recording. Both reuse the existing muted viewport playback helper, native controls, and reduced-motion behavior. Added poster frames, text descriptions, source credit, and English captions for the older narration; replaced the Decision 3 placeholder and historical still.
 
 - Added the Pie Slice prototype film to Juicebox with a short interaction-craft section, native playback controls, and a text description. The selected public export covers coordinated selection, authoring rules, layout/formatting states, and James's replacement filter-change transition. Playback starts muted when 35% visible and pauses below that threshold; reduced-motion users retain manual playback. Build and accessibility checks passed for 23 routes, and targeted playback-logic checks passed. Raw recordings and the review archive remain local. The matched Editor before/after is still the next evidence gap.

@@ -17,7 +17,17 @@ draft: false
 
 My work sat between product architecture, interaction design, and implementation. I designed reusable product systems, translated recurring client patterns into configuration models, built working definition prototypes, and implemented targeted frontend refinements. Engineering partners owned the underlying platform and production React system.
 
-![A Juicebox customer-reporting experience](./jb-header.png)
+<figure class="slice-film">
+  <video controls muted loop playsinline data-play-in-view preload="none" width="1920" height="1198" poster="./juicebox-sample-poster.jpg" aria-label="Juicebox sample customer-reporting experience" aria-describedby="juicebox-sample-caption">
+    <source src="./juicebox-sample.mp4" type="video/mp4">
+    <a href="./juicebox-sample.mp4">Download the Juicebox sample recording</a>.
+  </video>
+  <figcaption id="juicebox-sample-caption" class="portfolio-figure-label">A sample customer-reporting experience in Juicebox · 1 min 5 sec · Silent video.</figcaption>
+  <details class="slice-film-description">
+    <summary>Read the video description</summary>
+    <p>A walkthrough of the Acme Rentals Survey Results report combines photography, narrative text, and interactive charts. The recording shows survey-date selections and customer-response breakdowns, including a pie chart of promoter, detractor, and passive respondents.</p>
+  </details>
+</figure>
 
 # From custom applications to a product system
 
@@ -27,8 +37,6 @@ Juicebox turned those patterns into a platform. A report could contain multiple 
 
 The product tension was constant: every new option increased flexibility, but too much flexibility would turn the platform into a development language. The goal was a smaller family of richer building blocks that made good reporting decisions easier.
 
-![A public Juicebox report showing guided narrative and data visualization](./nashvillehealth.png)
-
 # Decision 1: Learn through real client work before opening self-service
 
 Our earlier product exposed editing from the beginning. For Juicebox, we chose to mature the platform first while internal developers configured client applications.
@@ -36,8 +44,6 @@ Our earlier product exposed editing from the beginning. For Juicebox, we chose t
 Building a self-service Editor too early would have forced us to formalize abstractions before we understood which patterns were genuinely reusable. Working through varied client reports let us learn where customization was valuable, where consistency mattered, and which options created unnecessary complexity.
 
 Once the team could design and develop diverse reports within weeks, the repeated patterns were stable enough to expose through a customer-facing authoring experience. I analyzed two to three years of configuration and design behavior, then iterated on the Slice configuration model before it became part of the Editor.
-
-![An early Story Designer configuration experience](./jb-story-designer.png)
 
 # Decision 2: Unify filtering through Slices 2.0
 
