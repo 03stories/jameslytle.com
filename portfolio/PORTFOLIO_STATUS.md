@@ -46,6 +46,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 
 ## Last session
 
+- Improved About’s mobile layout by pairing a compact off-center portrait with contact links in the same row, reducing the gap before the introduction, and tightening prose spacing. Contact targets remain 44px high. Verified narrow, tablet, and desktop layouts without horizontal overflow; desktop keeps its existing two-column composition.
+
 - Replaced About’s 2020 headshot with James’s approved travel portrait: subtle AI-assisted hair/gaze retouch, followed by a tighter off-center crop retaining the train setting. Exported an optimized WebP, updated alternative text, and verified the image loads on About without horizontal overflow.
 
 - James approved the Resume as ready on 2026-11-06. Added a Presentable readiness entry and recorded approval in RESUME.md; no resume content or PDF changes were requested.

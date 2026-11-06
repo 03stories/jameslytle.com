@@ -725,6 +725,7 @@ select:focus-visible {
 .portfolio-page-lede { max-width: 45ch; font-size: clamp(1.125rem, 2vw, 1.5rem); line-height: 1.5; color: var(--portfolio-muted); }
 .about-layout { display: grid; grid-template-columns: minmax(180px, 260px) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); max-width: 1040px; margin-inline: auto; align-items: start; }
 .about-profile { display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+.about-contact-links { display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; }
 .about-portrait { display: block; width: 100%; height: auto; border: 1px solid var(--portfolio-line); border-radius: var(--portfolio-image-radius); box-shadow: 0 3px 8px rgb(32 35 34 / var(--portfolio-shadow-opacity)); margin-bottom: 1rem; }
 .portfolio-editorial-prose { max-width: 70ch; font-size: var(--portfolio-body-size); font-weight: 400; line-height: 1.8; }
 .portfolio-editorial-prose p { margin-bottom: 1.5rem; }
@@ -733,8 +734,14 @@ select:focus-visible {
 .portfolio-editorial-prose li { margin-bottom: 0.75rem; }
 @media (max-width: 720px) {
   .portfolio-page-opening { padding-block: 1.5rem 2rem; }
-  .about-layout { grid-template-columns: 1fr; }
-  .about-portrait { max-width: 260px; }
+  .about-layout { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+  .about-profile { display: grid; grid-template-columns: minmax(0, clamp(130px, 42vw, 220px)) minmax(0, 1fr); align-items: center; gap: clamp(1rem, 5vw, 2rem); }
+  .about-portrait { max-width: none; margin: 0; }
+  .about-contact-links { gap: 0.5rem; min-width: 0; }
+  .about-contact-links .portfolio-text-link { min-height: 44px; }
+  .about-page .portfolio-editorial-prose { line-height: 1.7; min-width: 0; }
+  .about-page .portfolio-editorial-prose p { margin-bottom: 1.25rem; }
+  .about-page .portfolio-editorial-prose h2 { margin-top: 2rem; }
 }
 
 .portfolio-shell { font-size: var(--portfolio-body-size); }
