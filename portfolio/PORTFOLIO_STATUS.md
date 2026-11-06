@@ -12,7 +12,7 @@ Drafting
 
 ## Current focus
 
-Juicebox is ready. Continue the remaining portfolio content and asset review.
+Juicebox and Resume are ready. Continue the remaining portfolio content and asset review.
 
 ## Single recommended next action
 
@@ -36,6 +36,7 @@ Review the Forward case study and its remaining process-visual evidence gap.
 | Lab | Draft-ready | Four selected artifacts are in V1; OpenIDEO's strongest participation fact still needs verification during copywriting | Present as a compact Lab index and four artifact pages |
 | Writing | Draft-ready | The three selected V1 pieces now appear on About | Keep the curated presentation consistent with the refreshed system |
 | About/contact | Draft-ready | Updated positioning and personal voice, current role, contact link, curated writing, and project links are present; 2020 headshot retained | Apply refreshed page patterns after Home direction is set |
+| Resume | Presentable | None — James approved the resume as ready on 2026-11-06 | Preserve the approved resume during remaining portfolio work |
 
 Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Presentable, Shipped.
 
@@ -44,6 +45,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 - None prevent narrative drafting; documented asset and verification gaps remain bounded.
 
 ## Last session
+
+- James approved the Resume as ready on 2026-11-06. Added a Presentable readiness entry and recorded approval in RESUME.md; no resume content or PDF changes were requested.
 
 - James approved Juicebox as ready on 2026-11-06. Marked the case study Presentable: reviewed narrative and role boundaries, looping product overview, Pie Slice interaction film, approved Editor before/after recordings, and four-report gallery with modal viewing and live examples. Build and accessibility checks passed for 23 routes. Changes are in PR #7; publication is pending merge.
 
