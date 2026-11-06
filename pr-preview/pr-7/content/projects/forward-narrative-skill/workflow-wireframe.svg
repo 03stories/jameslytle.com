@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="480" viewBox="0 0 840 480" role="img" aria-labelledby="title desc">
+  <title id="title">Narrative creation before and after the Forward Narrative Skill</title>
+  <desc id="desc">Before, one author creates a narrative locally, reviews and deploys it, then shares a URL. After, the team drafts with the Claude Skill, validates and saves through Dispatch MCP, then shares the narrative.</desc>
+  <rect width="840" height="480" fill="#ffffff"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#202322">
+    <text x="40" y="58" font-size="28">Narrative creation</text>
+    <text x="40" y="113" font-size="22" font-weight="700">Before</text>
+    <text x="130" y="113" font-size="21" fill="#555d59">One author, a multi-day process</text>
+    <g fill="none" stroke="#727d77" stroke-width="1.5">
+      <rect x="40" y="140" width="224" height="86" rx="2"/>
+      <rect x="308" y="140" width="224" height="86" rx="2"/>
+      <rect x="576" y="140" width="224" height="86" rx="2"/>
+      <path d="M264 183h35m-7-6 7 6-7 6M532 183h35m-7-6 7 6-7 6"/>
+    </g>
+    <g text-anchor="middle" font-size="24">
+      <text x="152" y="177">Create locally</text>
+      <text x="420" y="177">Review &amp; deploy</text>
+      <text x="688" y="177">Share URL</text>
+    </g>
+    <g text-anchor="middle" font-size="18" fill="#555d59">
+      <text x="152" y="204">Manual JSON</text>
+      <text x="420" y="204">PR, merge, release</text>
+      <text x="688" y="204">After deployment</text>
+    </g>
+    <path d="M40 265h760" stroke="#d9dfdc"/>
+    <text x="40" y="310" font-size="22" font-weight="700">After</text>
+    <text x="130" y="310" font-size="21" fill="#555d59">The whole team, rapid creation and sharing</text>
+    <g fill="#f4f6f5" stroke="#727d77" stroke-width="1.5">
+      <rect x="40" y="337" width="224" height="86" rx="2"/>
+      <rect x="308" y="337" width="224" height="86" rx="2"/>
+      <rect x="576" y="337" width="224" height="86" rx="2"/>
+    </g>
+    <g fill="none" stroke="#727d77" stroke-width="1.5">
+      <path d="M264 380h35m-7-6 7 6-7 6M532 380h35m-7-6 7 6-7 6"/>
+    </g>
+    <g text-anchor="middle" font-size="24">
+      <text x="152" y="374">Claude Skill</text>
+      <text x="420" y="374">Dispatch MCP</text>
+      <text x="688" y="374">Share narrative</text>
+    </g>
+    <g text-anchor="middle" font-size="18" fill="#555d59">
+      <text x="152" y="401">Create, critique, refine</text>
+      <text x="420" y="401">Validate and save</text>
+      <text x="688" y="401">From Claude Code</text>
+    </g>
+  </g>
+</svg>
