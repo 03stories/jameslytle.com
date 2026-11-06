@@ -1,6 +1,6 @@
 # Portfolio Status
 
-Last updated: 2026-10-16
+Last updated: 2026-11-06
 
 ## V1 goal
 
@@ -16,7 +16,7 @@ Complete the remaining portfolio content and asset review, including Juicebox Ed
 
 ## Single recommended next action
 
-Select a matched or comparable before-and-after pair for the Juicebox Editor redesign.
+Review the integrated Juicebox Editor before/after recordings on the project page.
 
 ## This week's three outcomes
 
@@ -44,6 +44,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 - None prevent narrative drafting; documented asset and verification gaps remain bounded.
 
 ## Last session
+
+- Added the approved Editor comparison: 44 seconds from the 2022 Juice Analytics demo (3:42–4:26) and the first 60 seconds of James’s 2026 recording. Both reuse the existing muted viewport playback helper, native controls, and reduced-motion behavior. Added poster frames, text descriptions, source credit, and English captions for the older narration; replaced the Decision 3 placeholder and historical still.
 
 - Added the Pie Slice prototype film to Juicebox with a short interaction-craft section, native playback controls, and a text description. The selected public export covers coordinated selection, authoring rules, layout/formatting states, and James's replacement filter-change transition. Playback starts muted when 35% visible and pauses below that threshold; reduced-motion users retain manual playback. Build and accessibility checks passed for 23 routes, and targeted playback-logic checks passed. Raw recordings and the review archive remain local. The matched Editor before/after is still the next evidence gap.
 

@@ -227,4 +227,9 @@ The public article now includes a Pie Slice interaction-craft section and an 81-
 
 ## Single next action
 
-Replace the latest Editor before/after placeholder when the matched screenshots are supplied.
+Editor before/after placeholder resolved with the approved 2022 and 2026 recordings (2026-11-06).
+
+
+## Editor comparison — 2026-11-06
+
+James approved the 2022 overview demo segment from 3:42 through 4:26 and the first 60 seconds of `/Users/jameslytle/Desktop/Juicebox-2026-editor-snippet.mov` as the before/after evidence. The recordings show comparable Sales Dashboard authoring, not a timed efficiency test. Integrated stacked full-width videos with the existing viewport playback pattern, poster frames, text descriptions, and captions for the old narration. The raw 2026 source remains outside Git.

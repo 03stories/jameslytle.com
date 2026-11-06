@@ -79,17 +79,38 @@ The same component also needed to handle narrow and wide containers, long labels
 
 The original Editor made a smaller report easy to scan because configuration for its Slices and sections was visible together. As the platform evolved, that strength became a liability. Complex reports produced a cluttered interface, obscured the high-level structure, and forced authors to scroll repeatedly between distant parts of a story.
 
-![Historical Editor interface before the latest major redesign](./jb-editor-2022.png)
-
 The choice was to preserve all-at-once visibility or introduce hierarchy and reveal detail only when needed.
 
 I designed the complete new experience: a folder-tree model for understanding and navigating report structure, a list experience optimized for speed, a sliding-panel system for progressively revealing detailed configuration, and the configuration components themselves.
 
 I implemented working definition prototypes for handoff to frontend engineers, who built the production React system. After that implementation, I returned to the code to ship a series of UI and UX refinements.
 
-The redesign rolled out smoothly and received customer praise. We do not have hard efficiency metrics, so the strongest evidence will be a matched before-and-after comparison of the old scroll-heavy experience and the new hierarchical model.
+The redesign rolled out smoothly and received customer praise. We do not have hard efficiency metrics. These recordings show a comparable Sales Dashboard authoring task in the old inline Editor and the new hierarchical model.
 
-> **Before-and-after visual forthcoming.** This comparison will show the same or a comparable report in the old and new Editors, highlighting structural navigation, full-story orientation, and progressively disclosed configuration.
+<figure class="slice-film">
+  <video controls muted playsinline data-play-in-view preload="none" width="1920" height="1080" poster="./editor-before-2022-poster.jpg" aria-label="Before: Juicebox Editor in 2022" aria-describedby="editor-before-caption">
+    <source src="./editor-before-2022.mp4" type="video/mp4">
+    <track kind="captions" src="./editor-before-2022.en.vtt" srclang="en" label="English">
+    <a href="./editor-before-2022.mp4">Download the old Editor recording</a>.
+  </video>
+  <figcaption id="editor-before-caption" class="portfolio-figure-label">Before · 2022 · 44 sec. Add and configure key metrics through controls stacked inline beside the report. Excerpt from <a href="https://www.youtube.com/watch?v=ztXWsWjPCgU&t=222s">Juice Analytics’ overview demo</a>, 3:42–4:26. Audio with English captions.</figcaption>
+  <details class="slice-film-description">
+    <summary>Read the video description</summary>
+    <p>The Sales Dashboard contains a pie chart and a trend chart. The author adds a Chooser Slice, titles it Key Metrics, increases the heading size, and selects Sales and Profit. The two totals appear in the report. Section content and detailed configuration share the same scrolling editor panel.</p>
+  </details>
+</figure>
+
+<figure class="slice-film">
+  <video controls muted playsinline data-play-in-view preload="none" width="1920" height="1306" poster="./editor-after-2026-poster.jpg" aria-label="After: Juicebox Editor in 2026" aria-describedby="editor-after-caption">
+    <source src="./editor-after-2026.mp4" type="video/mp4">
+    <a href="./editor-after-2026.mp4">Download the redesigned Editor recording</a>.
+  </video>
+  <figcaption id="editor-after-caption" class="portfolio-figure-label">After · 2026 · 1 min · Silent video. Navigate the report’s folder tree and open configuration panels as needed while adding and connecting key metrics.</figcaption>
+  <details class="slice-film-description">
+    <summary>Read the video description</summary>
+    <p>The Sales Dashboard’s sections and Slices appear in a compact tree beside the report. The author opens configuration for individual Slices, adds a Key Metrics chooser with Sales and Profit, and connects the trend chart to that chooser. Additional choices open in an adjacent panel, separating report structure from detailed configuration.</p>
+  </details>
+</figure>
 
 # What shipped
 
