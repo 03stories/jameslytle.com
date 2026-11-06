@@ -28,6 +28,7 @@
     "@vitejs/plugin-react": "^4.4.1",
     "fast-glob": "^3.3.3",
     "gray-matter": "^4.0.3",
+    "parse5": "^8.1.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "vite": "^5.4.14"

@@ -13,11 +13,21 @@ summary: "I led interaction and interface design across Juicebox's evolution, fr
 draft: false
 ---
 
-[Juicebox](https://www.juiceanalytics.com/juicebox-for-databricks) is an active, configurable customer-reporting platform for turning data into guided, interactive stories. I led interaction and interface design across its evolution, from the building-block system used by internal app developers to the self-service Editor customers use to author reports.
+[Juicebox](https://www.juiceanalytics.com/) is an active, configurable customer-reporting platform for turning data into guided, interactive stories. I led interaction and interface design across its evolution, from the building-block system used by internal app developers to the self-service Editor customers use to author reports.
 
 My work sat between product architecture, interaction design, and implementation. I designed reusable product systems, translated recurring client patterns into configuration models, built working definition prototypes, and implemented targeted frontend refinements. Engineering partners owned the underlying platform and production React system.
 
-![A Juicebox customer-reporting experience](./jb-header.png)
+<figure class="slice-film">
+  <video controls muted loop playsinline data-play-in-view preload="none" width="1920" height="1198" poster="./juicebox-sample-poster.jpg" aria-label="Juicebox sample customer-reporting experience" aria-describedby="juicebox-sample-caption">
+    <source src="./juicebox-sample.mp4" type="video/mp4">
+    <a href="./juicebox-sample.mp4">Download the Juicebox sample recording</a>.
+  </video>
+  <figcaption id="juicebox-sample-caption" class="portfolio-figure-label">A sample customer-reporting experience in Juicebox · 1 min 5 sec · Silent video.</figcaption>
+  <details class="slice-film-description">
+    <summary>Read the video description</summary>
+    <p>A walkthrough of the Acme Rentals Survey Results report combines photography, narrative text, and interactive charts. The recording shows survey-date selections and customer-response breakdowns, including a pie chart of promoter, detractor, and passive respondents.</p>
+  </details>
+</figure>
 
 # From custom applications to a product system
 
@@ -27,8 +37,6 @@ Juicebox turned those patterns into a platform. A report could contain multiple 
 
 The product tension was constant: every new option increased flexibility, but too much flexibility would turn the platform into a development language. The goal was a smaller family of richer building blocks that made good reporting decisions easier.
 
-![A public Juicebox report showing guided narrative and data visualization](./nashvillehealth.png)
-
 # Decision 1: Learn through real client work before opening self-service
 
 Our earlier product exposed editing from the beginning. For Juicebox, we chose to mature the platform first while internal developers configured client applications.
@@ -36,8 +44,6 @@ Our earlier product exposed editing from the beginning. For Juicebox, we chose t
 Building a self-service Editor too early would have forced us to formalize abstractions before we understood which patterns were genuinely reusable. Working through varied client reports let us learn where customization was valuable, where consistency mattered, and which options created unnecessary complexity.
 
 Once the team could design and develop diverse reports within weeks, the repeated patterns were stable enough to expose through a customer-facing authoring experience. I analyzed two to three years of configuration and design behavior, then iterated on the Slice configuration model before it became part of the Editor.
-
-![An early Story Designer configuration experience](./jb-story-designer.png)
 
 # Decision 2: Unify filtering through Slices 2.0
 
@@ -79,25 +85,67 @@ The same component also needed to handle narrow and wide containers, long labels
 
 The original Editor made a smaller report easy to scan because configuration for its Slices and sections was visible together. As the platform evolved, that strength became a liability. Complex reports produced a cluttered interface, obscured the high-level structure, and forced authors to scroll repeatedly between distant parts of a story.
 
-![Historical Editor interface before the latest major redesign](./jb-editor-2022.png)
-
 The choice was to preserve all-at-once visibility or introduce hierarchy and reveal detail only when needed.
 
 I designed the complete new experience: a folder-tree model for understanding and navigating report structure, a list experience optimized for speed, a sliding-panel system for progressively revealing detailed configuration, and the configuration components themselves.
 
 I implemented working definition prototypes for handoff to frontend engineers, who built the production React system. After that implementation, I returned to the code to ship a series of UI and UX refinements.
 
-The redesign rolled out smoothly and received customer praise. We do not have hard efficiency metrics, so the strongest evidence will be a matched before-and-after comparison of the old scroll-heavy experience and the new hierarchical model.
+The redesign rolled out smoothly and received customer praise. We do not have hard efficiency metrics. These recordings show a comparable Sales Dashboard authoring task in the old inline Editor and the new hierarchical model.
 
-> **Before-and-after visual forthcoming.** This comparison will show the same or a comparable report in the old and new Editors, highlighting structural navigation, full-story orientation, and progressively disclosed configuration.
+<figure class="slice-film">
+  <video controls muted playsinline data-play-in-view preload="none" width="1920" height="1080" poster="./editor-before-2022-poster.jpg" aria-label="Before: Juicebox Editor in 2022" aria-describedby="editor-before-caption">
+    <source src="./editor-before-2022.mp4" type="video/mp4">
+    <track kind="captions" src="./editor-before-2022.en.vtt" srclang="en" label="English">
+    <a href="./editor-before-2022.mp4">Download the old Editor recording</a>.
+  </video>
+  <figcaption id="editor-before-caption" class="portfolio-figure-label">Before · 2022 · 44 sec. Add and configure key metrics through controls stacked inline beside the report. Excerpt from <a href="https://www.youtube.com/watch?v=ztXWsWjPCgU&t=222s">Juice Analytics’ overview demo</a>, 3:42–4:26. Audio with English captions.</figcaption>
+  <details class="slice-film-description">
+    <summary>Read the video description</summary>
+    <p>The Sales Dashboard contains a pie chart and a trend chart. The author adds a Chooser Slice, titles it Key Metrics, increases the heading size, and selects Sales and Profit. The two totals appear in the report. Section content and detailed configuration share the same scrolling editor panel.</p>
+  </details>
+</figure>
+
+<figure class="slice-film">
+  <video controls muted playsinline data-play-in-view preload="none" width="1920" height="1306" poster="./editor-after-2026-poster.jpg" aria-label="After: Juicebox Editor in 2026" aria-describedby="editor-after-caption">
+    <source src="./editor-after-2026.mp4" type="video/mp4">
+    <a href="./editor-after-2026.mp4">Download the redesigned Editor recording</a>.
+  </video>
+  <figcaption id="editor-after-caption" class="portfolio-figure-label">After · 2026 · 1 min · Silent video. Navigate the report’s folder tree and open configuration panels as needed while adding and connecting key metrics.</figcaption>
+  <details class="slice-film-description">
+    <summary>Read the video description</summary>
+    <p>The Sales Dashboard’s sections and Slices appear in a compact tree beside the report. The author opens configuration for individual Slices, adds a Key Metrics chooser with Sales and Profit, and connects the trend chart to that chooser. Additional choices open in an adjacent panel, separating report structure from detailed configuration.</p>
+  </details>
+</figure>
 
 # What shipped
 
 Across its evolution, Juicebox supported a wide variety of private customer reports and public examples in healthcare, entrepreneurship, survey analysis, politics, and personal data. The platform expanded from internal developer configuration into a self-service authoring experience spanning data sources, report design, templates, publishing, sharing, trials, and workspaces.
 
-![A public entrepreneurship report built with Juicebox](./jb-startme-2022-08-08.png)
-
-![A public survey-reporting experience built with Juicebox](./jb-survey-example.png)
+<div class="portfolio-report-gallery" role="group" aria-label="Examples of reports built with Juicebox">
+  <div class="portfolio-report-column">
+    <figure>
+      <img src="./report-quarterly.webp" alt="Quarterly performance report combining a dark blue cover, activity and engagement metrics, scores, and recommended actions" width="1400" height="6164" loading="lazy" decoding="async">
+      <figcaption class="portfolio-figure-label">Quarterly performance review<br>Benchmarks, progress, and recommended actions.</figcaption>
+    </figure>
+  </div>
+  <div class="portfolio-report-column">
+    <figure>
+      <img src="./report-dashboard.webp" alt="Compact pale-yellow and green website dashboard with key metrics, a sessions trend, locations, and traffic sources" width="1400" height="1176" loading="lazy" decoding="async">
+      <figcaption class="portfolio-figure-label">Website dashboard<br><a href="https://james.myjuicebox.io/a/dashboard_example_3/?h=Ep_ZyFNUAgnRpuI3EkczHXg4Fl4">Explore the live dashboard</a></figcaption>
+    </figure>
+    <figure>
+      <img src="./report-startme.webp" alt="Teal and mint Start:ME entrepreneurship report with neighborhood maps, business categories, growth trends, and business details" width="1400" height="5601" loading="lazy" decoding="async">
+      <figcaption class="portfolio-figure-label">Start:ME Entrepreneurs<br>A community story told through maps, trends, and business details.</figcaption>
+    </figure>
+  </div>
+  <div class="portfolio-report-column">
+    <figure>
+      <img src="./report-survey.webp" alt="Acme Rentals survey report mixing photography, purple and navy sections, recommendation scores, satisfaction ratings, and customer comments" width="1400" height="5586" loading="lazy" decoding="async">
+      <figcaption class="portfolio-figure-label">Customer survey report<br><a href="https://james.myjuicebox.io/a/survey_example_3/">Explore the live survey report</a></figcaption>
+    </figure>
+  </div>
+</div>
 
 Slices 2.0 supplied a more coherent filtering and layout foundation. The latest Editor redesign supplied an information architecture that could keep pace as reports became more complex. Juice Analytics continues to identify Juicebox as its technology platform, with active [product sign-in](https://juiceboxdata.com/) and [workspace documentation](https://docs.myjuicebox.io/getting-started/new-workspace).
 

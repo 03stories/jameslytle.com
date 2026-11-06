@@ -39,9 +39,9 @@ export default function HomePage() {
             <a className="home-primary-action" href="mailto:jameslytle@hey.com">
               <MaterialIcon name="mail" /> Start a conversation
             </a>
-            <Link className="home-secondary-action" to="/resume">
+            <a className="home-secondary-action" href={`${import.meta.env.BASE_URL}resume.pdf`}>
               Resume <MaterialIcon name="description" />
-            </Link>
+            </a>
           </div>
         </div>
       </section>

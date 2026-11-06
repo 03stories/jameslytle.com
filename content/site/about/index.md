@@ -2,7 +2,7 @@
 title: About
 heroStatement: "Design engineer and product design leader making complex products useful."
 email: "jameslytle@hey.com"
-headshot: ./james-headshot-2020.jpg
+headshot: ./james-portrait-train.webp
 ---
 
 I’m a Design Engineer & Product Lead at Juice Analytics, and I love designing useful data products from the inside out. The work I care about most helps people make sense of complex information and communicate it clearly, especially to people who don’t live in the data every day.

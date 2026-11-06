@@ -17,12 +17,12 @@
   {
     "slug": "slices",
     "home": false,
-    "projects": true
+    "projects": false
   },
   {
     "slug": "silverpop",
     "home": false,
-    "projects": true
+    "projects": false
   },
   {
     "slug": "coca-cola",

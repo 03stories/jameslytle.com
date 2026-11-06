@@ -4,6 +4,7 @@ import fg from 'fast-glob';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import { externalContentLinks } from './content-links.mjs';
 
 const ROOT = process.cwd();
 const CONTENT_ROOT = path.join(ROOT, 'content');
@@ -36,7 +37,7 @@ function withBase(absolutePath) {
 async function markdownToHtml(markdown) {
   // Content is authored in this repository; preserve its media and figure markup.
   const rendered = await remark().use(html, { sanitize: false }).process(markdown);
-  return String(rendered);
+  return externalContentLinks(String(rendered));
 }
 
 function rewriteAssetUrls(htmlText, publicBasePath) {

@@ -1,6 +1,6 @@
 # Portfolio Status
 
-Last updated: 2026-10-16
+Last updated: 2026-11-06
 
 ## V1 goal
 
@@ -12,11 +12,11 @@ Drafting
 
 ## Current focus
 
-Complete the remaining portfolio content and asset review, including Juicebox Editor evidence.
+Juicebox and Resume are ready. Continue the remaining portfolio content and asset review.
 
 ## Single recommended next action
 
-Select a matched or comparable before-and-after pair for the Juicebox Editor redesign.
+Review the Forward case study and its remaining process-visual evidence gap.
 
 ## This week's three outcomes
 
@@ -28,14 +28,15 @@ Select a matched or comparable before-and-after pair for the Juicebox Editor red
 
 | Item | Level | Blocking issue | Next proof |
 |---|---|---|---|
-| Home | Presentable | Visual direction approved; Juicebox replacement image remains G-027 | Preserve approved appearance during shared-pattern extraction |
+| Home | Presentable | Visual direction approved; Juicebox preview replaced with approved sample video (G-027 resolved) | Preserve approved appearance during shared-pattern extraction |
 | Forward | Draft-ready | The evidence-checked public route is implemented; the process visual remains a documented placeholder | Apply refreshed case-study patterns after Home direction is set |
-| Juicebox | Draft-ready | The evidence-checked public route is implemented; the before/after visual remains a documented placeholder | Apply refreshed case-study patterns after Home direction is set |
+| Juicebox | Presentable | None — James approved the project as ready on 2026-11-06 | Merge project-updates via PR #7 when ready to publish |
 | Forward Narrative Claude Skill | Draft-ready | Public case draft, explicit responsibility boundaries, and three synthetic visuals are implemented; Home now features it | Apply refreshed case-study patterns after Home direction is set |
 | Finestra historical reflection | Draft-ready | The case now names its period, role boundaries, and the buyer-research lesson; older copy still needs review for stale or unsupported claims | Review obsolete references and superlatives |
 | Lab | Draft-ready | Four selected artifacts are in V1; OpenIDEO's strongest participation fact still needs verification during copywriting | Present as a compact Lab index and four artifact pages |
 | Writing | Draft-ready | The three selected V1 pieces now appear on About | Keep the curated presentation consistent with the refreshed system |
-| About/contact | Draft-ready | Updated positioning and personal voice, current role, contact link, curated writing, and project links are present; 2020 headshot retained | Apply refreshed page patterns after Home direction is set |
+| About/contact | Draft-ready | Updated positioning and personal voice, current role, contact link, curated writing, project links, and approved travel portrait are present | Apply refreshed page patterns after Home direction is set |
+| Resume | Presentable | None — James approved the resume as ready on 2026-11-06 | Preserve the approved resume during remaining portfolio work |
 
 Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Presentable, Shipped.
 
@@ -44,6 +45,22 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 - None prevent narrative drafting; documented asset and verification gaps remain bounded.
 
 ## Last session
+
+- Replaced Home’s historical Juicebox image with the same 65-second sample report video used on the project page. Reuses the viewport playback helper, muted looping playback, native controls, poster, and responsive proportions. Verified offscreen pause and mobile sizing; resolved G-027.
+
+- Improved About’s mobile layout by pairing a compact off-center portrait with contact links in the same row, reducing the gap before the introduction, and tightening prose spacing. Contact targets remain 44px high. Verified narrow, tablet, and desktop layouts without horizontal overflow; desktop keeps its existing two-column composition.
+
+- Replaced About’s 2020 headshot with James’s approved travel portrait: subtle AI-assisted hair/gaze retouch, followed by a tighter off-center crop retaining the train setting. Exported an optimized WebP, updated alternative text, and verified the image loads on About without horizontal overflow.
+
+- James approved the Resume as ready on 2026-11-06. Added a Presentable readiness entry and recorded approval in RESUME.md; no resume content or PDF changes were requested.
+
+- James approved Juicebox as ready on 2026-11-06. Marked the case study Presentable: reviewed narrative and role boundaries, looping product overview, Pie Slice interaction film, approved Editor before/after recordings, and four-report gallery with modal viewing and live examples. Build and accessibility checks passed for 23 routes. Changes are in PR #7; publication is pending merge.
+
+- Replaced the two What shipped images with four supplied report captures: Quarterly Performance Review, Website Dashboard, Start:ME Entrepreneurs, and Acme Rentals Survey Results. A three-column gallery preserves full image proportions, stacks the compact dashboard above Start:ME, and collapses to one column on mobile. Added the supplied dashboard and survey live links, shared modal image viewing, and optimized WebP assets. Desktop and narrow layouts have no horizontal overflow.
+
+- Replaced the opening Juicebox still with James’s full 65-second sample recording, exported as a 1920px MP4 with a poster, description, muted viewport playback, and looping. Removed the NashvilleHealth and early Runners Tracker/Story Designer screenshots at James’s request.
+
+- Added the approved Editor comparison: 44 seconds from the 2022 Juice Analytics demo (3:42–4:26) and the first 60 seconds of James’s 2026 recording. Both reuse the existing muted viewport playback helper, native controls, and reduced-motion behavior. Added poster frames, text descriptions, source credit, and English captions for the older narration; replaced the Decision 3 placeholder and historical still.
 
 - Added the Pie Slice prototype film to Juicebox with a short interaction-craft section, native playback controls, and a text description. The selected public export covers coordinated selection, authoring rules, layout/formatting states, and James's replacement filter-change transition. Playback starts muted when 35% visible and pauses below that threshold; reduced-motion users retain manual playback. Build and accessibility checks passed for 23 routes, and targeted playback-logic checks passed. Raw recordings and the review archive remain local. The matched Editor before/after is still the next evidence gap.
 
