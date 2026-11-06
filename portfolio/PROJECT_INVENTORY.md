@@ -5,7 +5,7 @@ Scores are conservative and evidence-based. `?` marks missing evidence; ranges s
 | Project | Year | Employer/client | Live URL | Assets | Importance /3 | Ownership /3 | Decisions /3 | Outcome /3 | Craft /3 | Differentiation /3 | Technical /3 | Total /21 | Proposed level | Priority |
 |---|---:|---|---|---|---:|---:|---:|---:|---:|---:|---:|---|---|---|
 | Forward / Insights Recap | Current | Juice Analytics | `insightsrecap.com` | One reused Home image observed | 3 | 3 | 2 | 2 | ? | 3 | 3 | 16–19 | Full case study | Must Ship |
-| Juicebox | 2020–current | Juice Analytics | Juicebox product page | Extensive screenshots/GIFs | 3 | 3 | 3 | 2 | 2 | 2 | 2 | 17 | Full case study; Evidence-ready | Must Ship |
+| Juicebox | 2020–current | Juice Analytics | Juicebox product page | Reviewed product videos, report gallery, and live examples | 3 | 3 | 3 | 2 | 2 | 2 | 2 | 17 | Full case study; Presentable — approved ready 2026-11-06 | Must Ship |
 | Finestra Art App | 2012–2015 | Personal/co-founded | Closed | Extensive product/process assets | 2 | 3 | 3 | 2 | 2 | 3 | 2 | 17 | Historical reflection; Draft-ready | Must Ship supporting |
 | Slices 2.0 | 2017 | Juice Analytics | Documentation link | Extensive UI/process assets | 2 | 3 | 3 | 1 | 2 | 2 | 1 | 14 | Supporting decision chapter within Juicebox | Must Ship supporting |
 | Forward Pipeline Canvas | 2026 | Juice Analytics / internal POC | None observed | Working single-file app, plans, QA guide, 37 checks | 3 | 3 | 3 | 1 | 1? | 3 | 3 | 17 | Forward evidence or Lab artifact | Should Improve |
@@ -48,7 +48,7 @@ Scores are conservative and evidence-based. `?` marks missing evidence; ranges s
 - Visual/interaction quality: Extensive real interface imagery and GIFs exist.
 - Differentiation: Strong complex-systems and data-product evidence.
 - Technical/Design Engineer signal: James implemented design-definition prototypes and final frontend UI/UX refinements; frontend engineers owned the production React system implementation.
-- Unknowns affecting score: The before/after Editor artifacts, reflection, broader quantitative outcomes, and current product status.
+- Readiness: Presentable; James approved as ready on 2026-11-06. Editor artifacts, reflection, and current product context are captured. Broader quantitative outcomes remain optional future evidence.
 
 ### Finestra Art App
 

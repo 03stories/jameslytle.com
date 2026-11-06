@@ -1,12 +1,12 @@
 # Project: Juicebox
 
-Last updated: 2026-10-16
+Last updated: 2026-11-06
 
 ## Classification
 
 - Proposed level: Full case study
 - Priority: Must Ship
-- Readiness: Draft-ready
+- Readiness: Presentable — James approved as ready on 2026-11-06
 - Live URL: Current product-specific overview: https://www.juiceanalytics.com/juicebox-for-databricks; product sign-in: https://juiceboxdata.com/. The legacy `/juicebox` marketing URL redirects to the Juice Analytics homepage.
 - Repository/prototype: Not recorded
 - Confidentiality or redaction constraints: Most client apps are private; use public examples and confirm any internal outcomes before publication.
@@ -204,7 +204,7 @@ I implemented working definition prototypes for handoff to frontend engineers, w
 
 The redesign rolled out smoothly and received customer praise. We do not have hard efficiency metrics, so the strongest evidence will be a matched before-and-after comparison of the old scroll-heavy experience and the new hierarchical model.
 
-> **Visual placeholder:** Show the same or a comparable report in the old and new Editors, highlighting structural navigation, full-story orientation, and progressively disclosed configuration.
+The public page now shows the approved 44-second 2022 Editor excerpt and 60-second 2026 recording of comparable Sales Dashboard authoring.
 
 #### What shipped
 
@@ -222,14 +222,17 @@ The larger lesson is that authoring tools have two products inside them: the exp
 
 The public article now includes a Pie Slice interaction-craft section and an 81-second silent film. Evidence combines James's supplied hover/selection, expanded authoring, and filtered-state transition recordings with captured prototype states for layout, theme, and formatting. The final flow demonstrates a filter change while preserving Nashville's selection context. It is labeled as Figma design work. Raw recordings and the review archive remain outside Git.
 
-1. Matched before/after Editor screenshots when available.
-2. Broader quantitative, customer, business, or organizational outcome evidence.
+No blocking gaps remain for the approved case study. The Editor comparison is resolved with the 2022/2026 recordings. Broader quantitative or customer outcome evidence may be added later; the current article makes bounded qualitative claims.
 
 ## Single next action
 
-Editor before/after placeholder resolved with the approved 2022 and 2026 recordings (2026-11-06).
+No further case-study edits required. Publish through PR #7 when ready.
 
 
 ## Editor comparison — 2026-11-06
 
 James approved the 2022 overview demo segment from 3:42 through 4:26 and the first 60 seconds of `/Users/jameslytle/Desktop/Juicebox-2026-editor-snippet.mov` as the before/after evidence. The recordings show comparable Sales Dashboard authoring, not a timed efficiency test. Integrated stacked full-width videos with the existing viewport playback pattern, poster frames, text descriptions, and captions for the old narration. The raw 2026 source remains outside Git.
+
+## Readiness — 2026-11-06
+
+Presentable. James explicitly approved the Juicebox project as ready after reviewing the updated page. Evidence includes the looping product overview, Pie Slice interaction film, Editor comparison, four uncropped report examples, modal image viewing, and two live examples. Build and accessibility checks passed. PR #7 contains the changes; this status does not imply they are deployed.
