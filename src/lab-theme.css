@@ -34,34 +34,60 @@ body:has(.app-shell[data-theme="lab"]) {
 }
 
 .lab-desk-light {
-  display: none;
+  position: fixed;
+  inset: 0 auto auto 0;
+  width: clamp(22rem, 49vw, 44rem);
+  height: 140vh;
+  z-index: -1;
+  pointer-events: none;
+  transform: translate3d(64vw, 49vh, 0) translate(-50%, -85%);
+  filter: blur(5px);
+}
+
+.lab-desk-light::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(49% 0, 51% 0, 100% 100%, 0 100%);
+  background:
+    radial-gradient(ellipse 54% 20% at 50% 84%, rgb(247 216 155 / 17%), transparent 100%),
+    linear-gradient(180deg, rgb(247 216 155 / 14%), rgb(247 216 155 / 9%) 76%, transparent 100%);
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .app-shell[data-theme="lab"]::before {
-    animation: lab-canvas-reveal 620ms cubic-bezier(.22, 1, .36, 1) both;
-  }
-}
-
-@media (any-hover: hover) and (any-pointer: fine) and (prefers-reduced-motion: no-preference) {
-  .lab-desk-light {
-    display: block;
+  .app-shell[data-theme="lab"]::after {
+    content: '';
     position: fixed;
-    inset: 0 auto auto 0;
-    width: clamp(26rem, 66vw, 57rem);
-    aspect-ratio: 1;
-    z-index: -1;
+    inset: 0;
+    z-index: 110;
     pointer-events: none;
-    border-radius: 50%;
-    background: radial-gradient(ellipse 50% 43% at center, rgb(235 206 145 / 16%), rgb(235 206 145 / 6%) 52%, transparent 100%);
-    opacity: 0;
-    transition: opacity 360ms cubic-bezier(.22, 1, .36, 1);
+    background: radial-gradient(ellipse at 18% 18%, #e6e4d8, #c6cabb 34%, #788a80 68%, #3d514b);
+    animation: lab-light-sweep 760ms cubic-bezier(.55, .05, .85, .53) both;
   }
 
-  .lab-desk-light[data-lit] { opacity: 1; }
+  .app-shell[data-theme="lab"]::before {
+    animation: lab-grid-switch-on 460ms cubic-bezier(.22, 1, .36, 1) 880ms both;
+  }
+
+  .lab-desk-light {
+    animation: lab-desk-light-switch-on 390ms cubic-bezier(.22, 1, .36, 1) 960ms both;
+  }
 }
 
-@keyframes lab-canvas-reveal {
-  from { background-color: #31423d; opacity: .75; }
-  to { background-color: transparent; opacity: 1; }
+@keyframes lab-light-sweep {
+  0% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  100% {
+    clip-path: polygon(158% 0, 165% 0, 165% 100%, 103% 100%);
+    visibility: hidden;
+  }
+}
+
+@keyframes lab-grid-switch-on {
+  from { opacity: .14; }
+}
+
+@keyframes lab-desk-light-switch-on {
+  0%, 12% { opacity: 0; }
+  36% { opacity: .82; }
+  100% { opacity: 1; }
 }
