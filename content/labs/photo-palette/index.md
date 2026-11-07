@@ -5,7 +5,7 @@ kind: Browser utility
 tags:
   - code
   - color
-featured: true
+featured: false
 draft: false
 cover: /content/site/home/photo-palette-tool.png
 ---

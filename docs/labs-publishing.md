@@ -30,7 +30,7 @@ The example below has four artifacts. It embeds the screenshot and video where t
 ```markdown
 ---
 title: A color study
-date: 2026-11-07
+date: '2026-11-07T18:30:00Z'
 summary: Exploring how a photograph can become a small palette.
 kind: Creative experiment
 tags: [color, code]
@@ -85,7 +85,9 @@ For an HTML tool placed inside the body, use a titled, sandboxed iframe and keep
 
 For a hosted app that needs sign-in or browser storage, use a direct link instead of a sandboxed embed.
 
-`title` and `summary` are required for published entries. New posts should include `date`; imported work with an unknown date displays “From the archives.” `featured: true` adds the entry to Pinned. Use a few stable tags. A post can contain no artifacts at all. Markdown also supports inline images and links, using `./filename` for adjacent files. Never include secrets in HTML tools or posted transcripts.
+`title` and `summary` are required for published entries. Set `date` to the intended publication time as an ISO 8601 timestamp with a timezone. The draft command fills in the current UTC time. Existing date-only values still work. The archive, Pinned section, and RSS feed sort newest first, with ties sorted by slug. Entries with an unknown date appear last and display “From the archives” where dates are shown.
+
+`featured: true` adds the entry to Pinned. Use a few stable tags. A post can contain no artifacts at all. Markdown also supports inline images and links, using `./filename` for adjacent files. Never include secrets in HTML tools or posted transcripts.
 
 Use descriptive alt text for images, include a transcript for audio, and provide captions for spoken video. Large media is better hosted externally to avoid growing the Git repository.
 

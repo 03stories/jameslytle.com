@@ -5,7 +5,7 @@ summary: A writing prototype for connecting thoughts, keeping their context clos
 kind: Interaction prototype
 tags: [writing, interaction, code]
 draft: false
-featured: false
+featured: true
 cover: ./overview.png
 ---
 Considered is a prototype for thinking through connected writing. A phrase can lead to another thought, a source note, or an editable number. Open the connection beside what you're writing to keep its context in view.
