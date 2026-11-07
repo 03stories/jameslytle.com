@@ -32,8 +32,8 @@ export default function OtherThingsPage() {
       <p>Things I’m making, trying, and figuring out. Small tools, creative experiments, and notes from the process.</p>
       <div className="lab-opening-links"><Link className="portfolio-text-link" to="/design-system">Design system<MaterialIcon name="chevron_right" /></Link><a className="portfolio-text-link" href={`${import.meta.env.BASE_URL}lab.xml`}>RSS feed</a></div>
     </header>
-    {featured.length > 0 && <section className="lab-featured" aria-labelledby="featured-heading">
-      <h3 id="featured-heading">Selected explorations</h3>
+    {featured.length > 0 && <section className="lab-featured" aria-labelledby="pinned-heading">
+      <h3 id="pinned-heading">Pinned</h3>
       <ul>{featured.map(entry => <li key={entry.slug}>
         <LabEntryLink entry={entry} featured />
       </li>)}</ul>

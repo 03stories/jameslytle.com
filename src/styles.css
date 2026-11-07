@@ -917,27 +917,28 @@ html { scroll-padding-top: 100px; }
 }
 
 /* Lab: a curated opening and a compact, growing notebook. */
+.lab-page { max-width: 1040px; margin-inline: auto; }
 .lab-eyebrow, .portfolio-opening .lab-eyebrow { color: var(--portfolio-muted); font-size: calc(var(--portfolio-body-size) * .889); line-height: 1.5; margin-bottom: .5rem; }
-.lab-featured, .lab-archive { max-width: 1040px; margin: 0 auto 4rem; }
+.lab-featured, .lab-archive { margin-bottom: 4rem; }
 .lab-featured > h3, .lab-section-heading h3 { font-size: 1.5rem; font-weight: 500; margin-bottom: 1.5rem; }
 .lab-featured > ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
 .lab-entry-link { display: grid; gap: .75rem; color: inherit; text-decoration: none; }
 .lab-featured img { display: block; width: 100%; height: 200px; object-fit: contain; object-position: left center; border: 1px solid var(--portfolio-image-border); border-radius: var(--portfolio-image-radius); }
 .lab-entry-copy { display: grid; gap: .25rem; max-width: 65ch; }
 .lab-entry-copy :is(h4, p) { margin: 0; }
-.lab-entry-copy h4 { font-size: 1.125rem; font-weight: 500; line-height: 1.3; }
+.lab-entry-copy h4 { font-size: 1.25rem; font-weight: 500; line-height: 1.3; }
 .lab-entry-copy h4 .material-icon { margin-left: .25rem; }
 .lab-entry-link:is(:hover, :focus-visible) h4 { text-decoration: underline; text-underline-offset: .2em; }
-.lab-entry-copy p { font-size: .9375rem; line-height: 1.5; }
-.lab-entry-copy .lab-entry-meta { color: var(--portfolio-muted); font-size: .8125rem; }
+.lab-entry-copy p { font-size: var(--portfolio-body-size); line-height: 1.5; }
+.lab-entry-copy .lab-entry-meta { color: var(--portfolio-muted); font-size: .9375rem; }
 .lab-section-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
 .lab-section-heading p, .lab-result-count { color: var(--portfolio-muted); font-size: calc(var(--portfolio-body-size) * .889); }
 .lab-topics, .lab-filters { display: flex; flex-wrap: wrap; gap: .25rem; }
 .lab-entry-copy .lab-topics { margin-top: .25rem; }
 .lab-artifact .lab-topics { margin-top: .75rem; }
-.lab-badge { display: inline-block; padding: .125rem .5rem; border: 1px solid var(--portfolio-line); border-radius: 1rem; color: var(--portfolio-muted); font-size: .75rem; line-height: 1.5; overflow-wrap: anywhere; }
+.lab-badge { display: inline-block; padding: .125rem .5rem; border: 1px solid var(--portfolio-line); border-radius: 1rem; color: var(--portfolio-muted); font-size: .875rem; line-height: 1.5; overflow-wrap: anywhere; }
 .lab-filters { row-gap: 0; margin-bottom: .5rem; }
-.lab-filters button { display: grid; place-items: center; min-width: 44px; min-height: 44px; padding: 0; border: 0; border-radius: var(--portfolio-action-radius); background: transparent; font: inherit; cursor: pointer; }
+.lab-filters button { display: grid; place-items: center; min-width: 44px; min-height: 36px; padding: 0; border: 0; border-radius: var(--portfolio-action-radius); background: transparent; font: inherit; cursor: pointer; }
 .lab-filters button:hover .lab-badge { border-color: var(--portfolio-muted); color: var(--portfolio-ink); }
 .lab-filters button[aria-pressed="true"] .lab-badge { border-color: var(--portfolio-ink); background: var(--portfolio-ink); color: var(--portfolio-bg); }
 .lab-archive-list { list-style: none; margin: 0; padding: 0; }
@@ -953,9 +954,8 @@ html { scroll-padding-top: 100px; }
 @media (max-width: 720px) {
   .lab-featured > ul { grid-template-columns: 1fr; gap: 0; }
   .lab-featured li + li { border-top: 1px solid var(--portfolio-line); }
-  .lab-featured .lab-entry-link { align-items: start; padding-block: 1rem; }
-  .lab-featured .lab-entry-link:has(> img) { grid-template-columns: clamp(4.5rem, 23vw, 7rem) minmax(0, 1fr); }
-  .lab-featured img { height: auto; aspect-ratio: 4 / 3; object-position: center; }
+  .lab-featured .lab-entry-link { padding-block: 1rem; }
+  .lab-featured img { height: auto; }
   .lab-featured, .lab-archive { margin-bottom: 2.5rem; }
   .lab-attachment iframe { height: 420px; }
 }

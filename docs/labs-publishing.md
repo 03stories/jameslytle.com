@@ -1,6 +1,6 @@
 # Publishing to Lab
 
-One exploration is one folder in `content/labs/`. Its short Markdown post gives the artifacts context; the artifacts can be files in that folder or links to work hosted elsewhere. The archive and featured list update automatically. Existing `/other-things` URLs stay stable.
+One exploration is one folder in `content/labs/`. Its short Markdown post gives the artifacts context; the artifacts can be files in that folder or links to work hosted elsewhere. The archive and Pinned section update automatically. Existing `/other-things` URLs stay stable.
 
 ## From phone or desktop
 
@@ -85,7 +85,7 @@ For an HTML tool placed inside the body, use a titled, sandboxed iframe and keep
 
 For a hosted app that needs sign-in or browser storage, use a direct link instead of a sandboxed embed.
 
-`title` and `summary` are required for published entries. New posts should include `date`; imported work with an unknown date displays “From the archives.” `featured: true` selects the entry for the curated opening. Use a few stable tags. A post can contain no artifacts at all. Markdown also supports inline images and links, using `./filename` for adjacent files. Never include secrets in HTML tools or posted transcripts.
+`title` and `summary` are required for published entries. New posts should include `date`; imported work with an unknown date displays “From the archives.” `featured: true` adds the entry to Pinned. Use a few stable tags. A post can contain no artifacts at all. Markdown also supports inline images and links, using `./filename` for adjacent files. Never include secrets in HTML tools or posted transcripts.
 
 Use descriptive alt text for images, include a transcript for audio, and provide captions for spoken video. Large media is better hosted externally to avoid growing the Git repository.
 
