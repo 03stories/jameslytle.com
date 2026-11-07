@@ -918,7 +918,7 @@ html { scroll-padding-top: 100px; }
 
 /* Lab: a curated opening and a compact, growing notebook. */
 .lab-page { max-width: 1040px; margin-inline: auto; }
-.lab-eyebrow, .portfolio-opening .lab-eyebrow { color: var(--portfolio-muted); font-size: calc(var(--portfolio-body-size) * .889); line-height: 1.5; margin-bottom: .5rem; }
+.lab-eyebrow { color: var(--portfolio-muted); font-size: calc(var(--portfolio-body-size) * .889); line-height: 1.5; margin-bottom: .5rem; }
 .lab-featured, .lab-archive { margin-bottom: 4rem; }
 .lab-featured > h3, .lab-section-heading h3 { font-size: 1.5rem; font-weight: 500; margin-bottom: 1.5rem; }
 .lab-featured > ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
@@ -950,6 +950,8 @@ html { scroll-padding-top: 100px; }
   overflow-wrap: anywhere;
 }
 .lab-filters { row-gap: 0; margin-bottom: .5rem; }
+.lab-topics a.lab-badge { color: var(--portfolio-muted); text-underline-offset: .15em; }
+.lab-topics a.lab-badge:hover { border-color: var(--portfolio-muted); color: var(--portfolio-ink); }
 .lab-filters button { display: grid; place-items: center; min-width: 44px; min-height: 36px; padding: 0; border: 0; border-radius: var(--portfolio-action-radius); background: transparent; font: inherit; cursor: pointer; }
 .lab-filters button:hover .lab-badge { border-color: var(--portfolio-muted); color: var(--portfolio-ink); }
 .lab-filters button[aria-pressed="true"] .lab-badge { border-color: var(--portfolio-ink); background: var(--portfolio-ink); color: var(--portfolio-bg); }

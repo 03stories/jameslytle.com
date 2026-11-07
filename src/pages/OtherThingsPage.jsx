@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import entries from '../content/labs.json';
 import { formatMonthLabel } from '../utils/formatDate';
 import MaterialIcon from '../components/MaterialIcon';
@@ -21,13 +20,28 @@ function LabEntryLink({ entry, featured = false }) {
 }
 
 export default function OtherThingsPage() {
-  const [tag, setTag] = useState('All');
+  const [searchParams, setSearchParams] = useSearchParams();
   const tags = [...new Set(entries.flatMap(entry => entry.tags || []))].sort();
-  const visible = entries.filter(entry => tag === 'All' || entry.tags?.includes(tag));
+  const selected = new Set(searchParams.getAll('tag').filter(tag => tags.includes(tag)));
+  const visible = entries.filter(entry => selected.size === 0 || entry.tags?.some(tag => selected.has(tag)));
   const featured = entries.filter(entry => entry.featured);
+
+  function updateTags(nextTags) {
+    const params = new URLSearchParams(searchParams);
+    params.delete('tag');
+    for (const tag of nextTags) params.append('tag', tag);
+    setSearchParams(params);
+  }
+
+  function toggleTag(tag) {
+    const nextTags = new Set(selected);
+    if (nextTags.has(tag)) nextTags.delete(tag);
+    else nextTags.add(tag);
+    updateTags(nextTags);
+  }
+
   return <section className="portfolio-page lab-page" aria-labelledby="lab-heading">
     <header className="portfolio-opening">
-      <p className="lab-eyebrow">An open notebook</p>
       <h2 id="lab-heading">Lab</h2>
       <p>Things I’m making, trying, and figuring out. Small tools, creative experiments, and notes from the process.</p>
       <div className="lab-opening-links"><Link className="portfolio-text-link" to="/design-system">Design system<MaterialIcon name="chevron_right" /></Link><a className="portfolio-text-link" href={`${import.meta.env.BASE_URL}lab.xml`}>RSS feed</a></div>
@@ -41,7 +55,8 @@ export default function OtherThingsPage() {
     <section className="lab-archive" aria-labelledby="archive-heading">
       <div className="lab-section-heading"><h3 id="archive-heading">The archive</h3><p>Newest first. Older work keeps its place.</p></div>
       <div className="lab-filters" role="group" aria-label="Filter archive by topic">
-        {['All', ...tags].map(value => <button type="button" key={value} aria-pressed={tag === value} onClick={() => setTag(value)}><span className="lab-badge">{value}</span></button>)}
+        <button type="button" aria-pressed={selected.size === 0} onClick={() => updateTags([])}><span className="lab-badge">All</span></button>
+        {tags.map(tag => <button type="button" key={tag} aria-pressed={selected.has(tag)} onClick={() => toggleTag(tag)}><span className="lab-badge">{tag}</span></button>)}
       </div>
       <p className="lab-result-count" role="status">{visible.length} {visible.length === 1 ? 'entry' : 'entries'}</p>
       <ul className="lab-archive-list">{visible.map(entry => <li key={entry.slug}>
