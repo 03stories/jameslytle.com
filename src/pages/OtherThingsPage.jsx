@@ -6,10 +6,8 @@ import MaterialIcon from '../components/MaterialIcon';
 import LabTags from '../components/LabTags';
 
 function LabEntryLink({ entry, featured = false }) {
-  const showCover = entry.cover && (featured || !entry.featured);
-
   return <Link className="lab-entry-link" to={`/other-things/${entry.slug}`}>
-    {showCover && <img src={entry.cover} alt="" loading="lazy" />}
+    {entry.cover && <img src={entry.cover} alt="" loading="lazy" />}
     <div className="lab-entry-copy">
       <p className="lab-entry-meta">
         {entry.kind || 'Exploration'}
