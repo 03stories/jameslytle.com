@@ -24,7 +24,7 @@ async function playClick(audio, pressed) {
 }
 
 export default function useLabSwitch(isLab) {
-  const homeHref = useHref('/');
+  const labHref = useHref('/other-things');
   const { key } = useLocation();
   const [pressedKey, setPressedKey] = useState(null);
   const audio = useRef(null);
@@ -35,7 +35,9 @@ export default function useLabSwitch(isLab) {
   }, []);
 
   useEffect(() => {
-    const basePath = new URL(homeHref, window.location.href).pathname;
+    if (isLab) return;
+
+    const labPath = new URL(labHref, window.location.href).pathname;
     let pointerId = null;
     let releaseFrame = 0;
 
@@ -47,14 +49,11 @@ export default function useLabSwitch(isLab) {
 
     function press(event) {
       if (!event.isPrimary || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-      const link = event.target.closest?.('#primary-navigation a[href], a.site-name-link[href]');
+      const link = event.target.closest?.('#primary-navigation a[href]');
       if (!link || (link.target && link.target !== '_self') || link.hasAttribute('download')) return;
 
       const url = new URL(link.href);
-      if (url.origin !== window.location.origin || !url.pathname.startsWith(basePath)) return;
-      const destination = url.pathname.slice(basePath.length).replace(/\/$/, '');
-      const crossesTheme = isLab ? ['', 'projects', 'about'].includes(destination) : destination === 'other-things';
-      if (!crossesTheme) return;
+      if (url.origin !== window.location.origin || url.pathname !== labPath) return;
 
       cancelAnimationFrame(releaseFrame);
       pointerId = event.pointerId;
@@ -86,7 +85,7 @@ export default function useLabSwitch(isLab) {
       cancelAnimationFrame(releaseFrame);
       setPressedKey(current => current === key ? null : current);
     };
-  }, [homeHref, isLab, key]);
+  }, [isLab, key, labHref]);
 
   return pressedKey === key;
 }
