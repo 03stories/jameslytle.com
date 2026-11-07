@@ -42,10 +42,12 @@ async function markdownToHtml(markdown) {
 
 function rewriteAssetUrls(htmlText, publicBasePath) {
   return htmlText
+    .replace(/src="\/(?!\/)/g, `src="${SITE_BASE_PATH}`)
     .replace(/src="\.\//g, `src="${publicBasePath}/`)
+    .replace(/poster="\/(?!\/)/g, `poster="${SITE_BASE_PATH}`)
     .replace(/poster="\.\//g, `poster="${publicBasePath}/`)
-    .replace(/href="\.\//g, `href="${publicBasePath}/`)
-    .replace(/href="\/(?!\/)/g, `href="${SITE_BASE_PATH}`);
+    .replace(/href="\/(?!\/)/g, `href="${SITE_BASE_PATH}`)
+    .replace(/href="\.\//g, `href="${publicBasePath}/`);
 }
 
 function rewriteMetadataAssetPaths(value, publicBasePath) {
@@ -120,6 +122,16 @@ async function readCollection(collectionName) {
     const sourceDir = path.dirname(filePath);
     const raw = await readFile(filePath, 'utf8');
     const parsed = matter(raw);
+    if (collectionName === 'labs') {
+      if (parsed.data.draft === true) continue;
+      if (!parsed.data.title || !parsed.data.summary) throw new Error(`${match}: title and summary are required`);
+      if (parsed.data.date && Number.isNaN(new Date(parsed.data.date).getTime())) throw new Error(`${match}: invalid date`);
+      for (const artifact of parsed.data.artifacts || []) {
+        if (!['image', 'video', 'audio', 'html', 'embed', 'reference', 'file'].includes(artifact.type) || !artifact.title || !artifact.url) throw new Error(`${match}: artifact requires a supported type, title, and URL`);
+        if (!/^(https?:\/\/|\.\/|\/(?!\/))/.test(artifact.url)) throw new Error(`${match}: unsupported artifact URL`);
+        if (artifact.type === 'image' && !artifact.alt) throw new Error(`${match}: image artifacts require alt text`);
+      }
+    }
     const renderedHtml = await markdownToHtml(parsed.content || '');
     const publicBasePath = withBase(`/content/${collectionName}/${slug}`);
     const htmlWithAssetPaths = rewriteAssetUrls(renderedHtml, publicBasePath);
@@ -197,6 +209,8 @@ async function main() {
     otherThings = [];
   }
 
+  const labs = await readCollection('labs');
+  await writeFile(path.join(ROOT, 'src/content/labs.json'), JSON.stringify(labs, null, 2));
   site = await readSitePages();
 
   await writeFile(OUTPUT_PROJECTS, JSON.stringify(projects, null, 2));

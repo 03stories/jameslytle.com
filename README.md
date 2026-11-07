@@ -50,3 +50,7 @@ Base path environment values:
 ## Project visibility
 
 Edit `src/content/projectVisibility.json` to include or exclude a project. Set `home` or `projects` to `true` to display it on that surface, or `false` to hide it. These settings only control listings; content and direct project URLs remain available. Additional index entries follow the file order, after the three anchor projects and before the Finestra archive. To list a new project, create its content folder and add its slug to this file.
+
+## Lab archive
+
+Lab posts live in `content/labs/*/index.md`. Run `npm run lab:new -- my-exploration "My exploration" [notes.txt]` to create a draft. See [Lab publishing](docs/labs-publishing.md) for mobile/desktop publishing, notes and recordings, artifact embeds, and draft behavior.

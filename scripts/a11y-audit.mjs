@@ -17,11 +17,12 @@ async function auditHtmlFile(filePath) {
     errors.push('Missing `lang` attribute on <html>.');
   }
 
-  if (!/href="#main-content"/i.test(html)) {
+  const standaloneLabArtifact = path.relative(ROOT, filePath).split(path.sep).join('/').startsWith('dist/content/labs/');
+  if (!standaloneLabArtifact && !/href="#main-content"/i.test(html)) {
     errors.push('Missing skip link to #main-content.');
   }
 
-  if (!/<main[^>]*id="main-content"/i.test(html)) {
+  if (!standaloneLabArtifact && !/<main[^>]*id="main-content"/i.test(html)) {
     errors.push('Missing <main id="main-content"> landmark.');
   }
 
