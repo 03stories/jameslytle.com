@@ -10,14 +10,14 @@ async function playClick(audio, pressed) {
     const start = context.currentTime;
     const oscillator = context.createOscillator();
     const gain = context.createGain();
-    oscillator.type = 'triangle';
-    oscillator.frequency.setValueAtTime(pressed ? 580 : 720, start);
-    oscillator.frequency.exponentialRampToValueAtTime(pressed ? 165 : 235, start + .018);
-    gain.gain.setValueAtTime(.11, start);
-    gain.gain.exponentialRampToValueAtTime(.001, start + .032);
+    oscillator.type = 'square';
+    oscillator.frequency.setValueAtTime(pressed ? 587 : 440, start);
+    oscillator.frequency.setValueAtTime(pressed ? 440 : 659, start + .014);
+    gain.gain.setValueAtTime(.045, start);
+    gain.gain.exponentialRampToValueAtTime(.001, start + .038);
     oscillator.connect(gain).connect(context.destination);
     oscillator.start(start);
-    oscillator.stop(start + .035);
+    oscillator.stop(start + .04);
   } catch {
     // Navigation still works if the browser blocks audio.
   }
