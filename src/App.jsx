@@ -13,6 +13,19 @@ import OtherThingsDetailPage from './pages/OtherThingsDetailPage';
 import LoginPage from './pages/LoginPage';
 import SandboxPage from './pages/SandboxPage';
 import { defaults, readTokens, tokenStyles, loadGoogleFont } from './design/tokens';
+import LabDeskLight from './components/LabDeskLight';
+import './lab-theme.css';
+
+const labColors = {
+  bg: 'var(--lab-canvas)',
+  ink: '#edf4f1',
+  muted: '#aebfba',
+  accent: '#9ce4ca',
+  'accent-hover': '#b9f5e0',
+  'action-tint': '#203834',
+  line: '#354945',
+  'image-border': '#465c56'
+};
 
 function ScrollToTopOnRouteChange() {
   const { pathname } = useLocation();
@@ -26,6 +39,7 @@ function ScrollToTopOnRouteChange() {
 
 export default function App() {
   const location = useLocation();
+  const isLab = location.pathname === '/other-things' || location.pathname.startsWith('/other-things/');
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileNavigation, setMobileNavigation] = useState(false);
   useEffect(() => {
@@ -67,7 +81,8 @@ export default function App() {
   }, []);
 
   return (
-    <div data-layout-guides={layoutGuides} style={tokenStyles(designTokens)} className={`app-shell${(location.pathname === '/' || location.pathname.startsWith('/projects') || location.pathname.startsWith('/other-things') || ['/about', '/resume', '/design-system', '/sandbox'].includes(location.pathname)) ? ' portfolio-shell' : ''}`}>
+    <div data-layout-guides={layoutGuides} data-theme={isLab ? 'lab' : undefined} style={tokenStyles(isLab ? { ...designTokens, ...labColors } : designTokens)} className={`app-shell${(location.pathname === '/' || location.pathname.startsWith('/projects') || isLab || ['/about', '/resume', '/design-system', '/sandbox'].includes(location.pathname)) ? ' portfolio-shell' : ''}`}>
+      {isLab && <LabDeskLight />}
       <ScrollToTopOnRouteChange />
       <a className="skip-link" href="#main-content">
         Skip to main content
