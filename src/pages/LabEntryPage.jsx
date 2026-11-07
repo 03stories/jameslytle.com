@@ -1,14 +1,21 @@
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import entries from '../content/labs.json';
 import LabArtifact from '../components/LabArtifact';
 import MaterialIcon from '../components/MaterialIcon';
 import { formatMonthLabel } from '../utils/formatDate';
+import { observeViewportVideo } from '../utils/viewportVideo';
 import PhotoPaletteToolPage from './PhotoPaletteToolPage';
 
 export default function LabEntryPage({ entry }) {
+  const contentRef = useRef(null);
+  useEffect(() => {
+    const cleanups = Array.from(contentRef.current?.querySelectorAll('video[data-play-in-view]') || [], observeViewportVideo);
+    return () => cleanups.forEach(cleanup => cleanup());
+  }, [entry]);
   const position = entries.findIndex(item => item.slug === entry.slug);
   const next = entries[position + 1];
-  return <article className="portfolio-page case-study lab-artifact">
+  return <article ref={contentRef} className="portfolio-page case-study lab-artifact">
     <header className="case-study-opening">
       <Link className="portfolio-text-link" to="/other-things"><MaterialIcon name="chevron_right" />All Lab work</Link>
       <p className="lab-eyebrow">{entry.kind || 'Exploration'} · {entry.date ? <time dateTime={entry.date}>{formatMonthLabel(entry.date)}</time> : 'From the archives'}</p>

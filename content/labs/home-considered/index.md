@@ -44,7 +44,7 @@ The current starter notebook uses budgeting as an example. The design is about m
 Clicking an inline link opens its note in a side panel automatically. In this example, I open spending, switch to priorities, and close the panel. The main paragraph stays in view throughout.
 
 <figure class="lab-attachment">
-  <video controls playsinline preload="metadata" poster="./linked-page.png" aria-label="Following inline links into the automatic side panel">
+  <video controls muted loop playsinline data-play-in-view preload="none" width="1280" height="800" poster="./linked-page.png" aria-label="Following inline links into the automatic side panel">
     <source src="./follow-a-link.mp4" type="video/mp4">
     <a href="./follow-a-link.mp4">Watch the linked-thought example</a>
   </video>
@@ -56,7 +56,7 @@ Clicking an inline link opens its note in a side panel automatically. In this ex
 Here I write a sentence, select “unexpected costs,” and create a linked page from that phrase. The new page opens beside the original, ready for a supporting note.
 
 <figure class="lab-attachment">
-  <video controls playsinline preload="metadata" poster="./create-linked-thought-poster.png" aria-label="Selecting a phrase and creating a linked page beside the writing">
+  <video controls muted loop playsinline data-play-in-view preload="none" width="1280" height="800" poster="./create-linked-thought-poster.png" aria-label="Selecting a phrase and creating a linked page beside the writing">
     <source src="./create-a-linked-thought.mp4" type="video/mp4">
     <a href="./create-a-linked-thought.mp4">Watch the new-connection example</a>
   </video>
@@ -68,7 +68,7 @@ Here I write a sentence, select “unexpected costs,” and create a linked page
 Numbers in the writing can be edited in place. This clip changes an illustrative monthly amount from $2,400 to $2,600 in a linked note.
 
 <figure class="lab-attachment">
-  <video controls playsinline preload="metadata" poster="./inline-number-poster.png" aria-label="Changing an illustrative inline amount from 2400 dollars to 2600 dollars">
+  <video controls muted loop playsinline data-play-in-view preload="none" width="1280" height="800" poster="./inline-number-poster.png" aria-label="Changing an illustrative inline amount from 2400 dollars to 2600 dollars">
     <source src="./edit-an-inline-number.mp4" type="video/mp4">
     <a href="./edit-an-inline-number.mp4">Watch the inline-number example</a>
   </video>

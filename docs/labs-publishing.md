@@ -108,6 +108,8 @@ Set that artifact's `embed: false` if it is also listed in frontmatter. For a ho
 
 Artifact types: `image`, `video`, `audio`, `html`, `embed`, `reference`, and `file`. Every artifact requires `title` and `url`; images also require `alt`. `caption` is optional. Add `embed: false` to show only a link. References and files always show as links. Audio can publish an intentional voice note; include a transcript in the post. Provide captions for spoken video. Large media is better hosted externally to avoid growing the Git repository.
 
+For silent interaction clips, add `muted loop playsinline data-play-in-view preload="none"` to the body’s `<video controls>` element. Like project-page videos, these play when at least 35% visible, pause when scrolled away, and stay paused when reduced motion is enabled. Keep controls available for manual playback.
+
 HTML tools and external embeds use a sandboxed iframe with scripts enabled. Storage, same-origin access, popups, and navigation of the parent page are restricted. Every artifact also has an open link, which works when an external host blocks embedding. Tools that need those capabilities should use `embed: false`. A local standalone HTML file should use relative asset paths and avoid build steps where practical.
 
 Keep variants as additional artifacts in the same post with meaningful labels. A follow-up post is useful when there is a new lesson to share. Pin only the explorations you want someone to encounter first. No publishing schedule is required.
