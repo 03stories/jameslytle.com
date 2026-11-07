@@ -7,7 +7,7 @@ import LabRssButton from '../components/LabRssButton';
 
 function LabEntryLink({ entry, featured = false }) {
   return <Link className="lab-entry-link" to={`/other-things/${entry.slug}`}>
-    {entry.cover && <img src={entry.cover} alt="" loading="lazy" />}
+    {entry.cover && <span className="lab-entry-thumbnail"><img src={entry.cover} alt="" loading="lazy" /></span>}
     <div className="lab-entry-copy">
       <p className="lab-entry-meta">
         {entry.kind || 'Exploration'}
