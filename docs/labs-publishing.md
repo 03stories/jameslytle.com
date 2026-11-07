@@ -25,7 +25,9 @@ The command creates a draft without overwriting an existing post. It imports not
 
 ## Post format
 
-```yaml
+The example below has four artifacts. It embeds the screenshot and video where they are discussed, links to the demo and reference from the prose, and keeps the demo embedded in the automatic artifact section after the body.
+
+```markdown
 ---
 title: A color study
 date: 2026-11-07
@@ -41,21 +43,66 @@ artifacts:
     url: ./study.html
     caption: The second version, with draggable samples.
   - type: image
-    title: The first study
+    title: Open the first-study screenshot
     url: ./preview.webp
     alt: Five sampled colors beside the source photograph
+    embed: false
   - type: video
-    title: Watch the interaction
+    title: Open the interaction recording
     url: ./walkthrough.mp4
     poster: ./preview.webp
     captions: ./walkthrough.en.vtt
+    embed: false
   - type: reference
     title: The reference that started this
     url: https://example.com/reference
 ---
 
-I wanted to try… Here is what happened…
+I wanted to see how a photograph could become a small palette.
+[Try the interactive study](./study.html), or use the embedded demo after this post.
+
+## The first pass
+
+The first version kept the sampled colors beside the photograph:
+
+![Five sampled colors beside the source photograph](./preview.webp)
+
+[Open the screenshot at full size](./preview.webp).
+
+## Trying the interaction
+
+The second version adds draggable samples. This recording shows the interaction:
+
+<figure class="lab-attachment">
+  <video controls playsinline preload="metadata" poster="./preview.webp" aria-label="Dragging color samples in the study">
+    <source src="./walkthrough.mp4" type="video/mp4">
+    <track kind="captions" src="./walkthrough.en.vtt" srclang="en" label="English" default>
+    <a href="./walkthrough.mp4">Open the interaction recording</a>
+  </video>
+  <figcaption>Moving a sample updates the palette. <a href="./walkthrough.mp4">Open the video</a>.</figcaption>
+</figure>
+
+## Where it started
+
+[This reference](https://example.com/reference) gave me the starting point.
+I kept the photograph visible so I could see where each color came from.
 ```
+
+The body uses ordinary Markdown links (`[label](./file.html)`) and images (`![description](./image.webp)`), plus HTML for inline video, audio, or iframe embeds. These point directly to the files; there is no special artifact-reference syntax. Local `./` paths work in production and PR previews. You can refer to the same artifact more than once without copying its file.
+
+The `artifacts` list renders **after the body**, in the order listed. It does not place media at a particular paragraph. In this example, `embed: false` prevents the image and video from being embedded a second time in that section; their open links remain. An artifact used only inline need not also appear in the list. Likewise, `cover` chooses a preview image and does not insert it into the body.
+
+For an HTML tool placed inside the body, use a titled, sandboxed iframe and keep an open link nearby:
+
+```html
+<figure class="lab-attachment">
+  <iframe title="Interactive color study" src="./study.html"
+    sandbox="allow-scripts allow-downloads" referrerpolicy="no-referrer"></iframe>
+  <figcaption><a href="./study.html">Open the interactive study</a></figcaption>
+</figure>
+```
+
+Set that artifact's `embed: false` if it is also listed in frontmatter. For a hosted app that needs sign-in or browser storage, use a direct link instead of a sandboxed embed.
 
 `title` and `summary` are required for published entries. New posts should include `date`; imported work with an unknown date displays “From the archives.” `featured: true` selects the entry for the curated opening. Use a few stable tags. A post can contain no artifacts at all. Markdown also supports inline images and links, using `./filename` for adjacent files. Never include secrets in HTML tools or posted transcripts.
 
