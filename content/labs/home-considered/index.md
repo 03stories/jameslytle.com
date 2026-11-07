@@ -7,37 +7,14 @@ tags: [writing, interaction, code]
 draft: false
 featured: false
 cover: ./overview.png
-artifacts:
-  - type: reference
-    title: Try Considered
-    url: https://home-thoughts-james.fine-brush-9025.chatgpt.site/
-    caption: Public prototype. The starter notebook uses budgeting as an example.
-  - type: video
-    title: Follow a linked thought
-    url: ./follow-a-link.mp4
-    poster: ./linked-page.png
-    embed: false
-  - type: video
-    title: Create a linked thought
-    url: ./create-a-linked-thought.mp4
-    poster: ./create-linked-thought-poster.png
-    embed: false
-  - type: video
-    title: Edit an inline number
-    url: ./edit-an-inline-number.mp4
-    poster: ./inline-number-poster.png
-    embed: false
-  - type: image
-    title: View the notebook screenshot
-    url: ./overview.png
-    alt: Considered's personal budget notebook with inline links to income, spending, and priorities
-    embed: false
 ---
 Considered is a prototype for thinking through connected writing. A phrase can lead to another thought, a source note, or an editable number. Open the connection beside what you're writing to keep its context in view.
 
 The current starter notebook uses budgeting as an example. The design is about making those connections useful across whatever you're trying to understand.
 
 [Try Considered](https://home-thoughts-james.fine-brush-9025.chatgpt.site/) — the prototype is public, and you can explore the notebook yourself.
+
+[View the notebook screenshot](./overview.png).
 
 ## Follow a thought without losing your place
 
@@ -80,5 +57,3 @@ Numbers in the writing can be edited in place. This clip changes an illustrative
 - Inline linking with an automatic side panel feels seamless. It's nice to follow a thought while keeping the original writing in view.
 - The UX of parent rewrites based on changes to sibling notes needs work.
 - I need to try this more thoroughly on something real to put it through its paces.
-
-*Screenshots and silent interaction clips captured from a local rendering of the prototype's latest saved source on November 7, 2026. The clips use illustrative budgeting notes.*

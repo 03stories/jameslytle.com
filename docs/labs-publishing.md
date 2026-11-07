@@ -25,7 +25,7 @@ The command creates a draft without overwriting an existing post. It imports not
 
 ## Post format
 
-The example below has four artifacts. It embeds the screenshot and video where they are discussed, links to the demo and reference from the prose, and keeps the demo embedded in the automatic artifact section after the body.
+The example below has four artifacts. It embeds the screenshot and video where they are discussed, links to the demo and reference from the prose.
 
 ```markdown
 ---
@@ -37,29 +37,10 @@ tags: [color, code]
 draft: false
 featured: false
 cover: ./preview.webp
-artifacts:
-  - type: html
-    title: Open the interactive study
-    url: ./study.html
-    caption: The second version, with draggable samples.
-  - type: image
-    title: Open the first-study screenshot
-    url: ./preview.webp
-    alt: Five sampled colors beside the source photograph
-    embed: false
-  - type: video
-    title: Open the interaction recording
-    url: ./walkthrough.mp4
-    poster: ./preview.webp
-    captions: ./walkthrough.en.vtt
-    embed: false
-  - type: reference
-    title: The reference that started this
-    url: https://example.com/reference
 ---
 
 I wanted to see how a photograph could become a small palette.
-[Try the interactive study](./study.html), or use the embedded demo after this post.
+[Try the interactive study](./study.html).
 
 ## The first pass
 
@@ -90,7 +71,7 @@ I kept the photograph visible so I could see where each color came from.
 
 The body uses ordinary Markdown links (`[label](./file.html)`) and images (`![description](./image.webp)`), plus HTML for inline video, audio, or iframe embeds. These point directly to the files; there is no special artifact-reference syntax. Local `./` paths work in production and PR previews. You can refer to the same artifact more than once without copying its file.
 
-The `artifacts` list renders **after the body**, in the order listed. It does not place media at a particular paragraph. In this example, `embed: false` prevents the image and video from being embedded a second time in that section; their open links remain. An artifact used only inline need not also appear in the list. Likewise, `cover` chooses a preview image and does not insert it into the body.
+`cover` chooses the archive preview image. To show it in the post too, add it to the body.
 
 For an HTML tool placed inside the body, use a titled, sandboxed iframe and keep an open link nearby:
 
@@ -102,15 +83,15 @@ For an HTML tool placed inside the body, use a titled, sandboxed iframe and keep
 </figure>
 ```
 
-Set that artifact's `embed: false` if it is also listed in frontmatter. For a hosted app that needs sign-in or browser storage, use a direct link instead of a sandboxed embed.
+For a hosted app that needs sign-in or browser storage, use a direct link instead of a sandboxed embed.
 
 `title` and `summary` are required for published entries. New posts should include `date`; imported work with an unknown date displays “From the archives.” `featured: true` selects the entry for the curated opening. Use a few stable tags. A post can contain no artifacts at all. Markdown also supports inline images and links, using `./filename` for adjacent files. Never include secrets in HTML tools or posted transcripts.
 
-Artifact types: `image`, `video`, `audio`, `html`, `embed`, `reference`, and `file`. Every artifact requires `title` and `url`; images also require `alt`. `caption` is optional. Add `embed: false` to show only a link. References and files always show as links. Audio can publish an intentional voice note; include a transcript in the post. Provide captions for spoken video. Large media is better hosted externally to avoid growing the Git repository.
+Use descriptive alt text for images, include a transcript for audio, and provide captions for spoken video. Large media is better hosted externally to avoid growing the Git repository.
 
 For silent interaction clips, add `muted loop playsinline data-play-in-view preload="none"` to the body’s `<video controls>` element. Like project-page videos, these play when at least 35% visible, pause when scrolled away, and stay paused when reduced motion is enabled. Keep controls available for manual playback.
 
-HTML tools and external embeds use a sandboxed iframe with scripts enabled. Storage, same-origin access, popups, and navigation of the parent page are restricted. Every artifact also has an open link, which works when an external host blocks embedding. Tools that need those capabilities should use `embed: false`. A local standalone HTML file should use relative asset paths and avoid build steps where practical.
+The sandbox in the example enables scripts and downloads while restricting storage, same-origin access, popups, and navigation of the parent page. Link directly to tools that need those capabilities or whose host blocks embedding. A local standalone HTML file should use relative asset paths and avoid build steps where practical.
 
 Keep variants as additional artifacts in the same post with meaningful labels. A follow-up post is useful when there is a new lesson to share. Pin only the explorations you want someone to encounter first. No publishing schedule is required.
 

@@ -936,7 +936,6 @@ html { scroll-padding-top: 100px; }
 .lab-archive-list li { border-top: 1px solid var(--portfolio-line); }
 .lab-archive-list a { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 2rem; padding: 1.5rem 0; }
 .lab-entry-date { padding-top: .1rem; }
-.lab-attachments { grid-column: wide-start / wide-end; min-width: 0; margin-block: 1.5rem 3rem; }
 .lab-attachment { margin: 0 0 2.5rem; }
 .lab-attachment :is(img, video, iframe) { display: block; width: 100%; max-width: 100%; border: 1px solid var(--portfolio-image-border); border-radius: var(--portfolio-image-radius); }
 .lab-attachment :is(img, video) { height: auto; }
@@ -944,7 +943,6 @@ html { scroll-padding-top: 100px; }
 .lab-attachment audio { width: 100%; }
 .lab-attachment figcaption { margin-top: .75rem; font-size: calc(var(--portfolio-body-size) * .889); }
 .lab-attachment figcaption p { color: var(--portfolio-muted); margin-top: .5rem; }
-.lab-attachment-reference, .lab-attachment-file { border-top: 1px solid var(--portfolio-line); padding-top: 1rem; }
 @media (max-width: 720px) {
   .lab-featured ul { grid-template-columns: 1fr; gap: 2rem; }
   .lab-featured img { height: auto; max-height: 320px; }

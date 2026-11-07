@@ -10,10 +10,6 @@ tags:
 featured: true
 draft: false
 cover: /content/projects/design-docs/screen-shot-2020-09-28-at-9.27.07-pm.png
-artifacts:
-  - type: reference
-    title: Download the Design Doc template
-    url: /content/projects/design-docs/1.-design_-ticket-title.pdf
 date: '2018-01-01'
 ---
 Starting in 2018, I developed a regular practice of creating a Design Doc for each design task at Juice Analytics. It gave exploration, decisions, and implementation requirements a shared home instead of leaving that context scattered across tickets, sketches, messages, and design files.

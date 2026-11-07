@@ -11,7 +11,7 @@ test('Lab builds publish artifacts at preview paths and exclude drafts and their
   const cwd = await mkdtemp(path.join(tmpdir(), 'labs-test-'));
   try {
     for (const slug of ['published', 'private-draft']) await mkdir(path.join(cwd, 'content/labs', slug), { recursive: true });
-    await writeFile(path.join(cwd, 'content/labs/published/index.md'), '---\ntitle: Test\nsummary: Test summary\ndate: 2026-11-07\nartifacts:\n  - type: html\n    title: Demo\n    url: ./demo.html\n---\n[Open demo](./demo.html)\n![Root image](/content/example.png)');
+    await writeFile(path.join(cwd, 'content/labs/published/index.md'), '---\ntitle: Test\nsummary: Test summary\ndate: 2026-11-07\n---\n[Open demo](./demo.html)\n![Root image](/content/example.png)');
     await writeFile(path.join(cwd, 'content/labs/published/demo.html'), '<h1>Demo</h1>');
     await writeFile(path.join(cwd, 'content/labs/private-draft/index.md'), '---\ndraft: true\n---\nPRIVATE DRAFT');
     await writeFile(path.join(cwd, 'content/labs/private-draft/recording.mp3'), 'PRIVATE RECORDING');
@@ -19,7 +19,6 @@ test('Lab builds publish artifacts at preview paths and exclude drafts and their
     assert.equal(result.status, 0, result.stderr);
     const posts = JSON.parse(await readFile(path.join(cwd, 'src/content/labs.json')));
     assert.equal(posts.length, 1);
-    assert.equal(posts[0].artifacts[0].url, '/jameslytle.com/pr-preview/pr-123/content/labs/published/demo.html');
     assert.match(posts[0].html, /href="\/jameslytle.com\/pr-preview\/pr-123\/content\/labs\/published\/demo.html"/);
     assert.match(posts[0].html, /src="\/jameslytle.com\/pr-preview\/pr-123\/content\/example.png"/);
     await access(path.join(cwd, 'public/content/labs/published/demo.html'));

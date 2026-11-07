@@ -126,11 +126,6 @@ async function readCollection(collectionName) {
       if (parsed.data.draft === true) continue;
       if (!parsed.data.title || !parsed.data.summary) throw new Error(`${match}: title and summary are required`);
       if (parsed.data.date && Number.isNaN(new Date(parsed.data.date).getTime())) throw new Error(`${match}: invalid date`);
-      for (const artifact of parsed.data.artifacts || []) {
-        if (!['image', 'video', 'audio', 'html', 'embed', 'reference', 'file'].includes(artifact.type) || !artifact.title || !artifact.url) throw new Error(`${match}: artifact requires a supported type, title, and URL`);
-        if (!/^(https?:\/\/|\.\/|\/(?!\/))/.test(artifact.url)) throw new Error(`${match}: unsupported artifact URL`);
-        if (artifact.type === 'image' && !artifact.alt) throw new Error(`${match}: image artifacts require alt text`);
-      }
     }
     const renderedHtml = await markdownToHtml(parsed.content || '');
     const publicBasePath = withBase(`/content/${collectionName}/${slug}`);

@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import entries from '../content/labs.json';
-import LabArtifact from '../components/LabArtifact';
 import MaterialIcon from '../components/MaterialIcon';
 import { formatMonthLabel } from '../utils/formatDate';
 import { observeViewportVideo } from '../utils/viewportVideo';
@@ -24,7 +23,6 @@ export default function LabEntryPage({ entry }) {
     </header>
     <div className="prose case-study-prose" dangerouslySetInnerHTML={{ __html: entry.html }} />
     {entry.slug === 'photo-palette' && <PhotoPaletteToolPage />}
-    {entry.artifacts?.length > 0 && <section className="lab-attachments" aria-label="Artifacts and references">{entry.artifacts.map((artifact, index) => <LabArtifact key={index} artifact={artifact} />)}</section>}
     <footer className="case-study-footer"><nav className="case-study-pagination" aria-label="Lab navigation"><Link className="portfolio-text-link" to="/other-things">All Lab work</Link>{next && <Link className="portfolio-text-link" to={`/other-things/${next.slug}`}>Next: {next.title}<MaterialIcon name="chevron_right" /></Link>}</nav></footer>
   </article>;
 }
