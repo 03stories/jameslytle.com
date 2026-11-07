@@ -15,6 +15,10 @@ body:has(.app-shell[data-lab-switch="pressed"]) {
   background: var(--lab-switch-canvas);
 }
 
+.app-shell[data-lab-switch="pressed"] .site-main :is(img, video) {
+  filter: brightness(.62);
+}
+
 .app-shell[data-theme="lab"] {
   isolation: isolate;
   color-scheme: dark;
