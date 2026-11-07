@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import entries from '../content/labs.json';
 import MaterialIcon from '../components/MaterialIcon';
+import LabTags from '../components/LabTags';
 import { formatMonthLabel } from '../utils/formatDate';
 import { observeViewportVideo } from '../utils/viewportVideo';
 import PhotoPaletteToolPage from './PhotoPaletteToolPage';
@@ -19,7 +20,7 @@ export default function LabEntryPage({ entry }) {
       <Link className="portfolio-text-link" to="/other-things"><MaterialIcon name="chevron_right" />All Lab work</Link>
       <p className="lab-eyebrow">{entry.kind || 'Exploration'} · {entry.date ? <time dateTime={entry.date}>{formatMonthLabel(entry.date)}</time> : 'From the archives'}</p>
       <h2>{entry.title}</h2><p className="case-study-headline">{entry.summary}</p>
-      {entry.tags?.length > 0 && <p className="lab-topics">{entry.tags.join(' · ')}</p>}
+      <LabTags tags={entry.tags} />
     </header>
     <div className="prose case-study-prose" dangerouslySetInnerHTML={{ __html: entry.html }} />
     {entry.slug === 'photo-palette' && <PhotoPaletteToolPage />}
