@@ -14,7 +14,7 @@ export default function LabDeskLight() {
     let previousTime = 0;
 
     function paint() {
-      element.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -85%)`;
+      element.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -58%)`;
     }
 
     function follow(time) {
