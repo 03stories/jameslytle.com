@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { createThemeFromPalette } from '../utils/themePalette';
+import { copyText } from '../utils/copyText';
 import defaultPhoto from '../../content/other-things/photo-palette/default-photo.jpg';
 
 const DEFAULT_IMAGE = defaultPhoto;
@@ -233,28 +234,9 @@ export default function PhotoPaletteToolPage() {
   const copyValue = useMemo(() => buildCopyOutput(palette, copyMode), [palette, copyMode]);
   const themePreview = useMemo(() => createThemeFromPalette(palette), [palette]);
 
-  async function handleCopy(value) {
-    if (!value) return;
-
-    if (navigator.clipboard?.writeText) {
-      await navigator.clipboard.writeText(value);
-      return;
-    }
-
-    const fallbackInput = document.createElement('textarea');
-    fallbackInput.value = value;
-    fallbackInput.setAttribute('readonly', '');
-    fallbackInput.style.position = 'absolute';
-    fallbackInput.style.left = '-9999px';
-    document.body.appendChild(fallbackInput);
-    fallbackInput.select();
-    document.execCommand('copy');
-    document.body.removeChild(fallbackInput);
-  }
-
   async function onCopyAll() {
     try {
-      await handleCopy(copyValue);
+      await copyText(copyValue);
       setCopyStatus(`Copied ${copyMode} output.`);
     } catch {
       setCopyStatus('Could not copy automatically.');
@@ -265,7 +247,7 @@ export default function PhotoPaletteToolPage() {
     const value = colorFormats(color, index)[copyMode] ?? colorFormats(color, index).hex;
 
     try {
-      await handleCopy(value);
+      await copyText(value);
       setCopyStatus(`Copied color ${index + 1}.`);
     } catch {
       setCopyStatus('Could not copy automatically.');

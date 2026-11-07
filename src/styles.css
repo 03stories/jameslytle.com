@@ -976,3 +976,6 @@ html { scroll-padding-top: 100px; }
 }
 
 .lab-opening-links { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 1rem; }
+.lab-rss-copy { display: flex; align-items: center; flex-wrap: wrap; column-gap: .5rem; }
+.lab-rss-copy button { padding: 0; border: 0; background: none; color: inherit; font-family: inherit; text-decoration: underline; cursor: pointer; }
+.lab-rss-copy [role="status"] { color: var(--portfolio-muted); font-size: .875rem; }

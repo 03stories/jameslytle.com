@@ -3,6 +3,7 @@ import entries from '../content/labs.json';
 import { formatMonthLabel } from '../utils/formatDate';
 import MaterialIcon from '../components/MaterialIcon';
 import LabTags from '../components/LabTags';
+import LabRssButton from '../components/LabRssButton';
 
 function LabEntryLink({ entry, featured = false }) {
   return <Link className="lab-entry-link" to={`/other-things/${entry.slug}`}>
@@ -48,7 +49,10 @@ export default function OtherThingsPage() {
         <button type="button" aria-pressed={selected.size === 0} onClick={() => updateTags([])}><span className="lab-badge">All</span></button>
         {tags.map(tag => <button type="button" key={tag} aria-pressed={selected.has(tag)} onClick={() => toggleTag(tag)}><span className="lab-badge">{tag}</span></button>)}
       </div>
-      <div className="lab-opening-links"><Link className="portfolio-text-link" to="/design-system">Design system<MaterialIcon name="chevron_right" /></Link><a className="portfolio-text-link" href={`${import.meta.env.BASE_URL}lab.xml`}>RSS feed</a></div>
+      <div className="lab-opening-links">
+        <Link className="portfolio-text-link" to="/design-system">Design system<MaterialIcon name="chevron_right" /></Link>
+        <LabRssButton />
+      </div>
     </header>
     {featured.length > 0 && <section className="lab-featured" aria-labelledby="pinned-heading">
       <h3 id="pinned-heading">Pinned</h3>
