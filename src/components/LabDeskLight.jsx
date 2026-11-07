@@ -18,7 +18,7 @@ export default function LabDeskLight() {
     }
 
     function follow(time) {
-      const step = 1 - Math.exp(-Math.max(0, time - previousTime) / 240);
+      const step = 1 - Math.exp(-Math.max(0, time - previousTime) / 720);
       previousTime = time;
       x += (targetX - x) * step;
       y += (targetY - y) * step;

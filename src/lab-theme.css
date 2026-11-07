@@ -42,7 +42,7 @@ body:has(.app-shell[data-theme="lab"]) {
   pointer-events: none;
   transform: translate3d(64vw, 49vh, 0) translate(-50%, -58%);
   border-radius: 50%;
-  background: radial-gradient(ellipse 50% 43% at center, rgb(235 206 145 / 16%), rgb(235 206 145 / 6%) 52%, transparent 100%);
+  background: radial-gradient(circle closest-side, rgb(235 206 145 / 18%), rgb(235 206 145 / 14%) 82%, transparent 100%);
 }
 
 .lab-entrance-shadow {
