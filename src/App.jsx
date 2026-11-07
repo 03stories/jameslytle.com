@@ -1,6 +1,7 @@
 import { Link, NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import MaterialIcon from './components/MaterialIcon';
+import LabNavLink from './components/LabNavLink';
 import MediaViewer from './components/MediaViewer';
 import { hydrateThemeFromStorage } from './utils/themePalette';
 import HomePage from './pages/HomePage';
@@ -117,9 +118,7 @@ export default function App() {
           <NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : undefined)}>
             About
           </NavLink>
-          <NavLink to="/other-things" className={({ isActive }) => (isActive ? 'active' : undefined)}>
-            Lab
-          </NavLink>
+          <LabNavLink />
           <a className="header-resume-link" href={`${import.meta.env.BASE_URL}resume.pdf`}>
             <MaterialIcon name="description" />
             Resume
