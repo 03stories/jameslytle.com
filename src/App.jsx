@@ -13,8 +13,7 @@ import OtherThingsDetailPage from './pages/OtherThingsDetailPage';
 import LoginPage from './pages/LoginPage';
 import SandboxPage from './pages/SandboxPage';
 import { defaults, readTokens, tokenStyles, loadGoogleFont } from './design/tokens';
-import LabDeskLight from './components/LabDeskLight';
-import LabEntrance from './components/LabEntrance';
+import useLabSwitch from './components/useLabSwitch';
 import './lab-theme.css';
 
 const labColors = {
@@ -26,6 +25,17 @@ const labColors = {
   'action-tint': '#203834',
   line: '#354945',
   'image-border': '#465c56'
+};
+
+const labSwitchColors = {
+  bg: 'var(--lab-switch-canvas)',
+  ink: '#101815',
+  muted: '#18221e',
+  accent: '#102b22',
+  'accent-hover': '#102b22',
+  'action-tint': '#a8b1ac',
+  line: '#56605c',
+  'image-border': '#46514c'
 };
 
 function ScrollToTopOnRouteChange() {
@@ -41,6 +51,7 @@ function ScrollToTopOnRouteChange() {
 export default function App() {
   const location = useLocation();
   const isLab = location.pathname === '/other-things' || location.pathname.startsWith('/other-things/');
+  const labSwitchPressed = useLabSwitch(isLab);
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileNavigation, setMobileNavigation] = useState(false);
   useEffect(() => {
@@ -81,9 +92,10 @@ export default function App() {
     hydrateThemeFromStorage();
   }, []);
 
+  const themeColors = labSwitchPressed ? labSwitchColors : isLab ? labColors : {};
+
   return (
-    <div data-layout-guides={layoutGuides} data-theme={isLab ? 'lab' : undefined} style={tokenStyles(isLab ? { ...designTokens, ...labColors } : designTokens)} className={`app-shell${(location.pathname === '/' || location.pathname.startsWith('/projects') || isLab || ['/about', '/resume', '/design-system', '/sandbox'].includes(location.pathname)) ? ' portfolio-shell' : ''}`}>
-      {isLab ? <LabDeskLight /> : <LabEntrance />}
+    <div data-layout-guides={layoutGuides} data-theme={isLab ? 'lab' : undefined} data-lab-switch={labSwitchPressed ? 'pressed' : undefined} style={tokenStyles({ ...designTokens, ...themeColors })} className={`app-shell${(location.pathname === '/' || location.pathname.startsWith('/projects') || isLab || ['/about', '/resume', '/design-system', '/sandbox'].includes(location.pathname)) ? ' portfolio-shell' : ''}`}>
       <ScrollToTopOnRouteChange />
       <a className="skip-link" href="#main-content">
         Skip to main content

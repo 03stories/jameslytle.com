@@ -1,9 +1,18 @@
 :root {
   --lab-canvas: #111918;
+  --lab-switch-canvas: #858988;
+}
+
+body:has(.portfolio-shell) {
+  transition: none;
 }
 
 body:has(.app-shell[data-theme="lab"]) {
   background: var(--lab-canvas);
+}
+
+body:has(.app-shell[data-lab-switch="pressed"]) {
+  background: var(--lab-switch-canvas);
 }
 
 .app-shell[data-theme="lab"] {
@@ -18,7 +27,7 @@ body:has(.app-shell[data-theme="lab"]) {
   --color-skip-text: var(--portfolio-bg);
 }
 
-.app-shell[data-theme="lab"]::before {
+.app-shell[data-theme="lab"]:not([data-lab-switch="pressed"])::before {
   content: '';
   position: fixed;
   inset: 0;
@@ -31,51 +40,4 @@ body:has(.app-shell[data-theme="lab"]) {
 
 .portfolio-shell .site-header .header-resume-link {
   transition-property: background-color;
-}
-
-.lab-desk-light {
-  position: fixed;
-  inset: 0 auto auto 0;
-  width: clamp(26rem, 66vw, 57rem);
-  aspect-ratio: 1;
-  z-index: -1;
-  pointer-events: none;
-  transform: translate3d(64vw, 49vh, 0) translate(-50%, -58%);
-  border-radius: 50%;
-  background: radial-gradient(circle closest-side, rgb(235 206 145 / 18%), rgb(235 206 145 / 14%) 82%, transparent 100%);
-}
-
-.lab-entrance-shadow {
-  position: fixed;
-  inset: 0;
-  z-index: 110;
-  overflow: clip;
-  pointer-events: none;
-}
-
-.lab-entrance-shadow > span {
-  position: absolute;
-  inset: 0 0 0 -18vw;
-  background: linear-gradient(to right, transparent, rgb(8 16 15 / 92%) 18vw);
-  transform: translateX(100%);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .app-shell[data-theme="lab"]::before {
-    animation: lab-grid-switch-on 280ms cubic-bezier(.22, 1, .36, 1) both;
-  }
-
-  .lab-desk-light {
-    animation: lab-desk-light-switch-on 320ms cubic-bezier(.22, 1, .36, 1) 110ms both;
-  }
-}
-
-@keyframes lab-grid-switch-on {
-  from { opacity: .14; }
-}
-
-@keyframes lab-desk-light-switch-on {
-  0%, 12% { opacity: 0; }
-  36% { opacity: .82; }
-  100% { opacity: 1; }
 }
