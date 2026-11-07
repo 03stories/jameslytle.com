@@ -54,31 +54,28 @@ body:has(.app-shell[data-theme="lab"]) {
     linear-gradient(180deg, rgb(247 216 155 / 14%), rgb(247 216 155 / 9%) 76%, transparent 100%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .app-shell[data-theme="lab"]::after {
-    content: '';
-    position: fixed;
-    inset: 0;
-    z-index: 110;
-    pointer-events: none;
-    background: radial-gradient(ellipse at 18% 18%, #e6e4d8, #c6cabb 34%, #788a80 68%, #3d514b);
-    animation: lab-light-sweep 760ms cubic-bezier(.55, .05, .85, .53) both;
-  }
+.lab-entrance-shadow {
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+  overflow: clip;
+  pointer-events: none;
+}
 
+.lab-entrance-shadow > span {
+  position: absolute;
+  inset: 0 0 0 -18vw;
+  background: linear-gradient(to right, transparent, rgb(8 16 15 / 92%) 18vw);
+  transform: translateX(100%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
   .app-shell[data-theme="lab"]::before {
-    animation: lab-grid-switch-on 460ms cubic-bezier(.22, 1, .36, 1) 880ms both;
+    animation: lab-grid-switch-on 280ms cubic-bezier(.22, 1, .36, 1) both;
   }
 
   .lab-desk-light {
-    animation: lab-desk-light-switch-on 390ms cubic-bezier(.22, 1, .36, 1) 960ms both;
-  }
-}
-
-@keyframes lab-light-sweep {
-  0% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
-  100% {
-    clip-path: polygon(158% 0, 165% 0, 165% 100%, 103% 100%);
-    visibility: hidden;
+    animation: lab-desk-light-switch-on 320ms cubic-bezier(.22, 1, .36, 1) 110ms both;
   }
 }
 

@@ -14,6 +14,7 @@ import LoginPage from './pages/LoginPage';
 import SandboxPage from './pages/SandboxPage';
 import { defaults, readTokens, tokenStyles, loadGoogleFont } from './design/tokens';
 import LabDeskLight from './components/LabDeskLight';
+import LabEntrance from './components/LabEntrance';
 import './lab-theme.css';
 
 const labColors = {
@@ -82,7 +83,7 @@ export default function App() {
 
   return (
     <div data-layout-guides={layoutGuides} data-theme={isLab ? 'lab' : undefined} style={tokenStyles(isLab ? { ...designTokens, ...labColors } : designTokens)} className={`app-shell${(location.pathname === '/' || location.pathname.startsWith('/projects') || isLab || ['/about', '/resume', '/design-system', '/sandbox'].includes(location.pathname)) ? ' portfolio-shell' : ''}`}>
-      {isLab && <LabDeskLight />}
+      {isLab ? <LabDeskLight /> : <LabEntrance />}
       <ScrollToTopOnRouteChange />
       <a className="skip-link" href="#main-content">
         Skip to main content
