@@ -937,7 +937,18 @@ html { scroll-padding-top: 100px; }
 .lab-topics, .lab-filters { display: flex; flex-wrap: wrap; gap: .25rem; }
 .lab-entry-copy .lab-topics { margin-top: .25rem; }
 .lab-artifact .lab-topics { margin-top: .75rem; }
-.lab-badge { display: inline-block; padding: .125rem .5rem; border: 1px solid var(--portfolio-line); border-radius: 1rem; color: var(--portfolio-muted); font-size: .875rem; line-height: 1.5; overflow-wrap: anywhere; }
+.lab-badge {
+  display: inline-block;
+  padding: .125rem .5rem;
+  border: 1px solid var(--portfolio-line);
+  border-radius: 1rem;
+  background-color: color-mix(in srgb, var(--portfolio-muted) 8%, var(--portfolio-bg));
+  color: var(--portfolio-muted);
+  font-size: .875rem;
+  font-style: italic;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
 .lab-filters { row-gap: 0; margin-bottom: .5rem; }
 .lab-filters button { display: grid; place-items: center; min-width: 44px; min-height: 36px; padding: 0; border: 0; border-radius: var(--portfolio-action-radius); background: transparent; font: inherit; cursor: pointer; }
 .lab-filters button:hover .lab-badge { border-color: var(--portfolio-muted); color: var(--portfolio-ink); }
