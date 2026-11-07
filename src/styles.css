@@ -949,8 +949,8 @@ html { scroll-padding-top: 100px; }
   line-height: 1.5;
   overflow-wrap: anywhere;
 }
-.lab-filters { row-gap: 0; margin-bottom: .5rem; }
-.lab-topics a.lab-badge { color: var(--portfolio-muted); text-underline-offset: .15em; }
+.lab-filters { row-gap: 0; margin-top: .75rem; }
+.lab-topics a.lab-badge { color: var(--portfolio-muted); text-decoration: none; }
 .lab-topics a.lab-badge:hover { border-color: var(--portfolio-muted); color: var(--portfolio-ink); }
 .lab-filters button { display: grid; place-items: center; min-width: 44px; min-height: 36px; padding: 0; border: 0; border-radius: var(--portfolio-action-radius); background: transparent; font: inherit; cursor: pointer; }
 .lab-filters button:hover .lab-badge { border-color: var(--portfolio-muted); color: var(--portfolio-ink); }
