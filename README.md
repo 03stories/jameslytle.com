@@ -1,5 +1,7 @@
 # jameslytle.com
 
+**[View the live site](https://03stories.github.io/jameslytle.com/)**
+
 React + Vite portfolio site, statically prerendered for GitHub Pages.
 
 ## Local setup
