@@ -69,7 +69,7 @@ One recurring issue was that generated charts showed the data without clearly co
 
 I added a coordinated visual convention: write a succinct headline around the intended insight, connect its emphasis color to the referenced bar, and give that bar a striped treatment. The reader can immediately see which comparison matters.
 
-![Synthetic narrative page demonstrating a concise colored headline connected to a striped highlight bar in the chart.](./bar-insight-pattern.svg)
+![Graph showing how a concise insight headline connects to a shared emphasis cue and striped highlight bar, with a synthetic chart example.](./bar-insight-pattern.svg)
 
 Other recurring fixes became conventions for selecting appropriate photography and verifying that every icon actually exists in the Font Awesome kit installed in the product. These are small details individually; together, they move quality from repeated cleanup into the system.
 
