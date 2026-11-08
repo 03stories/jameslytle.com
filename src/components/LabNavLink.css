@@ -1,0 +1,114 @@
+.lab-nav-label {
+  position: relative;
+  isolation: isolate;
+}
+
+.lab-nav-atmosphere {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  z-index: -1;
+  width: 5.25rem;
+  height: 3.25rem;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.lab-nav-cloud, .lab-nav-bubble {
+  position: absolute;
+  opacity: 0;
+}
+
+.lab-nav-cloud {
+  inset-block-end: 0;
+  inset-inline-start: 18%;
+  width: 58%;
+  height: 56%;
+  background:
+    radial-gradient(ellipse at 27% 63%, #92c6b7 3%, transparent 49%),
+    radial-gradient(ellipse at 52% 43%, #c0dfd4 10%, transparent 52%),
+    radial-gradient(ellipse at 75% 59%, #b7c5de 5%, transparent 45%);
+  filter: blur(2px);
+}
+
+.lab-nav-cloud + .lab-nav-cloud {
+  inset-inline-start: 30%;
+  width: 50%;
+  --phase: -3s;
+  --drift: 7px;
+}
+
+.lab-nav-bubble {
+  inset-block-end: var(--bottom, 16%);
+  inset-inline-start: var(--left, 17%);
+  width: var(--size, 12px);
+  aspect-ratio: 1;
+  border: 1px solid rgb(90 123 126 / .4);
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse 32% 16% at 34% 24%, white, rgb(255 255 255 / .65) 42%, transparent 100%),
+    radial-gradient(circle closest-side, transparent 52%, rgb(255 255 255 / .26) 79%, rgb(255 255 255 / .8)),
+    radial-gradient(ellipse 58% 37% at 66% 93%, rgb(163 184 217 / .6), transparent);
+}
+
+.lab-nav-bubble:nth-of-type(4) { --left: 39%; --size: 8px; --phase: -2.1s; --drift: -7px; }
+.lab-nav-bubble:nth-of-type(5) { --left: 57%; --size: 15px; --phase: -.6s; --drift: 9px; --period: 5.2s; }
+.lab-nav-bubble:nth-of-type(6) { --left: 72%; --size: 9px; --bottom: 30%; --phase: -3.4s; --drift: 5px; }
+.lab-nav-bubble:nth-of-type(7) { --left: 29%; --size: 5px; --bottom: 27%; --phase: -2.8s; --drift: -9px; --period: 3.8s; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .lab-nav-atmosphere {
+    transition: opacity 320ms ease-out;
+  }
+
+  .lab-nav-cloud {
+    animation: lab-cloud-curl 6s ease-in-out var(--phase, -.7s) infinite var(--lab-motion, paused);
+  }
+
+  .lab-nav-bubble {
+    animation: lab-bubble-float var(--period, 4.6s) linear var(--phase, -1.3s) infinite var(--lab-motion, paused);
+  }
+
+  .lab-nav-link:is(.active, :focus-visible) .lab-nav-atmosphere {
+    --lab-motion: running;
+    opacity: 1;
+    transition: opacity 720ms ease-in-out;
+  }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .lab-nav-link:hover .lab-nav-atmosphere {
+    --lab-motion: running;
+    opacity: 1;
+    transition: opacity 720ms ease-in-out;
+  }
+}
+
+@media (max-width: 720px) and (prefers-reduced-motion: no-preference) {
+  .mobile-navigation-panel[data-open="false"] .lab-nav-atmosphere { display: none; }
+
+  .mobile-navigation-panel[data-open="true"] .lab-nav-atmosphere {
+    --lab-motion: running;
+    opacity: 1;
+    animation: lab-menu-fade-in 720ms ease-in-out;
+  }
+}
+
+@keyframes lab-bubble-float {
+  0% { opacity: 0; transform: translate(0, 4px) scale(.65); }
+  22% { opacity: .92; }
+  46% { transform: translate(1px, -10px) scale(.9); }
+  75% { opacity: .83; }
+  100% { opacity: 0; transform: translate(var(--drift, -5px), -27px) scale(1.14); }
+}
+
+@keyframes lab-cloud-curl {
+  0% { opacity: 0; transform: translate(-6px, 3px) scale(.8) rotate(-9deg); }
+  34%, 62% { opacity: .7; }
+  100% { opacity: 0; transform: translate(var(--drift, 5px), -15px) scale(1.24) rotate(12deg); }
+}
+
+@keyframes lab-menu-fade-in {
+  from { opacity: 0; }
+}

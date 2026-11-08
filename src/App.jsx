@@ -1,6 +1,7 @@
 import { Link, NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import MaterialIcon from './components/MaterialIcon';
+import LabNavLink from './components/LabNavLink';
 import MediaViewer from './components/MediaViewer';
 import { hydrateThemeFromStorage } from './utils/themePalette';
 import HomePage from './pages/HomePage';
@@ -13,6 +14,30 @@ import OtherThingsDetailPage from './pages/OtherThingsDetailPage';
 import LoginPage from './pages/LoginPage';
 import SandboxPage from './pages/SandboxPage';
 import { defaults, readTokens, tokenStyles, loadGoogleFont } from './design/tokens';
+import useLabSwitch from './components/useLabSwitch';
+import './lab-theme.css';
+
+const labColors = {
+  bg: 'var(--lab-canvas)',
+  ink: '#edf4f1',
+  muted: '#aebfba',
+  accent: '#9ce4ca',
+  'accent-hover': '#b9f5e0',
+  'action-tint': '#203834',
+  line: '#354945',
+  'image-border': '#465c56'
+};
+
+const labSwitchColors = {
+  bg: 'var(--lab-switch-canvas)',
+  ink: '#101815',
+  muted: '#18221e',
+  accent: '#102b22',
+  'accent-hover': '#102b22',
+  'action-tint': '#a8b1ac',
+  line: '#56605c',
+  'image-border': '#46514c'
+};
 
 function ScrollToTopOnRouteChange() {
   const { pathname } = useLocation();
@@ -26,6 +51,8 @@ function ScrollToTopOnRouteChange() {
 
 export default function App() {
   const location = useLocation();
+  const isLab = location.pathname === '/other-things' || location.pathname.startsWith('/other-things/');
+  const labSwitchPressed = useLabSwitch(isLab);
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileNavigation, setMobileNavigation] = useState(false);
   useEffect(() => {
@@ -66,8 +93,10 @@ export default function App() {
     hydrateThemeFromStorage();
   }, []);
 
+  const themeColors = labSwitchPressed ? labSwitchColors : isLab ? labColors : {};
+
   return (
-    <div data-layout-guides={layoutGuides} style={tokenStyles(designTokens)} className={`app-shell${(location.pathname === '/' || location.pathname.startsWith('/projects') || location.pathname.startsWith('/other-things') || ['/about', '/resume', '/design-system', '/sandbox'].includes(location.pathname)) ? ' portfolio-shell' : ''}`}>
+    <div data-layout-guides={layoutGuides} data-theme={isLab ? 'lab' : undefined} data-lab-switch={labSwitchPressed ? 'pressed' : undefined} style={tokenStyles({ ...designTokens, ...themeColors })} className={`app-shell${(location.pathname === '/' || location.pathname.startsWith('/projects') || isLab || ['/about', '/resume', '/design-system', '/sandbox'].includes(location.pathname)) ? ' portfolio-shell' : ''}`}>
       <ScrollToTopOnRouteChange />
       <a className="skip-link" href="#main-content">
         Skip to main content
@@ -89,9 +118,7 @@ export default function App() {
           <NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : undefined)}>
             About
           </NavLink>
-          <NavLink to="/other-things" className={({ isActive }) => (isActive ? 'active' : undefined)}>
-            Lab
-          </NavLink>
+          <LabNavLink />
           <a className="header-resume-link" href={`${import.meta.env.BASE_URL}resume.pdf`}>
             <MaterialIcon name="description" />
             Resume

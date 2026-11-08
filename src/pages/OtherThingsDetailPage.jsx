@@ -4,10 +4,14 @@ import projects from '../content/projects.json';
 import { labItems } from '../content/labItems';
 import { formatMonthLabel } from '../utils/formatDate';
 import MaterialIcon from '../components/MaterialIcon';
+import labs from '../content/labs.json';
+import LabEntryPage from './LabEntryPage';
 import PhotoPaletteToolPage from './PhotoPaletteToolPage';
 
 export default function OtherThingsDetailPage() {
   const { slug } = useParams();
+  const entry = labs.find(item => item.slug === slug);
+  if (entry) return <LabEntryPage entry={entry} />;
   const album = albums.find(entry => entry.slug === slug) || (slug === 'design-docs' ? projects.find(entry => entry.slug === slug) : null);
   const item = labItems.find(entry => entry.slug === slug);
   if (!album) return <section className="portfolio-page"><h2>Artifact not found</h2><Link className="portfolio-text-link" to="/other-things">Back to Lab</Link></section>;

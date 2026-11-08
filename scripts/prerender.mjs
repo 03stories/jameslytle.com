@@ -47,6 +47,7 @@ function routeToOutputPath(route) {
 async function buildRouteList() {
   const projects = await loadJson('src/content/projects.json');
   const albums = await loadJson('src/content/other-things.json');
+  const labs = await loadJson('src/content/labs.json');
 
   const routes = new Set([
     '/',
@@ -68,6 +69,7 @@ async function buildRouteList() {
     routes.add(`/other-things/${album.slug}`);
   }
 
+  for (const entry of labs) routes.add(`/other-things/${entry.slug}`);
   return [...routes];
 }
 
@@ -83,6 +85,13 @@ async function main() {
     await mkdir(path.dirname(outputPath), { recursive: true });
     await writeFile(outputPath, html);
   }
+
+  const labs = await loadJson('src/content/labs.json');
+  const origin = process.env.SITE_ORIGIN || 'https://03stories.github.io';
+  const absolute = route => new URL(withBase(route), origin).href;
+  const xml = value => String(value).replace(/[<>&"']/g, character => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;', "'": '&apos;' }[character]));
+  const items = labs.map(entry => `<item><title>${xml(entry.title)}</title><link>${xml(absolute(`/other-things/${entry.slug}`))}</link><guid>${xml(absolute(`/other-things/${entry.slug}`))}</guid><description>${xml(entry.summary)}</description>${entry.date ? `<pubDate>${new Date(entry.date).toUTCString()}</pubDate>` : ''}</item>`).join('');
+  await writeFile(path.join(DIST_DIR, 'lab.xml'), `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>James Lytle — Lab</title><link>${xml(absolute('/other-things'))}</link><description>Things I’m making, trying, and figuring out.</description>${items}</channel></rss>`);
 
   await rm(DIST_SERVER_DIR, { recursive: true, force: true });
   console.log(`Prerendered ${routes.length} routes.`);

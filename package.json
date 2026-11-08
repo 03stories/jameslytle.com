@@ -16,7 +16,8 @@
     "prerender": "node scripts/prerender.mjs",
     "build": "npm run build:content && npm run build:client && npm run build:ssr && npm run prerender",
     "a11y:check": "npm run build && node scripts/a11y-audit.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lab:new": "node scripts/new-lab.mjs"
   },
   "dependencies": {
     "js-sha256": "^1.0.0",

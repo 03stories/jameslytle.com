@@ -5,6 +5,10 @@ dist
 src/content/projects.json
 src/content/other-things.json
 src/content/site.json
+src/content/labs.json
+.lab-inbox/
 
 # Local resume gate password (never commit)
 .resume-password.local
+
+public/content/labs/

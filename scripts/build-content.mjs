@@ -42,10 +42,12 @@ async function markdownToHtml(markdown) {
 
 function rewriteAssetUrls(htmlText, publicBasePath) {
   return htmlText
+    .replace(/src="\/(?!\/)/g, `src="${SITE_BASE_PATH}`)
     .replace(/src="\.\//g, `src="${publicBasePath}/`)
+    .replace(/poster="\/(?!\/)/g, `poster="${SITE_BASE_PATH}`)
     .replace(/poster="\.\//g, `poster="${publicBasePath}/`)
-    .replace(/href="\.\//g, `href="${publicBasePath}/`)
-    .replace(/href="\/(?!\/)/g, `href="${SITE_BASE_PATH}`);
+    .replace(/href="\/(?!\/)/g, `href="${SITE_BASE_PATH}`)
+    .replace(/href="\.\//g, `href="${publicBasePath}/`);
 }
 
 function rewriteMetadataAssetPaths(value, publicBasePath) {
@@ -80,11 +82,11 @@ function rewriteMetadataAssetPaths(value, publicBasePath) {
   return value;
 }
 
-function sortByDateDesc(items) {
+function sortByDateDesc(items, undatedTime = 0) {
   return [...items].sort((a, b) => {
-    const aTime = a.date ? new Date(a.date).getTime() : 0;
-    const bTime = b.date ? new Date(b.date).getTime() : 0;
-    return bTime - aTime;
+    const aTime = a.date ? new Date(a.date).getTime() : undatedTime;
+    const bTime = b.date ? new Date(b.date).getTime() : undatedTime;
+    return aTime === bTime ? 0 : bTime - aTime;
   });
 }
 
@@ -112,6 +114,8 @@ async function copyFolderAssets(sourceDir, destinationDir) {
 
 async function readCollection(collectionName) {
   const matches = await fg(`content/${collectionName}/*/index.md`, { cwd: ROOT });
+  const isLab = collectionName === 'labs';
+  if (isLab) matches.sort(); // Preserve slug order when dates tie.
   const entries = [];
 
   for (const match of matches) {
@@ -120,6 +124,11 @@ async function readCollection(collectionName) {
     const sourceDir = path.dirname(filePath);
     const raw = await readFile(filePath, 'utf8');
     const parsed = matter(raw);
+    if (isLab) {
+      if (parsed.data.draft === true) continue;
+      if (!parsed.data.title || !parsed.data.summary) throw new Error(`${match}: title and summary are required`);
+      if (parsed.data.date && Number.isNaN(new Date(parsed.data.date).getTime())) throw new Error(`${match}: invalid date`);
+    }
     const renderedHtml = await markdownToHtml(parsed.content || '');
     const publicBasePath = withBase(`/content/${collectionName}/${slug}`);
     const htmlWithAssetPaths = rewriteAssetUrls(renderedHtml, publicBasePath);
@@ -134,7 +143,7 @@ async function readCollection(collectionName) {
     await copyFolderAssets(sourceDir, publicTarget);
   }
 
-  return sortByDateDesc(entries);
+  return sortByDateDesc(entries, isLab ? -Infinity : 0);
 }
 
 async function readSitePages() {
@@ -197,6 +206,8 @@ async function main() {
     otherThings = [];
   }
 
+  const labs = await readCollection('labs');
+  await writeFile(path.join(ROOT, 'src/content/labs.json'), JSON.stringify(labs, null, 2));
   site = await readSitePages();
 
   await writeFile(OUTPUT_PROJECTS, JSON.stringify(projects, null, 2));

@@ -1,0 +1,47 @@
+:root {
+  --lab-canvas: #111918;
+  --lab-switch-canvas: #858988;
+}
+
+body:has(.portfolio-shell) {
+  transition: none;
+}
+
+body:has(.app-shell[data-theme="lab"]) {
+  background: var(--lab-canvas);
+}
+
+body:has(.app-shell[data-lab-switch="pressed"]) {
+  background: var(--lab-switch-canvas);
+}
+
+.app-shell[data-lab-switch="pressed"] .site-main :is(img, video) {
+  filter: brightness(.62);
+}
+
+.app-shell[data-theme="lab"] {
+  isolation: isolate;
+  color-scheme: dark;
+  --color-text: var(--portfolio-ink);
+  --color-muted: var(--portfolio-muted);
+  --color-border: var(--portfolio-line);
+  --color-link: var(--portfolio-accent);
+  --color-focus: var(--portfolio-accent);
+  --color-skip-bg: var(--portfolio-ink);
+  --color-skip-text: var(--portfolio-bg);
+}
+
+.app-shell[data-theme="lab"]:not([data-lab-switch="pressed"])::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle, rgb(174 191 186 / 15%) .7px, transparent 1px) 0 0 / 22px 22px,
+    radial-gradient(ellipse at 50% 0%, #1d2b28, transparent 72%);
+}
+
+.portfolio-shell .site-header .header-resume-link {
+  transition-property: background-color;
+}

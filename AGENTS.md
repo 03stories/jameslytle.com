@@ -28,3 +28,7 @@
 1. Pushes to `main` deploy GitHub Pages from `dist/`.
 2. Pull requests automatically publish a preview under `gh-pages/pr-preview/pr-<PR#>/`.
 3. Keep PRs focused and passing so preview and production deploys stay stable.
+
+## Lab publishing
+
+Read `docs/labs-publishing.md` when drafting or publishing an exploration. Author posts under `content/labs/<slug>/index.md`; attach selected artifacts alongside them. Turn supplied notes or transcripts into a short factual post in James's voice. Do not invent outcomes, transcribe inaccessible recordings, or publish private recordings/raw notes without explicit instruction. Drafts are excluded from deployments, but committed drafts are visible in this public repository. Set `draft: false` on a publishing PR to enable its public preview; do not merge without authorization.
