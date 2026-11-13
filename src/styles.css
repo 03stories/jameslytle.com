@@ -971,7 +971,7 @@ html { scroll-padding-top: 100px; }
 .lab-archive-list li { border-top: 1px solid var(--portfolio-line); }
 .lab-archive-list .lab-entry-link { padding-block: 1rem; }
 .lab-archive-list .lab-entry-link:has(> .lab-entry-thumbnail) { grid-template-columns: clamp(4.5rem, 24vw, 10rem) minmax(0, 1fr); align-items: start; }
-.lab-attachment { margin: 0 0 2.5rem; }
+.case-study-prose > .lab-attachment { margin: 0 0 clamp(2rem, 4vw, 3rem); }
 .lab-attachment :is(img, video, iframe) { display: block; width: 100%; max-width: 100%; border: 1px solid var(--portfolio-image-border); border-radius: var(--portfolio-image-radius); }
 .lab-attachment :is(img, video) { height: auto; }
 .lab-attachment iframe { height: 560px; background: white; }
