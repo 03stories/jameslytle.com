@@ -589,10 +589,10 @@ After the design is done, comes the best part. Now, it is used as the primary de
     <source src="/jameslytle.com/pr-preview/pr-11/content/labs/snark/snark-demo.mp4" type="video/mp4">
     <a href="/jameslytle.com/pr-preview/pr-11/content/labs/snark/snark-demo.mp4">Watch the Snark product demo</a>
   </video>
-  <figcaption>A short, silent tour captured in Chrome using the Snark development profile and demo pins. Switch spaces, keep saved pages close, and search across them. <a href="/jameslytle.com/pr-preview/pr-11/content/labs/snark/snark-demo.mp4">Open the video</a>.</figcaption>
+  <figcaption>A short tour captured in Chrome using the Snark development profile and demo pins. Switch spaces, keep saved pages close, and search across them. </figcaption>
 </figure>
-<p>I wanted the parts of Arc I kept reaching for—spaces, pinned tabs, and folders—inside Chrome. So I built Snark: a side panel that gives those tabs a home, in the browser I already use.</p>
-<p><a href="https://chromewebstore.google.com/detail/snark/bffjpilpobpmcgfnbneibbomaecbmjoi" target="_blank" rel="noopener noreferrer">Get Snark on the Chrome Web Store</a> · <a href="https://github.com/03stories/snark" target="_blank" rel="noopener noreferrer">Explore the source on GitHub</a></p>
+<p>I only wanted the parts of Arc I actually cared about, the simple things it got right and reason I would eager most people stayed: space, its synthesis of tabs into bookmarks, and other minor niceties. They could take Arc out of our cold dead heands, but can't we still keep those things without committing to an AI-browser?</p>
+<p><a href="https://chromewebstore.google.com/detail/snark/bffjpilpobpmcgfnbneibbomaecbmjoi" target="_blank" rel="noopener noreferrer">Get Snark on the Chrome Web Store</a> · <a href="https://github.com/03stories/snark" target="_blank" rel="noopener noreferrer">Fork it on GitHub</a></p>
 <h2>A place for the tabs I mean to keep</h2>
 <p>Each space is a real Chrome tab group, with its own icon and gradient. I can switch between work, home, and reading; nest folders inside them; and separate saved pages from today's open tabs. Pins remember their original URL even when I browse away. Close the tab, and the pin stays there for next time.</p>
 <p><img src="/jameslytle.com/pr-preview/pr-11/content/labs/snark/pinned-tabs.png" alt="Snark store image showing a saved launch-plan pin, navigating away from it, and returning to its original page"></p>
