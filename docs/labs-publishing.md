@@ -21,7 +21,9 @@ npm run lab:new -- color-study "A color study"
 npm run lab:new -- color-study "A color study" .lab-inbox/transcript.txt
 ```
 
-The command creates a draft without overwriting an existing post. It imports notes verbatim; use the instruction above to edit them into a post. To see a new entry in local development, run `npm run build:content` after editing it, then refresh `npm run dev`.
+The command creates a draft without overwriting an existing post. It imports notes verbatim; use the instruction above to edit them into a post. Run `npm run dev` for local editing: it builds content at startup, watches `content/` for changes (including attachments), and reloads the browser after rebuilding. New published entries, edits, and deletions appear automatically. Draft entries remain excluded.
+
+`npm run preview` serves the last production build and does not watch for changes. Run `npm run build` again to update that production preview.
 
 ## Post format
 

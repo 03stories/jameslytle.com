@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { readFileSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { contentWatcher } from './scripts/vite-content-plugin.mjs';
 
 function normalizeBasePath(value) {
   if (!value) return '/';
@@ -17,6 +18,6 @@ export default defineConfig(() => {
   return ({
   define: { __RESUME_PASSWORD_HASH__: JSON.stringify(password ? createHash('sha256').update(password).digest('hex') : '') },
   base: normalizeBasePath(process.env.VITE_BASE_PATH || '/'),
-  plugins: [react()]
+  plugins: [contentWatcher(), react()]
   });
 });

@@ -10,9 +10,9 @@ Use Node.js 22, matching CI and `.nvmrc`. Install dependencies with `npm ci`, th
 
 ## Scripts
 
-- `npm run dev` - start local dev server (LAN accessible)
+- `npm run dev` - build content, start local dev server (LAN accessible), and rebuild/reload when content changes
 - `npm run build` - build content, client bundle, SSR bundle, and prerender routes
-- `npm run preview` - preview built site
+- `npm run preview` - preview the last production build (no watching; rebuild to update)
 - `npm run a11y:check` - run build plus basic accessibility audit
 
 ## Content
