@@ -14,12 +14,14 @@ cover: ./overview.png
     <source src="./snark-demo.mp4" type="video/mp4">
     <a href="./snark-demo.mp4">Watch the Snark product demo</a>
   </video>
-  <figcaption>A short, silent tour captured in Chrome using the Snark development profile and demo pins. Switch spaces, keep saved pages close, and search across them. <a href="./snark-demo.mp4">Open the video</a>.</figcaption>
+  <figcaption>A short tour captured in Chrome using the Snark development profile and demo pins. Switch spaces, keep saved pages close, and search across them. </figcaption>
 </figure>
 
-I wanted the parts of Arc I kept reaching for—spaces, pinned tabs, and folders—inside Chrome. So I built Snark: a side panel that gives those tabs a home, in the browser I already use.
 
-[Get Snark on the Chrome Web Store](https://chromewebstore.google.com/detail/snark/bffjpilpobpmcgfnbneibbomaecbmjoi) · [Explore the source on GitHub](https://github.com/03stories/snark)
+
+I only wanted the parts of Arc I actually cared about, the simple things it got right and reason I would eager most people stayed: space, its synthesis of tabs into bookmarks, and other minor niceties. They could take Arc out of our cold dead heands, but can't we still keep those things without committing to an AI-browser?
+
+[Get Snark on the Chrome Web Store](https://chromewebstore.google.com/detail/snark/bffjpilpobpmcgfnbneibbomaecbmjoi) · [Fork it on GitHub](https://github.com/03stories/snark)
 
 ## A place for the tabs I mean to keep
 
