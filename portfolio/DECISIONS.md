@@ -21,6 +21,8 @@
 
 ## Open decisions
 
+2026-11-13: James explicitly requested adding Snark to Lab, reopening the earlier four-item Lab limit for this shipped extension. Present it as a Lab artifact, with live-captured product video and supplied store imagery; retain the existing major case studies. PR preview is authorized; merging is not.
+
 | Decision | Evidence needed | Owner | Due/trigger |
 |---|---|---|---|
 

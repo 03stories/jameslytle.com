@@ -4,6 +4,7 @@ Scores are conservative and evidence-based. `?` marks missing evidence; ranges s
 
 | Project | Year | Employer/client | Live URL | Assets | Importance /3 | Ownership /3 | Decisions /3 | Outcome /3 | Craft /3 | Differentiation /3 | Technical /3 | Total /21 | Proposed level | Priority |
 |---|---:|---|---|---|---:|---:|---:|---:|---:|---:|---:|---|---|---|
+| Snark | 2026 | Personal | Chrome Web Store; public GitHub | Live-captured demo, store screenshots, supplied workflow summary | 1 | 3 | 2 | 1 | 2 | 2 | 2 | 13 | Lab artifact; review pending | Requested addition |
 | Forward / Insights Recap | Current | Juice Analytics | `insightsrecap.com` | One reused Home image observed | 3 | 3 | 2 | 2 | ? | 3 | 3 | 16–19 | Full case study | Must Ship |
 | Juicebox | 2020–current | Juice Analytics | Juicebox product page | Reviewed product videos, report gallery, and live examples | 3 | 3 | 3 | 2 | 2 | 2 | 2 | 17 | Full case study; Presentable — approved ready 2026-11-06 | Must Ship |
 | Finestra Art App | 2012–2015 | Personal/co-founded | Closed | Extensive product/process assets | 2 | 3 | 3 | 2 | 2 | 3 | 2 | 17 | Historical reflection; Draft-ready | Must Ship supporting |
