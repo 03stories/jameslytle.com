@@ -1,6 +1,6 @@
 # Portfolio Status
 
-Last updated: 2026-11-06
+Last updated: 2026-11-13
 
 ## V1 goal
 
@@ -45,6 +45,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 - None prevent narrative drafting; documented asset and verification gaps remain bounded.
 
 ## Last session
+
+- Added Snark as a new Lab artifact at James's request, with an opening live-capture marketing clip, two store stills, and a factual account of the motivation, AI-assisted design/development loop, agent folder, and store launch. See `projects/snark.md` for evidence and ownership boundaries. Next action for this addition: review the post and video before authorizing merge. Existing case-study priorities remain unchanged.
 
 - Replaced Home’s historical Juicebox image with the same 65-second sample report video used on the project page. Reuses the viewport playback helper, muted looping playback, native controls, poster, and responsive proportions. Verified offscreen pause and mobile sizing; resolved G-027.
 
