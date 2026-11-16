@@ -116,8 +116,17 @@ Error generating stack: `+i.message+`
 <p>Other recurring fixes became conventions for selecting appropriate photography and verifying that every icon actually exists in the Font Awesome kit installed in the product. These are small details individually; together, they move quality from repeated cleanup into the system.</p>
 <h1>What changed</h1>
 <p>The skill replaced a multi-day, single-author pull-request and deployment path with rapid, team-wide narrative creation. More than 100 narratives have now been created through the Dispatch MCP by a handful of teammates, mostly sales demonstrations and design prototypes built directly in Claude.</p>
-<!-- TODO: replace with devnav recording browsing MCP-created narratives (20–30s) -->
-<p><img src="/jameslytle.com/pr-preview/pr-13/content/projects/forward-narrative-skill/skill-devnav-mcp-narratives-video-placeholder.svg" alt="Placeholder: browsing narratives created through the MCP in the review tool"></p>
+<figure class="slice-film">
+  <video controls="" muted="" playsinline="" data-play-in-view="" preload="none" width="1920" height="1500" poster="/jameslytle.com/pr-preview/pr-13/content/projects/forward-narrative-skill/skill-team-narratives-poster.jpg" aria-label="Browsing narratives across team workspaces" aria-describedby="skill-team-narratives-caption">
+    <source src="/jameslytle.com/pr-preview/pr-13/content/projects/forward-narrative-skill/skill-team-narratives.mp4" type="video/mp4">
+    <a href="/jameslytle.com/pr-preview/pr-13/content/projects/forward-narrative-skill/skill-team-narratives.mp4">Download the team narrative gallery recording</a>.
+  </video>
+  <figcaption id="skill-team-narratives-caption" class="portfolio-figure-label">What the team made · 23 sec · Silent recording at normal speed. Workspace names and list details obscured.</figcaption>
+  <details class="slice-film-description">
+    <summary>Read the video description</summary>
+    <p>In Forward’s review tool, switching between team workspaces changes the list of available narratives. Selecting entries opens phone previews with distinct visual treatments: a lighting-company product story, an economic outlook with a section menu, healthcare and banking examples with highlighted figures and a quiz, and a hospitality benchmark narrative. Workspace names and narrative-list details are obscured. The sequence shows a range of created examples; it is not a count of all narratives or a measure of customer outcomes.</p>
+  </details>
+</figure>
 <p>Narrative creation and iteration are now the fastest part of the workflow. The constraint has shifted to the more valuable work: understanding the prospect relationship, deciding what matters to that audience, and shaping the right story.</p>
 <h1>What I learned</h1>
 <p>Scaling creative judgment takes more than distributing a prompt. The real product is the improvement loop around it: observe use, preserve specific evidence, identify durable patterns, choose the system layer that should own each fix, and remove instructions when better defaults can carry the behavior.</p>
