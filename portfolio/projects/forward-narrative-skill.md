@@ -1,12 +1,12 @@
 # Project: Forward Narrative Claude Skill
 
-Last updated: 2026-09-05
+Last updated: 2026-11-16
 
 ## Classification
 
 - Proposed level: Full case study
 - Priority: Must Ship
-- Readiness: Draft-ready
+- Readiness: Presentable — finished and approved by James, 2026-11-16; publication pending
 - Live URL: Private team deployment
 - Repository/prototype: Authored in `jb-forward/.claude/skills/forward-narrative/` and deployed through `juice-skills/skills/forward-narrative/`
 - Public draft: `content/projects/forward-narrative-skill/index.md`
@@ -96,6 +96,23 @@ This is an organizational outcome rather than a precise time-savings metric, so 
 
 The deeper product lesson is that scaling creative judgment requires more than distributing a prompt. The skill became a maintained system: observe real use, preserve specific evidence, curate repeatable patterns, decide which system layer should own each fix, and simplify guidance when better product defaults can carry the behavior.
 
+## Process video edit — 2026-11-16
+
+- Source: James’s supplied silent screen recording, 7 min 49 sec. The session explicitly chooses a fictional lighting-company demo; invented product and customer figures are demo content, not project outcomes.
+- Creation film: `skill-create-narrative.mp4`, about 45 seconds. Shows brief, skill loading, guided discovery, schema and photography work, validation/creation, and the live four-collection result.
+- Revision film: `skill-revise-narrative.mp4`, about 33 seconds. Shows a request to expand four collections to nine, abbreviated construction/validation, confirmation of the same shareable link, and newly added product sections. It does not expose the edit payload or independently prove targeted patch semantics.
+- Editing: selected excerpts, labeled playback speeds, brief fades, tighter framing, and exclusion of browser address bars. Long thinking/tool waits and window rearrangement are omitted. These films are edited demonstrations, not elapsed-time benchmarks.
+- Integrated beside the bottleneck section and Decision 3 with posters and text descriptions. Raw source and intermediates remain local and outside the repository.
+- The separate adoption/review-tool browsing placeholder was subsequently replaced by James’s supplied devnav recording (see below). The creation/revision session alone does not demonstrate team-wide adoption.
+
+## Team gallery video — 2026-11-16
+
+- Source: James’s supplied 28-second devnav recording, explicitly intended for “What the team made.”
+- Export: `skill-team-narratives.mp4`, 23 seconds at normal speed, with brief endpoint fades and a poster. Kept a continuous sequence of switching workspaces and selecting narratives; trimmed the repeated ending.
+- Visible evidence: changing narrative lists and phone previews spanning lighting products, economic outlook, healthcare, banking, and hospitality. This supports breadth of created examples, not independent verification of the existing 100-plus count or downstream outcomes.
+- Obscured workspace names, expanded workspace menus, and narrative-list details; retained rendered examples and selection/status structure. Raw source and intermediate artifacts remain local.
+- Replaced the public placeholder with native controls, viewport playback, and an accessible text description. Final editorial approval remains.
+
 ## Asset inventory
 
 | Asset | What it proves | Location | Ready? |
@@ -113,9 +130,12 @@ The deeper product lesson is that scaling creative judgment requires more than d
 
 ## Remaining gaps
 
-1. The number or roles of weekly users, if safely shareable; useful but not required for V1.
-2. A synthetic skill-session sequence could strengthen the case later; the current workflow and output visuals are sufficient for V1.
+No required content or evidence gaps remain after the 2026-11-16 completed-case review. Exact weekly user counts, teammate feedback, and a payload-level targeted-patch demonstration are optional future evidence. The gallery supports breadth, not an independent count of the existing 100-plus claim.
+
+## Completion review
+
+See `../reviews/forward-narrative-skill.md`. The public case covers context, problem, role boundaries, four decisions, working results, adoption, and reflection. Three recordings and three explanatory visuals provide sufficient V1 evidence. The revision caption now describes the demonstrated four-to-nine collection change rather than implying that the film independently verifies targeted patch semantics.
 
 ## Single next action
 
-Align Home to Forward, Juicebox, and the Forward Narrative Claude Skill; frame Finestra as a historical reflection.
+Preserve the approved case study through V1 publication; merge authorization remains required.
