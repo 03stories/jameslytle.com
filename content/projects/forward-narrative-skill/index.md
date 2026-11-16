@@ -15,9 +15,9 @@ draft: false
 
 Forward narratives combine data accuracy, story structure, visual pacing, and a growing interaction system. Initially, that expertise—and the ability to publish a narrative—was concentrated in my local workflow.
 
-I designed, built, deployed, and continue to maintain a Claude Skill that makes the narrative system usable across our team. It guides the creative work, connects through MCP to our hosted narrative platform, and turns a finished narrative into a shareable experience without a code deployment.
+I designed, built, deployed, and continue to maintain a Claude Skill that makes the narrative system usable across our team. It guides the creative work, connects through MCP to Dispatch—the hosted platform behind [Forward](/projects/forward)—and turns a finished narrative into a shareable experience without a code deployment.
 
-Our CTO leads the hosted platform, Dispatch. I collaborated closely with him on its MCP interface and the boundary between the platform and my skill. Other teammates now use the skill weekly for sales demonstrations and design prototypes.
+Our CTO leads Dispatch. I collaborated closely with him on its MCP interface and the boundary between the platform and my skill. Other teammates now use the skill weekly for sales demonstrations and design prototypes.
 
 ![Before the skill, one specialist moved every narrative through code review and deployment. Afterward, the team could create and share narratives through Claude and Dispatch.](./workflow-before-after.svg)
 
@@ -29,6 +29,9 @@ This constrained sales conversations. Prospects reacted most strongly when they 
 
 The goal was not simply to let everyone prompt an AI model. It was to make our accumulated narrative-design judgment available to the team while preserving the product’s technical rules, permissions, and quality standards.
 
+<!-- TODO: replace with screen recording of a Claude session creating a narrative (30–45s) -->
+![Placeholder: a Claude session creating, sharing, and revising a Forward narrative](./skill-claude-session-video-placeholder.svg)
+
 # Decision 1: Separate creative judgment from platform authority
 
 The skill and Dispatch have deliberately different responsibilities.
@@ -37,11 +40,11 @@ The skill owns discovery, story structure, writing and visual conventions, stabl
 
 That division matters. The AI can help create and refine the experience, but it cannot bypass the hosted system’s rules. The skill aims to make a narrative good; the MCP guarantees that what gets saved is valid and authorized.
 
-# Decision 2: Make the expertise portable
+# Decision 2: Ship the expertise like a product
 
-The skill works in two contexts. Inside the Forward repository, it can use the full development and validation toolchain. As a deployed standalone skill, it carries the schema, examples, design references, and icon rules needed to work without repository access.
+The skill works wherever a teammate starts. Inside the Forward repository, it uses the full development and validation toolchain. As a standalone skill in Claude, it carries what it needs: the schema, 17 reference guides, worked examples, an icon allowlist, and six validation scripts. When the Dispatch MCP is connected, Claude saves the narrative and returns a shareable link rather than leaving a block of JSON in the conversation.
 
-When the Dispatch MCP is available, Claude persists the narrative and returns a shareable experience rather than leaving a block of JSON in a conversation. The same product language and quality rules travel with the skill, wherever a teammate starts.
+I release it like product software: dated versions, a changelog written for the people who use and deploy it, and CI that publishes each release. Changes that alter rendered output are marked as breaking, so teammates know to re-test before they upload.
 
 # Decision 3: Make iteration narrow and lower-risk
 
@@ -61,25 +64,22 @@ Specific observations stay tied to the narrative that revealed them. Recurring l
 
 The key decision is where each improvement belongs. Some changes need clearer skill guidance. Some need validation. Others reveal that the product default itself is wrong.
 
-For example, teammates repeatedly had to correct chart widths and colors. Instead of adding more instructions forever, we made charts responsive and improved their defaults. The skill could then become simpler while every future narrative improved.
+For example, teammates repeatedly had to correct chart widths and colors. Instead of adding more instructions forever, we made charts responsive and improved their defaults, shipped as a breaking release so deployers knew to re-test. The skill could then become simpler while every future narrative improved.
 
-# Encoding visual judgment as a reusable pattern
+Another recurring issue was that generated charts showed the data without communicating the insight. The product already supported richer styling, but AI-authored narratives did not consistently use it. I added a coordinated convention: a succinct headline names the finding, its emphasis color matches the referenced bar, and that bar gets a striped treatment. A bundled check flags striped bars that nothing in the text refers to.
 
-One recurring issue was that generated charts showed the data without clearly communicating the insight. The product already supported richer styling, but AI-authored narratives did not consistently use it.
-
-I added a coordinated visual convention: write a succinct headline around the intended insight, connect its emphasis color to the referenced bar, and give that bar a striped treatment. The reader can immediately see which comparison matters.
-
-![Synthetic narrative page demonstrating a concise colored headline connected to a striped highlight bar in the chart.](./bar-insight-pattern.svg)
+![Synthetic narrative page: a short headline names the finding, and the bar it refers to is striped so the comparison stands out.](./bar-insight-pattern.svg)
 
 Other recurring fixes became conventions for selecting appropriate photography and verifying that every icon actually exists in the Font Awesome kit installed in the product. These are small details individually; together, they move quality from repeated cleanup into the system.
 
 # What changed
 
-The skill replaced a multi-day, single-author pull-request and deployment path with rapid, team-wide narrative creation. Teammates use it weekly to build sales demonstrations and design prototypes directly through Claude.
+The skill replaced a multi-day, single-author pull-request and deployment path with rapid, team-wide narrative creation. More than 100 narratives have now been created through the Dispatch MCP by a handful of teammates, mostly sales demonstrations and design prototypes built directly in Claude.
+
+<!-- TODO: replace with devnav recording browsing MCP-created narratives (20–30s) -->
+![Placeholder: browsing narratives created through the MCP in the review tool](./skill-devnav-mcp-narratives-video-placeholder.svg)
 
 Narrative creation and iteration are now the fastest part of the workflow. The constraint has shifted to the more valuable work: understanding the prospect relationship, deciding what matters to that audience, and shaping the right story.
-
-That is an organizational outcome rather than a precise time-savings metric. The honest comparison is multi-day production before and rapid creation now—not an invented percentage.
 
 # What I learned
 

@@ -15,7 +15,7 @@ draft: false
 
 [Forward](https://www.insightsrecap.com/) is a multi-tenant platform that helps customer-success teams turn product data into personalized, mobile-first narratives for every customer—not only the accounts with a dedicated CSM and a custom deck.
 
-I originated the product inside Juice Analytics, took it from concept through MVP deployment, and pitched the first client proposal, which became a paid pilot and the first production campaign. I led product direction and built the frontend, a Claude skill for drafting and validating narratives, and the generation pipeline. Senior engineers built the backend services and owned frontend testing; I collaborated on the direction of each platform capability and often built its frontend counterpart. I also led go-to-market and business operations, including the full marketing website.
+I originated the product inside Juice Analytics, took it from concept through MVP deployment, and pitched the first client proposal, which became a paid pilot and the first production campaign. I led product direction and built the frontend, a [Claude skill](/projects/forward-narrative-skill) for drafting and validating narratives, and the generation pipeline. Senior engineers built the backend services and owned frontend testing; I collaborated on the direction of each platform capability and often built its frontend counterpart. I also led go-to-market and business operations, including the full marketing website.
 
 <figure class="slice-film">
   <video controls muted loop playsinline data-play-in-view preload="none" width="1920" height="1394" poster="./forward-marketing-site-poster.jpg" aria-label="The Forward marketing website" aria-describedby="forward-marketing-caption">
