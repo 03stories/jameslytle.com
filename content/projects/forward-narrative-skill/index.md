@@ -29,8 +29,17 @@ This constrained sales conversations. Prospects reacted most strongly when they 
 
 The goal was not simply to let everyone prompt an AI model. It was to make our accumulated narrative-design judgment available to the team while preserving the product’s technical rules, permissions, and quality standards.
 
-<!-- TODO: replace with screen recording of a Claude session creating a narrative (30–45s) -->
-![Placeholder: a Claude session creating, sharing, and revising a Forward narrative](./skill-claude-session-video-placeholder.svg)
+<figure class="slice-film">
+  <video controls muted playsinline data-play-in-view preload="none" width="1920" height="1380" poster="./skill-create-narrative-poster.jpg" aria-label="Creating a Forward narrative with Claude" aria-describedby="skill-create-narrative-caption">
+    <source src="./skill-create-narrative.mp4" type="video/mp4">
+    <a href="./skill-create-narrative.mp4">Download the narrative creation recording</a>.
+  </video>
+  <figcaption id="skill-create-narrative-caption" class="portfolio-figure-label">From brief to live narrative · 45 sec · Silent, edited recording. Fictional demo; accelerated passages are labeled.</figcaption>
+  <details class="slice-film-description">
+    <summary>Read the video description</summary>
+    <p>A brief asks Claude for a celebratory quarterly narrative for a fictional lighting company. Claude reads the Forward Narrative Skill, asks about the audience, quarter, and call to action, then works through the product schema, photography, validation, and creation. The finished story opens in a browser, showing the four-collection lineup. Long thinking and tool waits are shortened or removed; this is not a real-time speed benchmark.</p>
+  </details>
+</figure>
 
 # Decision 1: Separate creative judgment from platform authority
 
@@ -53,6 +62,18 @@ Early narratives were treated as complete files. That made a small revision unne
 I introduced stable identifiers for sections and groups and aligned the skill with targeted MCP actions. Claude can now update one group or section while leaving the rest untouched. The hosted platform revalidates the complete narrative before saving.
 
 This makes the editing model match the way people actually work: discuss one moment, change that moment, and preserve everything already approved.
+
+<figure class="slice-film">
+  <video controls muted playsinline data-play-in-view preload="none" width="1920" height="1380" poster="./skill-revise-narrative-poster.jpg" aria-label="Revising a Forward narrative through Claude" aria-describedby="skill-revise-narrative-caption">
+    <source src="./skill-revise-narrative.mp4" type="video/mp4">
+    <a href="./skill-revise-narrative.mp4">Download the narrative revision recording</a>.
+  </video>
+  <figcaption id="skill-revise-narrative-caption" class="portfolio-figure-label">Revise the story through conversation · 33 sec · Silent, edited recording. Fictional demo; accelerated passages are labeled.</figcaption>
+  <details class="slice-film-description">
+    <summary>Read the video description</summary>
+    <p>The original narrative has four product collections. James asks Claude to make it nine. After shortened excerpts of building and validation, Claude confirms that the same shareable link now contains nine collections and lists the changes. The browser shows new product sections including Nimbus Drop, Verdant, and Cascade Cluster. The recording demonstrates a conversational revision and the rendered result; it does not expose the underlying edit payload. Long waits and unrelated browsing are removed.</p>
+  </details>
+</figure>
 
 # Decision 4: Curate improvement instead of accumulating prompts
 

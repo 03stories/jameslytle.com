@@ -1,6 +1,6 @@
 # Project: Forward Narrative Claude Skill
 
-Last updated: 2026-09-05
+Last updated: 2026-11-16
 
 ## Classification
 
@@ -96,6 +96,15 @@ This is an organizational outcome rather than a precise time-savings metric, so 
 
 The deeper product lesson is that scaling creative judgment requires more than distributing a prompt. The skill became a maintained system: observe real use, preserve specific evidence, curate repeatable patterns, decide which system layer should own each fix, and simplify guidance when better product defaults can carry the behavior.
 
+## Process video edit — 2026-11-16
+
+- Source: James’s supplied silent screen recording, 7 min 49 sec. The session explicitly chooses a fictional lighting-company demo; invented product and customer figures are demo content, not project outcomes.
+- Creation film: `skill-create-narrative.mp4`, about 45 seconds. Shows brief, skill loading, guided discovery, schema and photography work, validation/creation, and the live four-collection result.
+- Revision film: `skill-revise-narrative.mp4`, about 33 seconds. Shows a request to expand four collections to nine, abbreviated construction/validation, confirmation of the same shareable link, and newly added product sections. It does not expose the edit payload or independently prove targeted patch semantics.
+- Editing: selected excerpts, labeled playback speeds, brief fades, tighter framing, and exclusion of browser address bars. Long thinking/tool waits and window rearrangement are omitted. These films are edited demonstrations, not elapsed-time benchmarks.
+- Integrated beside the bottleneck section and Decision 3 with posters and text descriptions. Raw source and intermediates remain local and outside the repository.
+- The separate adoption/review-tool browsing placeholder remains; this single session does not demonstrate the existing team-wide usage claim.
+
 ## Asset inventory
 
 | Asset | What it proves | Location | Ready? |
@@ -114,8 +123,9 @@ The deeper product lesson is that scaling creative judgment requires more than d
 ## Remaining gaps
 
 1. The number or roles of weekly users, if safely shareable; useful but not required for V1.
-2. A synthetic skill-session sequence could strengthen the case later; the current workflow and output visuals are sufficient for V1.
+2. Review the two supplied-session edits for final visual approval.
+3. Supply a separate recording browsing MCP-created narratives if retaining the adoption-video slot; the current recording covers creation and revision only.
 
 ## Single next action
 
-Align Home to Forward, Juicebox, and the Forward Narrative Claude Skill; frame Finestra as a historical reflection.
+Review the 45-second creation film and 33-second revision film in the local case study.
