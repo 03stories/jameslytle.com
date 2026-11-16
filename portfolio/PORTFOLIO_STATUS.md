@@ -12,11 +12,11 @@ Drafting
 
 ## Current focus
 
-Review the new Forward Narrative Skill process films. Recent Forward commits now include platform framing, a generation-system diagram, and product/marketing/QA recordings. Juicebox and Resume retain James’s approval; Forward and the Narrative Skill remain Draft-ready.
+Review the completed Forward Narrative Skill video set. Recent Forward commits now include platform framing, a generation-system diagram, and product/marketing/QA recordings. Juicebox and Resume retain James’s approval; Forward and the Narrative Skill remain Draft-ready.
 
 ## Single recommended next action
 
-Review the 45-second creation film and 33-second revision film in `/projects/forward-narrative-skill`.
+Review the 23-second “What the team made” film in `/projects/forward-narrative-skill`.
 
 ## This week's three outcomes
 
@@ -31,7 +31,7 @@ Review the 45-second creation film and 33-second revision film in `/projects/for
 | Home | Presentable | Visual direction approved; Juicebox preview replaced with approved sample video (G-027 resolved) | Preserve approved appearance during shared-pattern extraction |
 | Forward | Draft-ready | The public route now includes a generation-system diagram and three product/process films; final content and visual approval remains | Review the updated platform story, generation diagram, and product/process recordings |
 | Juicebox | Presentable | None — James approved the project as ready on 2026-11-06 | Merge project-updates via PR #7 when ready to publish |
-| Forward Narrative Claude Skill | Draft-ready | Public case draft, three synthetic visuals, and two real process films using a fictional demo are implemented; the team-adoption browsing video remains a placeholder | Review the edited films; supply the separate team-adoption browsing recording if retaining that slot |
+| Forward Narrative Claude Skill | Draft-ready | Public case draft, three synthetic visuals, two creation/revision films, and the team-workspace browsing film are implemented; final editorial approval remains | Review the finished video set and case-study narrative |
 | Finestra historical reflection | Draft-ready | The case now names its period, role boundaries, and the buyer-research lesson; older copy still needs review for stale or unsupported claims | Review obsolete references and superlatives |
 | Lab | Draft-ready | Four selected artifacts are in V1; OpenIDEO's strongest participation fact still needs verification during copywriting | Present as a compact Lab index and four artifact pages |
 | Writing | Draft-ready | The three selected V1 pieces now appear on About | Keep the curated presentation consistent with the refreshed system |
@@ -45,6 +45,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 - None prevent narrative drafting; documented asset and verification gaps remain bounded.
 
 ## Last session
+
+- 2026-11-16: Replaced the “What the team made” placeholder using James’s supplied 28-second devnav recording. Kept a continuous 23-second sequence at normal speed, trimmed the repeated ending, and added brief opening/closing fades. Obscured workspace names, expanded workspace menus, and narrative-list details while preserving visible list structure, selection, and phone previews. The film shows workspace switching and varied product, economic, healthcare, banking, and hospitality examples; it does not independently establish the total narrative count or customer outcomes. Added a poster and text description. Raw footage and editing intermediates remain outside the repository.
 
 - 2026-11-16: Reviewed commits `8d6e286` and `37a3b7a` before editing James’s supplied 7:49 silent Claude recording. Produced a 45-second creation sequence and a 33-second revision sequence using the fictional lighting-brand demo. Cropped for legibility and to exclude internal browser addresses; labeled accelerated playback, cut long waits and window rearrangement, and added brief fades at time jumps. Replaced the Claude-session placeholder and added the revision film beside Decision 3, with posters, native controls, viewport playback, and text descriptions. The separate MCP-created-narratives browsing placeholder remains: this recording does not establish team-wide adoption. Original recording and intermediate edits remain outside the repository.
 

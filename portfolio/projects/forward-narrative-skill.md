@@ -103,7 +103,15 @@ The deeper product lesson is that scaling creative judgment requires more than d
 - Revision film: `skill-revise-narrative.mp4`, about 33 seconds. Shows a request to expand four collections to nine, abbreviated construction/validation, confirmation of the same shareable link, and newly added product sections. It does not expose the edit payload or independently prove targeted patch semantics.
 - Editing: selected excerpts, labeled playback speeds, brief fades, tighter framing, and exclusion of browser address bars. Long thinking/tool waits and window rearrangement are omitted. These films are edited demonstrations, not elapsed-time benchmarks.
 - Integrated beside the bottleneck section and Decision 3 with posters and text descriptions. Raw source and intermediates remain local and outside the repository.
-- The separate adoption/review-tool browsing placeholder remains; this single session does not demonstrate the existing team-wide usage claim.
+- The separate adoption/review-tool browsing placeholder was subsequently replaced by James’s supplied devnav recording (see below). The creation/revision session alone does not demonstrate team-wide adoption.
+
+## Team gallery video — 2026-11-16
+
+- Source: James’s supplied 28-second devnav recording, explicitly intended for “What the team made.”
+- Export: `skill-team-narratives.mp4`, 23 seconds at normal speed, with brief endpoint fades and a poster. Kept a continuous sequence of switching workspaces and selecting narratives; trimmed the repeated ending.
+- Visible evidence: changing narrative lists and phone previews spanning lighting products, economic outlook, healthcare, banking, and hospitality. This supports breadth of created examples, not independent verification of the existing 100-plus count or downstream outcomes.
+- Obscured workspace names, expanded workspace menus, and narrative-list details; retained rendered examples and selection/status structure. Raw source and intermediate artifacts remain local.
+- Replaced the public placeholder with native controls, viewport playback, and an accessible text description. Final editorial approval remains.
 
 ## Asset inventory
 
@@ -124,8 +132,8 @@ The deeper product lesson is that scaling creative judgment requires more than d
 
 1. The number or roles of weekly users, if safely shareable; useful but not required for V1.
 2. Review the two supplied-session edits for final visual approval.
-3. Supply a separate recording browsing MCP-created narratives if retaining the adoption-video slot; the current recording covers creation and revision only.
+3. Review the 23-second team gallery film; the separate adoption-video placeholder is now replaced.
 
 ## Single next action
 
-Review the 45-second creation film and 33-second revision film in the local case study.
+Review the 23-second “What the team made” film in the local case study.
