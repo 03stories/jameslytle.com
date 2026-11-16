@@ -6,7 +6,7 @@ Last updated: 2026-11-16
 
 - Proposed level: Full case study
 - Priority: Must Ship
-- Readiness: Presentable — editorial assessment, 2026-11-16; James’s final approval pending
+- Readiness: Presentable — finished and approved by James, 2026-11-16; publication pending
 - Live URL: Private team deployment
 - Repository/prototype: Authored in `jb-forward/.claude/skills/forward-narrative/` and deployed through `juice-skills/skills/forward-narrative/`
 - Public draft: `content/projects/forward-narrative-skill/index.md`
@@ -138,4 +138,4 @@ See `../reviews/forward-narrative-skill.md`. The public case covers context, pro
 
 ## Single next action
 
-James’s final editorial sign-off on the case study and its three recordings. Publication follows through the existing PR after merge authorization.
+Preserve the approved case study through V1 publication; merge authorization remains required.

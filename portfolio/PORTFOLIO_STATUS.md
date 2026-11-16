@@ -12,11 +12,11 @@ Drafting
 
 ## Current focus
 
-Forward Narrative Skill is Presentable after the completed-case review; James’s final editorial sign-off remains. Recent Forward commits now include platform framing, a generation-system diagram, and product/marketing/QA recordings. Juicebox and Resume retain James’s approval; Forward and the Narrative Skill remain Draft-ready.
+Narrative Skill is finished and approved by James on 2026-11-16. Forward meets the V1 case-study standard. Prepare the custom-domain cutover and release. Recent Forward commits now include platform framing, a generation-system diagram, and product/marketing/QA recordings. Juicebox and Resume retain James’s approval; Forward and the Narrative Skill remain Draft-ready.
 
 ## Single recommended next action
 
-Give final editorial sign-off on the Forward Narrative Skill case study and its three recordings.
+Prepare and review the custom-domain deployment configuration before changing live DNS.
 
 ## This week's three outcomes
 
@@ -29,9 +29,9 @@ Give final editorial sign-off on the Forward Narrative Skill case study and its 
 | Item | Level | Blocking issue | Next proof |
 |---|---|---|---|
 | Home | Presentable | Visual direction approved; Juicebox preview replaced with approved sample video (G-027 resolved) | Preserve approved appearance during shared-pattern extraction |
-| Forward | Draft-ready | The public route now includes a generation-system diagram and three product/process films; final content and visual approval remains | Review the updated platform story, generation diagram, and product/process recordings |
+| Forward | Presentable | The public route now includes a generation-system diagram and three product/process films; final content and visual approval remains | Review the updated platform story, generation diagram, and product/process recordings |
 | Juicebox | Presentable | None — James approved the project as ready on 2026-11-06 | Merge project-updates via PR #7 when ready to publish |
-| Forward Narrative Claude Skill | Presentable | No content blocker; editorial assessment on 2026-11-16, not yet James’s final approval | Final editorial sign-off on the case study and its three recordings |
+| Forward Narrative Claude Skill | Presentable | Finished editorially; approved by James on 2026-11-16; publication pending | Preserve the approved case study during V1 publication |
 | Finestra historical reflection | Draft-ready | The case now names its period, role boundaries, and the buyer-research lesson; older copy still needs review for stale or unsupported claims | Review obsolete references and superlatives |
 | Lab | Draft-ready | Four selected artifacts are in V1; OpenIDEO's strongest participation fact still needs verification during copywriting | Present as a compact Lab index and four artifact pages |
 | Writing | Draft-ready | The three selected V1 pieces now appear on About | Keep the curated presentation consistent with the refreshed system |
@@ -45,6 +45,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 - None prevent narrative drafting; documented asset and verification gaps remain bounded.
 
 ## Last session
+
+- 2026-11-16: James approved Narrative Skill as finished and requested V1 release preparation. Reviewed Forward’s full story, generation diagram, and product/QA media: no missing required case-study material remains. Root and production-subpath builds passed; the repository accessibility audit passed for 25 HTML files; five existing content/Lab tests passed. A production-path scan checked 300 local asset/navigation references across 14 scoped routes with no missing target or placeholder. PR #13 was mergeable with a successful preview check at inspection. Public DNS uses DigitalOcean nameservers, while the repository has no custom domain and still builds production under `/jameslytle.com/`; custom-domain build configuration and DNS cutover remain launch work. No DNS, Pages settings, or merge was changed.
 
 - 2026-11-16: Reviewed the complete Narrative Skill case study against all six case-study requirements and inspected the rendered case/index. Marked Presentable as an editorial assessment, with no new required assets or interview questions. Clarified the revision-film caption to state its actual visible evidence. Updated Projects’ Juicebox thumbnail to the approved current survey-report poster and Narrative Skill’s thumbnail to an authentic Claude-plus-result frame; kept the appropriate Forward and historical Finestra previews. All four thumbnails loaded; narrow Projects and case-study checks showed no horizontal overflow and correctly sized videos. Detailed findings: `reviews/forward-narrative-skill.md`. Next action is James’s final editorial sign-off; merge still requires authorization.
 

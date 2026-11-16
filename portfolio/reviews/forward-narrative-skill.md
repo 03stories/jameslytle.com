@@ -2,7 +2,7 @@
 
 Reviewed 2026-11-16 against the portfolio case-study standard and the local rendered pages.
 
-**Assessment: Presentable for V1.** This is an editorial assessment, not a record of James approving publication. No additional recording, diagram, testimonial, or metric is required to finish this case study.
+**Assessment: Presentable for V1.** James approved the case study as finished on 2026-11-16. Publication remains a separate action. No additional recording, diagram, testimonial, or metric is required to finish this case study.
 
 ## What is now complete
 
@@ -27,7 +27,7 @@ The prose carries the story without requiring video playback. The films add appr
 
 ## What still needs to happen
 
-**One next action: James’s final editorial sign-off on the case study and the three recordings.** After that, publication is the remaining operational step through the existing PR. Do not merge without authorization.
+**Editorial sign-off complete:** James approved the case study and recordings on 2026-11-16. Publication is the remaining operational step through the existing PR. Do not merge without authorization.
 
 There are no remaining content placeholders or required evidence requests for this case. The 100-plus claim is already present in James’s authored commit `37a3b7a`; this review does not independently recount the private database, and the gallery is not presented as a full census. Exact weekly user counts, a teammate quote, a changelog excerpt, or a payload-level patch demonstration would be optional future additions, not V1 blockers.
 
