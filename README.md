@@ -1,6 +1,6 @@
 # jameslytle.com
 
-**[View the live site](https://03stories.github.io/jameslytle.com/)**
+**[View the live site](https://jameslytle.com/)**
 
 React + Vite portfolio site, statically prerendered for GitHub Pages.
 
@@ -46,8 +46,12 @@ GitHub Pages deploy is handled by:
 
 Base path environment values:
 
-- Production: `VITE_BASE_PATH=/jameslytle.com/`
-- PR previews: `VITE_BASE_PATH=/jameslytle.com/pr-preview/pr-<PR#>/`
+- Production: `VITE_BASE_PATH=/` for `https://jameslytle.com/`.
+- PR previews: the workflow reads the active repository Pages URL and appends `pr-preview/pr-<PR#>/` to its path. Before the custom-domain cutover this is `/jameslytle.com/pr-preview/pr-<PR#>/`; afterward it is `/pr-preview/pr-<PR#>/`. The preview comment uses the same active URL.
+
+`public/CNAME` contains `jameslytle.com` and is copied to `dist/CNAME`, preserving the custom-domain setting when production replaces the contents of `gh-pages`. Pages must continue publishing from `gh-pages` at `/ (root)`.
+
+The custom-domain configuration takes effect when this change is deployed. Configure the domain in repository Settings → Pages before updating live DNS. Point the apex at GitHub Pages and `www` at `03stories.github.io`, then enable Enforce HTTPS after the DNS check and certificate issuance complete. DNS is currently delegated to DigitalOcean; Squarespace records become authoritative only after changing nameservers. Preserve all required mail and verification records if moving DNS providers.
 
 ## Project visibility
 

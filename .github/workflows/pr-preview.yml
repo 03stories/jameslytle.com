@@ -6,13 +6,12 @@ on:
 
 permissions:
   contents: write
+  pages: read
   pull-requests: write
 
 jobs:
   preview:
     runs-on: ubuntu-latest
-    env:
-      VITE_BASE_PATH: /jameslytle.com/pr-preview/pr-${{ github.event.number }}/
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -28,8 +27,22 @@ jobs:
         if: github.event.action != 'closed'
         run: npm ci
 
+      - name: Resolve active Pages URL
+        id: pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.number }}
+        run: |
+          pages_url=$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.html_url')
+          pages_path=$(node -e 'process.stdout.write(new URL(process.argv[1]).pathname.replace(/\/?$/, "/"))' "$pages_url")
+          pages_base_url=$(node -e 'const url = new URL(process.argv[1]); process.stdout.write((url.host + url.pathname).replace(/\/$/, ""))' "$pages_url")
+          printf 'url=%s\n' "$pages_base_url" >> "$GITHUB_OUTPUT"
+          printf 'base_path=%spr-preview/pr-%s/\n' "$pages_path" "$PR_NUMBER" >> "$GITHUB_OUTPUT"
+
       - name: Build site
         if: github.event.action != 'closed'
+        env:
+          VITE_BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: npm run build
 
       - name: Ensure dist exists for cleanup runs
@@ -42,3 +55,4 @@ jobs:
           preview-branch: gh-pages
           umbrella-dir: pr-preview
           source-dir: dist
+          pages-base-url: ${{ steps.pages.outputs.url }}
