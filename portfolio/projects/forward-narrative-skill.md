@@ -6,7 +6,7 @@ Last updated: 2026-11-16
 
 - Proposed level: Full case study
 - Priority: Must Ship
-- Readiness: Draft-ready
+- Readiness: Presentable — editorial assessment, 2026-11-16; James’s final approval pending
 - Live URL: Private team deployment
 - Repository/prototype: Authored in `jb-forward/.claude/skills/forward-narrative/` and deployed through `juice-skills/skills/forward-narrative/`
 - Public draft: `content/projects/forward-narrative-skill/index.md`
@@ -130,10 +130,12 @@ The deeper product lesson is that scaling creative judgment requires more than d
 
 ## Remaining gaps
 
-1. The number or roles of weekly users, if safely shareable; useful but not required for V1.
-2. Review the two supplied-session edits for final visual approval.
-3. Review the 23-second team gallery film; the separate adoption-video placeholder is now replaced.
+No required content or evidence gaps remain after the 2026-11-16 completed-case review. Exact weekly user counts, teammate feedback, and a payload-level targeted-patch demonstration are optional future evidence. The gallery supports breadth, not an independent count of the existing 100-plus claim.
+
+## Completion review
+
+See `../reviews/forward-narrative-skill.md`. The public case covers context, problem, role boundaries, four decisions, working results, adoption, and reflection. Three recordings and three explanatory visuals provide sufficient V1 evidence. The revision caption now describes the demonstrated four-to-nine collection change rather than implying that the film independently verifies targeted patch semantics.
 
 ## Single next action
 
-Review the 23-second “What the team made” film in the local case study.
+James’s final editorial sign-off on the case study and its three recordings. Publication follows through the existing PR after merge authorization.

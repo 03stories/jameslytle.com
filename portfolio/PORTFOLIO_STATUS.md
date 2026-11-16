@@ -12,11 +12,11 @@ Drafting
 
 ## Current focus
 
-Review the completed Forward Narrative Skill video set. Recent Forward commits now include platform framing, a generation-system diagram, and product/marketing/QA recordings. Juicebox and Resume retain James’s approval; Forward and the Narrative Skill remain Draft-ready.
+Forward Narrative Skill is Presentable after the completed-case review; James’s final editorial sign-off remains. Recent Forward commits now include platform framing, a generation-system diagram, and product/marketing/QA recordings. Juicebox and Resume retain James’s approval; Forward and the Narrative Skill remain Draft-ready.
 
 ## Single recommended next action
 
-Review the 23-second “What the team made” film in `/projects/forward-narrative-skill`.
+Give final editorial sign-off on the Forward Narrative Skill case study and its three recordings.
 
 ## This week's three outcomes
 
@@ -31,7 +31,7 @@ Review the 23-second “What the team made” film in `/projects/forward-narrati
 | Home | Presentable | Visual direction approved; Juicebox preview replaced with approved sample video (G-027 resolved) | Preserve approved appearance during shared-pattern extraction |
 | Forward | Draft-ready | The public route now includes a generation-system diagram and three product/process films; final content and visual approval remains | Review the updated platform story, generation diagram, and product/process recordings |
 | Juicebox | Presentable | None — James approved the project as ready on 2026-11-06 | Merge project-updates via PR #7 when ready to publish |
-| Forward Narrative Claude Skill | Draft-ready | Public case draft, three synthetic visuals, two creation/revision films, and the team-workspace browsing film are implemented; final editorial approval remains | Review the finished video set and case-study narrative |
+| Forward Narrative Claude Skill | Presentable | No content blocker; editorial assessment on 2026-11-16, not yet James’s final approval | Final editorial sign-off on the case study and its three recordings |
 | Finestra historical reflection | Draft-ready | The case now names its period, role boundaries, and the buyer-research lesson; older copy still needs review for stale or unsupported claims | Review obsolete references and superlatives |
 | Lab | Draft-ready | Four selected artifacts are in V1; OpenIDEO's strongest participation fact still needs verification during copywriting | Present as a compact Lab index and four artifact pages |
 | Writing | Draft-ready | The three selected V1 pieces now appear on About | Keep the curated presentation consistent with the refreshed system |
@@ -45,6 +45,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 - None prevent narrative drafting; documented asset and verification gaps remain bounded.
 
 ## Last session
+
+- 2026-11-16: Reviewed the complete Narrative Skill case study against all six case-study requirements and inspected the rendered case/index. Marked Presentable as an editorial assessment, with no new required assets or interview questions. Clarified the revision-film caption to state its actual visible evidence. Updated Projects’ Juicebox thumbnail to the approved current survey-report poster and Narrative Skill’s thumbnail to an authentic Claude-plus-result frame; kept the appropriate Forward and historical Finestra previews. All four thumbnails loaded; narrow Projects and case-study checks showed no horizontal overflow and correctly sized videos. Detailed findings: `reviews/forward-narrative-skill.md`. Next action is James’s final editorial sign-off; merge still requires authorization.
 
 - 2026-11-16: Replaced the “What the team made” placeholder using James’s supplied 28-second devnav recording. Kept a continuous 23-second sequence at normal speed, trimmed the repeated ending, and added brief opening/closing fades. Obscured workspace names, expanded workspace menus, and narrative-list details while preserving visible list structure, selection, and phone previews. The film shows workspace switching and varied product, economic, healthcare, banking, and hospitality examples; it does not independently establish the total narrative count or customer outcomes. Added a poster and text description. Raw footage and editing intermediates remain outside the repository.
 

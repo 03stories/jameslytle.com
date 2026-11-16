@@ -68,7 +68,7 @@ This makes the editing model match the way people actually work: discuss one mom
     <source src="./skill-revise-narrative.mp4" type="video/mp4">
     <a href="./skill-revise-narrative.mp4">Download the narrative revision recording</a>.
   </video>
-  <figcaption id="skill-revise-narrative-caption" class="portfolio-figure-label">Revise the story through conversation · 33 sec · Silent, edited recording. Fictional demo; accelerated passages are labeled.</figcaption>
+  <figcaption id="skill-revise-narrative-caption" class="portfolio-figure-label">Revise the story through conversation · 33 sec · Expanding four collections to nine while keeping the shareable link. Silent, edited fictional demo; accelerated passages are labeled.</figcaption>
   <details class="slice-film-description">
     <summary>Read the video description</summary>
     <p>The original narrative has four product collections. James asks Claude to make it nine. After shortened excerpts of building and validation, Claude confirms that the same shareable link now contains nine collections and lists the changes. The browser shows new product sections including Nimbus Drop, Verdant, and Cascade Cluster. The recording demonstrates a conversational revision and the rendered result; it does not expose the underlying edit payload. Long waits and unrelated browsing are removed.</p>
