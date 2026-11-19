@@ -16,7 +16,7 @@ Juicebox and Resume remain Presentable. The requested copy pass is implemented l
 
 ## Single recommended next action
 
-Review the Forward case study and its remaining process-visual evidence gap.
+Prepare and review the custom-domain deployment configuration before changing live DNS.
 
 ## Completed portfolio milestones
 
@@ -29,9 +29,9 @@ Review the Forward case study and its remaining process-visual evidence gap.
 | Item | Level | Blocking issue | Next proof |
 |---|---|---|---|
 | Home | Presentable | Visual direction approved; Juicebox preview replaced with approved sample video (G-027 resolved) | Review the updated hero copy; preserve the approved visual baseline |
-| Forward | Draft-ready | The evidence-checked public route is implemented; the process visual remains a documented placeholder | Review the revised copy and remaining process-visual placeholder |
+| Forward | Draft-ready | The evidence-checked public route is implemented; it includes the generation diagram and three recordings | Review the revised copy and new process evidence |
 | Juicebox | Presentable | None — James approved the project as ready on 2026-11-06 | Preserve approved evidence and presentation; confirm publication state before further release work |
-| Forward Narrative Claude Skill | Draft-ready | Public case draft, explicit responsibility boundaries, and three synthetic visuals are implemented; Home now features it | Review the conversational copy pass and synthetic examples |
+| Forward Narrative Claude Skill | Draft-ready | Public case draft, explicit responsibility boundaries, and three synthetic visuals and three recordings are implemented; Home now features it | Review the conversational copy pass and accompanying evidence |
 | Finestra historical reflection | Draft-ready | The case now names its period, role boundaries, and the buyer-research lesson; older copy still needs review for stale or unsupported claims | Review remaining legacy wording and linked evidence; requested reflection is implemented |
 | Lab | Draft-ready | Original four artifacts plus Considered and Snark have authored Lab pages; stronger OpenIDEO participation claims remain outside its public post | Review current Lab entries and Snark media; verify participation evidence before expanding OpenIDEO copy |
 | Writing | Draft-ready | The three selected V1 pieces now appear on About | Keep the curated presentation consistent with the refreshed system |
@@ -68,6 +68,16 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 
 The entries below describe their original sessions; later completed work supersedes their pending actions and PR references.
 
+- 2026-11-16: James approved Narrative Skill as finished and requested V1 release preparation. Reviewed Forward’s full story, generation diagram, and product/QA media: no missing required case-study material remains. Root and production-subpath builds passed; the repository accessibility audit passed for 25 HTML files; five existing content/Lab tests passed. A production-path scan checked 300 local asset/navigation references across 14 scoped routes with no missing target or placeholder. PR #13 was mergeable with a successful preview check at inspection. Public DNS uses DigitalOcean nameservers, while the repository has no custom domain and still builds production under `/jameslytle.com/`; custom-domain build configuration and DNS cutover remain launch work. No DNS, Pages settings, or merge was changed.
+
+- 2026-11-16: Reviewed the complete Narrative Skill case study against all six case-study requirements and inspected the rendered case/index. Marked Presentable as an editorial assessment, with no new required assets or interview questions. Clarified the revision-film caption to state its actual visible evidence. Updated Projects’ Juicebox thumbnail to the approved current survey-report poster and Narrative Skill’s thumbnail to an authentic Claude-plus-result frame; kept the appropriate Forward and historical Finestra previews. All four thumbnails loaded; narrow Projects and case-study checks showed no horizontal overflow and correctly sized videos. Detailed findings: `reviews/forward-narrative-skill.md`. Next action is James’s final editorial sign-off; merge still requires authorization.
+
+- 2026-11-16: Replaced the “What the team made” placeholder using James’s supplied 28-second devnav recording. Kept a continuous 23-second sequence at normal speed, trimmed the repeated ending, and added brief opening/closing fades. Obscured workspace names, expanded workspace menus, and narrative-list details while preserving visible list structure, selection, and phone previews. The film shows workspace switching and varied product, economic, healthcare, banking, and hospitality examples; it does not independently establish the total narrative count or customer outcomes. Added a poster and text description. Raw footage and editing intermediates remain outside the repository.
+
+- 2026-11-16: Reviewed commits `8d6e286` and `37a3b7a` before editing James’s supplied 7:49 silent Claude recording. Produced a 45-second creation sequence and a 33-second revision sequence using the fictional lighting-brand demo. Cropped for legibility and to exclude internal browser addresses; labeled accelerated playback, cut long waits and window rearrangement, and added brief fades at time jumps. Replaced the Claude-session placeholder and added the revision film beside Decision 3, with posters, native controls, viewport playback, and text descriptions. The separate MCP-created-narratives browsing placeholder remains: this recording does not establish team-wide adoption. Original recording and intermediate edits remain outside the repository.
+
+- 2026-11-16: Resumed main-project review on `codex/update-main-projects` from current `origin/main`. Checked planning state against the Forward and Forward Narrative Claude Skill source pages. Forward still contains its public process-visual placeholder (G-010); Narrative Skill has its draft and three synthetic visuals implemented. Juicebox and Resume retain their recorded approval. Earlier PR publication notes are historical; this status check did not reverify external deployments or rerun launch checks. Recommended next action remains resolving Forward’s evidence gap.
+
 - Added Snark as a new Lab artifact at James's request, with an opening live-capture marketing clip, two store stills, and a factual account of the motivation, AI-assisted design/development loop, agent folder, and store launch. See `projects/snark.md` for evidence and ownership boundaries. Next action for this addition: review the post and video before authorizing merge. Existing case-study priorities remain unchanged.
 
 - Replaced Home’s historical Juicebox image with the same 65-second sample report video used on the project page. Reuses the viewport playback helper, muted looping playback, native controls, poster, and responsive proportions. Verified offscreen pause and mobile sizing; resolved G-027.
@@ -84,7 +94,7 @@ The entries below describe their original sessions; later completed work superse
 
 - Replaced the opening Juicebox still with James’s full 65-second sample recording, exported as a 1920px MP4 with a poster, description, muted viewport playback, and looping. Removed the NashvilleHealth and early Runners Tracker/Story Designer screenshots at James’s request.
 
-- Added the approved Editor comparison: 44 seconds from the 2022 Juice Analytics demo (3:42–4:26) and the first 60 seconds of James’s 2026 recording. Both reuse the existing muted viewport playback helper, native controls, and reduced-motion behavior. Added poster frames, text descriptions, source credit, and English captions for the older narration; replaced the Decision 3 placeholder and historical still.
+- Added the approved Editor comparison: 45 seconds from the 2022 Juice Analytics demo (3:42–4:26) and the first 60 seconds of James’s 2026 recording. Both reuse the existing muted viewport playback helper, native controls, and reduced-motion behavior. Added poster frames, text descriptions, source credit, and English captions for the older narration; replaced the Decision 3 placeholder and historical still.
 
 - Added the Pie Slice prototype film to Juicebox with a short interaction-craft section, native playback controls, and a text description. The selected public export covers coordinated selection, authoring rules, layout/formatting states, and James's replacement filter-change transition. Playback starts muted when 35% visible and pauses below that threshold; reduced-motion users retain manual playback. Build and accessibility checks passed for 23 routes, and targeted playback-logic checks passed. Raw recordings and the review archive remain local. The matched Editor before/after is still the next evidence gap.
 

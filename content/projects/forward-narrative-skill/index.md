@@ -35,15 +35,42 @@ The skill guides discovery, story structure, writing, and visual conventions. It
 
 The distinction matters when Claude makes a change. The skill guides the work, but Dispatch checks that the narrative follows the required structure and that the user has permission to save it.
 
+<figure class="slice-film">
+  <video controls muted playsinline data-play-in-view preload="none" width="1920" height="1380" poster="./skill-create-narrative-poster.jpg" aria-label="Creating a Forward narrative with Claude" aria-describedby="skill-create-narrative-caption">
+    <source src="./skill-create-narrative.mp4" type="video/mp4">
+    <a href="./skill-create-narrative.mp4">Download the narrative creation recording</a>.
+  </video>
+  <figcaption id="skill-create-narrative-caption" class="portfolio-figure-label">From brief to live narrative · 45 sec · Silent, edited recording. Fictional demo; accelerated passages are labeled.</figcaption>
+  <details class="slice-film-description">
+    <summary>Read the video description</summary>
+    <p>A brief asks Claude for a celebratory quarterly narrative for a fictional lighting company. Claude reads the Forward Narrative Skill, asks about the audience, quarter, and call to action, then works through the product schema, photography, validation, and creation. The finished story opens in a browser, showing the four-collection lineup. Long thinking and tool waits are shortened or removed; this is not a real-time speed benchmark.</p>
+  </details>
+</figure>
+
 # Working outside my local setup
 
 Inside the Forward repository, the skill can use the full development and validation tools. The deployed standalone version works without repository access, carrying the schema, examples, design references, and icon rules with it.
+
+I release dated versions with a changelog, and CI publishes each release. Changes to rendered output are marked as breaking so teammates know to re-test.
 
 With the Dispatch MCP available, Claude can save the narrative and return a shareable experience. A teammate can go from working through a story to sharing it without moving the result into a code deployment.
 
 Editing needed some attention too. Early narratives were treated as complete files, so changing one page could mean resending the whole experience.
 
 I introduced stable identifiers for sections and groups and connected the skill to targeted MCP actions. Claude can now update one group or section, and Dispatch checks the complete narrative again before saving. A small revision can stay small, with the rest of the work left intact.
+
+<figure class="slice-film">
+  <video controls muted playsinline data-play-in-view preload="none" width="1920" height="1380" poster="./skill-revise-narrative-poster.jpg" aria-label="Revising a Forward narrative through Claude" aria-describedby="skill-revise-narrative-caption">
+    <source src="./skill-revise-narrative.mp4" type="video/mp4">
+    <a href="./skill-revise-narrative.mp4">Download the narrative revision recording</a>.
+  </video>
+  <figcaption id="skill-revise-narrative-caption" class="portfolio-figure-label">Revise the story through conversation · 33 sec · Expanding four collections to nine while keeping the shareable link. Silent, edited fictional demo; accelerated passages are labeled.</figcaption>
+  <details class="slice-film-description">
+    <summary>Read the video description</summary>
+    <p>The original narrative has four product collections. James asks Claude to make it nine. After shortened excerpts of building and validation, Claude confirms that the same shareable link now contains nine collections and lists the changes. The browser shows new product sections including Nimbus Drop, Verdant, and Cascade Cluster. The recording demonstrates a conversational revision and the rendered result; it does not expose the underlying edit payload. Long waits and unrelated browsing are removed.</p>
+  </details>
+</figure>
+
 
 # Learning from what people kept correcting
 
@@ -68,6 +95,18 @@ Other recurring fixes became guidance for choosing appropriate photography and c
 # What changed
 
 Teammates now create and revise sales demonstrations and design prototypes directly through Claude. A process that depended on me and could take multiple days is something the team can do themselves.
+
+<figure class="slice-film">
+  <video controls muted playsinline data-play-in-view preload="none" width="1920" height="1500" poster="./skill-team-narratives-poster.jpg" aria-label="Browsing narratives across team workspaces" aria-describedby="skill-team-narratives-caption">
+    <source src="./skill-team-narratives.mp4" type="video/mp4">
+    <a href="./skill-team-narratives.mp4">Download the team narrative gallery recording</a>.
+  </video>
+  <figcaption id="skill-team-narratives-caption" class="portfolio-figure-label">What the team made · 23 sec · Silent recording at normal speed. Workspace names and list details obscured.</figcaption>
+  <details class="slice-film-description">
+    <summary>Read the video description</summary>
+    <p>In Forward’s review tool, switching between team workspaces changes the list of available narratives. Selecting entries opens phone previews with distinct visual treatments: a lighting-company product story, an economic outlook with a section menu, healthcare and banking examples with highlighted figures and a quiz, and a hospitality benchmark narrative. Workspace names and narrative-list details are obscured. The sequence shows a range of created examples; it is not a count of all narratives or a measure of customer outcomes.</p>
+  </details>
+</figure>
 
 I don’t have a precise time-savings figure. Narrative creation and iteration are now the fastest part of the workflow, though. More of the work is in understanding the prospect, deciding what matters to their audience, and shaping the story.
 
