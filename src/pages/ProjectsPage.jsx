@@ -5,7 +5,7 @@ import MaterialIcon from '../components/MaterialIcon';
 
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 const overrides = {
-  forward: { title: 'Forward', image: asset('content/site/home/forward-insights-recap-home.png'), alt: 'Forward product website beside a mobile customer narrative', role: 'Product originator, design and implementation lead' },
+  forward: { title: 'Forward', image: asset('content/projects/forward/forward-preview.png'), alt: 'Forward product website beside a mobile customer narrative', role: 'Product originator, design and implementation lead' },
   juicebox: { image: asset('content/projects/juicebox/juicebox-sample-poster.jpg'), alt: 'Juicebox customer survey report with interactive result cards', role: 'Product design lead' },
   'forward-narrative-skill': { title: 'Forward Narrative Skill', image: asset('content/projects/forward-narrative-skill/project-thumbnail.jpg'), alt: 'Claude narrative authoring beside the rendered Forward product story', role: 'AI product system, design and implementation lead' }
 };

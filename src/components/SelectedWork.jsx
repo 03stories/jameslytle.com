@@ -8,7 +8,7 @@ import { observeViewportVideo } from '../utils/viewportVideo';
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 
 const projects = {
-  forward: asset('content/site/home/forward-insights-recap-home.png'),
+  forward: asset('content/projects/forward/forward-preview.png'),
   juiceboxVideo: asset('content/projects/juicebox/juicebox-sample.mp4'),
   juiceboxPoster: asset('content/projects/juicebox/juicebox-sample-poster.jpg'),
   narrativeWorkflow: asset('content/projects/forward-narrative-skill/workflow-wireframe.svg'),
