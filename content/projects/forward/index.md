@@ -9,13 +9,13 @@ tags:
   - "UX"
   - "Frontend"
 cover: ./forward-preview.png
-summary: "I originated Forward, a multi-tenant platform for personalized customer narratives, and led its product direction, recipient experience, narrative AI system, and generation pipeline from MVP through the first paid production release."
+summary: "I started Forward to help customer-success teams share personalized stories about what their customers achieved. I led the product and built the recipient experience, AI skill, and generation pipeline for our first paid release."
 draft: false
 ---
 
-[Forward](https://www.insightsrecap.com/) is a multi-tenant platform that helps customer-success teams turn product data into personalized, mobile-first narratives for every customer, including those without a dedicated CSM and a custom deck.
+A customer success manager can spend hours pulling together a deck that shows one customer what they got out of a product that year. Top accounts might get that kind of attention. For many other customers, the year might end with a quick email or a check-in call. I started [Forward](https://www.insightsrecap.com/) to help teams give more customers a story about their own results, something they could open on their phone and share with a colleague.
 
-I started Forward inside Juice Analytics, took it from concept through MVP deployment, and pitched the first client proposal. That proposal became a paid pilot and the first production release. I led product direction and built the frontend, [narrative AI skill](/projects/forward-narrative-skill), and generation pipeline. Senior engineers built the supporting backend services and owned frontend testing. I also led go-to-market and built the marketing site.
+I took Forward from an idea inside Juice Analytics to a working first version and pitched it to our first client. That proposal became a paid pilot and our first production release. I led product direction and built the frontend, [narrative AI skill](/projects/forward-narrative-skill), and generation pipeline. Senior engineers built the supporting backend services and owned frontend testing. I also led the go-to-market work and built the site below.
 
 <figure class="slice-film">
   <video controls muted loop playsinline data-play-in-view preload="none" width="1920" height="1394" poster="./forward-marketing-site-poster.jpg" aria-label="The Forward marketing website" aria-describedby="forward-marketing-caption">
@@ -29,11 +29,9 @@ I started Forward inside Juice Analytics, took it from concept through MVP deplo
   </details>
 </figure>
 
-# The customer-success gap
+# What a customer receives
 
-Before Forward, our clients struggled to communicate their product's positive impact at scale. CSMs could give top accounts individual attention, but medium and long-tail customers were often underserved. Even among accounts receiving a year-end touchpoint, the quality varied from a basic email or check-in call to a manually assembled deck.
-
-That manual work could take hours. More importantly, customers were left to infer the value they received. The opportunity was not simply to automate a report; it was to make ROI feel personal, clear, and worth sharing without multiplying the workload of the customer-success team.
+In the example below, an early-education team can see which teachers stood out and download badges for its literacy and math outcomes. That was the kind of story we wanted customer-success teams to be able to send without assembling a deck for each account.
 
 <figure class="slice-film">
   <video controls muted playsinline data-play-in-view preload="none" width="1920" height="1224" poster="./forward-narrative-walkthrough-poster.jpg" aria-label="A Forward narrative from a recipient's point of view" aria-describedby="forward-walkthrough-caption">
@@ -47,47 +45,35 @@ That manual work could take hours. More importantly, customers were left to infe
   </details>
 </figure>
 
-# One campaign, built as a platform
+# How a team runs a campaign
 
-The first client engagement proved the idea, but Forward was designed to run the same way for any customer-success team, audience, or reporting period.
+We built Forward so teams could repeat the process for different audiences and reporting periods. Each team has its own workspace, with separate roles for people who run campaigns and people who write narratives. A team can upload a batch from the pipeline, create a one-off story, or let an assistant like Claude write directly in the workspace through MCP.
 
-- **A workspace for every client team.** Each team works in its own isolated workspace, with separate roles for campaign managers and narrative authors.
-- **A repeatable campaign lifecycle.** Upload a generated run, issue a link for each recipient, send, and track.
-- **Three ways to create narratives.** Batch generation from the pipeline, one-off standalone narratives, and MCP access so AI assistants such as Claude can author narratives directly inside a workspace.
-- **Privacy matched to the audience.** Links can be open or bound to their recipient. I set the initial direction for the email-based bound model: the first open claims a link, and the recipient unlocks other devices by proving access to their inbox—no single sign-on required.
-- **Engagement that flows back.** Sessions, completions, and in-narrative responses return to the team that sent them.
+Teams send each recipient a link, which can be open or tied to that recipient. I set the initial direction for how private links work: the link is claimed the first time it’s opened, and the recipient can open it on another device by confirming access to their email. The team that sent the link can see sessions, completions, and responses to questions inside the story.
 
-# Decision 1: Keep exploration out of the experience
+# Send people straight to their story
 
-An early client needed permission-aware targeting for different organizational units. One plausible solution was a query-backed picker inside the product, allowing users to filter and switch among versions of a narrative.
+An early client needed different parts of its organization to see different versions of a narrative based on their permissions. We could have added a picker so people could filter and switch between the versions they were allowed to see.
 
-I decided against it.
+I wanted the experience to feel like a small celebration. Giving people a picker would mean asking them to do some of the work we were trying to do for them. It would also change how we served each story, which was generated ahead of time and needed very little data after that.
 
-I wanted Forward to feel lightweight, celebratory, and easy to finish. Adding filtering would shift the experience from receiving a coherent story to operating a reporting tool. It would also weaken a useful technical constraint: each narrative was pre-generated, self-contained, and minimally dependent on data after generation.
+We used the campaign emails to give people the link for their part of the organization. People could open their link and start reading right away. That gave us a rule for future campaigns: decide who gets each story before it goes out.
 
-We moved audience targeting upstream to the sent emails. Recipients opened the right narrative directly, while the product preserved a focused beginning-to-end experience. That became a platform rule: targeting happens before delivery, not inside the narrative. More interaction could come later, but it would have to strengthen the story rather than turn it into a dashboard.
+# Review the story before generating thousands of versions
 
-# Decision 2: Use AI to explore; use an approved system to scale
+AI helped us try out story ideas and work through which parts of a narrative should appear for different customers. I wanted us to be able to review what the system could say before we ran a campaign. A prompt on its own couldn’t give us that.
 
-Personalizing thousands of narratives introduced another choice: allow an AI model to generate copy freely at production scale, or build a system whose output could be understood and approved before generation.
-
-I rejected unreviewed generative text at scale. Prompt guardrails alone did not provide the oversight we needed.
-
-Instead, AI accelerated narrative exploration and helped define data-based conditions. Humans accepted the stylistic direction and overall experience, and the resulting template—every narrative path and the conditions that select it—was exported for review before anything was generated. Production generation made zero model calls.
-
-This separated creative exploration from production behavior. Once the narrative system was approved, the pipeline could generate thousands of personalized stories without requiring a person to review every individual output.
+We reviewed the writing and overall experience, then exported the template for review so people could see every path through the story and the data conditions that would select it. Once approved, the template ran against each customer’s data. The production pipeline made zero model calls.
 
 ![How Forward generates narratives: AI helps draft a template once, people review every path, and a deterministic engine applies it to every customer](./forward-generation-system.svg)
 
-# A system built to generate at scale
+# Checking a production run
 
-The pipeline is built for campaign-scale runs; the first production campaign processed roughly 13,000 narratives. Quality gates written into each template excluded or flagged stories without enough meaningful material; 9,772 passed and were handed to the client to send.
+The first campaign processed about 13,000 narratives. Each template had rules for flagging or excluding stories that didn’t have enough to say. Of those narratives, 9,772 passed, and we handed them to the client to send.
 
-Three choices made that volume trustworthy:
+The same approved template and customer data always produce the same story, so we can test for the output we expect. The player, pipeline, and Python backend all check the format against one schema defined in TypeScript. Before release, we strip the template rules and authoring notes from the stories.
 
-- **Deterministic generation.** The pipeline applies approved templates to each customer's data row. The same input always produces the same story, and test suites can assert on the output.
-- **One schema, everywhere.** The narrative format is defined once in TypeScript and published as a contract, so the player, the pipeline, and the Python backend validate against the same definition.
-- **Internals stay internal.** Template logic and authoring notes are stripped before release, so recipients see the story, not the rules that selected it.
+The recording below shows how we spot-check a run, including opening a flagged story and seeing which parts of the template it used.
 
 <figure class="slice-film">
   <video controls muted playsinline data-play-in-view preload="none" width="1920" height="1224" poster="./forward-devnav-run-qa-poster.jpg" aria-label="Spot-checking a generated run in Forward's review tool" aria-describedby="forward-devnav-caption">
@@ -101,16 +87,12 @@ Three choices made that volume trustworthy:
   </details>
 </figure>
 
-# Evidence from the first production campaign
+# How customers responded
 
-The client sent the links directly, so measurement starts when someone opens a narrative. Among 1,448 opened narratives, 864 reached the end, a 60% completion rate. Of those 864 completed narratives, 715 included a “Yes” response to receiving the experience again the following year, or 83%.
+We could see what happened from the moment someone opened a link. People reached the end of 864 of the 1,448 narratives they opened (60%). In 715 of those completed narratives (83%), someone answered yes when asked if they’d like to get another one the following year.
 
-The qualitative response matched the behavior. Users asked to receive narratives like this more often and reported that they had shared, or planned to share, them with colleagues.
-
-Those results do not prove every downstream retention outcome. They do show that a scaled customer-success touchpoint could hold attention, create sharing intent, and leave most finishers wanting another one.
+Some people asked to receive these stories more often. Others told us they’d shared theirs with colleagues or planned to.
 
 # What I would improve now
 
-Next time, I’d put more work into helping the team see what’s changing in the AI-assisted content. Generating it has become easier. Keeping track of changes to the writing, conditions, and behavior, and knowing what to review, is still hard.
-
-Forward gave us room to try ideas with AI. To send thousands of stories with confidence, though, we needed clear rules and a system the team could understand and review.
+Next time, I’d spend more design time on how the team sees what changed between versions of a template. It’s getting easier to generate content. I’d like it to be just as easy to tell which wording changed, which customers would see it, and what someone needs to review again.

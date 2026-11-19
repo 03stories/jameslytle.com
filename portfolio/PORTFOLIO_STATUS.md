@@ -44,6 +44,14 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 
 - Consider changing the contact email to james@jameslytle.com. Keep jameslytle@hey.com until that decision is made.
 
+
+### Questions for the next tone pass
+
+- [ ] **[Forward](../content/projects/forward/index.md)** — What’s one example you can share of a customer result that made for a better story than a year-end deck?
+- [ ] **[Juicebox](../content/projects/juicebox/index.md)** — What’s one pattern you saw across those early custom reports that made you think it belonged in a reusable Slice?
+- [ ] **[Snark](../content/labs/snark/index.md)** — Was there a moment in daily use when it felt like Snark could actually replace Arc for you? What were you doing?
+- [ ] **[Considered](../content/labs/home-considered/index.md)** — When a supporting note changes, what would you want Considered to show you or ask you before it rewrites the main note?
+
 ## Blocking gaps
 
 - None prevent narrative drafting; documented asset and verification gaps remain bounded.
