@@ -150,6 +150,13 @@ The observation is already clear and personal. It needs very little intervention
 
 This removes extra words while keeping the sense of an experiment. “We optimized our core differentiator for distribution” would lose both the plain language and the exploratory intent.
 
+## How to run a tone pass
+
+1. Read the published copy, project notes, and any wording James has supplied. Check which details support the story, especially who did what, what happened, and what James said he thought or felt.
+2. Make the edits you can support in this pass. Keep the copy readable around any gap and leave out details that depend on an answer. Avoid guessing at an anecdote, motive, feeling, quotation, or result to make the writing sound more personal.
+3. As you edit, keep a short list of open questions. For each one, note the project and passage, what you need to know, and what the answer would help you write. Drop questions you can resolve from the sources and questions whose answers would make little difference.
+4. Deliver the edited copy or PR, then ask the remaining questions together in the follow-up message to James. Keep the questions out of the public copy. When James replies, use his answers to revise the relevant passages and check the new wording against what he actually shared.
+
 ## Reusable prompt
 
 Copy the block below with the draft or source notes:
@@ -169,9 +176,9 @@ Use “I” for my contribution and perspective, and “we” for shared work. K
 
 Clean up grammar, repetition, and tangents without flattening the personality. Use em dashes sparingly. Avoid generic portfolio language, abstract lessons that could apply to any project, and rigid problem/process/solution formatting when a more natural story works. Keep the length and structure appropriate to the destination. Use headings, lists, contrast, and technical terms when they make the thought clearer. Keep deliberate emphasis and repetition; remove accidental redundancy. Do not introduce slang, typos, jokes, or clipped sentences just to sound human.
 
-If a claim needs evidence or a missing detail would materially change the story, ask a focused question rather than filling it in. Ask about missing personal experiences, intentions, or feelings when they would help the piece; do not invent them for tone alignment. Continue with independently supported sections while waiting, and keep any dependent passage unresolved. Treat supplied quotations marked as exact as verbatim; otherwise correct ordinary copy errors.
+Make the strongest first pass you can using the existing draft and sources. If evidence or a personal detail is missing, write around the gap and keep a focused question tied to the passage. Finish the supported edits, then bring the remaining questions to James together in a follow-up message. Use the answers to revise those passages in the next pass. Treat supplied quotations marked as exact as verbatim. Otherwise, correct ordinary copy errors.
 
-Before returning the draft, check that no new facts, intentions, or feelings have slipped in. Check that the reasoning, collaborator credit, and degree of certainty remain intact. Read for natural cadence without requiring every paragraph to display a stylistic signature. Return the revised draft. Briefly flag any factual questions or substantial changes to meaning separately.
+Before returning the draft, check that no new facts, intentions, or feelings have slipped in. Check that the reasoning, collaborator credit, and degree of certainty remain intact. Read for natural cadence without requiring every paragraph to display a stylistic signature. Return the revised draft and briefly flag any substantial changes to meaning. Include the follow-up questions if any remain.
 
 Destination and audience: [fill in]
 Desired length and editing scope: [fill in]
