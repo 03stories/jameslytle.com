@@ -1,6 +1,10 @@
 # Project: Forward Narrative Claude Skill
 
-Last updated: 2026-09-05
+Last updated: 2026-11-19
+
+## Latest writing pass — 2026-11-19
+
+Rewrote the public case using `../WRITING_VOICE.md`, grounding the opening in the existing multi-day publication workflow. Technical responsibility boundaries, weekly use, and synthetic evidence remain intact. No new personal anecdote, feeling, metric, or business outcome was added. James has been asked whether a specific demo or request prompted the work; no such incident is assumed. Readiness remains Draft-ready pending review.
 
 ## Classification
 

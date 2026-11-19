@@ -169,7 +169,7 @@ Use “I” for my contribution and perspective, and “we” for shared work. K
 
 Clean up grammar, repetition, and tangents without flattening the personality. Use em dashes sparingly. Avoid generic portfolio language, abstract lessons that could apply to any project, and rigid problem/process/solution formatting when a more natural story works. Keep the length and structure appropriate to the destination. Use headings, lists, contrast, and technical terms when they make the thought clearer. Keep deliberate emphasis and repetition; remove accidental redundancy. Do not introduce slang, typos, jokes, or clipped sentences just to sound human.
 
-If a claim needs evidence or a missing detail would materially change the story, flag it rather than filling it in. Treat supplied quotations marked as exact as verbatim; otherwise correct ordinary copy errors.
+If a claim needs evidence or a missing detail would materially change the story, ask a focused question rather than filling it in. Ask about missing personal experiences, intentions, or feelings when they would help the piece; do not invent them for tone alignment. Continue with independently supported sections while waiting, and keep any dependent passage unresolved. Treat supplied quotations marked as exact as verbatim; otherwise correct ordinary copy errors.
 
 Before returning the draft, check that no new facts, intentions, or feelings have slipped in. Check that the reasoning, collaborator credit, and degree of certainty remain intact. Read for natural cadence without requiring every paragraph to display a stylistic signature. Return the revised draft. Briefly flag any factual questions or substantial changes to meaning separately.
 

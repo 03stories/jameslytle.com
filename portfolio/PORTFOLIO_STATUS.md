@@ -50,6 +50,10 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 
 ## Latest work — 2026-11-19
 
+- Committed the earlier copy pass, status sweep, voice guide, and source review as `228dd73` on `copy/website-feedback`.
+- Rewrote the Forward Narrative Skill case using the voice guide: opens with the documented publication workflow, uses more natural headings and concrete explanations, and preserves Dispatch/skill ownership, weekly adoption, synthetic visuals, and the absence of precise time-savings metrics. Readiness remains Draft-ready pending James’s review. Production build and accessibility audit passed for 25 prerendered pages after the rewrite.
+- James explicitly requested questions wherever personal details are missing rather than fabricated tone alignment. Updated the reusable prompt accordingly. Asked whether a specific demo or teammate request prompted the change; the current opening uses only the established workflow and does not depend on an anecdote.
+
 - Completed a [source-backed review of the writing guidance](./WRITING_VOICE_REVIEW.md), refined the prompt to distinguish observed habits from current preferences and editorial recommendations, and added two illustrative before/after paragraph pairs. These are documentation examples, not public copy changes.
 
 - Documented James’s natural writing voice from the largely self-written Finestra narrative in [WRITING_VOICE.md](./WRITING_VOICE.md), with source examples, editing guidance, and a reusable prompt. Expanded it after reading all three linked Medium articles, adding verbatim examples, humor, conviction, rhetorical pacing, and guidance by writing context. Linked it from DESIGN.md. This analysis did not change public project copy.
@@ -57,7 +61,7 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 - Implemented James’s copy feedback: heroes now say “making complex things useful”; the project title is “Forward”; most prose em dashes were removed; case-study copy is more conversational; Finestra uses the supplied replacement verbatim.
 - Kept the current email unchanged and recorded the possible switch to james@jameslytle.com under Future TODO.
 - Validation: production build and accessibility audit passed for 25 prerendered pages. Generated content was refreshed. No new browser review was performed for this copy pass.
-- Delivery: changes are local on `copy/website-feedback`. Fetching GitHub failed because the configured proxy was unreachable; this branch has no PR or deployment verified in this session.
+- Delivery: earlier work is committed locally on `copy/website-feedback`; the Skill rewrite follows as a separate change. Fetching GitHub failed because the configured proxy was unreachable; this branch has no PR or deployment verified in this session.
 - Reviewed status, inventory, content gaps, editorial decisions, design guidance, and historical QA/planning notes for stale current-state instructions.
 
 ## Earlier session history
