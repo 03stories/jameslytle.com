@@ -1,6 +1,6 @@
 ---
 title: About
-heroStatement: "Design engineer and product design leader making complex products useful."
+heroStatement: "Design engineer and product design leader making complex things useful."
 email: "jameslytle@hey.com"
 headshot: ./james-portrait-train.webp
 ---
@@ -9,7 +9,7 @@ I’m a Design Engineer & Product Lead at Juice Analytics, and I love designing 
 
 I enjoy working with different kinds of people and turning ambitious ideas into practical things that solve real problems. Constraints are part of the work; the best method or tool is the one that helps the team make progress. That might mean research, sketching, prototyping in code, or getting a first version in front of someone. I like moving between those modes, from framing the problem through to the details of a shipped experience.
 
-Lately, that’s meant originating and building [Forward](/projects/forward), shaping the [Juicebox](/projects/juicebox) authoring platform, and turning narrative-design expertise into a team-wide workflow with the [Forward Narrative Skill](/projects/forward-narrative-skill). Each has asked me to connect product decisions with the interaction design, frontend implementation, and AI behavior that make the experience work.
+Lately, that’s meant starting and building [Forward](/projects/forward), shaping the [Juicebox](/projects/juicebox) authoring platform, and helping the team create and share narratives with the [Forward Narrative Skill](/projects/forward-narrative-skill). In each of these, I’ve worked through what we should build, how it should feel, and the code and AI behavior that make it work.
 
 Earlier, I co-founded [Finestra](/projects/finestra-art-app), a local art marketplace. I’m glad I took that swing. It’s part of how I got here, and an honest record of work, learning, and the product questions I’d approach differently today.
 

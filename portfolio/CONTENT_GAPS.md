@@ -5,17 +5,17 @@
 | ID | Project/area | Priority | Missing evidence or question | Why it matters | Evidence/source needed | Destination | Status |
 |---|---|---|---|---|---|---|---|
 | G-010 | Forward | Must Ship | Create an anonymized Sankey explaining template-condition paths without implying it was the production review interface | The trust-model claim needs visible technical evidence | Anonymized source data or a manually verified path model | `projects/forward.md` | Deferred |
-| G-016 | Juicebox Editor | Must Ship | Insert matched before/after screenshots showing the old flat, scroll-heavy Editor and the new folder-tree/sliding-panel UX | Visual comparison can demonstrate the improvement without unsupported quantitative claims | Old and new Editor screenshots, preferably showing the same or comparable story | `projects/juicebox.md` | Resolved: approved 2022/2026 recordings integrated, 2026-11-06 |
-| G-027 | Home / Juicebox image | Should Improve | Replace `jb-header.png` with a stronger representative product image, as requested in James's browser feedback | The current historical screenshot is not the desired visual introduction to Juicebox | James to select or supply a better image; preserve its authentic proportions | `src/pages/HomePage.jsx` | Resolved — Home uses the approved looping sample video, 2026-11-06 |
 
 ## Interview queue
 
-No active interview questions. Deferred visual replacements remain documented below.
+No active interview questions. The remaining Forward explanatory visual is deferred and documented above.
 
 ## Resolved gaps
 
 | ID | Resolution | Captured in | Source/confidence | Date |
 |---|---|---|---|---|
+| G-016 | Approved 2022/2026 Editor comparison recordings integrated; the before/after evidence gap is closed. | `content/projects/juicebox/index.md` | James’s approval / High | 2026-11-06 |
+| G-027 | Home uses the approved looping Juicebox sample video in place of the historical header image. | `src/components/SelectedWork.jsx` | James’s approval / High | 2026-11-06 |
 | G-001 | James owned the concept through MVP and first proposal, then product direction, frontend, narrative AI skill, and generation pipeline for the first production release; senior engineers owned the Django backend and frontend testing. | `projects/forward.md` | Firsthand answer / High | 2026-08-08 |
 | G-007 | CSMs could not scale consistent ROI storytelling beyond top accounts; manual ad hoc reporting consumed hours, long-tail customers were underserved, and the resulting value gap exposed retention risk. | `projects/forward.md` | Firsthand answer / High | 2026-08-08 |
 | G-002 | Two decisions are captured: preserving a focused, self-contained narrative instead of adding exploration UI; and using AI for exploration while scaling through deterministic, human-approved generation. | `projects/forward.md` | Firsthand answers / High | 2026-08-08 |

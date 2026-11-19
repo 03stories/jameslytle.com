@@ -19,7 +19,16 @@
 | D-015 | Refresh the Home aesthetic before rollout, then apply the resulting visual conventions consistently to the routes included in MVP. Decide page relevance before spending time on final polish or launch checks. | James explicitly wants a new Home aesthetic carried throughout the site and correctly observes that pages outside the eventual MVP may not need the same work. | 2026-09-26 | Reopen only if James changes this launch direction. |
 | D-016 | V1 includes Home, a curated Projects index, Forward, Juicebox, Forward Narrative Skill, Finestra as a historical reflection, a four-item Lab (Photo Palette, Design Docs, Mural, OpenIDEO Atlanta), About, and Resume. Exclude login/sandbox from public scope; keep other legacy project and gallery URLs out of the index until link/redirect review. | This matches the frozen anchor and Lab selections, retains the Finestra history, and keeps visual-system work bounded while avoiding premature retirement of old URLs. | 2026-09-26 | Reopen if a selected story or artifact is no longer credible, or link review finds a legacy route needed for launch. |
 
+## Editorial guidance — 2026-11-19
+
+- Use “Forward” as the project title; retain the existing live URL and asset filenames.
+- Avoid repeating “product” in hero statements. Home and About now use “making complex things useful.”
+- Write conversationally in James’s voice and use em dashes sparingly. Keep published article titles intact.
+- Finestra’s historical framing remains; use James’s supplied candid reflection rather than the formal disclaimer about current interface standards.
+
 ## Open decisions
+
+- Possible future contact email: james@jameslytle.com. No change authorized yet; keep jameslytle@hey.com.
 
 2026-11-13: James explicitly requested adding Snark to Lab, reopening the earlier four-item Lab limit for this shipped extension. Present it as a Lab artifact, with live-captured product video and supplied store imagery; retain the existing major case studies. PR preview is authorized; merging is not.
 

@@ -1,6 +1,12 @@
 # Homepage Design QA
 
-## Current iteration — 2026-10-03
+## Current status — 2026-11-19
+
+Home was subsequently approved as the visual baseline and its shell applied across scoped pages. The approved Juicebox sample video resolved G-027. The latest copy pass updates Home/About hero wording, the Forward title, conversational case-study copy, and Finestra’s reflection. Production build and accessibility audit passed for 25 prerendered pages; no fresh browser or visual QA was performed for this copy-only pass. See `portfolio/PORTFOLIO_STATUS.md` for current review tasks.
+
+The records below are historical evidence, including their original pending actions and local screenshot paths.
+
+## Historical iteration — 2026-10-03
 
 Browser feedback refinement: removed arrow icons, added thin image borders and Role labels, recorded Juicebox image TODO G-027, removed principles, shortened Resume labels and the contact heading, and compressed the historical section to approximately 246px at a 1161px viewport. Reviewed mobile at 325px without horizontal overflow. Build and basic accessibility audit passed for 21 pages. Feedback screenshot: `/private/tmp/james-home-feedback-desktop.png`.
 

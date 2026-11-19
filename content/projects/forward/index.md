@@ -1,5 +1,5 @@
 ---
-title: "Forward / Insights Recap"
+title: "Forward"
 date: "2026-08-15T12:00:00"
 headline: "Personalized customer-impact stories at scale"
 client: "Juice Analytics"
@@ -13,9 +13,9 @@ summary: "I originated Forward and led its product direction, recipient experien
 draft: false
 ---
 
-[Forward](https://www.insightsrecap.com/) helps customer-success teams turn product data into personalized, mobile-first narratives for every customer—not only the accounts with a dedicated CSM and a custom deck.
+[Forward](https://www.insightsrecap.com/) helps customer-success teams turn product data into personalized, mobile-first narratives for every customer, including those without a dedicated CSM and a custom deck.
 
-I originated the product inside Juice Analytics, took it from concept through MVP deployment, and pitched the first client proposal. That proposal became a paid pilot and the first production release. I led product direction and built the frontend, narrative AI skill, and generation pipeline. Senior engineers built the supporting backend services and owned frontend testing.
+I started Forward inside Juice Analytics, took it from concept through MVP deployment, and pitched the first client proposal. That proposal became a paid pilot and the first production release. I led product direction and built the frontend, narrative AI skill, and generation pipeline. Senior engineers built the supporting backend services and owned frontend testing.
 
 ![Forward personalized narrative shown across mobile and desktop](./forward-insights-recap-home.png)
 
@@ -31,13 +31,13 @@ The first client needed permission-aware targeting for different organizational 
 
 I decided against it.
 
-Forward was intended to be lightweight, celebratory, and easy to finish—not another data-exploration interface. Adding filtering would shift the experience from receiving a coherent story to operating a reporting tool. It would also weaken a useful technical constraint: each narrative was pre-generated, self-contained, and minimally dependent on data after generation.
+I wanted Forward to feel lightweight, celebratory, and easy to finish. Adding filtering would shift the experience from receiving a coherent story to operating a reporting tool. It would also weaken a useful technical constraint: each narrative was pre-generated, self-contained, and minimally dependent on data after generation.
 
 We moved audience targeting upstream to the sent emails. Recipients opened the right narrative directly, while the product preserved a focused beginning-to-end experience. More interaction could come later, but it would have to strengthen the narrative rather than turn it into a dashboard.
 
 # Decision 2: Use AI to explore; use an approved system to scale
 
-Personalizing thousands of narratives introduced a more consequential choice: allow an AI model to generate copy freely at production scale, or build a system whose output could be understood and approved before generation.
+Personalizing thousands of narratives introduced another choice: allow an AI model to generate copy freely at production scale, or build a system whose output could be understood and approved before generation.
 
 I rejected unreviewed generative text at scale. Prompt guardrails alone did not provide the oversight we needed.
 
@@ -55,7 +55,7 @@ The release included the recipient-facing experience, the narrative AI skill, an
 
 # Evidence that the story connected
 
-Among 1,448 opened narratives, 864 reached the end—a 60% completion rate. Of those 864 completed narratives, 715 included a “Yes” response to receiving the experience again the following year, or 83%.
+Among 1,448 opened narratives, 864 reached the end, a 60% completion rate. Of those 864 completed narratives, 715 included a “Yes” response to receiving the experience again the following year, or 83%.
 
 The qualitative response matched the behavior. Users asked to receive narratives like this more often and reported that they had shared, or planned to share, them with colleagues.
 
@@ -63,6 +63,6 @@ Those results do not prove every downstream retention outcome. They do show that
 
 # What I would improve now
 
-I would invest earlier in observability for AI-assisted content systems. Generation is no longer the hardest part. The limiting factor is understanding how content, conditions, and behavior change over time—and giving a team enough visibility to review those changes with confidence.
+Next time, I’d put more work into helping the team see what’s changing in the AI-assisted content. Generating it has become easier. Keeping track of changes to the writing, conditions, and behavior, and knowing what to review, is still hard.
 
-Forward reinforced a product principle I continue to use: AI can widen the space of possibilities, but trust at scale comes from making the final system legible, governable, and intentionally constrained.
+Forward gave us room to try ideas with AI. To send thousands of stories with confidence, though, we needed clear rules and a system the team could understand and review.

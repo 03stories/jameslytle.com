@@ -9,11 +9,11 @@ export default function HomePage() {
         <div className="home-intro">
           <h2 id="home-heading">
             Design engineer &amp; product design leader
-            <span>making complex products useful.</span>
+            <span>making complex things useful.</span>
           </h2>
           <div className="home-intro-copy">
             <p>
-              I connect product strategy, interface design, production code, and AI behavior—from the first question to a working product.
+              I work across strategy, interface design, code, and AI to take an idea from the first question to something people can use.
             </p>
             <div className="home-actions">
               <a className="home-primary-action" href="mailto:jameslytle@hey.com">

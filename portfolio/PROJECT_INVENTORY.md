@@ -5,7 +5,7 @@ Scores are conservative and evidence-based. `?` marks missing evidence; ranges s
 | Project | Year | Employer/client | Live URL | Assets | Importance /3 | Ownership /3 | Decisions /3 | Outcome /3 | Craft /3 | Differentiation /3 | Technical /3 | Total /21 | Proposed level | Priority |
 |---|---:|---|---|---|---:|---:|---:|---:|---:|---:|---:|---|---|---|
 | Snark | 2026 | Personal | Chrome Web Store; public GitHub | Live-captured demo, store screenshots, supplied workflow summary | 1 | 3 | 2 | 1 | 2 | 2 | 2 | 13 | Lab artifact; review pending | Requested addition |
-| Forward / Insights Recap | Current | Juice Analytics | `insightsrecap.com` | One reused Home image observed | 3 | 3 | 2 | 2 | ? | 3 | 3 | 16–19 | Full case study | Must Ship |
+| Forward | Current | Juice Analytics | `insightsrecap.com` | One reused Home image observed | 3 | 3 | 2 | 2 | ? | 3 | 3 | 16–19 | Full case study | Must Ship |
 | Juicebox | 2020–current | Juice Analytics | Juicebox product page | Reviewed product videos, report gallery, and live examples | 3 | 3 | 3 | 2 | 2 | 2 | 2 | 17 | Full case study; Presentable — approved ready 2026-11-06 | Must Ship |
 | Finestra Art App | 2012–2015 | Personal/co-founded | Closed | Extensive product/process assets | 2 | 3 | 3 | 2 | 2 | 3 | 2 | 17 | Historical reflection; Draft-ready | Must Ship supporting |
 | Slices 2.0 | 2017 | Juice Analytics | Documentation link | Extensive UI/process assets | 2 | 3 | 3 | 1 | 2 | 2 | 1 | 14 | Supporting decision chapter within Juicebox | Must Ship supporting |
@@ -29,7 +29,7 @@ Scores are conservative and evidence-based. `?` marks missing evidence; ranges s
 
 ## Score evidence
 
-### Forward / Insights Recap
+### Forward
 
 - Importance: Client CSMs could not consistently communicate ROI beyond top accounts; manual reporting consumed hours, long-tail customers were underserved, and retention was at risk.
 - Ownership: James's firsthand account establishes ownership from concept through MVP and first proposal, then product direction for the first production release; senior-engineer boundaries are explicit.
@@ -52,6 +52,8 @@ Scores are conservative and evidence-based. `?` marks missing evidence; ranges s
 - Readiness: Presentable; James approved as ready on 2026-11-06. Editor artifacts, reflection, and current product context are captured. Broader quantitative outcomes remain optional future evidence.
 
 ### Finestra Art App
+
+- Copy update (2026-11-19): James’s supplied reflection is implemented verbatim. Readiness remains Draft-ready pending review of legacy copy and linked evidence.
 
 - Importance: Local art marketplace problem with multi-year startup stakes.
 - Ownership: James owned the complete app UX/UI and the marketing site's design and engineering; his co-founder owned native iOS engineering.
@@ -83,7 +85,7 @@ Scores are conservative and evidence-based. `?` marks missing evidence; ranges s
 | Signal | Best evidence | Coverage | Gap or redundancy |
 |---|---|---|---|
 | Product judgment | Forward, Juicebox/Slices 2.0 | Strong | Forward has two evidenced decisions; Slices supplies a platform tradeoff |
-| Complexity | Juicebox/Slices 2.0 | Strong | Needs concise proof from the latest Editor redesign |
+| Complexity | Juicebox/Slices 2.0 | Strong | Approved Editor before/after recordings are integrated |
 | Ownership | Forward, Finestra | Strong | Both cases now have explicit implementation boundaries |
 | Craft | Juicebox, Finestra | Moderate | Shipped imagery needs curation |
 | Systems thinking | Juicebox, Slices, Design Docs | Strong | Redundant Juice Analytics stories possible |
@@ -95,7 +97,7 @@ Scores are conservative and evidence-based. `?` marks missing evidence; ranges s
 
 ## Proposed featured set
 
-1. Forward / Insights Recap — recent flagship
+1. Forward — recent flagship
 2. Juicebox — complex data-product system
 3. Forward Narrative Claude Skill — AI-enabled team workflow and organizational leverage
 
@@ -107,7 +109,7 @@ Forward, Juicebox, and the Forward Narrative Claude Skill form three distinct st
 
 ## Writing candidates
 
-Eight external pieces are listed on About. V1 selection is frozen to three pieces that collectively reinforce product judgment, visual craft, and human-centered communication.
+Eight external pieces were evaluated; About now lists the three selected pieces that collectively reinforce product judgment, visual craft, and human-centered communication.
 
 | Piece | V1 decision | Signal | Audit note |
 |---|---|---|---|
@@ -122,7 +124,7 @@ Eight external pieces are listed on About. V1 selection is frozen to three piece
 
 ## Lab selection
 
-V1 uses four compact artifacts. Each should be presented as one proof, one image or interaction, and one concise ownership statement—not a miniature case study.
+The original V1 selection has four compact artifacts; Considered and Snark now also have authored Lab pages. Snark was explicitly requested on 2026-11-13. Each should be presented as one proof, one image or interaction, and one concise ownership statement—not a miniature case study.
 
 | Artifact | V1 decision | Primary proof | Editorial treatment |
 |---|---|---|---|

@@ -1,5 +1,7 @@
 # React + GitHub Pages Rebuild Plan
 
+This is the historical rebuild plan. The React app, Markdown content pipeline, and prerendering are implemented. The original questions and next steps below are retained as planning history; use `portfolio/PORTFOLIO_STATUS.md` for current work and verification.
+
 ## Summary
 Build a new, standalone React site that statically renders pages and reads project content from Markdown under a `content/` folder. Deploy via GitHub Actions to GitHub Pages with a custom domain. Kirby CMS and login gating are removed. This plan documents the approach only, not implementation.
 

@@ -1,6 +1,6 @@
 # Portfolio Status
 
-Last updated: 2026-11-13
+Last updated: 2026-11-19
 
 ## V1 goal
 
@@ -12,13 +12,13 @@ Drafting
 
 ## Current focus
 
-Juicebox and Resume are ready. Continue the remaining portfolio content and asset review.
+Juicebox and Resume remain Presentable. The requested copy pass is implemented locally: Home/About heroes, Forward title, conversational case-study wording, fewer em dashes, and James’s exact Finestra reflection. Review the remaining evidence gaps and copy before publication.
 
 ## Single recommended next action
 
 Review the Forward case study and its remaining process-visual evidence gap.
 
-## This week's three outcomes
+## Completed portfolio milestones
 
 1. [x] Publish evidence-checked Forward and Juicebox case-study routes.
 2. [x] Resolve ownership and adoption for Pipeline Canvas.
@@ -28,23 +28,41 @@ Review the Forward case study and its remaining process-visual evidence gap.
 
 | Item | Level | Blocking issue | Next proof |
 |---|---|---|---|
-| Home | Presentable | Visual direction approved; Juicebox preview replaced with approved sample video (G-027 resolved) | Preserve approved appearance during shared-pattern extraction |
-| Forward | Draft-ready | The evidence-checked public route is implemented; the process visual remains a documented placeholder | Apply refreshed case-study patterns after Home direction is set |
-| Juicebox | Presentable | None — James approved the project as ready on 2026-11-06 | Merge project-updates via PR #7 when ready to publish |
-| Forward Narrative Claude Skill | Draft-ready | Public case draft, explicit responsibility boundaries, and three synthetic visuals are implemented; Home now features it | Apply refreshed case-study patterns after Home direction is set |
-| Finestra historical reflection | Draft-ready | The case now names its period, role boundaries, and the buyer-research lesson; older copy still needs review for stale or unsupported claims | Review obsolete references and superlatives |
-| Lab | Draft-ready | Four selected artifacts are in V1; OpenIDEO's strongest participation fact still needs verification during copywriting | Present as a compact Lab index and four artifact pages |
+| Home | Presentable | Visual direction approved; Juicebox preview replaced with approved sample video (G-027 resolved) | Review the updated hero copy; preserve the approved visual baseline |
+| Forward | Draft-ready | The evidence-checked public route is implemented; the process visual remains a documented placeholder | Review the revised copy and remaining process-visual placeholder |
+| Juicebox | Presentable | None — James approved the project as ready on 2026-11-06 | Preserve approved evidence and presentation; confirm publication state before further release work |
+| Forward Narrative Claude Skill | Draft-ready | Public case draft, explicit responsibility boundaries, and three synthetic visuals are implemented; Home now features it | Review the conversational copy pass and synthetic examples |
+| Finestra historical reflection | Draft-ready | The case now names its period, role boundaries, and the buyer-research lesson; older copy still needs review for stale or unsupported claims | Review remaining legacy wording and linked evidence; requested reflection is implemented |
+| Lab | Draft-ready | Original four artifacts plus Considered and Snark have authored Lab pages; stronger OpenIDEO participation claims remain outside its public post | Review current Lab entries and Snark media; verify participation evidence before expanding OpenIDEO copy |
 | Writing | Draft-ready | The three selected V1 pieces now appear on About | Keep the curated presentation consistent with the refreshed system |
-| About/contact | Draft-ready | Updated positioning and personal voice, current role, contact link, curated writing, project links, and approved travel portrait are present | Apply refreshed page patterns after Home direction is set |
+| About/contact | Draft-ready | Updated positioning and personal voice, current role, contact link, curated writing, project links, and approved travel portrait are present | Review updated hero and conversational wording; retain approved travel portrait |
 | Resume | Presentable | None — James approved the resume as ready on 2026-11-06 | Preserve the approved resume during remaining portfolio work |
 
 Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Presentable, Shipped.
+
+## Future TODO
+
+- Consider changing the contact email to james@jameslytle.com. Keep jameslytle@hey.com until that decision is made.
 
 ## Blocking gaps
 
 - None prevent narrative drafting; documented asset and verification gaps remain bounded.
 
-## Last session
+## Latest work — 2026-11-19
+
+- Completed a [source-backed review of the writing guidance](./WRITING_VOICE_REVIEW.md), refined the prompt to distinguish observed habits from current preferences and editorial recommendations, and added two illustrative before/after paragraph pairs. These are documentation examples, not public copy changes.
+
+- Documented James’s natural writing voice from the largely self-written Finestra narrative in [WRITING_VOICE.md](./WRITING_VOICE.md), with source examples, editing guidance, and a reusable prompt. Expanded it after reading all three linked Medium articles, adding verbatim examples, humor, conviction, rhetorical pacing, and guidance by writing context. Linked it from DESIGN.md. This analysis did not change public project copy.
+
+- Implemented James’s copy feedback: heroes now say “making complex things useful”; the project title is “Forward”; most prose em dashes were removed; case-study copy is more conversational; Finestra uses the supplied replacement verbatim.
+- Kept the current email unchanged and recorded the possible switch to james@jameslytle.com under Future TODO.
+- Validation: production build and accessibility audit passed for 25 prerendered pages. Generated content was refreshed. No new browser review was performed for this copy pass.
+- Delivery: changes are local on `copy/website-feedback`. Fetching GitHub failed because the configured proxy was unreachable; this branch has no PR or deployment verified in this session.
+- Reviewed status, inventory, content gaps, editorial decisions, design guidance, and historical QA/planning notes for stale current-state instructions.
+
+## Earlier session history
+
+The entries below describe their original sessions; later completed work supersedes their pending actions and PR references.
 
 - Added Snark as a new Lab artifact at James's request, with an opening live-capture marketing clip, two store stills, and a factual account of the motivation, AI-assisted design/development loop, agent folder, and store launch. See `projects/snark.md` for evidence and ownership boundaries. Next action for this addition: review the post and video before authorizing merge. Existing case-study priorities remain unchanged.
 
@@ -98,8 +116,8 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 
 ## Next review trigger
 
-The Projects index uses the approved shared foundations and is ready for visual review.
+James’s review of the revised copy and the remaining Forward process-visual gap. Readiness levels remain unchanged until review; this pass does not establish a new publication state.
 
-## Session stopping point — 2026-10-10
+## Historical stopping point — 2026-10-10 (superseded)
 
 James approved the current website refinements as a good stopping point. Next work is primarily content review: Home/About/resume positioning, ownership and evidence in the three primary case studies, remaining placeholders, and final resume PDF export. James also wants a new portrait of himself for About, replacing the 2020 headshot. Obtain a current photo before replacing the asset. The existing draft PR #4 holds the implementation work. Local development server stopped at James's request.

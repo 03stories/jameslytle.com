@@ -21,7 +21,7 @@ draft: false
 
 From 2012 to 2015, my brother Seth and I built Finestra to connect local artists with buyers. I led the product’s UX and UI design and designed and built the marketing site; Seth led native iOS engineering. I also did most of the web frontend work on the later Preview experience.
 
-Finestra is now closed, and the screens below belong to that period. I still value the persistence it took to build the company and the people the work brought together. I would make many design decisions differently today. The clearest lesson is that I should have spent more time understanding buyers and designing for the exchange between artists and buyers—not only the discovery experience. This is a record of an earlier chapter, not a claim about my current interface standard.
+Finestra is now closed, and the screens below belong to that period. I still value the persistence it took to build the company and the people the work brought together. I would make many design decisions differently today. The clearest lesson is that I should have spent more time understanding buyers and designing how artists and buyers could make an exchange, beyond just discovering the art. While the interface is a bit cringy for me to look back on, I am proud of the businesses experiences and achievements for that season.
 
 **The goal then:** Help working local artists connect their work with local buyers.
 
@@ -75,7 +75,7 @@ Ok, back to business.
 
 After translating early views into basic prototypes, we had enough to start getting feedback on the basic idea. This process was highly iterative and consisted of talking to artists as we started to design/develop the first proof of concept app. 
 
-In retrospect, a lesson I learned here is that we should spent *considerably* more time on in-depth conversations with the other half of this marketplace marriage — the potential buyers. It wasn't that there was a shortage of excited reactions and exclamations of "that's really cool!". Everyone we talked to loved the idea, and ultimately we even got great press from various channels at launch, but I think we didn't pay enough early attention to facilitation of the art exchange experience between buyers and artists<a href="#aside"><sup>(2)</sup></a>.
+In retrospect, a lesson I learned here is that we should spent *considerably* more time on in-depth conversations with the other half of this marketplace: the potential buyers. It wasn't that there was a shortage of excited reactions and exclamations of "that's really cool!". Everyone we talked to loved the idea, and ultimately we even got great press from various channels at launch, but I think we didn't pay enough early attention to facilitation of the art exchange experience between buyers and artists<a href="#aside"><sup>(2)</sup></a>.
 
 As we synthesized feedback, the wireframes rounded out with more features such as search, filtering, mapping, and innovative ways to experience the art. 
 

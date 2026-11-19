@@ -1,6 +1,10 @@
 # Project: Finestra Art App
 
-Last updated: 2026-09-26
+Last updated: 2026-11-19
+
+## Latest copy update — 2026-11-19
+
+The public case now uses James’s supplied “While the interface is a bit cringy…” reflection verbatim. The requested wording and em-dash pass are implemented locally; readiness remains Draft-ready, with legacy copy and linked evidence still requiring review. No new business or adoption claims were added.
 
 ## Classification
 

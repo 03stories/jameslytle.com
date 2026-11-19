@@ -1,16 +1,18 @@
 # Portfolio visual direction
 
-Updated 2026-10-03. James approved Home as the visual baseline for the MVP. These rules capture that design and guide its application to the remaining scoped pages. The reference implementation is `src/pages/HomePage.jsx` and the Home section of `src/styles.css`.
+Updated 2026-11-19. James approved Home as the visual baseline for the MVP. The shared shell has since been applied to Projects, project details, About, Resume, and Lab. These rules capture the baseline for ongoing refinements. The reference implementation is `src/pages/HomePage.jsx` and the Home section of `src/styles.css`.
 
 ## Voice
 
-Practical, precise, approachable. Real product artifacts carry the visual evidence. The Cimen Fluid reference informs varying image scales and generous spacing; it does not define the site's identity.
+Use [James’s writing voice guide and reusable prompt](portfolio/WRITING_VOICE.md) for future writing and editing. It draws on his largely self-written Finestra narrative and three linked articles, with verbatim examples and guidance for reflective, teaching, and opinion writing. It distinguishes natural voice from copy errors and later editorial additions.
+
+Practical, precise, approachable. Use conversational first-person copy, avoid repeating “product” in heroes, and use em dashes sparingly. The 2026-11-19 copy pass is implemented; remaining legacy copy still needs review. Real product artifacts carry the visual evidence. The Cimen Fluid reference informs varying image scales and generous spacing; it does not define the site's identity.
 
 ## Foundations
 
 - Keep the existing Geologica family. Use 400 for prose, 500 for display and links, and 600 for the name. Weight contrast should help long headlines breathe.
 - Home's neutral background is `#f8f9f9`, ink `#202322`, secondary text `#555d59`, rules `#d9dfdc`, and vermilion action color `#bd3023`.
-- CSS foundations live under `--portfolio-*` in `src/styles.css`. They now live on `.portfolio-shell`, used by Home and Projects; extend that shell deliberately as remaining pages migrate.
+- CSS foundations live under `--portfolio-*` in `src/styles.css`. The shared shell is used across scoped portfolio pages; token foundations live in `src/design/tokens.json`.
 - Fluid outer gutter: 20–64px. Section spacing: 56–112px. Display scale: 38–70px on desktop, 36–52px on mobile, with line height 1.12 and tracking no tighter than -0.035em.
 - Primary actions use a solid accent, white text, 4px corners, and a minimum 44px target. Secondary actions are underlined text. Links use local Google Material outlined SVGs: chevrons for internal project links, open-in-new for live products, mail for contact, and a document for Resume. Icons are 18px with a 6px label gap and inherit the text color; they are hidden from assistive technology. Hover lifts have reduced-motion alternatives.
 
@@ -46,16 +48,16 @@ Use plain wireframe styling: neutral fills, thin outlines, simple connectors, re
 | Finestra | Carry the archive icon, dates, and documentary treatment into the introduction. Keep reflection and period artifacts distinct from current design claims. |
 | About | Apply the shared title, prose, links, and spacing while preserving personal voice, inline project references, portrait, and curated writing. |
 | Resume | Use dense, readable typography and clear experience hierarchy within the same shell; prioritize scanning and a direct resume action. |
-| Lab | Compact index and four artifact pages with the same typography, links, image treatment, and spacing. Keep `/other-things` routes. |
+| Lab | Compact index and selected artifact pages with the same typography, links, image treatment, and spacing. Keep `/other-things` routes. |
 
-## Rollout order
+## Rollout status
 
-1. Promote shared foundations and repeated actions/figures while preserving Home.
-2. Apply the system to Projects and the three major case studies.
-3. Apply the historical pattern to Finestra, then About, Resume, and the scoped Lab pages.
-4. Clean relevant content and resolve remaining evidence/assets, then review responsive behavior and accessibility before the launch PR.
+1. Complete: shared foundations and repeated actions/figures, preserving Home.
+2. Complete: shared system applied to Projects and the three major case studies.
+3. Complete: shared patterns applied to Finestra, About, Resume, and the scoped Lab pages.
+4. In progress: copy feedback applied on 2026-11-19; remaining evidence/assets and final review are tracked in `portfolio/PORTFOLIO_STATUS.md`.
 
-Home's direction is approved. The Juicebox replacement image remains tracked as G-027; approval of the visual patterns does not resolve that asset gap. Legacy pages outside MVP remain subject to the existing relevance and inbound-link plan.
+Home's direction is approved. G-027 is resolved with the approved Juicebox sample video. Legacy pages outside MVP remain subject to the existing relevance and inbound-link plan.
 
 ## Interactive design system
 
@@ -65,13 +67,13 @@ Open `/design-system` (`/sandbox` is an alias) for live foundations, type, actio
 
 Edits are local browser previews, stored separately from the older Photo Palette experiment. They carry across the migrated portfolio routes. Copy/download the current JSON and provide it to Codex to apply to `src/design/tokens.json`; reset restores committed defaults. Import accepts known token names, six-digit hex colors, and bounded numeric values. Contrast ratios are basic body-text checks, not a full accessibility audit.
 
-Scope: Home, Projects, shared case studies, About, Resume, and the design-system page use the portfolio foundations. Lab and older utility pages still use the legacy theme until migrated. Component-specific composition, responsive minimums, archive details, and small metadata sizes remain intentional CSS rules; the controls are not a universal override of every pixel.
+Scope: Home, Projects, shared case studies, About, Resume, and the design-system page use the portfolio foundations. Lab also uses the shared shell; older utility pages may retain their legacy theme. Component-specific composition, responsive minimums, archive details, and small metadata sizes remain intentional CSS rules; the controls are not a universal override of every pixel.
 
 Font exploration: the design system links to Google Fonts and accepts a family name, specimen URL, Google CSS link/import snippet, or CSS font-family declaration. It extracts the first family and requests regular weights 400–700 from Google Fonts; pasted markup is never inserted. Custom choices export as `"font": "google:Manrope"` and reload across routes. Unavailable fonts report a loading error; existing predefined font choices remain available.
 
 Font roles now export independently as `heading-font` and `body-font`. All rendered site headings (h1–h6), including the linked site name, use the heading family. Prose, navigation, buttons, labels, captions, and metadata inherit the body family across the app, including legacy routes. Each role has its own predefined selector and custom Google Fonts input. Old single-font exports and stored previews migrate that choice to both roles; new exports retain each choice separately. The downloadable resume PDF is a separate artifact and does not respond to website font controls.
 
-Lab now uses the shared portfolio shell, including both font roles and image/action tokens. Its compact index has four full-row links with small evidence previews and role summaries. Artifact pages use the shared opening, prose, uncropped imagery, and named Lab navigation. Photo Palette’s generated theme is scoped to the interactive utility; it does not overwrite portfolio tokens. The original Design Docs article stays at `/projects/design-docs`, with a shorter artifact at `/other-things/design-docs`.
+Lab now uses the shared portfolio shell, including both font roles and image/action tokens. Its compact index has full-row links with small evidence previews and role summaries. Artifact pages use the shared opening, prose, uncropped imagery, and named Lab navigation. Photo Palette’s generated theme is scoped to the interactive utility; it does not overwrite portfolio tokens. The original Design Docs article stays at `/projects/design-docs`, with a shorter artifact at `/other-things/design-docs`.
 
 ## Detail-page alignment
 

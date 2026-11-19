@@ -13,7 +13,7 @@ summary: "I designed, built, deployed, and maintain a Claude Skill that replaced
 draft: false
 ---
 
-Forward narratives combine data accuracy, story structure, visual pacing, and a growing interaction system. Initially, that expertise—and the ability to publish a narrative—was concentrated in my local workflow.
+Forward narratives combine data accuracy, story structure, visual pacing, and a growing interaction system. At first, I was the only person putting all of that together and publishing narratives from my local setup.
 
 I designed, built, deployed, and continue to maintain a Claude Skill that makes the narrative system usable across our team. It guides the creative work, connects through MCP to our hosted narrative platform, and turns a finished narrative into a shareable experience without a code deployment.
 
@@ -25,9 +25,9 @@ Our CTO leads the hosted platform, Dispatch. I collaborated closely with him on 
 
 Before the skill, I manually created and edited every narrative locally. To make one accessible at a URL, I had to open a pull request, wait for review and merge, and then wait for deployment. That path could take multiple days.
 
-This constrained sales conversations. Prospects reacted most strongly when they could see a narrative in their own world—shaped around their use case rather than a generic demonstration—but I was the only person who could produce one.
+That slowed down sales conversations. Prospects responded best to a narrative built around their own use case, but I was the only person who could make one.
 
-The goal was not simply to let everyone prompt an AI model. It was to make our accumulated narrative-design judgment available to the team while preserving the product’s technical rules, permissions, and quality standards.
+I wanted teammates to use what we’d learned about building narratives without having to learn the whole codebase. The skill still needed to follow the platform’s technical rules, permissions, and quality standards.
 
 # Decision 1: Separate creative judgment from platform authority
 
@@ -55,7 +55,7 @@ This makes the editing model match the way people actually work: discuss one mom
 
 After deployment, we reviewed teammates’ Claude sessions and inventoried what people repeatedly corrected or asked the model to do differently. I turned those conversations into a managed improvement process.
 
-Specific observations stay tied to the narrative that revealed them. Recurring lessons are synthesized, deduplicated, and tracked until incorporated. A single person’s preference does not automatically become a rule.
+I keep each observation linked to the narrative it came from, group the recurring issues, and track them until we’ve addressed them. One person’s preference doesn’t automatically become a rule.
 
 ![The improvement loop moves from real team sessions to specific observations, synthesized patterns, the appropriate system layer, and a maintained release.](./continuous-improvement-loop.svg)
 
@@ -79,10 +79,10 @@ The skill replaced a multi-day, single-author pull-request and deployment path w
 
 Narrative creation and iteration are now the fastest part of the workflow. The constraint has shifted to the more valuable work: understanding the prospect relationship, deciding what matters to that audience, and shaping the right story.
 
-That is an organizational outcome rather than a precise time-savings metric. The honest comparison is multi-day production before and rapid creation now—not an invented percentage.
+I don’t have a precise time-savings figure. What I can say is that a process that took multiple days and depended on me is now something teammates can do themselves.
 
 # What I learned
 
-Scaling creative judgment takes more than distributing a prompt. The real product is the improvement loop around it: observe use, preserve specific evidence, identify durable patterns, choose the system layer that should own each fix, and remove instructions when better defaults can carry the behavior.
+I’ve learned that sharing the prompt is just the start. I need to watch how people use it, keep examples of what goes wrong, and work out whether to improve the skill or the platform. Sometimes a better default lets me remove an instruction altogether.
 
-The skill’s value is not that it eliminates thinking. It moves human attention away from deployment mechanics and toward the sales context, product judgment, and narrative choices where it matters most.
+The useful part is giving teammates more time to think about the prospect and the story, with less time spent getting a narrative published.
