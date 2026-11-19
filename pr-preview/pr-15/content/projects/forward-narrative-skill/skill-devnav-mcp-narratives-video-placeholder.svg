@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Placeholder: browsing MCP-created narratives in the review tool" font-family="-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <rect width="1200" height="675" fill="#fff"/>
+  <rect x="12" y="12" width="1176" height="651" fill="none" stroke="#000" stroke-width="2" stroke-dasharray="10 8"/>
+  <rect x="60" y="60" width="700" height="500" rx="10" fill="#fff" stroke="#000" stroke-width="3"/>
+  <line x1="60" y1="96" x2="760" y2="96" stroke="#000" stroke-width="2"/>
+  <g fill="none" stroke="#000" stroke-width="2"><circle cx="82" cy="78" r="6"/><circle cx="102" cy="78" r="6"/><circle cx="122" cy="78" r="6"/></g>
+  <line x1="290" y1="96" x2="290" y2="560" stroke="#000" stroke-width="2"/>
+  <text x="76" y="124" font-size="12" font-weight="700" fill="#000">STANDALONE · 100+</text>
+  <g font-size="12" fill="#000">
+    <rect x="70" y="138" width="210" height="28" fill="#000"/>
+    <text x="80" y="157" fill="#fff">Prospect demo · Healthcare</text>
+    <text x="80" y="189">Prototype · Polls</text>
+    <text x="80" y="217">Prospect demo · SaaS onboarding</text>
+    <text x="80" y="245">Prototype · Embedded video</text>
+    <text x="80" y="273">Prospect demo · Nonprofit</text>
+    <text x="80" y="301">…</text>
+  </g>
+  <rect x="420" y="120" width="210" height="400" rx="28" fill="#fff" stroke="#000" stroke-width="2.5"/>
+  <rect x="445" y="160" width="160" height="12" rx="3" fill="#000"/>
+  <text x="525" y="280" font-size="40" font-weight="700" text-anchor="middle" fill="#000">+24%</text>
+  <rect x="460" y="305" width="130" height="8" rx="3" fill="#000" opacity="0.35"/>
+  <g fill="#000">
+    <text x="820" y="140" font-size="14" font-weight="700" letter-spacing="1.5">VIDEO PLACEHOLDER</text>
+    <text x="820" y="182" font-size="28" font-weight="700">What the team made</text>
+    <text x="820" y="212" font-size="16">devnav · 20–30 s · screen recording</text>
+    <text x="820" y="266" font-size="15" font-weight="700">Shot list</text>
+    <text x="820" y="296" font-size="15">1. Open the MCP-created narratives</text>
+    <text x="820" y="324" font-size="15">2. Scroll the list (show the count)</text>
+    <text x="820" y="352" font-size="15">3. Click 3–4 very different ones</text>
+    <text x="820" y="408" font-size="15" font-weight="700">Notes</text>
+    <text x="820" y="438" font-size="15">Confirm the real count and</text>
+    <text x="820" y="460" font-size="15">number of authors while there</text>
+    <text x="820" y="488" font-size="15">Hide or blur prospect names</text>
+  </g>
+</svg>
