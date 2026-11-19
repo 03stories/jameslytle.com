@@ -1,24 +1,24 @@
 ---
 title: Considered
 date: '2026-11-07'
-summary: A writing prototype for connecting thoughts, keeping their context close, and exploring how changes affect the bigger picture.
+summary: A writing prototype that opens notes beside the sentence that links to them and lets you edit numbers right in the text.
 kind: Interaction prototype
 tags: [writing, interaction, code]
 draft: false
 featured: true
 cover: ./overview.png
 ---
-Considered is a prototype for thinking through connected writing. A phrase can lead to another thought, a source note, or an editable number. Open the connection beside what you're writing to keep its context in view.
+Say you’re writing about a budget and want to check a detail about your spending. In Considered, clicking “spending” opens the note right beside the paragraph you’re writing. You can see what you meant by that phrase and still have the original sentence in front of you.
 
-The current starter notebook uses budgeting as an example. The design is about making those connections useful across whatever you're trying to understand.
+The starter notebook uses budgeting to show how this works. A phrase can link to another thought or a source, and you can edit a number right where it appears in the writing.
 
-[Try Considered](https://home-thoughts-james.fine-brush-9025.chatgpt.site/). The prototype is public, and you can explore the notebook yourself.
+[Try Considered with the starter notebook](https://home-thoughts-james.fine-brush-9025.chatgpt.site/).
 
 [View the notebook screenshot](./overview.png).
 
 ## Follow a thought without losing your place
 
-Clicking an inline link opens its note in a side panel automatically. In this example, I open spending, switch to priorities, and close the panel. The main paragraph stays in view throughout.
+In the clip, I check spending, open priorities, then close the panel. The paragraph is still where I left it.
 
 <figure class="lab-attachment">
   <video controls muted loop playsinline data-play-in-view preload="none" width="1280" height="800" poster="./linked-page.png" aria-label="Following inline links into the automatic side panel">
@@ -28,9 +28,9 @@ Clicking an inline link opens its note in a side panel automatically. In this ex
   <figcaption>A linked note opens beside the writing. <a href="./follow-a-link.mp4">Open the silent clip</a>.</figcaption>
 </figure>
 
-## Make a new connection while writing
+## Give a phrase its own note
 
-Here I write a sentence, select “unexpected costs,” and create a linked page from that phrase. The new page opens beside the original, ready for a supporting note.
+Here I get to “unexpected costs” and give it a note of its own. I select the phrase and create a linked page, which opens beside the sentence so I can add more detail.
 
 <figure class="lab-attachment">
   <video controls muted loop playsinline data-play-in-view preload="none" width="1280" height="800" poster="./create-linked-thought-poster.png" aria-label="Selecting a phrase and creating a linked page beside the writing">
@@ -40,9 +40,9 @@ Here I write a sentence, select “unexpected costs,” and create a linked page
   <figcaption>Select a phrase, link it, and keep writing in the new note. <a href="./create-a-linked-thought.mp4">Open the silent clip</a>.</figcaption>
 </figure>
 
-## Work with a number in context
+## Change a number where it comes up
 
-Numbers in the writing can be edited in place. This clip changes an illustrative monthly amount from $2,400 to $2,600 in a linked note.
+Here I change an example monthly amount from $2,400 to $2,600. I can make the edit in the sentence where the number is used.
 
 <figure class="lab-attachment">
   <video controls muted loop playsinline data-play-in-view preload="none" width="1280" height="800" poster="./inline-number-poster.png" aria-label="Changing an illustrative inline amount from 2400 dollars to 2600 dollars">
@@ -52,8 +52,8 @@ Numbers in the writing can be edited in place. This clip changes an illustrative
   <figcaption>Edit the amount without leaving the surrounding writing. <a href="./edit-an-inline-number.mp4">Open the silent clip</a>.</figcaption>
 </figure>
 
-## Learnings
+## What I’d try next
 
-- Inline linking with an automatic side panel feels seamless. It's nice to follow a thought while keeping the original writing in view.
-- The UX of parent rewrites based on changes to sibling notes needs work.
-- I need to try this more thoroughly on something real to put it through its paces.
+The side panel feels right to me. I can follow a thought and still see the train of thought that got me there. What still needs work is how the main note gets rewritten when related notes change.
+
+I’d like to put this through its paces on something real and see how it holds up.
