@@ -52,7 +52,7 @@ Allowed levels: Not assessed, Blocked, Skeleton, Evidence-ready, Draft-ready, Pr
 
 - Committed the earlier copy pass, status sweep, voice guide, and source review as `228dd73` on `copy/website-feedback`.
 - Rewrote the Forward Narrative Skill case using the voice guide: opens with the documented publication workflow, uses more natural headings and concrete explanations, and preserves Dispatch/skill ownership, weekly adoption, synthetic visuals, and the absence of precise time-savings metrics. Readiness remains Draft-ready pending James’s review. Production build and accessibility audit passed for 25 prerendered pages after the rewrite.
-- James explicitly requested questions wherever personal details are missing rather than fabricated tone alignment. Updated the reusable prompt accordingly. Asked whether a specific demo or teammate request prompted the change; the current opening uses only the established workflow and does not depend on an anecdote.
+- James explicitly requested questions wherever personal details are missing rather than fabricated tone alignment. Updated the reusable prompt accordingly. James identified the turning point: needing PTO while multiple requests were arriving at once. Added that firsthand detail to the opening and project notes without inventing dates, request counts, feelings, or missed deliveries.
 
 - Completed a [source-backed review of the writing guidance](./WRITING_VOICE_REVIEW.md), refined the prompt to distinguish observed habits from current preferences and editorial recommendations, and added two illustrative before/after paragraph pairs. These are documentation examples, not public copy changes.
 

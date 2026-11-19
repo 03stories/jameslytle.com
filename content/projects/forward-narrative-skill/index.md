@@ -15,6 +15,8 @@ draft: false
 
 At first, every Forward narrative had to go through me. I’d make it locally, open a pull request, and wait for review, merge, and deployment before anyone could share a link. That could take days.
 
+When I needed to take PTO and multiple requests were coming in at once, I knew the workflow had to change.
+
 This was especially limiting in sales conversations. Prospects responded best when they could see a narrative built around their own use case, but I was the only person who could make one.
 
 I designed, built, deployed, and continue to maintain a Claude Skill that lets teammates create and share narratives themselves. It guides the writing and design, then connects through MCP to our hosted platform, Dispatch, to save and share the result without a code deployment.
