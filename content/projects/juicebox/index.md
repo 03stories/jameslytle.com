@@ -9,13 +9,13 @@ tags:
   - "Data Visualization"
   - "UX"
 cover: ./jb-header.png
-summary: "I led interaction and interface design across Juicebox's evolution, from its configurable Slice system to a self-service Editor built for complex customer reports."
+summary: "I led interaction and interface design for Juicebox, from the building blocks our team used to make reports to the Editor customers use to make their own."
 draft: false
 ---
 
-[Juicebox](https://www.juiceanalytics.com/) is an active, configurable customer-reporting platform for turning data into guided, interactive stories. I led interaction and interface design across its evolution, from the building-block system used by internal app developers to the self-service Editor customers use to author reports.
+Before we built [Juicebox](https://www.juiceanalytics.com/), our team made roughly 30–40 custom data apps. We kept seeing the same needs. People who didn’t work with data every day needed to know what a report was telling them, where to go next, and how to use the charts along the way.
 
-My work sat between product architecture, interaction design, and implementation. I designed reusable product systems, translated recurring client patterns into configuration models, built working definition prototypes, and implemented targeted frontend refinements. Engineering partners owned the underlying platform and production React system.
+I led interaction and interface design as we turned those patterns into reusable building blocks, then designed the Editor customers use to make their own reports. The sample below shows what a reader sees: a survey report that combines writing and photography with charts you can explore.
 
 <figure class="slice-film">
   <video controls muted loop playsinline data-play-in-view preload="none" width="1920" height="1198" poster="./juicebox-sample-poster.jpg" aria-label="Juicebox sample customer-reporting experience" aria-describedby="juicebox-sample-caption">
@@ -29,45 +29,37 @@ My work sat between product architecture, interaction design, and implementation
   </details>
 </figure>
 
-# From custom applications to a product system
+# Learn from the reports we were already building
 
-Before Juicebox, our team had designed and developed roughly 30–40 custom data applications. Repeated patterns were becoming visible: non-analytical audiences needed purposeful messaging, a guided narrative flow, and consistent visual building blocks.
+We organized reports into Stories made from configurable components called Slices. A developer could use the same building blocks across different client reports, and readers could learn how a Slice behaved and carry that knowledge to the next one.
 
-Juicebox turned those patterns into a platform. A report could contain multiple Stories, each assembled from configurable components called Slices. Shared interaction behavior made the experience coherent for end users, while common configuration gave app developers a reusable system for creating different customer reports.
+Every option made a Slice more flexible. Add enough options and you’ve built a programming language. We wanted a small set of building blocks that could each do more.
 
-The product tension was constant: every new option increased flexibility, but too much flexibility would turn the platform into a development language. The goal was a smaller family of richer building blocks that made good reporting decisions easier.
+We’d put editing into an earlier product from the start. This time, we had our own developers configure client reports first. That gave us a better sense of which options people needed and which ones made a report harder to build. By the time we could make very different reports in a few weeks, I had two to three years of design and configuration work to look back on. I used that work to refine how Slices were configured before we put those controls in the Editor.
 
-# Decision 1: Learn through real client work before opening self-service
+# Give filters a home in Slices
 
-Our earlier product exposed editing from the beginning. For Juicebox, we chose to mature the platform first while internal developers configured client applications.
-
-Building a self-service Editor too early would have forced us to settle on configuration rules before we understood which patterns were reusable. Working through varied client reports let us learn where customization was valuable, where consistency mattered, and which options created unnecessary complexity.
-
-Once the team could design and develop diverse reports within weeks, the repeated patterns were stable enough to expose through a customer-facing authoring experience. I analyzed two to three years of configuration and design behavior, then iterated on the Slice configuration model before it became part of the Editor.
-
-# Decision 2: Unify filtering through Slices 2.0
-
-As the platform grew, two filtering systems had begun to overlap. Global Filters were easy to add, but every filter's data had to load before the story itself appeared. They also duplicated capabilities that increasingly belonged in Slices, creating two systems that would drift in behavior and cost more to maintain.
+Global Filters were easy to add. The catch was that a reader had to wait for every filter to load before seeing the story. Slices were already doing some of the same work, so we were heading toward two ways of filtering that we’d have to keep in sync.
 
 ![The original Global Filters experience](./slices-global-filters.gif)
 
-We could optimize Global Filters, create a special filters-only Slice, or unify filtering within the common Slice model. I specifically drove the third direction.
+We could speed up Global Filters, make a dedicated filter Slice, or teach the Slices we already had to do the job. I led that third approach, Slices 2.0. We had to keep existing reports working and give developers a consistent way to set up the new behavior in YAML.
 
-The difficult part was preserving existing client behavior while improving performance, end-user coherence, and YAML configuration for app developers. The design centered on persistent Slice pills: a compact selection state that could also open the Slice's data in a searchable, sortable side panel. A shared `display_slice_as` option let any compatible Slice appear as a visualization, a pill, or both.
+A Slice could now show your selection in a small pill. Click the pill and you could search or sort the full list in a side panel. Developers could use the same `display_slice_as` setting to show a compatible Slice as a visualization, a pill, or both.
 
 ![Slice pills opening a searchable side-panel list](./slices-side-panel-list.gif)
 
-This unlocked more than a replacement for Global Filters. Slice groups could place related filters together, add context, share layout behavior, and support crossfiltering. Lazy loading returned useful counts before full data values. Hierarchical Slices gained a consistent selection experience, and reports could place filters inline rather than isolate them in a header.
+That meant we could put filters right where they mattered in a story. Related filters could sit together and update one another’s available choices. A reader could see counts while the full values were still loading, and Slices with nested choices could use the same selection behavior.
 
 ![Crossfiltering and lazy-loading behavior in Slice pills](./slices-crossfilter.gif)
 
-The result was one primary filtering architecture the team could continue improving. Existing apps retained backward compatibility, while new apps could move to the richer Slice model.
+Existing reports kept working, and we had one filtering system to build on in new reports.
 
-## Interaction craft within a reusable Slice
+## What happens when you select a slice of pie?
 
-A reusable Slice has to stay understandable as data, layout, and authoring choices change. For the pie Slice, I designed coordinated feedback across the chart, legend, and filter pill. Hover previews a selection; selecting Nashville and “41 Other” represents 42 underlying cities.
+In the prototype below, hovering over the chart also highlights its legend entry. Select Nashville and “41 Other” and the filter pill has to make clear what you chose. That’s 42 cities behind two labels.
 
-The same component also needed to handle narrow and wide containers, long labels, large values, dark backgrounds, and incomplete authoring inputs. I worked through these cases in Figma prototypes so the system's behavior was considered alongside its appearance.
+I worked through those details in Figma, along with what happens when the chart gets squeezed into a narrow space, a label runs long, or the author removes a required input. It had to behave predictably in all of those cases.
 
 <figure class="slice-film">
   <video controls muted playsinline data-play-in-view preload="none" width="1920" height="1080" poster="./pie-slice-poster.jpg" aria-label="Pie Slice interaction and system-state prototypes" aria-describedby="slice-film-caption">
@@ -81,17 +73,13 @@ The same component also needed to handle narrow and wide containers, long labels
   </details>
 </figure>
 
-# Decision 3: Redesign the Editor for platform-scale complexity
+# Keep the shape of the report in view
 
-The original Editor made a smaller report easy to scan because configuration for its Slices and sections was visible together. As the platform evolved, that strength became a liability. Complex reports produced a cluttered interface, obscured the high-level structure, and forced authors to scroll repeatedly between distant parts of a story.
+A small report was easy to scan in the original Editor. You could see the sections, the Slices, and their settings all together. As reports got bigger, those same settings filled up the panel. Finding a different part of the story could mean a lot of scrolling.
 
-The choice was to preserve all-at-once visibility or introduce hierarchy and reveal detail only when needed.
+I designed the new Editor around a folder tree so authors could see the shape of the report at a glance. I designed the tree, the sliding panels that open when you need more detail, and the controls inside them. I built working prototypes for the frontend engineers, who implemented the production React system. I came back into the code after that to ship some UI and interaction refinements.
 
-I designed the complete new experience: a folder-tree model for understanding and navigating report structure, a list experience optimized for speed, a sliding-panel system for progressively revealing detailed configuration, and the configuration components themselves.
-
-I implemented working definition prototypes for handoff to frontend engineers, who built the production React system. After that implementation, I returned to the code to ship a series of UI and UX refinements.
-
-The redesign rolled out smoothly and received customer praise. We do not have hard efficiency metrics. These recordings show a comparable Sales Dashboard authoring task in the old inline Editor and the new hierarchical model.
+The rollout went smoothly and we heard praise from customers. Watch where the settings go in these two recordings. Both show someone adding key metrics to a Sales Dashboard. In the newer Editor, the tree stays in view while a separate panel opens for the settings.
 
 <figure class="slice-film">
   <video controls muted playsinline data-play-in-view preload="none" width="1920" height="1080" poster="./editor-before-2022-poster.jpg" aria-label="Before: Juicebox Editor in 2022" aria-describedby="editor-before-caption">
@@ -120,7 +108,7 @@ The redesign rolled out smoothly and received customer praise. We do not have ha
 
 # What shipped
 
-Across its evolution, Juicebox supported a wide variety of private customer reports and public examples in healthcare, entrepreneurship, survey analysis, politics, and personal data. The platform expanded from internal developer configuration into a self-service authoring experience spanning data sources, report design, templates, publishing, sharing, trials, and workspaces.
+What started as a way for our developers to assemble client reports grew into a tool customers could use to connect data, design a report, and publish it themselves. Below are a few examples of what that range looks like, from a compact dashboard to a longer story about neighborhood businesses.
 
 <div class="portfolio-report-gallery" role="group" aria-label="Examples of reports built with Juicebox">
   <div class="portfolio-report-column">
@@ -147,10 +135,8 @@ Across its evolution, Juicebox supported a wide variety of private customer repo
   </div>
 </div>
 
-Slices 2.0 supplied a more coherent filtering and layout foundation. The latest Editor redesign supplied an information architecture that could keep pace as reports became more complex. Juice Analytics continues to identify Juicebox as its technology platform, with active [product sign-in](https://juiceboxdata.com/) and [workspace documentation](https://docs.myjuicebox.io/getting-started/new-workspace).
+You can still [sign in to Juicebox](https://juiceboxdata.com/), and the [workspace documentation](https://docs.myjuicebox.io/getting-started/new-workspace) shows how authors get started.
 
 # What I would improve now
 
-I would add a floating Editor mode that lets the report remain full width while editing. The folder tree and sliding panels improved navigation and progressive disclosure, but some complex layouts are best judged at their real canvas width. A floating mode would preserve editing access without compromising the design context an author needs.
-
-The larger lesson is that authoring tools have two products inside them: the experience being created and the system used to create it. A scalable Editor has to keep both understandable as the platform grows.
+I’d add a floating Editor. The tree makes a large report easier to get around, but the editing panel still takes up some of the canvas. For a complex layout, I’d like to be able to move that panel out of the way and keep editing while I see the report at full width.
