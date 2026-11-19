@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>James Lytle</title>
     <link rel="alternate" type="application/rss+xml" title="James Lytle — Lab" href="/lab.xml" />
-    <script type="module" crossorigin src="/assets/index-DhBS12Jg.js"></script>
+    <script type="module" crossorigin src="/assets/index-BsfkCryN.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-CpakoBGD.css">
   </head>
   <body>
@@ -16,25 +16,23 @@
   </video>
   <figcaption>Codex generated this demo video. Pretty good for a first pass, and it works for now. Note to self: record my own when I have a little more time.</figcaption>
 </figure>
-<p>I wanted to keep the parts of Arc I used every day: spaces, pinned bookmark tabs, and the little niceties that made the sidebar feel right. So I worked with Claude to build them into a Chrome extension in a week of evenings.</p>
+<p>I wanted to keep the parts of Arc I used every day. Spaces, pins that were bookmarks and tabs at the same time, and little things like copying the current URL with a shortcut. I spent a week of evenings with Claude putting those things into a Chrome extension.</p>
 <p><a href="https://chromewebstore.google.com/detail/snark/bffjpilpobpmcgfnbneibbomaecbmjoi" target="_blank" rel="noopener noreferrer">Get Snark on the Chrome Web Store</a> · <a href="https://github.com/03stories/snark" target="_blank" rel="noopener noreferrer">Fork it on GitHub</a></p>
-<h2>The sidebar we all loved</h2>
-<p>If you used Arc, this should feel familiar. Spaces, folders, pinned bookmark tabs, and a right-click menu for duplicating tabs and other little conveniences. I focused on the parts I liked best and wanted to keep using.</p>
+<h2>What I kept from Arc</h2>
+<p>If you used Arc, you’ll know what to do with the sidebar. You can tuck tabs into folders, duplicate a tab from the right-click menu, or click a pin to get back to the page you originally saved.</p>
 <p><img src="/content/labs/snark/pinned-tabs.png" alt="Snark store image showing a saved launch-plan pin, navigating away from it, and returning to its original page"></p>
-<p>I left most of the design theming behind, but kept colors for spaces. When I'm swiping between them, that color is a useful reminder of where I am.</p>
-<p>One Arc shortcut I used all the time was copying the current URL. I made sure that worked here too, with a shortcut you can customize in settings.</p>
+<p>I kept colors for spaces. When I’m swiping between them, the color is a quick reminder of where I am. You can also pick your own shortcut for copying the URL in settings.</p>
 <p>Search brings pins, folders, and spaces together. Snark works locally, without an account or backend. The <a href="https://github.com/03stories/snark/blob/main/PRIVACY.md" target="_blank" rel="noopener noreferrer">privacy policy</a> explains storage and the optional connections.</p>
-<h2>A week of evenings with Claude</h2>
-<p>I worked with Claude in Cowork: describe a change, sometimes mark up a screenshot, reload in Chrome, and try it. I decided what I wanted and how it should feel; Claude handled the code, tests, and release materials. Most of the decisions came from using it in my own browser.</p>
+<h2>Working on it in my browser</h2>
+<p>In Cowork, I’d describe a change to Claude or mark up a screenshot. Once Claude made the change, I’d reload the extension in Chrome and try it. That’s where I made most of the design decisions. Claude handled the code, tests, and release materials.</p>
 <h2>Letting an agent help organize</h2>
 <p>This started with getting my bookmarks out of Arc and into Snark. Claude translated and cleaned up the exported bookmarks along the way.</p>
-<p>That became a useful little interface of its own: an optional agent folder on my computer's local filesystem. Snark writes its state there, and an agent can leave commands to update the bookmarks. I can tell Claude what to change and see those changes in the sidebar.</p>
+<p>That gave me a way to keep working with Claude after the move. Snark can write its state to a folder on my computer, and an agent can leave commands there to update my bookmarks. I can ask for a change and see it show up in the sidebar. Any agent that can work with the local folder can use it.</p>
 <p><img src="/content/labs/snark/agent-folder.png" alt="Snark store image explaining the agent folder: connect a local folder, ask an AI to organize tabs, then review the changes in the sidebar"></p>
-<p>What started as a way to move bookmarks between browsers became a simple way to bring any model I want to organizing and editing them. Just connect a local folder and let an agent work there.</p>
 <h2>Shipping was part of the experiment</h2>
 <p>The store images use the extension's actual UI with made-up demo data. Claude rendered that UI, composed the screenshots, and captured them in Chrome. It also prepared the package, listing copy, privacy policy, and permission explanations. I handled the developer account and final submission.</p>
-<p>I shipped it to the Chrome Web Store with 55 automated tests and now run it in two real profiles. Daily use surfaced things a polished screenshot couldn't, including a folder-move data-loss bug and reconnect prompts. Staying close to the working product made those issues visible.</p>
-<p>The thing that stays with me is how quickly this happened. A product I loved was going away. With a little thought about the parts I wanted to keep and a week of evenings with Claude, I had a useful tool I'll use every day. I didn't need a whole software company to keep those things available to me. That's the magic of how AI is changing things.</p>
+<p>I shipped it with 55 automated tests and now use it in two real profiles. Using it every day turned up things I could work on, including a bug that could lose data when moving a folder and reconnect prompts.</p>
+<p>A product I loved was going away. A week of evenings with Claude gave me a way to keep using the parts I cared about. That’s the part that still feels a little like magic to me.</p>
 </div><footer class="case-study-footer"><nav class="case-study-pagination" aria-label="Lab navigation"><a class="portfolio-text-link" href="/other-things">All Lab work</a><a class="portfolio-text-link" href="/other-things/home-considered">Next: <!-- -->Considered<span class="material-icon" aria-hidden="true" style="--material-icon:url(&quot;/icons/material/chevron_right.svg&quot;)"></span></a></nav></footer></article></main><dialog class="media-viewer" aria-label="Full-screen image viewer"></dialog></div></div>
   </body>
 </html>
