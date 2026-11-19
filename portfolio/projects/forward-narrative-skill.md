@@ -1,6 +1,10 @@
 # Project: Forward Narrative Claude Skill
 
-Last updated: 2026-11-16
+Last updated: 2026-11-19
+
+## Latest writing pass — 2026-11-19
+
+Rewrote the public case using `../WRITING_VOICE.md`, grounding the opening in the existing multi-day publication workflow. Technical responsibility boundaries, weekly use, and synthetic evidence remain intact. James supplied the turning point: he needed to take PTO while multiple requests were coming in at once. That detail is now included in the opening. No additional feelings, metrics, or business outcomes were invented. Readiness remains Draft-ready pending review.
 
 ## Classification
 
@@ -51,6 +55,10 @@ Last updated: 2026-11-16
 | F-020 | Other generalized improvements include conventions for sourcing appropriate photography and verifying icons against the Font Awesome kit actually installed in the product. | Firsthand answer and repository evidence | High | Generalized wording likely safe | Iteration examples |
 | F-021 | The review process prefers fixing underlying product defaults when possible rather than repeatedly adding corrective skill instructions; this can improve every future narrative while simplifying the skill. | Narrative Review Journal | High | Yes | Decision 4 and reflection |
 | F-022 | James approved public description of Dispatch and MCP at the system-boundary level and approved synthetic skill-session and narrative-output examples. | Firsthand answer | High | Yes | Public evidence boundary |
+
+## Firsthand follow-up — 2026-11-19
+
+James supplied the specific trigger for changing the workflow: “When I needed to take pto and multiple requests were coming in at once I knew the workflow had to change.” The public introduction now includes that moment. This does not establish dates, request counts, or whether any request was delayed or missed.
 
 ## Story skeleton
 

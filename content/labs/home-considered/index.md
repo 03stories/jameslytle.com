@@ -12,7 +12,7 @@ Considered is a prototype for thinking through connected writing. A phrase can l
 
 The current starter notebook uses budgeting as an example. The design is about making those connections useful across whatever you're trying to understand.
 
-[Try Considered](https://home-thoughts-james.fine-brush-9025.chatgpt.site/) — the prototype is public, and you can explore the notebook yourself.
+[Try Considered](https://home-thoughts-james.fine-brush-9025.chatgpt.site/). The prototype is public, and you can explore the notebook yourself.
 
 [View the notebook screenshot](./overview.png).
 

@@ -1,5 +1,5 @@
 ---
-title: "Forward / Insights Recap"
+title: "Forward"
 date: "2026-08-15T12:00:00"
 headline: "Personalized customer-impact stories at scale"
 client: "Juice Analytics"
@@ -13,9 +13,9 @@ summary: "I originated Forward, a multi-tenant platform for personalized custome
 draft: false
 ---
 
-[Forward](https://www.insightsrecap.com/) is a multi-tenant platform that helps customer-success teams turn product data into personalized, mobile-first narratives for every customer—not only the accounts with a dedicated CSM and a custom deck.
+[Forward](https://www.insightsrecap.com/) is a multi-tenant platform that helps customer-success teams turn product data into personalized, mobile-first narratives for every customer, including those without a dedicated CSM and a custom deck.
 
-I originated the product inside Juice Analytics, took it from concept through MVP deployment, and pitched the first client proposal, which became a paid pilot and the first production campaign. I led product direction and built the frontend, a [Claude skill](/projects/forward-narrative-skill) for drafting and validating narratives, and the generation pipeline. Senior engineers built the backend services and owned frontend testing; I collaborated on the direction of each platform capability and often built its frontend counterpart. I also led go-to-market and business operations, including the full marketing website.
+I started Forward inside Juice Analytics, took it from concept through MVP deployment, and pitched the first client proposal. That proposal became a paid pilot and the first production release. I led product direction and built the frontend, [narrative AI skill](/projects/forward-narrative-skill), and generation pipeline. Senior engineers built the supporting backend services and owned frontend testing. I also led go-to-market and built the marketing site.
 
 <figure class="slice-film">
   <video controls muted loop playsinline data-play-in-view preload="none" width="1920" height="1394" poster="./forward-marketing-site-poster.jpg" aria-label="The Forward marketing website" aria-describedby="forward-marketing-caption">
@@ -63,13 +63,13 @@ An early client needed permission-aware targeting for different organizational u
 
 I decided against it.
 
-Forward was intended to be lightweight, celebratory, and easy to finish—not another data-exploration interface. Adding filtering would shift the experience from receiving a coherent story to operating a reporting tool. It would also weaken a useful technical constraint: each narrative was pre-generated and self-contained, so viewing one never queried customer data—less to secure, and simpler to host.
+I wanted Forward to feel lightweight, celebratory, and easy to finish. Adding filtering would shift the experience from receiving a coherent story to operating a reporting tool. It would also weaken a useful technical constraint: each narrative was pre-generated, self-contained, and minimally dependent on data after generation.
 
 We moved audience targeting upstream to the sent emails. Recipients opened the right narrative directly, while the product preserved a focused beginning-to-end experience. That became a platform rule: targeting happens before delivery, not inside the narrative. More interaction could come later, but it would have to strengthen the story rather than turn it into a dashboard.
 
 # Decision 2: Use AI to explore; use an approved system to scale
 
-Personalizing thousands of narratives introduced a more consequential choice: allow an AI model to generate copy freely at production scale, or build a system whose output could be understood and approved before generation.
+Personalizing thousands of narratives introduced another choice: allow an AI model to generate copy freely at production scale, or build a system whose output could be understood and approved before generation.
 
 I rejected unreviewed generative text at scale. Prompt guardrails alone did not provide the oversight we needed.
 
@@ -103,7 +103,7 @@ Three choices made that volume trustworthy:
 
 # Evidence from the first production campaign
 
-The client sent the links directly, so measurement starts when a recipient opens a narrative. Of the 1,448 narratives opened, 864 were finished—a 60% completion rate. Of those 864, 715 (83%) said yes when asked if they'd want one again next year.
+The client sent the links directly, so measurement starts when someone opens a narrative. Among 1,448 opened narratives, 864 reached the end, a 60% completion rate. Of those 864 completed narratives, 715 included a “Yes” response to receiving the experience again the following year, or 83%.
 
 The qualitative response matched the behavior. Users asked to receive narratives like this more often and reported that they had shared, or planned to share, them with colleagues.
 
@@ -111,6 +111,6 @@ Those results do not prove every downstream retention outcome. They do show that
 
 # What I would improve now
 
-I would invest earlier in observability for AI-assisted content systems. Generation is no longer the hardest part. The limiting factor is understanding how content, conditions, and behavior change over time—and giving a team enough visibility to review those changes with confidence.
+Next time, I’d put more work into helping the team see what’s changing in the AI-assisted content. Generating it has become easier. Keeping track of changes to the writing, conditions, and behavior, and knowing what to review, is still hard.
 
-Forward reinforced a product principle I continue to use: AI writes the rules; code applies them. Trust at scale comes from a system people can read, review, and constrain.
+Forward gave us room to try ideas with AI. To send thousands of stories with confidence, though, we needed clear rules and a system the team could understand and review.
