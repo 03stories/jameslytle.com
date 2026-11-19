@@ -8,7 +8,7 @@ tags:
   - "AI"
   - "UX"
   - "Frontend"
-cover: ./forward-insights-recap-home.png
+cover: ./forward-preview.png
 summary: "I originated Forward, a multi-tenant platform for personalized customer narratives, and led its product direction, recipient experience, narrative AI system, and generation pipeline from MVP through the first paid production release."
 draft: false
 ---
