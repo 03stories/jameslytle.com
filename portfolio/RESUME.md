@@ -1,6 +1,6 @@
 # Resume source and export
 
-Last updated: 2026-11-06
+Last updated: 2026-11-20
 
 ## Readiness
 
@@ -8,11 +8,11 @@ Presentable — James explicitly approved the resume as ready on 2026-11-06. No 
 
 The editable resume is `src/pages/ResumePage.jsx`, rendered at `/resume` and prerendered to `dist/resume/index.html`. Its document styles are in `src/pages/ResumePage.css`. This is the source for future resume changes; the downloadable file is `public/resume.pdf`.
 
-The draft combines design engineering and product design leadership. Existing resume history supplies Juice Analytics (2011–present), freelance experience, OpenIDEO, and education; current portfolio case studies supply Forward accomplishments and the Finestra date range.
+The draft combines design engineering and product design leadership. The resume uses the confirmed Juice Analytics tenure (August 2009–present), along with the existing freelance, OpenIDEO, and education history; current portfolio case studies supply Forward accomplishments and the Finestra date range.
 
 ## Earlier drafting checklist (superseded by approval)
 
-- James confirmed Finestra as 2012–2015 and Juice Analytics as 2011–present. The resume and portfolio now use these dates.
+- James confirmed Finestra as 2012–2015 and corrected the Juice Analytics start date to August 2009 after marking his 17th anniversary in August 2026.
 - Confirm the current title and whether to show dates for each earlier Juice Analytics role. The draft avoids assigning a start date to the current title.
 - Confirm the degree wording retained from the existing PDF.
 

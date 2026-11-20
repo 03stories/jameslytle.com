@@ -74,7 +74,7 @@ export default function ResumePage() {
         <section className="resume-section" aria-labelledby="resume-experience">
           <h3 id="resume-experience">Experience</h3>
           <div className="resume-job">
-            <div className="resume-job-heading"><h4>Juice Analytics</h4><span>2011–Present</span></div>
+            <div className="resume-job-heading"><h4>Juice Analytics</h4><span>August 2009–Present</span></div>
             <p className="resume-role">Design Engineer &amp; Product Lead · Current role</p>
             <ul>
               <li>Originated Forward, a customer-impact storytelling product; led product direction, recipient experience, and implementation from concept through MVP and the first paid production release.</li>
