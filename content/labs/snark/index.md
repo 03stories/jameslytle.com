@@ -10,7 +10,7 @@ cover: ./overview.png
 ---
 
 <figure class="lab-attachment">
-  <video controls muted loop playsinline data-play-in-view preload="none" width="1920" height="1080" poster="./video-poster.jpg" aria-label="Snark product demo: switching spaces and finding saved tabs with search">
+  <video controls muted loop playsinline data-play-in-view preload="none" width="1920" height="1080" poster="./video-poster.jpg" aria-label="Snark product demo: switching spaces, returning to a saved pin, and finding tabs with search">
     <source src="./snark-demo.mp4" type="video/mp4">
     <a href="./snark-demo.mp4">Watch the Snark product demo</a>
   </video>
@@ -25,7 +25,9 @@ I wanted to keep the parts of Arc I used every day. Spaces, pins that were bookm
 
 If you used Arc, you’ll know what to do with the sidebar. You can tuck tabs into folders, duplicate a tab from the right-click menu, or click a pin to get back to the page you originally saved.
 
-![Snark store image showing a saved launch-plan pin, navigating away from it, and returning to its original page](./pinned-tabs.png)
+In [1.4.3](https://github.com/03stories/snark/releases/tag/v1.4.3), I made it easier to see where I started. When I follow a link from a pinned page, the sidebar shows the saved pin beside the page I’m on. I can click the saved pin to go back.
+
+![The saved Pricing draft pin sits to the left of the current Competitor pricing page in the same sidebar row. Click Pricing draft to return to the saved page.](./pinned-tabs.png)
 
 I kept colors for spaces. When I’m swiping between them, the color is a quick reminder of where I am. You can also pick your own shortcut for copying the URL in settings.
 
