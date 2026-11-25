@@ -99,6 +99,12 @@ The sandbox in the example enables scripts and downloads while restricting stora
 
 Keep variants as additional artifacts in the same post with meaningful labels. A follow-up post is useful when there is a new lesson to share. Pin only the explorations you want someone to encounter first. No publishing schedule is required.
 
+## Update an existing post
+
+Keep each Lab post as a record of the project at the time it was written. Routine fixes and refinements belong in the project changelog and the relevant release channels. Keep the original Lab story and media for those changes.
+
+For a major release or a milestone that changes what readers can do with the project, add a brief `## Update · YYYY-MM-DD` section at the top of the article body, immediately after the frontmatter. In a sentence or two, explain what changed and why it matters, and link to the release or full notes. Fix broken links and factual errors in place as needed.
+
 ## Check before merging
 
 Run `npm run build` and `npm run a11y:check`. Check the preview on a narrow screen; play media, open files, and use each demo. Confirm alt text, captions, and attribution. Draft content and attachments must not appear in `dist/`.
